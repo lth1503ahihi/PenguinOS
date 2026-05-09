@@ -33,11 +33,7 @@ jobs:
         run: |
           echo "Setting Vienam timezone"
           sudo timedatectl set-timezone Asia/Ho_Chi_Minh
-
-  Build:
-    needs: Initialize
-    runs-on: ubuntu-latest
-    steps:
+          
       - name: Install OpenJDK
         uses: actions/setup-java@v4
         with:
