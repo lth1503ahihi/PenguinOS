@@ -89,46 +89,49 @@ else
 fi
 
 # Pack super.img
-if [[ "$is_ab_device" == false ]];then
+if [[ "$is_ab_device" == false ]]; then
     repack "Packing super.img for A-only device"
-    lpargs="-F --output build/baserom/images/super.img --metadata-size 65536 --super-name super --metadata-slots 2 --block-size 4096 --device super:$superSize --group=qti_dynamic_partitions:$superSize"
-    for pname in odm mi_ext system system_ext product vendor;do
-        if [ -f "build/baserom/images/${pname}.img" ];then
-            if [[ "$OSTYPE" == "darwin"* ]];then
-               subsize=$(find build/baserom/images/${pname}.img | xargs stat -f%z | awk ' {s+=$1} END { print s }')
+    GROUP_SIZE=$((superSize - 268435456))   
+    lpargs="-F --output build/baserom/images/super.img --metadata-size 65536 --super-name super --metadata-slots 2 --block-size 4096 --device super:$superSize --group=qti_dynamic_partitions:$GROUP_SIZE"
+    
+    for pname in odm mi_ext system system_ext product vendor; do
+        if [ -f "build/baserom/images/${pname}.img" ]; then
+            if [[ "$OSTYPE" == "darwin"* ]]; then
+                subsize=$(stat -f%z "build/baserom/images/${pname}.img")
             else
-                subsize=$(du -sb build/baserom/images/${pname}.img |tr -cd 0-9)
+                subsize=$(du -sb "build/baserom/images/${pname}.img" | awk '{print $1}')
             fi
             repack "Super sub-partition [$pname] size: [$subsize]"
-            args="--partition ${pname}:none:${subsize}:qti_dynamic_partitions --image ${pname}=build/baserom/images/${pname}.img"
-            lpargs="$lpargs $args"
-            unset subsize
-            unset args
+            lpargs="$lpargs --partition ${pname}:readonly:${subsize}:qti_dynamic_partitions --image ${pname}=build/baserom/images/${pname}.img"
         fi
     done
+
 else
     repack "Packing super.img for V-AB device"
-    lpargs="-F --virtual-ab --output $work_dir/build/baserom/images/super.img --metadata-size 65536 --super-name super --metadata-slots 3 --device super:$superSize --group=qti_dynamic_partitions_a:$superSize --group=qti_dynamic_partitions_b:$superSize"
+    
+    GROUP_SIZE=$((superSize - 268435456))   # 256MB margin - Fix for error -22
+    
+    lpargs="-F --virtual-ab --output $work_dir/build/baserom/images/super.img --metadata-size 65536 --super-name super --metadata-slots 3 --block-size 4096 --device super:$superSize --group=qti_dynamic_partitions_a:$GROUP_SIZE --group=qti_dynamic_partitions_b:$GROUP_SIZE"
+    
     for pname in ${super_list}; do
         if [ -f "build/baserom/images/${pname}.img" ]; then
-            subsize=$(du -sb build/baserom/images/${pname}.img | awk '{print $1}')
+            subsize=$(du -sb "build/baserom/images/${pname}.img" | awk '{print $1}')
             repack "Super sub-partition [$pname] size: [$subsize]"
-            args="--partition ${pname}_a:none:${subsize}:qti_dynamic_partitions_a --image ${pname}_a=build/baserom/images/${pname}.img --partition ${pname}_b:none:0:qti_dynamic_partitions_b"
-            lpargs="$lpargs $args"
-            unset subsize
-            unset args
+            lpargs="$lpargs --partition ${pname}_a:readonly:${subsize}:qti_dynamic_partitions_a --image ${pname}_a=build/baserom/images/${pname}.img --partition ${pname}_b:readonly:0:qti_dynamic_partitions_b"
         fi
     done
 fi
 
-
+# Run lpmake
 lpmake $lpargs
+
 if [ -f "$work_dir/build/baserom/images/super.img" ]; then
     repack "Successfully packed super.img."
 else
     repack "Unable to pack super.img."
     exit 1
 fi
+
 for pname in ${super_list}; do
-    rm -rf $work_dir/build/baserom/images/${pname}.img
+    rm -rf "$work_dir/build/baserom/images/${pname}.img" 2>/dev/null
 done
