@@ -110,3 +110,12 @@ CalendarGoogle_xxxhdpi
 byglgnite
 com.altice.android.myapps
 com.sfr.android.sfrjeux
+QuickSearchBoxPadMIUI15
+MIUIPersonalAssistantPadOS3
+MIUISecurityCenterPad
+MIUIPackageInstallerVariants
+CAJLauncher
+Creation
+MiuiPassword
+Padapp
+MIUIThemeManagerPad
