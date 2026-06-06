@@ -68,8 +68,7 @@ jobs:
         env:
           INPUT_URL: ${{ inputs.input_url }}
         run: |
-          python notify.py build "${{ github.repository }}" "${{ inputs.input_url }}" "xiaomi" "${{ inputs.builder_name }}" "${{ inputs.builder_id }}"
-          sudo bash build.sh "$INPUT_URL"
+          sudo bash build.sh "$INPUT_URL" "${{ github.repository }}" "xiaomi" "${{ inputs.builder_name }}" "${{ inputs.builder_id }}"
 
       - name: Pack ROM...
         run: |
