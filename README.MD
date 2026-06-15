@@ -1,8 +1,8 @@
 <div align="center">
 
-# 🚀 NothingsVN AutoBuild — Xiaomi Edition
+# 🚀 PenguinOS Builder — Xiaomi Edition
 
-**Xiaomi Custom ROM Builder** — *Automated MIUI / HyperOS firmware modification pipeline*
+**Xiaomi ROM Builder** — *Automated MIUI / HyperOS firmware modification pipeline*
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Version](https://img.shields.io/badge/version-v1.0-green.svg)](#)
@@ -49,7 +49,7 @@
 ## 📁 Project Structure
 
 ```
-nothingsvn_xiaomi-toolbuild/
+penguinos_xiaomi-toolbuild/
 ├── 📜 build.sh              # Main build orchestrator
 ├── 📜 functions.sh          # Shared utility functions
 ├── 📜 packROM.sh            # ROM packaging (super.img + partitions)
@@ -95,8 +95,8 @@ bash setup.sh
 
 ```bash
 # Clone the repository
-git clone https://github.com/tiencv2006/nothingsvn_xiaomi-toolbuild.git
-cd nothingsvn_xiaomi-toolbuild
+git clone https://github.com/lth1503ahihi/PenguinOS.git
+cd PenguinOS
 ```
 
 ```bash
