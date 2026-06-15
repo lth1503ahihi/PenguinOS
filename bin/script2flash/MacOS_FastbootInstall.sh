@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Welcome to Nothings Classic ROM Installer for macOS"
+echo "Welcome to PenguinOS Fastboot ROM Installer for macOS"
 cd "$(dirname "$0")" || exit 1
 
 # Define commands
