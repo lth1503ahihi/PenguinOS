@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 NothingsVN AutoBuild — Phiên bản Xiaomi
+# 🚀 PenguinOS Builder — Phiên bản Xiaomi
 
 **Công cụ Build ROM Tuỳ chỉnh Xiaomi** — *Quy trình tự động hoá chỉnh sửa firmware MIUI / HyperOS*
 
@@ -49,7 +49,7 @@
 ## 📁 Cấu trúc dự án
 
 ```
-nothingsvn_xiaomi-toolbuild/
+PenguinOS/
 ├── 📜 build.sh              # Script build chính
 ├── 📜 functions.sh          # Các hàm tiện ích dùng chung
 ├── 📜 packROM.sh            # Đóng gói ROM (super.img + phân vùng)
@@ -95,8 +95,8 @@ bash setup.sh
 
 ```bash
 # Clone repository
-git clone https://github.com/tiencv2006/nothingsvn_xiaomi-toolbuild.git
-cd nothingsvn_xiaomi-toolbuild
+git clone https://github.com/lth1503ahihi/PenguinOS.git
+cd PenguinOS 
 ```
 
 ```bash
