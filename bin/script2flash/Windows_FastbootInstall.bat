@@ -1,5 +1,5 @@
 @echo off&setlocal enabledelayedexpansion
-title Welcome to Nothings Classic ROM Installer
+title Welcome to PenguinOS Fastboot ROM Installer
 cd %~dp0
 set fastboot=META-INF\fastboot
 set /p DeviceCodeRom=<META-INF\Data\DeviceCode
