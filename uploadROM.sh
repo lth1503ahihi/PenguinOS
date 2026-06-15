@@ -1,7 +1,11 @@
 work_dir=$(pwd)
 source $work_dir/functions.sh
 RCLONE_CONFIG_1DRIVE="$work_dir/rclone.conf"
-ONEDRIVE_REMOTE="starxONEDRIVE"
+
+# Cấu hình SourceForge
+SF_REMOTE="gdrive"
+SF_PROJECT="penguinos" # CHÚ Ý: Thay chữ 'penguinos' bằng tên project chính xác của ông trên SourceForge
+
 os_type=$(cat $work_dir/bin/ddevice/os_type.txt)
 base_rom_code=$(cat $work_dir/bin/ddevice/base_rom_code.txt)
 androidVER=$(cat $work_dir/bin/ddevice/androidver.txt)
@@ -81,18 +85,12 @@ else
     uploaddir="HyperOS"
 fi
 
-# 1drive
-if [[ $rom_os == "MIUI" ]]; then
-    rclone -v --config="$RCLONE_CONFIG_1DRIVE" copy "$output_file" "$ONEDRIVE_REMOTE:NTBuild/${uploaddir}/${polyxver}/${device_code}/" || {
-        upload "Error uploading file to OneDrive: $FILENAME"
-        exit 1
-    }
-else
-    rclone -v --config="$RCLONE_CONFIG_1DRIVE" copy "$output_file" "$ONEDRIVE_REMOTE:NTBuild/${uploaddir}/${polyxver}/${device_code}/" || {
-        upload "Error uploading file to OneDrive: $FILENAME"
-        exit 1
-    }
-fi  
+# Upload thẳng lên SourceForge
+upload "Uploading to SourceForge..."
+rclone -v --config="$RCLONE_CONFIG_1DRIVE" copy "$output_file" "$SF_REMOTE:/home/frs/project/$SF_PROJECT/releases/${uploaddir}/${polyxver}/${device_code}/" || {
+    upload "Lỗi khi upload file lên SourceForge!"
+    exit 1
+}
 
 upload "Clean Workflow.."
 rm -rf $work_dir/out
