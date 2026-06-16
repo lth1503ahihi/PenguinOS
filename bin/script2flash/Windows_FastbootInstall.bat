@@ -17,10 +17,8 @@ pause >NUL 2>NUL
 echo.=========================================================================================
 echo. Please Choose Format Option Before Flash ROM
 echo.
-echo.
-y = Format All Data(Clean Flash)         
-echo.
-n = Keep Data And Document(Dirty Flash)
+echo.   y = Format All Data(Clean Flash)         
+echo.   n = Keep Data And Document(Dirty Flash)
 echo.
 echo.=========================================================================================
 set /p CHOICE="Your choice {y/n}: "
@@ -91,8 +89,7 @@ if exist super.img (
 )
 
 if /I "%CHOICE%" == "y" (
-	echo.
-Formatting...
+	echo.  Formatting...
 	!fastboot! erase frp  >NUL 2>NUL
 	!fastboot! erase userdata  >NUL 2>NUL
         !fastboot! erase metadata  >NUL 2>NUL
