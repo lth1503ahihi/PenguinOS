@@ -1,3 +1,4 @@
+
 @echo off&setlocal enabledelayedexpansion
 title Welcome to PenguinOS Fastboot ROM Installer
 cd %~dp0
@@ -11,15 +12,16 @@ echo.2. You have to choose carefully else you will LOST ALL DATA!
 echo.3. THIS IS A FREE ROM!!!If you see someone sell or install this ROM for fees,please CONTACT ADMIN NOW.
 echo.4. We will NOT take responsibility if you brick your phone or lose all data while installing this ROM.
 echo.5. Make sure you have downloaded the exact build for your device, else you might get bricked.
-
 echo.[i] - If you have read and agreed to all of the above,press any key to start the installation.
 echo.[i] - Else, exit this window.
 pause >NUL 2>NUL
 echo.=========================================================================================
 echo. Please Choose Format Option Before Flash ROM
 echo.
-echo.   y = Format All Data(Clean Flash)         
-echo.   n = Keep Data And Document(Dirty Flash)
+echo.
+y = Format All Data(Clean Flash)         
+echo.
+n = Keep Data And Document(Dirty Flash)
 echo.
 echo.=========================================================================================
 set /p CHOICE="Your choice {y/n}: "
@@ -35,7 +37,7 @@ if "!fqlx!" == "2" (set fqlx=AB)  else (set fqlx=A)
 
 if "!DeviceCodeReal!" == "mars" set DeviceCodeReal=star
 
-echo !DeviceCodeReal! | findstr /b /c:"!DeviceCodeRom!"  >nul 2>nul 
+echo !DeviceCodeReal! | findstr /b /c:"!DeviceCodeRom!" >nul 2>nul 
 
 if errorlevel 1 (
     title Device Code Mismatch! & echo. Device codename does not match, your device is "!DeviceCodeReal!". This rom file is for "!DeviceCodeRom!". & pause & exit /B 1
@@ -59,6 +61,13 @@ for /f %%i in ('dir /b images') do (
 		!fastboot! flash preloader_b !url! >nul 2>nul 
 		!fastboot! flash preloader1 !url! >nul 2>nul 
 		!fastboot! flash preloader2 !url! >nul 2>nul 
+	) else if "!par:~0,6!" == "vbmeta" (
+		if !fqlx! == AB ( 
+			!fastboot! --disable-verity --disable-verification flash !par!_a !url!
+			!fastboot! --disable-verity --disable-verification flash !par!_b !url!
+		) else ( 
+			!fastboot! --disable-verity --disable-verification flash !par! !url!
+		)
 	) else if !fqlx! == AB ( 
 		!fastboot! flash !par!_a !url!
 		!fastboot! flash !par!_b !url!
@@ -72,9 +81,9 @@ if exist super.img (
         del /s /q super.img >nul 2>nul 
 )
 
-
 if /I "%CHOICE%" == "y" (
-	echo.  Formatting...
+	echo.
+Formatting...
 	!fastboot! erase frp  >NUL 2>NUL
 	!fastboot! erase userdata  >NUL 2>NUL
         !fastboot! erase metadata  >NUL 2>NUL
