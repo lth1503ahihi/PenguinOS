@@ -2,9 +2,9 @@ work_dir=$(pwd)
 source $work_dir/functions.sh
 RCLONE_CONFIG_1DRIVE="$work_dir/rclone.conf"
 
-# Cấu hình SourceForge
-SF_REMOTE="gdrive"
-SF_PROJECT="penguinos" # CHÚ Ý: Thay chữ 'penguinos' bằng tên project chính xác của ông trên SourceForge
+# Cấu hình Google Drive
+GDRIVE_REMOTE="googledrive"
+GDRIVE_FOLDER="PenguinOS_Releases" 
 
 os_type=$(cat $work_dir/bin/ddevice/os_type.txt)
 base_rom_code=$(cat $work_dir/bin/ddevice/base_rom_code.txt)
@@ -85,10 +85,10 @@ else
     uploaddir="HyperOS"
 fi
 
-# Upload thẳng lên SourceForge
-upload "Uploading to SourceForge..."
-rclone -v --config="$RCLONE_CONFIG_1DRIVE" copy "$output_file" "$SF_REMOTE:/home/frs/project/$SF_PROJECT/releases/${uploaddir}/${polyxver}/${device_code}/" || {
-    upload "Lỗi khi upload file lên SourceForge!"
+# Upload thẳng lên Google Drive
+upload "Uploading to Google Drive..."
+rclone -v --config="$RCLONE_CONFIG_1DRIVE" copy "$output_file" "$GDRIVE_REMOTE:$GDRIVE_FOLDER/${uploaddir}/${polyxver}/${device_code}/" || {
+    upload "Lỗi khi upload file lên Google Drive!"
     exit 1
 }
 
