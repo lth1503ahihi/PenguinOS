@@ -3,7 +3,7 @@ source $work_dir/functions.sh
 RCLONE_CONFIG_1DRIVE="$work_dir/rclone.conf"
 
 # Cấu hình Google Drive
-GDRIVE_REMOTE="googledrive"
+GDRIVE_REMOTE="gdrive"
 GDRIVE_FOLDER="PenguinOS_Releases" 
 
 os_type=$(cat $work_dir/bin/ddevice/os_type.txt)
