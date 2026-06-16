@@ -22,7 +22,7 @@ fi
 
 check unzip aria2c 7z zip java zipalign python3 zstd bc xmlstarlet aapt
 
-# Dọn dẹp sạch sẽ thư mục cũ trước khi build để tránh lỗi upload trùng lặp
+# Dọn dẹp môi trường trước khi build
 rm -rf $work_dir/out
 rm -rf $work_dir/build
 mkdir -p $work_dir/out
@@ -118,14 +118,11 @@ rm -rf config
 if [ -f $work_dir/${baserom}.zip ]; then rm -rf ${baserom}.zip; fi
 rm -rf build/baserom/payload.bin build/baserom/images/super.img
 
-# Force ROM Info: Tự động dọn sạch hậu tố NT/INT để trả lại tên chuẩn MIUI/HyperOS
-OS_TYPE_RAW=$(cat $work_dir/bin/ddevice/os_type.txt 2>/dev/null || echo "MIUI")
-CLEAN_OS=$(echo "$OS_TYPE_RAW" | sed -E 's/(NT|INT)$//I')
-if [[ -z "$CLEAN_OS" ]]; then CLEAN_OS="MIUI"; fi
-
-echo "$CLEAN_OS" > $work_dir/bin/ddevice/os_type.txt
-echo "$CLEAN_OS" > $work_dir/bin/ddevice/rom_os.txt
-echo "$CLEAN_OS" > $work_dir/bin/ddevice/brand.txt
+# Kỹ thuật ép tên: Làm sạch hậu tố NT/INT và ép về tên thương hiệu riêng (ví dụ: PenguinOS)
+MY_BRAND_NAME="PenguinOS"
+echo "$MY_BRAND_NAME" > $work_dir/bin/ddevice/os_type.txt
+echo "$MY_BRAND_NAME" > $work_dir/bin/ddevice/rom_os.txt
+echo "$MY_BRAND_NAME" > $work_dir/bin/ddevice/brand.txt
 
 if [ ! -s "$work_dir/bin/ddevice/device_name.txt" ]; then 
     echo "Xiaomi Device" > $work_dir/bin/ddevice/device_name.txt 
