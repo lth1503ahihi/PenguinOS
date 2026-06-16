@@ -2,7 +2,7 @@ work_dir=$(pwd)
 source $work_dir/functions.sh
 RCLONE_CONFIG_1DRIVE="$work_dir/rclone.conf"
 
-# Cấu hình Google Drive
+# Cấu hình Google Drive (Đã sửa tên khớp với rclone.conf)
 GDRIVE_REMOTE="gdrive"
 GDRIVE_FOLDER="PenguinOS_Releases" 
 
@@ -14,19 +14,6 @@ regionTYPE=$(cat $work_dir/bin/ddevice/device_type.txt)
 device_code=$(cat $work_dir/bin/ddevice/device_code.txt)
 baserom_type=$(cat $work_dir/bin/ddevice/romtype.txt)
 device_f=$(cat $work_dir/bin/ddevice/device_f.txt)
-
-if [ "$1" == "setup" ]; then
-  if [ -z "$2" ] || [ -z "$3" ] || [ -z "$4" ]; then
-    echo "[ERROR] - Please provide rclone token and remote name"
-    exit 1
-  fi
-  curl  -s -o $work_dir/rclone.conf \
-        -H "Authorization: token $2" \
-        -H "Accept: application/vnd.github.v3.raw" \
-        -L https://api.github.com/repos/$3/contents/$4
-  exit 0
-fi
-
 
 if [[ $(git branch --show-current) == "beta" ]]; then
     polyxver="$(cat Version)"
