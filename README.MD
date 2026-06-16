@@ -27,7 +27,7 @@
 | 📱 **Multi-OS Mods** | Mods for HyperOS 1, HyperOS 2, HyperOS 3 |
 | 🧩 **A-only & V-AB** | Supports both A-only and Virtual A/B partition schemes |
 | ⚙️ **Automated Pipeline** | End-to-end CI/CD via GitHub Actions |
-| 📤 **Cloud Upload** | Auto-upload built ROMs to OneDrive via Rclone |
+| 📤 **Cloud Upload** | Auto-upload built ROMs to GGDrive via Rclone |
 
 > 🔧 More features coming soon — stay tuned!
 
