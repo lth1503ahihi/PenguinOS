@@ -1,4 +1,4 @@
-name: NothingsVN Xiaomi ROM Build
+name: PenguinOS  ROM Build
 
 on:
   workflow_dispatch:
