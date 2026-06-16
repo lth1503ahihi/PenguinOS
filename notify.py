@@ -274,8 +274,8 @@ if __name__ == "__main__":
     builder_id = sys.argv[6] if len(sys.argv) > 6 else ""
     
     # Lấy token, channel ID, message ID và Build ID từ biến môi trường
-    bot_token = os.environ.get("8170817469:AAFmm3b_CZaM96CzXgFQMig2JdVfLkz-VFQ")
-    channel_id = os.environ.get("1781565051")
+    bot_token = os.environ.get("TELEGRAM_BOT_TOKEN")
+    channel_id = os.environ.get("TELEGRAM_CHANNEL_ID")
     msg_id = os.environ.get("TELEGRAM_MSG_ID") 
     build_id = os.environ.get("TELEGRAM_BUILD_ID")
 
