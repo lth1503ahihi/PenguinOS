@@ -107,6 +107,13 @@ if [ -d "images" ]; then
             $FASTBOOT flash preloader_b "$url" >/dev/null 2>&1
             $FASTBOOT flash preloader1 "$url" >/dev/null 2>&1
             $FASTBOOT flash preloader2 "$url" >/dev/null 2>&1
+        elif [[ "$par" == vbmeta* ]]; then
+            if [ "$fqlx" = "AB" ]; then
+                $FASTBOOT --disable-verity --disable-verification flash "${par}_a" "$url"
+                $FASTBOOT --disable-verity --disable-verification flash "${par}_b" "$url"
+            else
+                $FASTBOOT --disable-verity --disable-verification flash "$par" "$url"
+            fi
         elif [ "$fqlx" = "AB" ]; then
             $FASTBOOT flash "${par}_a" "$url"
             $FASTBOOT flash "${par}_b" "$url"
