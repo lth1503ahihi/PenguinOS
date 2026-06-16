@@ -61,14 +61,14 @@ def get_progress_bar(status):
         if status == 'fail' and i == 6:
             timeline.append("❌")
         elif i < current_index:
-            timeline.append("🟢")
+            timeline.append("🐧")
         elif i == current_index:
             if status == 'success':
                 timeline.append("✅")
             else:
                 timeline.append("🔵")
         else:
-            timeline.append("⚪")
+            timeline.append("🧊")
             
     return " ➔ ".join(timeline)
 
