@@ -27,7 +27,7 @@
 | 📱 **Mod đa hệ điều hành** | Mod cho HyperOS 1, HyperOS 2, HyperOS 3 |
 | 🧩 **A-only & V-AB** | Hỗ trợ cả sơ đồ phân vùng A-only và Virtual A/B |
 | ⚙️ **Pipeline Tự động** | CI/CD toàn diện qua GitHub Actions |
-| 📤 **Upload lên Cloud** | Tự động tải ROM đã build lên OneDrive qua Rclone |
+| 📤 **Upload lên Cloud** | Tự động tải ROM đã build lên GGDrive qua Rclone |
 
 > 🔧 Thêm nhiều tính năng sắp ra mắt — hãy theo dõi!
 
