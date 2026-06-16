@@ -39,9 +39,9 @@ def get_status_info(status):
     if status == 'pack': 
         return "📦", "ĐÓNG GÓI ROM ZIP", "Đang nén các phân vùng và đóng gói tệp flashable..."
     if status == 'upload': 
-        return "📤", "TẢI THÀNH PHẨM LÊN CLOUD", "Đang upload tệp zip ROM lên OneDrive..."
+        return "📤", "TẢI THÀNH PHẨM LÊN CLOUD", "Đang upload tệp zip ROM lên GGDrive..."
     if status == 'success': 
-        return "✅", "BUILD HOÀN TẤT THÀNH CÔNG", "Yêu cầu build ROM đã hoàn thành tốt đẹp! 🎉"
+        return "✅", "BUILD HOÀN TẤT THÀNH CÔNG", "Yêu cầu build ROM đã hoàn thành tốt đẹp! 🎉🐧"
     if status == 'fail': 
         return "❌", "QUÁ TRÌNH BUILD THẤT BẠI", "Đã xảy ra lỗi nghiêm trọng trong quá trình build!"
     
@@ -231,7 +231,7 @@ def send_notification(status, repo_name, rom_link, channel_id, bot_token, msg_id
                 pm_text = (
                     f"🎉 *YÊU CẦU BUILD ROM ĐÃ HOÀN TẤT!*\n\n"
                     f"{message}\n"
-                    f"⬇️ *Tải ROM tại:* [https://nothingsvn.vercel.app/](https://nothingsvn.vercel.app/)"
+                    f"⬇️ *Tải ROM tại:* [Google Drive](https://drive.google.com/drive/folders/1B11DL6aX7ZUKfawxwT8Do1mfX9hoxINp?usp=sharing)"
                 )
             else:
                 pm_text = (
