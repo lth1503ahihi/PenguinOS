@@ -2,7 +2,7 @@ work_dir=$(pwd)
 source $work_dir/functions.sh
 RCLONE_CONFIG_1DRIVE="$work_dir/rclone.conf"
 
-# Cấu hình Google Drive (Đã sửa tên khớp với rclone.conf)
+# Cấu hình Google Drive 
 GDRIVE_REMOTE="gdrive"
 GDRIVE_FOLDER="PenguinOS_Releases" 
 
@@ -23,11 +23,19 @@ else
 	status="Official"
 fi
 
-if [[ $rom_os == "MIUI" ]];then
-    os_type="MIUI"
+# ========================================================
+# LOGIC NHẬN DIỆN HỆ ĐIỀU HÀNH CHUẨN XÁC 100%
+# Quét thẳng vào mã bản ROM gốc ($base_rom_code). 
+# Nếu mã bắt đầu bằng "OS" thì là HyperOS, ngược lại là MIUI.
+if [[ "$base_rom_code" == OS* ]]; then
+    true_os="HyperOS"
 else
-    os_type="HyperOS"
+    true_os="MIUI"
 fi
+
+# Ép tên hệ điều hành để xuất file
+os_type=$true_os
+# ========================================================
 
 repack "Compressing super.img"
 zstd --rm $work_dir/build/baserom/images/super.img -o $work_dir/build/baserom/images/super.img.zst > /dev/null 2>&1
@@ -66,11 +74,8 @@ upload "Uploading"
 output_file="out/${os_type}_${polyxver}_${device_code}_${base_rom_code}_${hash}_${status}.zip"
 echo "${os_type}_${polyxver}_${device_code}_${base_rom_code}_${hash}_${status}.zip" > $work_dir/bin/ddevice/output_zip.txt
 
-if [[ $rom_os == "MIUI" ]];then
-    uploaddir="MIUI"
-else
-    uploaddir="HyperOS"
-fi
+# Đặt tên thư mục upload trên Drive trùng với hệ điều hành
+uploaddir=$true_os
 
 # Upload thẳng lên Google Drive
 upload "Uploading to Google Drive..."
