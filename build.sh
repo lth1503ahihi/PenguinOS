@@ -144,4 +144,9 @@ bash $work_dir/bin/modfile/Universal/insfile.sh
 bash $work_dir/bin/modfile/UpdateFile/insupdate.sh
 bash $work_dir/bin/package/patchpackage.sh
 
+# ----> SÁT THỦ DIỆT MIUINT/HyperNT TỪ GỐC <----
+info "Đang luộc chín MIUINT/HyperNT từ các file cấu hình..."
+find "$work_dir/build/baserom/images/" -type f -name "*.prop" -exec sed -i 's/MIUINT/MIUI/g' {} +
+find "$work_dir/build/baserom/images/" -type f -name "*.prop" -exec sed -i 's/HyperNT/HyperOS/g' {} +
+
 find "$work_dir/build/baserom/images/" -exec touch -t 200901010000.00 {} + 2> /dev/null || true
