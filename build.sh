@@ -4,11 +4,14 @@ prefix_id="$3"
 builder_name="$4"
 builder_id="$5"
 work_dir=$(pwd)
+
 # Import functions
-tools_dir=${work_dir}/bin/$(uname)/$(uname -m)export PATH=$(pwd)/bin/$(uname)/$(uname -m)/:$PATH
+tools_dir=${work_dir}/bin/$(uname)/$(uname -m)
+export PATH=$(pwd)/bin/$(uname)/$(uname -m)/:$PATH
 chmod 777 ${work_dir}/bin/*
 chmod 777 ${work_dir}/bin/Linux/x86_64/*
 source $work_dir/functions.sh
+
 if [[ $(git branch --show-current) == "beta" ]]; then
     polyxver="$(cat Version)"
 	status="Development"
@@ -19,8 +22,10 @@ fi
 
 check unzip aria2c 7z zip java zipalign python3 zstd bc xmlstarlet aapt
 
+# Dọn dẹp sạch sẽ thư mục cũ trước khi build để tránh lỗi upload trùng lặp
 rm -rf $work_dir/out
 rm -rf $work_dir/build
+mkdir -p $work_dir/out
 
 python3 $work_dir/notify.py download "$repo_name" "$baserom" "$prefix_id" "$builder_name" "$builder_id"
 source "$work_dir/bin/ddevice/getROM.sh" "$baserom"
@@ -47,10 +52,7 @@ else
     exit 1
 fi
 
-rm -rf app
-rm -rf tmp
-rm -rf config
-rm -rf build/baserom/
+rm -rf app tmp config build/baserom/
 find . -type d -name 'miui_*' | xargs rm -rf
 
 unpack "Files cleaned up."
@@ -113,20 +115,26 @@ echo $device_f > $work_dir/bin/ddevice/device_f.txt
 getvar=$(cat $work_dir/bin/ddevice/device_f.txt)
 
 rm -rf config
+if [ -f $work_dir/${baserom}.zip ]; then rm -rf ${baserom}.zip; fi
+rm -rf build/baserom/payload.bin build/baserom/images/super.img
 
-if [ -f $work_dir/${baserom}.zip ]; then
-    rm -rf ${baserom}.zip
+# Force ROM Info: Tự động dọn sạch hậu tố NT/INT để trả lại tên chuẩn MIUI/HyperOS
+OS_TYPE_RAW=$(cat $work_dir/bin/ddevice/os_type.txt 2>/dev/null || echo "MIUI")
+CLEAN_OS=$(echo "$OS_TYPE_RAW" | sed -E 's/(NT|INT)$//I')
+if [[ -z "$CLEAN_OS" ]]; then CLEAN_OS="MIUI"; fi
+
+echo "$CLEAN_OS" > $work_dir/bin/ddevice/os_type.txt
+echo "$CLEAN_OS" > $work_dir/bin/ddevice/rom_os.txt
+echo "$CLEAN_OS" > $work_dir/bin/ddevice/brand.txt
+
+if [ ! -s "$work_dir/bin/ddevice/device_name.txt" ]; then 
+    echo "Xiaomi Device" > $work_dir/bin/ddevice/device_name.txt 
 fi
-
-rm -rf build/baserom/payload.bin
-rm -rf build/baserom/images/super.img
-
 
 mods "Gathering Devices Infomations"
 bash $work_dir/bin/ddevice/getname.sh $getvar
 bash $work_dir/bin/ddevice/fetchINFO.sh
 
-# Gửi thông báo đang Build với đầy đủ Codename và Version
 python3 $work_dir/notify.py build "$repo_name" "$baserom" "$prefix_id" "$builder_name" "$builder_id"
 
 bash $work_dir/bin/ddevice/DEBLOAT/debloat.sh
@@ -140,4 +148,3 @@ bash $work_dir/bin/modfile/UpdateFile/insupdate.sh
 bash $work_dir/bin/package/patchpackage.sh
 
 find "$work_dir/build/baserom/images/" -exec touch -t 200901010000.00 {} + 2> /dev/null || true
-
