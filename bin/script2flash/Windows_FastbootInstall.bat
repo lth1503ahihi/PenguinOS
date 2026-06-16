@@ -1,4 +1,3 @@
-
 @echo off&setlocal enabledelayedexpansion
 title Welcome to PenguinOS Fastboot ROM Installer
 cd %~dp0
@@ -61,12 +60,22 @@ for /f %%i in ('dir /b images') do (
 		!fastboot! flash preloader_b !url! >nul 2>nul 
 		!fastboot! flash preloader1 !url! >nul 2>nul 
 		!fastboot! flash preloader2 !url! >nul 2>nul 
-	) else if "!par:~0,6!" == "vbmeta" (
+	) else if "!par!" == "vbmeta" (
 		if !fqlx! == AB ( 
 			!fastboot! --disable-verity --disable-verification flash !par!_a !url!
+			!fastboot! --disable-verity flash !par!_a !url!
 			!fastboot! --disable-verity --disable-verification flash !par!_b !url!
+			!fastboot! --disable-verity flash !par!_b !url!
 		) else ( 
 			!fastboot! --disable-verity --disable-verification flash !par! !url!
+			!fastboot! --disable-verity flash !par! !url!
+		)
+	) else if "!par!" == "vbmeta_system" (
+		if !fqlx! == AB ( 
+			!fastboot! --disable-verity flash !par!_a !url!
+			!fastboot! --disable-verity flash !par!_b !url!
+		) else ( 
+			!fastboot! --disable-verity flash !par! !url!
 		)
 	) else if !fqlx! == AB ( 
 		!fastboot! flash !par!_a !url!
@@ -95,6 +104,11 @@ echo.  Now Wait For 10-15 Min For Booting
 echo.  
 echo.
 if !fqlx! == AB (!fastboot! set_active a  >NUL 2>NUL)
+
+:: Bypass Cross Device Mismatch Security cho HyperOS/MIUI
+echo. Bypassing Cross Device Mismatch Security...
+!fastboot! oem cdms >NUL 2>NUL
+
 !fastboot! reboot 
 pause
 exit
