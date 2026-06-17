@@ -149,4 +149,13 @@ info "Đang luộc chín MIUINT/HyperNT từ các file cấu hình..."
 find "$work_dir/build/baserom/images/" -type f -name "*.prop" -exec sed -i 's/MIUINT/MIUI/g' {} +
 find "$work_dir/build/baserom/images/" -type f -name "*.prop" -exec sed -i 's/HyperNT/HyperOS/g' {} +
 
+# ----> ĐÓNG DẤU BẢN QUYỀN PENGUINOS <----
+info "Đang đóng dấu bản quyền PenguinOS..."
+find "$work_dir/build/baserom/images/" -type f -name "*.prop" -exec sed -i 's/^ro.build.display.id=.*/ro.build.display.id=PenguinOS 1.0Beta/g' {} +
+find "$work_dir/build/baserom/images/" -type f -name "*.prop" -exec sed -i 's/^ro.build.version.incremental=.*/ro.build.version.incremental=PenguinOS 1.0Beta/g' {} +
+find "$work_dir/build/baserom/images/" -type f -name "*.prop" -exec sed -i 's/^ro.mi.os.version.name=.*/ro.mi.os.version.name=PenguinOS 1.0Beta/g' {} +
+find "$work_dir/build/baserom/images/" -type f -name "*.prop" -exec sed -i 's/^ro.mi.os.version.incremental=.*/ro.mi.os.version.incremental=PenguinOS 1.0Beta/g' {} +
+
 find "$work_dir/build/baserom/images/" -exec touch -t 200901010000.00 {} + 2> /dev/null || true
+
+}
