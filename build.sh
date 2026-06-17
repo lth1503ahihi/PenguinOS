@@ -158,4 +158,4 @@ find "$work_dir/build/baserom/images/" -type f -name "*.prop" -exec sed -i 's/^r
 
 find "$work_dir/build/baserom/images/" -exec touch -t 200901010000.00 {} + 2> /dev/null || true
 
-}
+
