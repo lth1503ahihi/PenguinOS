@@ -75,14 +75,9 @@ echo "${os_type}_${polyxver}_${device_code}_${base_rom_code}_${hash}_${status}.z
 # Đặt tên thư mục upload trên Drive trùng với hệ điều hành
 uploaddir=$true_os
 
-# Upload thẳng lên Google Drive (Đã tối ưu cấu hình chống nghẽn và lặp vô hạn)
+# Upload thẳng lên Google Drive (Tốc độ bình thường, không giới hạn)
 upload "Uploading to Google Drive..."
-rclone -v --config="$RCLONE_CONFIG_1DRIVE" copy "$output_file" "$GDRIVE_REMOTE:$GDRIVE_FOLDER/${uploaddir}/${polyxver}/${device_code}/" \
-    --drive-chunk-size 128M \
-    --low-level-retries 3 \
-    --retries 1 \
-    --timeout 5m \
-    --contimeout 2m || {
+rclone -v --config="$RCLONE_CONFIG_1DRIVE" copy "$output_file" "$GDRIVE_REMOTE:$GDRIVE_FOLDER/${uploaddir}/${polyxver}/${device_code}/" || {
     upload "Lỗi khi upload file lên Google Drive!"
     exit 1
 }
