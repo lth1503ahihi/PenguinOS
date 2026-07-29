@@ -20,6 +20,10 @@ else
 	status="Official"
 fi
 
+# ---> ĐÃ THÊM 2 DÒNG NÀY ĐỂ FIX LỖI THIẾU GÓI <---
+sudo apt-get update -y
+sudo apt-get install -y xmlstarlet aapt
+
 check unzip aria2c 7z zip java zipalign python3 zstd bc xmlstarlet aapt
 
 # Dọn dẹp môi trường trước khi build
@@ -157,5 +161,3 @@ find "$work_dir/build/baserom/images/" -type f -name "*.prop" -exec sed -i 's/^r
 find "$work_dir/build/baserom/images/" -type f -name "*.prop" -exec sed -i 's/^ro.mi.os.version.incremental=.*/ro.mi.os.version.incremental=PenguinOS 1.1/g' {} +
 
 find "$work_dir/build/baserom/images/" -exec touch -t 200901010000.00 {} + 2> /dev/null || true
-
-
