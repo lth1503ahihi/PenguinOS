@@ -34,7 +34,7 @@ jobs:
           docker rmi `docker images -q` || true
           sudo apt-get -y purge azure-cli ghc* zulu* hhvm llvm* firefox google* dotnet* powershell mysql* php* || true
           sudo apt-get -y autoremove --purge || true
-          sudo rm -rf /usr/share/dotnet /etc/mysql /etc/php /etc/apt/sources.list.d || true
+          sudo rm -rf /usr/share/dotnet /etc/mysql /etc/php || true
           sudo apt-get -y autoclean || true
           sudo apt-get clean || true
 
@@ -96,5 +96,4 @@ jobs:
         if: failure()
         run: |
           python notify.py fail "${{ github.repository }}" "${{ inputs.input_url }}" "xiaomi" "${{ inputs.builder_name }}" "${{ inputs.builder_id }}"
-
           
