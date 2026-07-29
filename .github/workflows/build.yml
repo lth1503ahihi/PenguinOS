@@ -32,11 +32,11 @@ jobs:
       - name: Clean All Unused file,application
         run: |
           docker rmi `docker images -q` || true
-          sudo rm -rf /usr/share/dotnet /etc/mysql /etc/php /etc/sudo apt/sources.list.d || true
-          sudo apt -y purge azure-cli ghc* zulu* hhvm llvm* firefox google* dotnet* powershell mysql* php* || true
-          sudo apt -y autoremove --purge || true
-          sudo apt -y autoclean || true
-          sudo apt clean || true
+          sudo apt-get -y purge azure-cli ghc* zulu* hhvm llvm* firefox google* dotnet* powershell mysql* php* || true
+          sudo apt-get -y autoremove --purge || true
+          sudo rm -rf /usr/share/dotnet /etc/mysql /etc/php /etc/apt/sources.list.d || true
+          sudo apt-get -y autoclean || true
+          sudo apt-get clean || true
 
       - name: Checkout repository
         uses: actions/checkout@main
@@ -96,4 +96,5 @@ jobs:
         if: failure()
         run: |
           python notify.py fail "${{ github.repository }}" "${{ inputs.input_url }}" "xiaomi" "${{ inputs.builder_name }}" "${{ inputs.builder_id }}"
+
           
