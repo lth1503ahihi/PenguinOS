@@ -68,7 +68,7 @@ def get_progress_bar(status):
             else:
                 timeline.append("👉")
         else:
-            timeline.append("🥶")
+            timeline.append("🤔")
             
     return " ➔ ".join(timeline)
 
