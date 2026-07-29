@@ -61,14 +61,14 @@ def get_progress_bar(status):
         if status == 'fail' and i == 6:
             timeline.append("❌")
         elif i < current_index:
-            timeline.append("🐧")
+            timeline.append("✅")
         elif i == current_index:
             if status == 'success':
                 timeline.append("✅")
             else:
-                timeline.append("🔵")
+                timeline.append("👉")
         else:
-            timeline.append("🧊")
+            timeline.append("🥶")
             
     return " ➔ ".join(timeline)
 
@@ -178,8 +178,11 @@ def send_notification(status, repo_name, rom_link, channel_id, bot_token, msg_id
     message_lines.append(f"📈 *Tiến trình:* `{get_progress_bar(status)}`")
     message_lines.append("")
 
-    if status.lower() == 'success' and output_zip:
-        message_lines.append(f"📦 *Tên file zip:* `{output_zip}`")
+    # Đã bổ sung link Google Drive vào mảng message_lines cho kênh channel
+    if status.lower() == 'success':
+        if output_zip:
+            message_lines.append(f"📦 *Tên file zip:* `{output_zip}`")
+        message_lines.append(f"⬇️ *Tải ROM tại:* [Google Drive](https://drive.google.com/drive/folders/1B11DL6aX7ZUKfawxwT8Do1mfX9hoxINp?usp=sharing)")
         message_lines.append("")
 
     message_lines.append(f"🆔 *Build ID:* `{build_id}`")
@@ -231,7 +234,6 @@ def send_notification(status, repo_name, rom_link, channel_id, bot_token, msg_id
                 pm_text = (
                     f"🎉 *YÊU CẦU BUILD ROM ĐÃ HOÀN TẤT!*\n\n"
                     f"{message}\n"
-                    f"⬇️ *Tải ROM tại:* [Google Drive](https://drive.google.com/drive/folders/1B11DL6aX7ZUKfawxwT8Do1mfX9hoxINp?usp=sharing)"
                 )
             else:
                 pm_text = (
@@ -294,3 +296,4 @@ if __name__ == "__main__":
         sys.exit(1)
 
     send_notification(status, repo_name, rom_link, channel_id, bot_token, msg_id, build_id, builder_name, builder_id)
+        
