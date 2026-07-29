@@ -1,4 +1,5 @@
 #!/bin/bash
+yellow() { echo -e "\e[1;33m$*\e[0m"; }
 WORK_DIR=$(pwd)
 
 mods() {
