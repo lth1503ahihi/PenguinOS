@@ -109,7 +109,6 @@ elif [[ ${is_base_rom_eu} == true ]];then
         fi
     done
     super_list=$(echo $super_list | sed 's/_a//g')
-fi
 
 for part in ${super_list}; do
     extract_partition $work_dir/build/baserom/images/${part}.img $work_dir/build/baserom/images
@@ -142,17 +141,5 @@ bash $work_dir/bin/modfile/OS3/insmod.sh
 bash $work_dir/bin/modfile/Universal/insfile.sh
 bash $work_dir/bin/modfile/UpdateFile/insupdate.sh
 bash $work_dir/bin/package/patchpackage.sh
-
-# ----> SÁT THỦ DIỆT MIUINT/HyperNT TỪ GỐC <----
-info "Đang luộc chín MIUINT/HyperNT từ các file cấu hình..."
-find "$work_dir/build/baserom/images/" -type f -name "*.prop" -exec sed -i 's/MIUINT/MIUI/g' {} +
-find "$work_dir/build/baserom/images/" -type f -name "*.prop" -exec sed -i 's/HyperNT/HyperOS/g' {} +
-
-# ----> ĐÓNG DẤU BẢN QUYỀN PENGUINOS <----
-info "Đang đóng dấu bản quyền PenguinOS..."
-find "$work_dir/build/baserom/images/" -type f -name "*.prop" -exec sed -i 's/^ro.build.display.id=.*/ro.build.display.id=PenguinOS 1.1/g' {} +
-find "$work_dir/build/baserom/images/" -type f -name "*.prop" -exec sed -i 's/^ro.build.version.incremental=.*/ro.build.version.incremental=PenguinOS 1.1/g' {} +
-find "$work_dir/build/baserom/images/" -type f -name "*.prop" -exec sed -i 's/^ro.mi.os.version.name=.*/ro.mi.os.version.name=PenguinOS 1.1/g' {} +
-find "$work_dir/build/baserom/images/" -type f -name "*.prop" -exec sed -i 's/^ro.mi.os.version.incremental=.*/ro.mi.os.version.incremental=PenguinOS 1.1/g' {} +
 
 find "$work_dir/build/baserom/images/" -exec touch -t 200901010000.00 {} + 2> /dev/null || true
