@@ -109,6 +109,7 @@ elif [[ ${is_base_rom_eu} == true ]];then
         fi
     done
     super_list=$(echo $super_list | sed 's/_a//g')
+fi
 
 for part in ${super_list}; do
     extract_partition $work_dir/build/baserom/images/${part}.img $work_dir/build/baserom/images
