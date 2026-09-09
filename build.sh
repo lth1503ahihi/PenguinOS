@@ -122,11 +122,6 @@ rm -rf config
 if [ -f $work_dir/${baserom}.zip ]; then rm -rf ${baserom}.zip; fi
 rm -rf build/baserom/payload.bin build/baserom/images/super.img
 
-# Kỹ thuật ép tên: Làm sạch hậu tố NT/INT và ép về tên thương hiệu riêng (ví dụ: PenguinOS)
-MY_BRAND_NAME="PenguinOS"
-echo "$MY_BRAND_NAME" > $work_dir/bin/ddevice/os_type.txt
-echo "$MY_BRAND_NAME" > $work_dir/bin/ddevice/rom_os.txt
-echo "$MY_BRAND_NAME" > $work_dir/bin/ddevice/brand.txt
 
 if [ ! -s "$work_dir/bin/ddevice/device_name.txt" ]; then 
     echo "Xiaomi Device" > $work_dir/bin/ddevice/device_name.txt 
