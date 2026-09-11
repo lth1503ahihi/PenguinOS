@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+<privapp-permissions package="eu.xiaomi.ext">
+<permission name="android.permission.QUERY_ALL_PACKAGES"/>
+<permission name="android.permission.WRITE_SETTINGS"/>
+<permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+<permission name="eu.xiaomi.ext.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+</privapp-permissions>
+</permissions>
