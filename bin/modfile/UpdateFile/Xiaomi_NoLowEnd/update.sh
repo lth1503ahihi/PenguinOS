@@ -6,8 +6,8 @@ find . -type f -name "*.prop" | while read -r f; do
     sed -i \
         -e 's/^ro.config.low_ram.threshold_gb\s*=.*/ro.config.low_ram.threshold_gb=0/' \
         -e 's/^ro.config.low_ram.middle.threshold_gb\s*=.*/ro.config.low_ram.middle.threshold_gb=0/' \
-        -e 's/^persist.sys.computility.gpulevel\s*=.*/persist.sys.computility.gpulevel=4/' \
-        -e 's/^persist.sys.computility.cpulevel\s*=.*/persist.sys.computility.cpulevel=4/' \
+        -e 's/^persist.sys.computility.gpulevel\s*=.*/persist.sys.computility.gpulevel=2/' \
+        -e 's/^persist.sys.computility.cpulevel\s*=.*/persist.sys.computility.cpulevel=2/' \
         -e 's/^vendor.perf.framepacing.enable\s*=.*/vendor.perf.framepacing.enable=true/' \
         -e 's/^persist.sys.sf_charge_anim_supported\s*=.*/persist.sys.sf_charge_anim_supported=true/' \
         -e 's/^ro.miui.has_handy_mode_sf\s*=.*/ro.miui.has_handy_mode_sf=1/' \
