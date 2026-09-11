@@ -101,6 +101,7 @@
     :cond_34
     return-void
 
+    .line 54
     nop
 
     .line 55
@@ -888,6 +889,7 @@
     .line 119
     return-object p0
 
+    .line 120
     nop
 
     .line 121

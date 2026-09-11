@@ -977,7 +977,7 @@
     :cond_322
     instance-of v2, v0, Lcom/kousei/framework/si;
 
-    if-eqz v2, :cond_3f3
+    if-eqz v2, :cond_3fd
 
     check-cast v0, Lcom/kousei/framework/si;
 
@@ -1034,15 +1034,21 @@
     new-array v15, v7, [I
 
     .line 133
-    iget-object v7, v0, Lcom/kousei/framework/h7;->a:[I
+    iget-object v7, v0, Lcom/kousei/framework/h7;->a:Ljava/lang/Object;
+
+    check-cast v7, [I
 
     invoke-static {v7, v13}, Lcom/kousei/framework/j0;->G1([I[I)V
 
-    iget-object v7, v0, Lcom/kousei/framework/h7;->b:[I
+    iget-object v7, v0, Lcom/kousei/framework/h7;->b:Ljava/lang/Object;
+
+    check-cast v7, [I
 
     invoke-static {v7, v14}, Lcom/kousei/framework/j0;->G1([I[I)V
 
-    iget-object v7, v0, Lcom/kousei/framework/h7;->c:[I
+    iget-object v7, v0, Lcom/kousei/framework/h7;->c:Ljava/lang/Object;
+
+    check-cast v7, [I
 
     invoke-static {v7, v15}, Lcom/kousei/framework/j0;->G1([I[I)V
 
@@ -1088,14 +1094,18 @@
 
     and-int/2addr v7, v12
 
-    if-eqz v7, :cond_3ed
+    if-eqz v7, :cond_3f7
 
     .line 134
-    iget-object v7, v0, Lcom/kousei/framework/h7;->b:[I
+    iget-object v7, v0, Lcom/kousei/framework/h7;->b:Ljava/lang/Object;
+
+    check-cast v7, [I
 
     invoke-static {v9, v9, v7, v8}, Lcom/kousei/framework/j0;->C(II[I[I)V
 
-    iget-object v0, v0, Lcom/kousei/framework/h7;->c:[I
+    iget-object v0, v0, Lcom/kousei/framework/h7;->c:Ljava/lang/Object;
+
+    check-cast v0, [I
 
     invoke-static {v9, v9, v0, v11}, Lcom/kousei/framework/j0;->C(II[I[I)V
 
@@ -1171,7 +1181,7 @@
     return-object v2
 
     .line 146
-    :cond_3ed
+    :cond_3f7
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
@@ -1179,10 +1189,10 @@
     throw v0
 
     .line 147
-    :cond_3f3
+    :cond_3fd
     instance-of v2, v0, Lcom/kousei/framework/p7;
 
-    if-eqz v2, :cond_431
+    if-eqz v2, :cond_43b
 
     check-cast v0, Lcom/kousei/framework/p7;
 
@@ -1211,10 +1221,10 @@
 
     monitor-enter v5
 
-    :try_start_410
+    :try_start_41a
     iget-object v6, v0, Lcom/kousei/framework/p7;->M:Lcom/kousei/framework/q7;
 
-    if-nez v6, :cond_424
+    if-nez v6, :cond_42e
 
     new-instance v6, Lcom/kousei/framework/q7;
 
@@ -1228,20 +1238,20 @@
 
     iput-object v6, v0, Lcom/kousei/framework/p7;->M:Lcom/kousei/framework/q7;
 
-    goto :goto_424
+    goto :goto_42e
 
-    :catchall_422
+    :catchall_42c
     move-exception v0
 
-    goto :goto_42f
+    goto :goto_439
 
-    :cond_424
-    :goto_424
+    :cond_42e
+    :goto_42e
     iget-object v0, v0, Lcom/kousei/framework/p7;->M:Lcom/kousei/framework/q7;
 
     monitor-exit v5
-    :try_end_427
-    .catchall {:try_start_410 .. :try_end_427} :catchall_422
+    :try_end_431
+    .catchall {:try_start_41a .. :try_end_431} :catchall_42c
 
     .line 151
     invoke-virtual {v0}, Lcom/kousei/framework/q7;->getEncoded()[B
@@ -1253,19 +1263,19 @@
     return-object v2
 
     .line 152
-    :goto_42f
-    :try_start_42f
+    :goto_439
+    :try_start_439
     monitor-exit v5
-    :try_end_430
-    .catchall {:try_start_42f .. :try_end_430} :catchall_422
+    :try_end_43a
+    .catchall {:try_start_439 .. :try_end_43a} :catchall_42c
 
     throw v0
 
     .line 153
-    :cond_431
+    :cond_43b
     instance-of v2, v0, Lcom/kousei/framework/m7;
 
-    if-eqz v2, :cond_46f
+    if-eqz v2, :cond_479
 
     check-cast v0, Lcom/kousei/framework/m7;
 
@@ -1294,10 +1304,10 @@
 
     monitor-enter v5
 
-    :try_start_44e
+    :try_start_458
     iget-object v6, v0, Lcom/kousei/framework/m7;->M:Lcom/kousei/framework/n7;
 
-    if-nez v6, :cond_462
+    if-nez v6, :cond_46c
 
     new-instance v6, Lcom/kousei/framework/n7;
 
@@ -1311,20 +1321,20 @@
 
     iput-object v6, v0, Lcom/kousei/framework/m7;->M:Lcom/kousei/framework/n7;
 
-    goto :goto_462
+    goto :goto_46c
 
-    :catchall_460
+    :catchall_46a
     move-exception v0
 
-    goto :goto_46d
+    goto :goto_477
 
-    :cond_462
-    :goto_462
+    :cond_46c
+    :goto_46c
     iget-object v0, v0, Lcom/kousei/framework/m7;->M:Lcom/kousei/framework/n7;
 
     monitor-exit v5
-    :try_end_465
-    .catchall {:try_start_44e .. :try_end_465} :catchall_460
+    :try_end_46f
+    .catchall {:try_start_458 .. :try_end_46f} :catchall_46a
 
     .line 157
     invoke-virtual {v0}, Lcom/kousei/framework/n7;->getEncoded()[B
@@ -1336,16 +1346,16 @@
     return-object v2
 
     .line 158
-    :goto_46d
-    :try_start_46d
+    :goto_477
+    :try_start_477
     monitor-exit v5
-    :try_end_46e
-    .catchall {:try_start_46d .. :try_end_46e} :catchall_460
+    :try_end_478
+    .catchall {:try_start_477 .. :try_end_478} :catchall_46a
 
     throw v0
 
     .line 159
-    :cond_46f
+    :cond_479
     new-instance v0, Ljava/io/IOException;
 
     const-string v1, "key parameters not recognized"

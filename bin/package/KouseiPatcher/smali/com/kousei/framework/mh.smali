@@ -345,6 +345,7 @@
     .line 11
     return p0
 
+    .line 12
     nop
 
     .line 13

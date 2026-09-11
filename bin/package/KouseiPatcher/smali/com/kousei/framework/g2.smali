@@ -182,6 +182,7 @@
     :goto_32
     return-object v2
 
+    .line 52
     nop
 
     .line 53
@@ -252,6 +253,7 @@
     .line 39
     return-object v0
 
+    .line 40
     nop
 
     .line 41

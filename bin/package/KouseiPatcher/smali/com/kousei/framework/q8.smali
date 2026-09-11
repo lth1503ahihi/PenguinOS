@@ -329,6 +329,7 @@
     .line 49
     return p0
 
+    .line 50
     nop
 
     .line 51
@@ -451,6 +452,7 @@
     .line 57
     goto :goto_21
 
+    .line 58
     nop
 
     .line 59

@@ -836,6 +836,7 @@
     :pswitch_56  #0x0
     return-object p0
 
+    .line 88
     nop
 
     .line 89

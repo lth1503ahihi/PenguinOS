@@ -1,6 +1,6 @@
 .class public abstract Lcom/kousei/framework/m3;
 .super Ljava/lang/Object;
-.source "r8-map-id-5ae92ff21d09ad14f9452618f0eb059d5742c78e657d0492d02c35db86ae1101"
+.source "r8-map-id-ab9d9a36b7cfe29bbfb78ee9a77c1feaf549e881397fc2be336a306d7a6faedf"
 
 
 # static fields
@@ -14,7 +14,7 @@
     .registers 2
 
     .line 1
-    const-wide v0, -0x34b6b49c48d3L
+    const-wide v0, -0x53dfdf5b40d7L
 
     .line 6
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -270,7 +270,7 @@
 
     .line 50
     :cond_31
-    const-wide v0, -0x3458b49c48d3L
+    const-wide v0, -0x523ddf5b40d7L
 
     .line 55
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -312,487 +312,809 @@
     throw p0
 .end method
 
-.method public static c(Lcom/kousei/framework/a0;Lcom/kousei/framework/l;[Lcom/kousei/framework/k;)Lcom/kousei/framework/a8;
-    .registers 9
+.method public static c(Lcom/kousei/framework/a0;Lcom/kousei/framework/l;[Lcom/kousei/framework/k;Lcom/kousei/framework/h7;)Lcom/kousei/framework/a8;
+    .registers 20
 
     .line 1
-    sget-object v0, Lcom/kousei/framework/o0;->a:[B
+    move-object/from16 v0, p0
 
     .line 3
-    if-nez v0, :cond_12
+    move-object/from16 v1, p1
 
     .line 5
-    const/16 v0, 0x20
+    move-object/from16 v2, p2
 
     .line 7
-    new-array v0, v0, [B
+    move-object/from16 v3, p3
 
     .line 9
-    new-instance v1, Ljava/security/SecureRandom;
+    sget-object v4, Lcom/kousei/framework/o0;->a:[B
 
     .line 11
-    invoke-direct {v1}, Ljava/security/SecureRandom;-><init>()V
+    if-nez v4, :cond_1a
 
-    .line 14
-    invoke-virtual {v1, v0}, Ljava/security/SecureRandom;->nextBytes([B)V
+    .line 13
+    const/16 v4, 0x20
+
+    .line 15
+    new-array v4, v4, [B
 
     .line 17
-    sput-object v0, Lcom/kousei/framework/o0;->a:[B
+    new-instance v5, Ljava/security/SecureRandom;
 
     .line 19
-    :cond_12
-    sget-object v0, Lcom/kousei/framework/o0;->a:[B
+    invoke-direct {v5}, Ljava/security/SecureRandom;-><init>()V
 
-    .line 21
-    invoke-static {}, Lcom/kousei/framework/o0;->d()[B
-
-    .line 24
-    move-result-object v1
+    .line 22
+    invoke-virtual {v5, v4}, Ljava/security/SecureRandom;->nextBytes([B)V
 
     .line 25
-    const/4 v2, 0x3
+    sput-object v4, Lcom/kousei/framework/o0;->a:[B
 
-    .line 26
-    if-nez v1, :cond_3e
+    .line 27
+    :cond_1a
+    sget-object v4, Lcom/kousei/framework/o0;->a:[B
 
-    .line 28
-    instance-of v3, p0, Lcom/kousei/framework/d0;
-
-    .line 30
-    if-eqz v3, :cond_3e
-
-    .line 32
-    :try_start_1f
-    check-cast p0, Lcom/kousei/framework/d0;
-
-    .line 34
-    invoke-virtual {p0, v2}, Lcom/kousei/framework/d0;->t(I)Lcom/kousei/framework/k;
-
-    .line 37
-    move-result-object p0
-
-    .line 38
-    instance-of v3, p0, Lcom/kousei/framework/o4;
-
-    .line 40
-    if-eqz v3, :cond_3e
-
-    .line 42
-    check-cast p0, Lcom/kousei/framework/o4;
-
-    .line 44
-    iget-object v1, p0, Lcom/kousei/framework/w;->K:[B
-    :try_end_2d
-    .catch Ljava/lang/Exception; {:try_start_1f .. :try_end_2d} :catch_2e
-
-    .line 46
-    goto :goto_3e
-
-    .line 47
-    :catch_2e
-    const-wide v3, -0x346fb49c48d3L
-
-    .line 52
-    invoke-static {v3, v4}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 55
-    const-wide v3, -0x3488b49c48d3L
-
-    .line 60
-    invoke-static {v3, v4}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 63
-    :cond_3e
-    :goto_3e
-    if-nez v1, :cond_44
-
-    .line 65
+    .line 29
     invoke-static {}, Lcom/kousei/framework/o0;->d()[B
 
-    .line 68
-    move-result-object v1
+    .line 32
+    move-result-object v5
 
-    .line 69
-    :cond_44
-    new-instance p0, Lcom/kousei/framework/o4;
+    .line 33
+    const/4 v6, 0x3
+
+    .line 34
+    if-nez v5, :cond_46
+
+    .line 36
+    instance-of v7, v0, Lcom/kousei/framework/d0;
+
+    .line 38
+    if-eqz v7, :cond_46
+
+    .line 40
+    :try_start_27
+    check-cast v0, Lcom/kousei/framework/d0;
+
+    .line 42
+    invoke-virtual {v0, v6}, Lcom/kousei/framework/d0;->t(I)Lcom/kousei/framework/k;
+
+    .line 45
+    move-result-object v0
+
+    .line 46
+    instance-of v7, v0, Lcom/kousei/framework/o4;
+
+    .line 48
+    if-eqz v7, :cond_46
+
+    .line 50
+    check-cast v0, Lcom/kousei/framework/o4;
+
+    .line 52
+    iget-object v5, v0, Lcom/kousei/framework/w;->K:[B
+    :try_end_35
+    .catch Ljava/lang/Exception; {:try_start_27 .. :try_end_35} :catch_36
+
+    .line 54
+    goto :goto_46
+
+    .line 55
+    :catch_36
+    const-wide v7, -0x5216df5b40d7L
+
+    .line 60
+    invoke-static {v7, v8}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 63
+    const-wide v7, -0x53eddf5b40d7L
+
+    .line 68
+    invoke-static {v7, v8}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 71
-    invoke-direct {p0, v0}, Lcom/kousei/framework/w;-><init>([B)V
+    :cond_46
+    :goto_46
+    if-nez v5, :cond_4c
 
-    .line 74
-    new-instance v0, Lcom/kousei/framework/m;
+    .line 73
+    invoke-static {}, Lcom/kousei/framework/o0;->d()[B
 
     .line 76
-    const/4 v3, 0x0
+    move-result-object v5
 
     .line 77
-    invoke-direct {v0, v3}, Lcom/kousei/framework/m;-><init>(I)V
+    :cond_4c
+    new-instance v0, Lcom/kousei/framework/o4;
 
-    .line 80
-    new-instance v4, Lcom/kousei/framework/o4;
+    .line 79
+    invoke-direct {v0, v4}, Lcom/kousei/framework/w;-><init>([B)V
 
     .line 82
-    invoke-direct {v4, v1}, Lcom/kousei/framework/w;-><init>([B)V
+    new-instance v4, Lcom/kousei/framework/m;
+
+    .line 84
+    const/4 v7, 0x0
 
     .line 85
-    const/4 v1, 0x4
-
-    .line 86
-    new-array v1, v1, [Lcom/kousei/framework/k;
+    invoke-direct {v4, v7}, Lcom/kousei/framework/m;-><init>(I)V
 
     .line 88
-    aput-object p0, v1, v3
+    new-instance v8, Lcom/kousei/framework/o4;
 
     .line 90
-    sget-object p0, Lcom/kousei/framework/i;->M:Lcom/kousei/framework/i;
-
-    .line 92
-    const/4 v5, 0x1
+    invoke-direct {v8, v5}, Lcom/kousei/framework/w;-><init>([B)V
 
     .line 93
-    aput-object p0, v1, v5
+    const/4 v5, 0x4
 
-    .line 95
-    const/4 p0, 0x2
+    .line 94
+    new-array v5, v5, [Lcom/kousei/framework/k;
 
     .line 96
-    aput-object v0, v1, p0
+    aput-object v0, v5, v7
 
     .line 98
-    aput-object v4, v1, v2
+    sget-object v0, Lcom/kousei/framework/i;->M:Lcom/kousei/framework/i;
 
     .line 100
-    new-instance p0, Lcom/kousei/framework/r4;
+    const/4 v9, 0x1
 
-    .line 102
-    invoke-direct {p0, v1, v3}, Lcom/kousei/framework/r4;-><init>([Lcom/kousei/framework/k;I)V
+    .line 101
+    aput-object v0, v5, v9
 
-    .line 105
-    new-instance v0, Lcom/kousei/framework/k2;
+    .line 103
+    const/4 v0, 0x2
 
-    .line 107
-    new-instance v1, Lcom/kousei/framework/q;
+    .line 104
+    aput-object v4, v5, v0
 
-    .line 109
-    invoke-static {}, Lcom/kousei/framework/gi;->c()Lcom/kousei/framework/gi;
+    .line 106
+    aput-object v8, v5, v6
 
-    .line 112
-    move-result-object v2
+    .line 108
+    new-instance v0, Lcom/kousei/framework/r4;
+
+    .line 110
+    invoke-direct {v0, v5, v7}, Lcom/kousei/framework/r4;-><init>([Lcom/kousei/framework/k;I)V
 
     .line 113
-    iget-object v2, v2, Lcom/kousei/framework/gi;->e:Lcom/kousei/framework/k3;
+    if-eqz v3, :cond_127
 
     .line 115
-    if-eqz v2, :cond_85
+    iget-object v4, v3, Lcom/kousei/framework/h7;->e:Ljava/lang/Object;
 
     .line 117
-    iget-object v2, v2, Lcom/kousei/framework/k3;->i:Ljava/lang/Object;
+    check-cast v4, [B
 
     .line 119
-    check-cast v2, Ljava/lang/String;
+    iget-object v5, v3, Lcom/kousei/framework/h7;->d:Ljava/lang/Object;
 
     .line 121
-    if-eqz v2, :cond_85
+    check-cast v5, [B
 
     .line 123
-    invoke-static {v2, v5}, Lcom/kousei/framework/o0;->g(Ljava/lang/String;Z)Ljava/lang/Integer;
+    iget-object v6, v3, Lcom/kousei/framework/h7;->c:Ljava/lang/Object;
 
-    .line 126
-    move-result-object v2
+    .line 125
+    check-cast v6, [B
 
     .line 127
-    if-eqz v2, :cond_85
+    iget-object v8, v3, Lcom/kousei/framework/h7;->b:Ljava/lang/Object;
 
     .line 129
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    check-cast v8, [B
 
-    .line 132
-    move-result v2
+    .line 131
+    iget-object v3, v3, Lcom/kousei/framework/h7;->a:Ljava/lang/Object;
 
     .line 133
-    goto :goto_8b
+    check-cast v3, [B
 
-    .line 134
-    :cond_85
-    sget-object v2, Landroid/os/Build$VERSION;->SECURITY_PATCH:Ljava/lang/String;
+    .line 135
+    if-nez v3, :cond_92
 
-    .line 136
-    invoke-static {v5}, Lcom/kousei/framework/o0;->b(Z)I
+    .line 137
+    if-nez v8, :cond_92
 
     .line 139
-    move-result v2
+    if-nez v6, :cond_92
 
-    .line 140
-    :goto_8b
-    invoke-direct {v1, v2}, Lcom/kousei/framework/q;-><init>(I)V
+    .line 141
+    if-nez v5, :cond_92
 
     .line 143
-    const/16 v2, 0x2ce
+    if-nez v4, :cond_92
 
     .line 145
-    invoke-direct {v0, v5, v2, v1, v5}, Lcom/kousei/framework/k2;-><init>(ZILcom/kousei/framework/k;I)V
+    goto/16 :goto_127
 
-    .line 148
-    invoke-virtual {p1, v0}, Lcom/kousei/framework/l;->a(Lcom/kousei/framework/k;)V
+    .line 147
+    :cond_92
+    new-instance v10, Lcom/kousei/framework/l;
 
-    .line 151
-    new-instance v0, Lcom/kousei/framework/k2;
+    .line 149
+    invoke-direct {v10}, Lcom/kousei/framework/l;-><init>()V
 
-    .line 153
-    new-instance v1, Lcom/kousei/framework/q;
+    .line 152
+    iget v11, v1, Lcom/kousei/framework/l;->b:I
+
+    .line 154
+    move v12, v7
 
     .line 155
-    invoke-static {}, Lcom/kousei/framework/gi;->c()Lcom/kousei/framework/gi;
+    :goto_9a
+    const/16 v15, 0x2c8
 
-    .line 158
-    move-result-object v2
+    .line 157
+    const/16 v7, 0x2c7
 
     .line 159
-    iget-object v2, v2, Lcom/kousei/framework/gi;->e:Lcom/kousei/framework/k3;
+    const/16 v9, 0x2c6
 
     .line 161
-    if-eqz v2, :cond_b3
+    if-ge v12, v11, :cond_d4
 
     .line 163
-    iget-object v2, v2, Lcom/kousei/framework/k3;->h:Ljava/lang/Object;
+    invoke-virtual {v1, v12}, Lcom/kousei/framework/l;->c(I)Lcom/kousei/framework/k;
 
-    .line 165
-    check-cast v2, Ljava/lang/String;
+    .line 166
+    move-result-object v13
 
     .line 167
-    if-eqz v2, :cond_b3
+    instance-of v14, v13, Lcom/kousei/framework/k2;
 
     .line 169
-    invoke-static {v2, v5}, Lcom/kousei/framework/o0;->g(Ljava/lang/String;Z)Ljava/lang/Integer;
+    if-eqz v14, :cond_cc
+
+    .line 171
+    move-object v14, v13
 
     .line 172
-    move-result-object v2
+    check-cast v14, Lcom/kousei/framework/k2;
 
-    .line 173
-    if-eqz v2, :cond_b3
+    .line 174
+    iget v14, v14, Lcom/kousei/framework/k2;->M:I
 
-    .line 175
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    .line 176
+    if-eqz v3, :cond_b4
 
     .line 178
-    move-result v2
-
-    .line 179
-    goto :goto_b9
+    if-ne v14, v9, :cond_b4
 
     .line 180
-    :cond_b3
-    sget-object v2, Landroid/os/Build$VERSION;->SECURITY_PATCH:Ljava/lang/String;
+    goto :goto_cf
 
-    .line 182
-    invoke-static {v5}, Lcom/kousei/framework/o0;->b(Z)I
+    .line 181
+    :cond_b4
+    if-eqz v8, :cond_b9
+
+    .line 183
+    if-ne v14, v7, :cond_b9
 
     .line 185
-    move-result v2
+    goto :goto_cf
 
     .line 186
-    :goto_b9
-    invoke-direct {v1, v2}, Lcom/kousei/framework/q;-><init>(I)V
+    :cond_b9
+    if-eqz v6, :cond_be
 
-    .line 189
-    const/16 v2, 0x2cf
+    .line 188
+    if-ne v14, v15, :cond_be
+
+    .line 190
+    goto :goto_cf
 
     .line 191
-    invoke-direct {v0, v5, v2, v1, v5}, Lcom/kousei/framework/k2;-><init>(ZILcom/kousei/framework/k;I)V
+    :cond_be
+    if-eqz v5, :cond_c5
 
-    .line 194
-    invoke-virtual {p1, v0}, Lcom/kousei/framework/l;->a(Lcom/kousei/framework/k;)V
+    .line 193
+    const/16 v7, 0x2cc
+
+    .line 195
+    if-ne v14, v7, :cond_c5
 
     .line 197
-    new-instance v0, Lcom/kousei/framework/k2;
+    goto :goto_cf
 
-    .line 199
-    new-instance v1, Lcom/kousei/framework/q;
+    .line 198
+    :cond_c5
+    if-eqz v4, :cond_cc
 
-    .line 201
-    invoke-static {}, Lcom/kousei/framework/gi;->c()Lcom/kousei/framework/gi;
+    .line 200
+    const/16 v7, 0x2cd
+
+    .line 202
+    if-ne v14, v7, :cond_cc
 
     .line 204
-    move-result-object v2
+    goto :goto_cf
 
     .line 205
-    iget-object v2, v2, Lcom/kousei/framework/gi;->e:Lcom/kousei/framework/k3;
+    :cond_cc
+    invoke-virtual {v10, v13}, Lcom/kousei/framework/l;->a(Lcom/kousei/framework/k;)V
 
-    .line 207
-    if-eqz v2, :cond_e1
+    .line 208
+    :goto_cf
+    add-int/lit8 v12, v12, 0x1
 
-    .line 209
-    iget-object v2, v2, Lcom/kousei/framework/k3;->g:Ljava/lang/Object;
+    .line 210
+    const/4 v7, 0x0
 
     .line 211
-    check-cast v2, Ljava/lang/String;
+    const/4 v9, 0x1
+
+    .line 212
+    goto :goto_9a
 
     .line 213
-    if-eqz v2, :cond_e1
+    :cond_d4
+    if-eqz v3, :cond_e5
 
     .line 215
-    invoke-static {v2, v3}, Lcom/kousei/framework/o0;->g(Ljava/lang/String;Z)Ljava/lang/Integer;
+    new-instance v1, Lcom/kousei/framework/k2;
 
-    .line 218
-    move-result-object v2
+    .line 217
+    new-instance v11, Lcom/kousei/framework/o4;
 
     .line 219
-    if-eqz v2, :cond_e1
+    invoke-direct {v11, v3}, Lcom/kousei/framework/w;-><init>([B)V
 
-    .line 221
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    .line 222
+    const/4 v3, 0x1
 
-    .line 224
-    move-result v2
-
-    .line 225
-    goto :goto_e7
+    .line 223
+    invoke-direct {v1, v3, v9, v11, v3}, Lcom/kousei/framework/k2;-><init>(ZILcom/kousei/framework/k;I)V
 
     .line 226
-    :cond_e1
-    sget-object v2, Landroid/os/Build$VERSION;->SECURITY_PATCH:Ljava/lang/String;
+    invoke-virtual {v10, v1}, Lcom/kousei/framework/l;->a(Lcom/kousei/framework/k;)V
 
-    .line 228
-    invoke-static {v3}, Lcom/kousei/framework/o0;->b(Z)I
+    .line 229
+    goto :goto_e6
+
+    .line 230
+    :cond_e5
+    const/4 v3, 0x1
 
     .line 231
-    move-result v2
+    :goto_e6
+    if-eqz v8, :cond_f5
 
-    .line 232
-    :goto_e7
-    invoke-direct {v1, v2}, Lcom/kousei/framework/q;-><init>(I)V
+    .line 233
+    new-instance v1, Lcom/kousei/framework/k2;
 
     .line 235
-    const/16 v2, 0x2c2
+    new-instance v9, Lcom/kousei/framework/o4;
 
     .line 237
-    invoke-direct {v0, v5, v2, v1, v5}, Lcom/kousei/framework/k2;-><init>(ZILcom/kousei/framework/k;I)V
+    invoke-direct {v9, v8}, Lcom/kousei/framework/w;-><init>([B)V
 
     .line 240
-    invoke-virtual {p1, v0}, Lcom/kousei/framework/l;->a(Lcom/kousei/framework/k;)V
+    invoke-direct {v1, v3, v7, v9, v3}, Lcom/kousei/framework/k2;-><init>(ZILcom/kousei/framework/k;I)V
 
     .line 243
-    new-instance v0, Lcom/kousei/framework/k2;
+    invoke-virtual {v10, v1}, Lcom/kousei/framework/l;->a(Lcom/kousei/framework/k;)V
 
-    .line 245
-    new-instance v1, Lcom/kousei/framework/q;
+    .line 246
+    :cond_f5
+    if-eqz v6, :cond_104
 
-    .line 247
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+    .line 248
+    new-instance v1, Lcom/kousei/framework/k2;
 
-    .line 249
-    packed-switch v2, :pswitch_data_140
+    .line 250
+    new-instance v7, Lcom/kousei/framework/o4;
 
     .line 252
-    const v2, 0x27100
+    invoke-direct {v7, v6}, Lcom/kousei/framework/w;-><init>([B)V
 
     .line 255
-    goto :goto_10e
+    invoke-direct {v1, v3, v15, v7, v3}, Lcom/kousei/framework/k2;-><init>(ZILcom/kousei/framework/k;I)V
 
-    .line 256
-    :pswitch_ff  #0x23
-    const v2, 0x249f0
+    .line 258
+    invoke-virtual {v10, v1}, Lcom/kousei/framework/l;->a(Lcom/kousei/framework/k;)V
 
-    .line 259
-    goto :goto_10e
-
-    .line 260
-    :pswitch_103  #0x22
-    const v2, 0x222e0
+    .line 261
+    :cond_104
+    if-eqz v5, :cond_115
 
     .line 263
-    goto :goto_10e
+    new-instance v1, Lcom/kousei/framework/k2;
 
-    .line 264
-    :pswitch_107  #0x21
-    const v2, 0x1fbd0
+    .line 265
+    new-instance v6, Lcom/kousei/framework/o4;
 
     .line 267
-    goto :goto_10e
+    invoke-direct {v6, v5}, Lcom/kousei/framework/w;-><init>([B)V
 
-    .line 268
-    :pswitch_10b  #0x20
-    const v2, 0x1d524
+    .line 270
+    const/16 v7, 0x2cc
 
-    .line 271
-    :goto_10e
-    invoke-direct {v1, v2}, Lcom/kousei/framework/q;-><init>(I)V
+    .line 272
+    invoke-direct {v1, v3, v7, v6, v3}, Lcom/kousei/framework/k2;-><init>(ZILcom/kousei/framework/k;I)V
 
-    .line 274
-    const/16 v2, 0x2c1
+    .line 275
+    invoke-virtual {v10, v1}, Lcom/kousei/framework/l;->a(Lcom/kousei/framework/k;)V
 
-    .line 276
-    invoke-direct {v0, v5, v2, v1, v5}, Lcom/kousei/framework/k2;-><init>(ZILcom/kousei/framework/k;I)V
+    .line 278
+    :cond_115
+    if-eqz v4, :cond_126
 
-    .line 279
-    invoke-virtual {p1, v0}, Lcom/kousei/framework/l;->a(Lcom/kousei/framework/k;)V
+    .line 280
+    new-instance v1, Lcom/kousei/framework/k2;
 
     .line 282
-    new-instance v0, Lcom/kousei/framework/k2;
+    new-instance v5, Lcom/kousei/framework/o4;
 
     .line 284
-    const/16 v1, 0x2c0
+    invoke-direct {v5, v4}, Lcom/kousei/framework/w;-><init>([B)V
 
-    .line 286
-    invoke-direct {v0, v5, v1, p0, v5}, Lcom/kousei/framework/k2;-><init>(ZILcom/kousei/framework/k;I)V
+    .line 287
+    const/16 v7, 0x2cd
 
     .line 289
-    invoke-virtual {p1, v0}, Lcom/kousei/framework/l;->a(Lcom/kousei/framework/k;)V
+    invoke-direct {v1, v3, v7, v5, v3}, Lcom/kousei/framework/k2;-><init>(ZILcom/kousei/framework/k;I)V
 
     .line 292
-    new-instance p0, Lcom/kousei/framework/r4;
+    invoke-virtual {v10, v1}, Lcom/kousei/framework/l;->a(Lcom/kousei/framework/k;)V
 
-    .line 294
-    invoke-direct {p0, p1, v3}, Lcom/kousei/framework/r4;-><init>(Lcom/kousei/framework/l;Z)V
+    .line 295
+    :cond_126
+    move-object v1, v10
 
-    .line 297
-    const/4 p1, -0x1
+    .line 296
+    :cond_127
+    :goto_127
+    new-instance v3, Lcom/kousei/framework/k2;
 
     .line 298
-    iput p1, p0, Lcom/kousei/framework/r4;->N:I
+    new-instance v4, Lcom/kousei/framework/q;
 
     .line 300
-    const/4 p1, 0x7
-
-    .line 301
-    aput-object p0, p2, p1
+    invoke-static {}, Lcom/kousei/framework/gi;->c()Lcom/kousei/framework/gi;
 
     .line 303
-    new-instance p0, Lcom/kousei/framework/r4;
+    move-result-object v5
 
-    .line 305
-    invoke-direct {p0, p2, v3}, Lcom/kousei/framework/r4;-><init>([Lcom/kousei/framework/k;I)V
+    .line 304
+    iget-object v5, v5, Lcom/kousei/framework/gi;->f:Lcom/kousei/framework/k3;
+
+    .line 306
+    if-eqz v5, :cond_145
 
     .line 308
-    new-instance p1, Lcom/kousei/framework/o4;
+    iget-object v5, v5, Lcom/kousei/framework/k3;->i:Ljava/lang/Object;
 
     .line 310
-    invoke-direct {p1, p0}, Lcom/kousei/framework/o4;-><init>(Lcom/kousei/framework/s;)V
+    check-cast v5, Ljava/lang/String;
 
-    .line 313
-    new-instance p0, Lcom/kousei/framework/a8;
+    .line 312
+    if-eqz v5, :cond_145
+
+    .line 314
+    const/4 v6, 0x1
 
     .line 315
-    sget-object p2, Lcom/kousei/framework/j3;->a:Lcom/kousei/framework/v;
+    invoke-static {v5, v6}, Lcom/kousei/framework/o0;->g(Ljava/lang/String;Z)Ljava/lang/Integer;
 
-    .line 317
-    invoke-direct {p0, p2, v3, p1}, Lcom/kousei/framework/a8;-><init>(Lcom/kousei/framework/v;ZLcom/kousei/framework/o4;)V
+    .line 318
+    move-result-object v5
 
-    .line 320
-    return-object p0
+    .line 319
+    if-eqz v5, :cond_146
 
     .line 321
-    :pswitch_data_140
+    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
+
+    .line 324
+    move-result v5
+
+    .line 325
+    goto :goto_14c
+
+    .line 326
+    :cond_145
+    const/4 v6, 0x1
+
+    .line 327
+    :cond_146
+    sget-object v5, Landroid/os/Build$VERSION;->SECURITY_PATCH:Ljava/lang/String;
+
+    .line 329
+    invoke-static {v6}, Lcom/kousei/framework/o0;->b(Z)I
+
+    .line 332
+    move-result v5
+
+    .line 333
+    :goto_14c
+    invoke-direct {v4, v5}, Lcom/kousei/framework/q;-><init>(I)V
+
+    .line 336
+    const/16 v5, 0x2ce
+
+    .line 338
+    invoke-direct {v3, v6, v5, v4, v6}, Lcom/kousei/framework/k2;-><init>(ZILcom/kousei/framework/k;I)V
+
+    .line 341
+    invoke-virtual {v1, v3}, Lcom/kousei/framework/l;->a(Lcom/kousei/framework/k;)V
+
+    .line 344
+    new-instance v3, Lcom/kousei/framework/k2;
+
+    .line 346
+    new-instance v4, Lcom/kousei/framework/q;
+
+    .line 348
+    invoke-static {}, Lcom/kousei/framework/gi;->c()Lcom/kousei/framework/gi;
+
+    .line 351
+    move-result-object v5
+
+    .line 352
+    iget-object v5, v5, Lcom/kousei/framework/gi;->f:Lcom/kousei/framework/k3;
+
+    .line 354
+    if-eqz v5, :cond_174
+
+    .line 356
+    iget-object v5, v5, Lcom/kousei/framework/k3;->h:Ljava/lang/Object;
+
+    .line 358
+    check-cast v5, Ljava/lang/String;
+
+    .line 360
+    if-eqz v5, :cond_174
+
+    .line 362
+    invoke-static {v5, v6}, Lcom/kousei/framework/o0;->g(Ljava/lang/String;Z)Ljava/lang/Integer;
+
+    .line 365
+    move-result-object v5
+
+    .line 366
+    if-eqz v5, :cond_174
+
+    .line 368
+    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
+
+    .line 371
+    move-result v5
+
+    .line 372
+    goto :goto_17a
+
+    .line 373
+    :cond_174
+    sget-object v5, Landroid/os/Build$VERSION;->SECURITY_PATCH:Ljava/lang/String;
+
+    .line 375
+    invoke-static {v6}, Lcom/kousei/framework/o0;->b(Z)I
+
+    .line 378
+    move-result v5
+
+    .line 379
+    :goto_17a
+    invoke-direct {v4, v5}, Lcom/kousei/framework/q;-><init>(I)V
+
+    .line 382
+    const/16 v5, 0x2cf
+
+    .line 384
+    invoke-direct {v3, v6, v5, v4, v6}, Lcom/kousei/framework/k2;-><init>(ZILcom/kousei/framework/k;I)V
+
+    .line 387
+    invoke-virtual {v1, v3}, Lcom/kousei/framework/l;->a(Lcom/kousei/framework/k;)V
+
+    .line 390
+    new-instance v3, Lcom/kousei/framework/k2;
+
+    .line 392
+    new-instance v4, Lcom/kousei/framework/q;
+
+    .line 394
+    invoke-static {}, Lcom/kousei/framework/gi;->c()Lcom/kousei/framework/gi;
+
+    .line 397
+    move-result-object v5
+
+    .line 398
+    iget-object v5, v5, Lcom/kousei/framework/gi;->f:Lcom/kousei/framework/k3;
+
+    .line 400
+    if-eqz v5, :cond_1a3
+
+    .line 402
+    iget-object v5, v5, Lcom/kousei/framework/k3;->g:Ljava/lang/Object;
+
+    .line 404
+    check-cast v5, Ljava/lang/String;
+
+    .line 406
+    if-eqz v5, :cond_1a3
+
+    .line 408
+    const/4 v6, 0x0
+
+    .line 409
+    invoke-static {v5, v6}, Lcom/kousei/framework/o0;->g(Ljava/lang/String;Z)Ljava/lang/Integer;
+
+    .line 412
+    move-result-object v5
+
+    .line 413
+    if-eqz v5, :cond_1a4
+
+    .line 415
+    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
+
+    .line 418
+    move-result v5
+
+    .line 419
+    goto :goto_1aa
+
+    .line 420
+    :cond_1a3
+    const/4 v6, 0x0
+
+    .line 421
+    :cond_1a4
+    sget-object v5, Landroid/os/Build$VERSION;->SECURITY_PATCH:Ljava/lang/String;
+
+    .line 423
+    invoke-static {v6}, Lcom/kousei/framework/o0;->b(Z)I
+
+    .line 426
+    move-result v5
+
+    .line 427
+    :goto_1aa
+    invoke-direct {v4, v5}, Lcom/kousei/framework/q;-><init>(I)V
+
+    .line 430
+    const/16 v5, 0x2c2
+
+    .line 432
+    const/4 v6, 0x1
+
+    .line 433
+    invoke-direct {v3, v6, v5, v4, v6}, Lcom/kousei/framework/k2;-><init>(ZILcom/kousei/framework/k;I)V
+
+    .line 436
+    invoke-virtual {v1, v3}, Lcom/kousei/framework/l;->a(Lcom/kousei/framework/k;)V
+
+    .line 439
+    new-instance v3, Lcom/kousei/framework/k2;
+
+    .line 441
+    new-instance v4, Lcom/kousei/framework/q;
+
+    .line 443
+    sget v5, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 445
+    packed-switch v5, :pswitch_data_206
+
+    .line 448
+    const v5, 0x27100
+
+    .line 451
+    goto :goto_1d2
+
+    .line 452
+    :pswitch_1c3  #0x23
+    const v5, 0x249f0
+
+    .line 455
+    goto :goto_1d2
+
+    .line 456
+    :pswitch_1c7  #0x22
+    const v5, 0x222e0
+
+    .line 459
+    goto :goto_1d2
+
+    .line 460
+    :pswitch_1cb  #0x21
+    const v5, 0x1fbd0
+
+    .line 463
+    goto :goto_1d2
+
+    .line 464
+    :pswitch_1cf  #0x20
+    const v5, 0x1d524
+
+    .line 467
+    :goto_1d2
+    invoke-direct {v4, v5}, Lcom/kousei/framework/q;-><init>(I)V
+
+    .line 470
+    const/16 v5, 0x2c1
+
+    .line 472
+    const/4 v6, 0x1
+
+    .line 473
+    invoke-direct {v3, v6, v5, v4, v6}, Lcom/kousei/framework/k2;-><init>(ZILcom/kousei/framework/k;I)V
+
+    .line 476
+    invoke-virtual {v1, v3}, Lcom/kousei/framework/l;->a(Lcom/kousei/framework/k;)V
+
+    .line 479
+    new-instance v3, Lcom/kousei/framework/k2;
+
+    .line 481
+    const/16 v4, 0x2c0
+
+    .line 483
+    invoke-direct {v3, v6, v4, v0, v6}, Lcom/kousei/framework/k2;-><init>(ZILcom/kousei/framework/k;I)V
+
+    .line 486
+    invoke-virtual {v1, v3}, Lcom/kousei/framework/l;->a(Lcom/kousei/framework/k;)V
+
+    .line 489
+    new-instance v0, Lcom/kousei/framework/r4;
+
+    .line 491
+    const/4 v6, 0x0
+
+    .line 492
+    invoke-direct {v0, v1, v6}, Lcom/kousei/framework/r4;-><init>(Lcom/kousei/framework/l;Z)V
+
+    .line 495
+    const/4 v1, -0x1
+
+    .line 496
+    iput v1, v0, Lcom/kousei/framework/r4;->N:I
+
+    .line 498
+    const/4 v1, 0x7
+
+    .line 499
+    aput-object v0, v2, v1
+
+    .line 501
+    new-instance v0, Lcom/kousei/framework/r4;
+
+    .line 503
+    invoke-direct {v0, v2, v6}, Lcom/kousei/framework/r4;-><init>([Lcom/kousei/framework/k;I)V
+
+    .line 506
+    new-instance v1, Lcom/kousei/framework/o4;
+
+    .line 508
+    invoke-direct {v1, v0}, Lcom/kousei/framework/o4;-><init>(Lcom/kousei/framework/s;)V
+
+    .line 511
+    new-instance v0, Lcom/kousei/framework/a8;
+
+    .line 513
+    sget-object v2, Lcom/kousei/framework/j3;->a:Lcom/kousei/framework/v;
+
+    .line 515
+    invoke-direct {v0, v2, v6, v1}, Lcom/kousei/framework/a8;-><init>(Lcom/kousei/framework/v;ZLcom/kousei/framework/o4;)V
+
+    .line 518
+    return-object v0
+
+    .line 519
+    :pswitch_data_206
     .packed-switch 0x20
-        :pswitch_10b  #00000020
-        :pswitch_107  #00000021
-        :pswitch_103  #00000022
-        :pswitch_ff  #00000023
+        :pswitch_1cf  #00000020
+        :pswitch_1cb  #00000021
+        :pswitch_1c7  #00000022
+        :pswitch_1c3  #00000023
     .end packed-switch
 .end method
 
-.method public static d(Ljava/security/cert/X509Certificate;Ljava/security/cert/CertificateFactory;)[Ljava/security/cert/Certificate;
-    .registers 20
+.method public static d(Ljava/security/cert/X509Certificate;Ljava/security/cert/CertificateFactory;Lcom/kousei/framework/h7;)[Ljava/security/cert/Certificate;
+    .registers 21
 
     .line 1
     const/4 v1, 0x0
@@ -928,7 +1250,7 @@
     move-exception v0
 
     .line 82
-    goto/16 :goto_179
+    goto/16 :goto_17b
 
     .line 84
     :cond_53
@@ -957,7 +1279,7 @@
     move-result-object v7
 
     .line 100
-    iget-object v7, v7, Lcom/kousei/framework/gi;->f:Lcom/kousei/framework/da;
+    iget-object v7, v7, Lcom/kousei/framework/gi;->i:Lcom/kousei/framework/da;
 
     .line 102
     invoke-virtual {v7, v4}, Lcom/kousei/framework/da;->b(Ljava/lang/String;)Lcom/kousei/framework/ca;
@@ -1092,7 +1414,7 @@
 
     .line 178
     :cond_b1
-    const-wide v10, -0x3441b49c48d3L
+    const-wide v10, -0x5224df5b40d7L
 
     .line 183
     invoke-static {v10, v11}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1110,7 +1432,7 @@
     new-instance v11, Ljava/security/spec/ECGenParameterSpec;
 
     .line 193
-    const-wide v12, -0x3444b49c48d3L
+    const-wide v12, -0x5221df5b40d7L
 
     .line 198
     invoke-static {v12, v13}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1228,185 +1550,188 @@
     move-result-object v2
 
     .line 277
-    invoke-static {v6, v5, v3}, Lcom/kousei/framework/m3;->c(Lcom/kousei/framework/a0;Lcom/kousei/framework/l;[Lcom/kousei/framework/k;)Lcom/kousei/framework/a8;
+    move-object/from16 v4, p2
 
-    .line 280
+    .line 279
+    invoke-static {v6, v5, v3, v4}, Lcom/kousei/framework/m3;->c(Lcom/kousei/framework/a0;Lcom/kousei/framework/l;[Lcom/kousei/framework/k;Lcom/kousei/framework/h7;)Lcom/kousei/framework/a8;
+
+    .line 282
     move-result-object v3
-
-    .line 281
-    iget-object v4, v11, Lcom/kousei/framework/m8;->b:Ljava/lang/Object;
 
     .line 283
-    check-cast v4, Lcom/kousei/framework/c8;
+    iget-object v4, v11, Lcom/kousei/framework/m8;->b:Ljava/lang/Object;
 
     .line 285
+    check-cast v4, Lcom/kousei/framework/c8;
+
+    .line 287
     invoke-virtual {v4, v3}, Lcom/kousei/framework/c8;->b(Lcom/kousei/framework/a8;)V
 
-    .line 288
+    .line 290
     iget-object v3, v0, Lcom/kousei/framework/yi;->L:Lcom/kousei/framework/b8;
 
-    .line 290
+    .line 292
     invoke-virtual {v3}, Lcom/kousei/framework/b8;->h()[Lcom/kousei/framework/v;
 
-    .line 293
-    move-result-object v3
-
-    .line 294
-    array-length v4, v3
-
     .line 295
-    move v5, v9
+    move-result-object v3
 
     .line 296
-    :goto_127
-    if-ge v5, v4, :cond_14e
+    array-length v4, v3
+
+    .line 297
+    move v5, v9
 
     .line 298
-    aget-object v6, v3, v5
+    :goto_129
+    if-ge v5, v4, :cond_150
 
     .line 300
+    aget-object v6, v3, v5
+
+    .line 302
     invoke-virtual {v6}, Lcom/kousei/framework/v;->t()Ljava/lang/String;
 
-    .line 303
+    .line 305
     move-result-object v6
-
-    .line 304
-    sget-object v7, Lcom/kousei/framework/j3;->a:Lcom/kousei/framework/v;
 
     .line 306
+    sget-object v7, Lcom/kousei/framework/j3;->a:Lcom/kousei/framework/v;
+
+    .line 308
     invoke-virtual {v7}, Lcom/kousei/framework/v;->t()Ljava/lang/String;
 
-    .line 309
+    .line 311
     move-result-object v7
 
-    .line 310
+    .line 312
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 313
+    .line 315
     move-result v7
 
-    .line 314
-    if-nez v7, :cond_14b
-
     .line 316
-    new-instance v7, Lcom/kousei/framework/v;
+    if-nez v7, :cond_14d
 
     .line 318
+    new-instance v7, Lcom/kousei/framework/v;
+
+    .line 320
     invoke-direct {v7, v6}, Lcom/kousei/framework/v;-><init>(Ljava/lang/String;)V
 
-    .line 321
+    .line 323
     invoke-virtual {v0, v7}, Lcom/kousei/framework/yi;->a(Lcom/kousei/framework/v;)Lcom/kousei/framework/a8;
 
-    .line 324
+    .line 326
     move-result-object v6
 
-    .line 325
+    .line 327
     iget-object v7, v11, Lcom/kousei/framework/m8;->b:Ljava/lang/Object;
 
-    .line 327
+    .line 329
     check-cast v7, Lcom/kousei/framework/c8;
 
-    .line 329
+    .line 331
     invoke-virtual {v7, v6}, Lcom/kousei/framework/c8;->b(Lcom/kousei/framework/a8;)V
 
-    .line 332
-    :cond_14b
+    .line 334
+    :cond_14d
     add-int/lit8 v5, v5, 0x1
 
-    .line 334
-    goto :goto_127
+    .line 336
+    goto :goto_129
 
-    .line 335
-    :cond_14e
+    .line 337
+    :cond_150
     invoke-virtual {v11, v2}, Lcom/kousei/framework/m8;->c(Lcom/kousei/framework/k3;)Lcom/kousei/framework/yi;
 
-    .line 338
+    .line 340
     move-result-object v0
-
-    .line 339
-    new-instance v2, Ljava/io/ByteArrayInputStream;
 
     .line 341
-    iget-object v0, v0, Lcom/kousei/framework/yi;->K:Lcom/kousei/framework/h3;
+    new-instance v2, Ljava/io/ByteArrayInputStream;
 
     .line 343
+    iget-object v0, v0, Lcom/kousei/framework/yi;->K:Lcom/kousei/framework/h3;
+
+    .line 345
     invoke-virtual {v0}, Lcom/kousei/framework/s;->getEncoded()[B
 
-    .line 346
+    .line 348
     move-result-object v0
 
-    .line 347
+    .line 349
     invoke-direct {v2, v0}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    .line 350
+    .line 352
     move-object/from16 v0, p1
 
-    .line 352
+    .line 354
     invoke-virtual {v0, v2}, Ljava/security/cert/CertificateFactory;->generateCertificate(Ljava/io/InputStream;)Ljava/security/cert/Certificate;
 
-    .line 355
+    .line 357
     move-result-object v0
-
-    .line 356
-    check-cast v0, Ljava/security/cert/X509Certificate;
 
     .line 358
-    new-instance v2, Ljava/util/ArrayList;
+    check-cast v0, Ljava/security/cert/X509Certificate;
 
     .line 360
+    new-instance v2, Ljava/util/ArrayList;
+
+    .line 362
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 363
+    .line 365
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 366
+    .line 368
     invoke-virtual {v2, v8}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 369
+    .line 371
     new-array v0, v9, [Ljava/security/cert/Certificate;
 
-    .line 371
+    .line 373
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 374
+    .line 376
     move-result-object v0
 
-    .line 375
-    check-cast v0, [Ljava/security/cert/Certificate;
-    :try_end_178
-    .catch Ljava/lang/Exception; {:try_start_98 .. :try_end_178} :catch_50
-
     .line 377
+    check-cast v0, [Ljava/security/cert/Certificate;
+    :try_end_17a
+    .catch Ljava/lang/Exception; {:try_start_98 .. :try_end_17a} :catch_50
+
+    .line 379
     return-object v0
 
-    .line 378
-    :goto_179
-    const-wide v2, -0x33edb49c48d3L
+    .line 380
+    :goto_17b
+    const-wide v2, -0x5288df5b40d7L
 
-    .line 383
+    .line 385
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
-    .line 386
+    .line 388
     move-result-object v2
 
-    .line 387
-    const-wide v3, -0x3406b49c48d3L
+    .line 389
+    const-wide v3, -0x526fdf5b40d7L
 
-    .line 392
+    .line 394
     invoke-static {v3, v4}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
-    .line 395
+    .line 397
     move-result-object v3
 
-    .line 396
+    .line 398
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 399
+    .line 401
     return-object v1
 .end method
 
-.method public static e([Ljava/security/cert/Certificate;)[Ljava/security/cert/Certificate;
-    .registers 5
+.method public static e([Ljava/security/cert/Certificate;Lcom/kousei/framework/h7;)[Ljava/security/cert/Certificate;
+    .registers 6
 
     .line 1
     array-length v0, p0
@@ -1419,7 +1744,7 @@
 
     .line 5
     :cond_4
-    const-wide v0, -0x32deb49c48d3L
+    const-wide v0, -0x5587df5b40d7L
 
     .line 10
     :try_start_9
@@ -1497,7 +1822,7 @@
     if-eqz v2, :cond_42
 
     .line 58
-    invoke-static {v1, v0}, Lcom/kousei/framework/m3;->d(Ljava/security/cert/X509Certificate;Ljava/security/cert/CertificateFactory;)[Ljava/security/cert/Certificate;
+    invoke-static {v1, v0, p1}, Lcom/kousei/framework/m3;->d(Ljava/security/cert/X509Certificate;Ljava/security/cert/CertificateFactory;Lcom/kousei/framework/h7;)[Ljava/security/cert/Certificate;
 
     .line 61
     move-result-object v2
@@ -1510,7 +1835,7 @@
 
     .line 65
     :catch_40
-    move-exception v0
+    move-exception p1
 
     .line 66
     goto :goto_52
@@ -1526,7 +1851,7 @@
     if-ne v2, v3, :cond_4d
 
     .line 71
-    invoke-static {v1, v0}, Lcom/kousei/framework/m3;->g(Ljava/security/cert/X509Certificate;Ljava/security/cert/CertificateFactory;)[Ljava/security/cert/Certificate;
+    invoke-static {v1, v0, p1}, Lcom/kousei/framework/m3;->g(Ljava/security/cert/X509Certificate;Ljava/security/cert/CertificateFactory;Lcom/kousei/framework/h7;)[Ljava/security/cert/Certificate;
 
     .line 74
     move-result-object v2
@@ -1539,7 +1864,7 @@
 
     .line 78
     :cond_4d
-    invoke-static {v1, p0, v0}, Lcom/kousei/framework/m3;->f(Ljava/security/cert/X509Certificate;[Ljava/security/cert/Certificate;Ljava/security/cert/CertificateFactory;)[Ljava/security/cert/Certificate;
+    invoke-static {v1, p0, v0, p1}, Lcom/kousei/framework/m3;->f(Ljava/security/cert/X509Certificate;[Ljava/security/cert/Certificate;Ljava/security/cert/CertificateFactory;Lcom/kousei/framework/h7;)[Ljava/security/cert/Certificate;
 
     .line 81
     move-result-object p0
@@ -1551,32 +1876,32 @@
 
     .line 83
     :goto_52
-    const-wide v1, -0x32e4b49c48d3L
+    const-wide v0, -0x5581df5b40d7L
 
     .line 88
-    invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 91
-    move-result-object v1
+    move-result-object v0
 
     .line 92
-    const-wide v2, -0x32fdb49c48d3L
+    const-wide v1, -0x5598df5b40d7L
 
     .line 97
-    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 100
-    move-result-object v2
+    move-result-object v1
 
     .line 101
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 104
     return-object p0
 .end method
 
-.method public static f(Ljava/security/cert/X509Certificate;[Ljava/security/cert/Certificate;Ljava/security/cert/CertificateFactory;)[Ljava/security/cert/Certificate;
-    .registers 20
+.method public static f(Ljava/security/cert/X509Certificate;[Ljava/security/cert/Certificate;Ljava/security/cert/CertificateFactory;Lcom/kousei/framework/h7;)[Ljava/security/cert/Certificate;
+    .registers 21
 
     .line 1
     :try_start_0
@@ -1702,7 +2027,7 @@
     move-exception v0
 
     .line 78
-    goto/16 :goto_155
+    goto/16 :goto_157
 
     .line 80
     :cond_4f
@@ -1731,7 +2056,7 @@
     move-result-object v6
 
     .line 96
-    iget-object v6, v6, Lcom/kousei/framework/gi;->f:Lcom/kousei/framework/da;
+    iget-object v6, v6, Lcom/kousei/framework/gi;->i:Lcom/kousei/framework/da;
 
     .line 98
     invoke-virtual {v6, v3}, Lcom/kousei/framework/da;->b(Ljava/lang/String;)Lcom/kousei/framework/ca;
@@ -1749,7 +2074,7 @@
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 109
-    const-wide v1, -0x331eb49c48d3L
+    const-wide v1, -0x5547df5b40d7L
 
     .line 114
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1764,7 +2089,7 @@
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 124
-    const-wide v1, -0x3332b49c48d3L
+    const-wide v1, -0x5553df5b40d7L
 
     .line 129
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1776,7 +2101,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 136
-    const-wide v1, -0x3348b49c48d3L
+    const-wide v1, -0x552ddf5b40d7L
 
     .line 141
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1927,185 +2252,188 @@
     move-result-object v1
 
     .line 241
-    invoke-static {v5, v4, v2}, Lcom/kousei/framework/m3;->c(Lcom/kousei/framework/a0;Lcom/kousei/framework/l;[Lcom/kousei/framework/k;)Lcom/kousei/framework/a8;
+    move-object/from16 v3, p3
 
-    .line 244
+    .line 243
+    invoke-static {v5, v4, v2, v3}, Lcom/kousei/framework/m3;->c(Lcom/kousei/framework/a0;Lcom/kousei/framework/l;[Lcom/kousei/framework/k;Lcom/kousei/framework/h7;)Lcom/kousei/framework/a8;
+
+    .line 246
     move-result-object v2
-
-    .line 245
-    iget-object v3, v10, Lcom/kousei/framework/m8;->b:Ljava/lang/Object;
 
     .line 247
-    check-cast v3, Lcom/kousei/framework/c8;
+    iget-object v3, v10, Lcom/kousei/framework/m8;->b:Ljava/lang/Object;
 
     .line 249
+    check-cast v3, Lcom/kousei/framework/c8;
+
+    .line 251
     invoke-virtual {v3, v2}, Lcom/kousei/framework/c8;->b(Lcom/kousei/framework/a8;)V
 
-    .line 252
+    .line 254
     iget-object v2, v0, Lcom/kousei/framework/yi;->L:Lcom/kousei/framework/b8;
 
-    .line 254
+    .line 256
     invoke-virtual {v2}, Lcom/kousei/framework/b8;->h()[Lcom/kousei/framework/v;
 
-    .line 257
-    move-result-object v2
-
-    .line 258
-    array-length v3, v2
-
     .line 259
-    move v4, v8
+    move-result-object v2
 
     .line 260
-    :goto_103
-    if-ge v4, v3, :cond_12a
+    array-length v3, v2
+
+    .line 261
+    move v4, v8
 
     .line 262
-    aget-object v5, v2, v4
+    :goto_105
+    if-ge v4, v3, :cond_12c
 
     .line 264
+    aget-object v5, v2, v4
+
+    .line 266
     invoke-virtual {v5}, Lcom/kousei/framework/v;->t()Ljava/lang/String;
 
-    .line 267
+    .line 269
     move-result-object v5
-
-    .line 268
-    sget-object v6, Lcom/kousei/framework/j3;->a:Lcom/kousei/framework/v;
 
     .line 270
+    sget-object v6, Lcom/kousei/framework/j3;->a:Lcom/kousei/framework/v;
+
+    .line 272
     invoke-virtual {v6}, Lcom/kousei/framework/v;->t()Ljava/lang/String;
 
-    .line 273
+    .line 275
     move-result-object v6
 
-    .line 274
+    .line 276
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 277
+    .line 279
     move-result v6
 
-    .line 278
-    if-nez v6, :cond_127
-
     .line 280
-    new-instance v6, Lcom/kousei/framework/v;
+    if-nez v6, :cond_129
 
     .line 282
+    new-instance v6, Lcom/kousei/framework/v;
+
+    .line 284
     invoke-direct {v6, v5}, Lcom/kousei/framework/v;-><init>(Ljava/lang/String;)V
 
-    .line 285
+    .line 287
     invoke-virtual {v0, v6}, Lcom/kousei/framework/yi;->a(Lcom/kousei/framework/v;)Lcom/kousei/framework/a8;
 
-    .line 288
+    .line 290
     move-result-object v5
 
-    .line 289
+    .line 291
     iget-object v6, v10, Lcom/kousei/framework/m8;->b:Ljava/lang/Object;
 
-    .line 291
+    .line 293
     check-cast v6, Lcom/kousei/framework/c8;
 
-    .line 293
+    .line 295
     invoke-virtual {v6, v5}, Lcom/kousei/framework/c8;->b(Lcom/kousei/framework/a8;)V
 
-    .line 296
-    :cond_127
+    .line 298
+    :cond_129
     add-int/lit8 v4, v4, 0x1
 
-    .line 298
-    goto :goto_103
+    .line 300
+    goto :goto_105
 
-    .line 299
-    :cond_12a
+    .line 301
+    :cond_12c
     invoke-virtual {v10, v1}, Lcom/kousei/framework/m8;->c(Lcom/kousei/framework/k3;)Lcom/kousei/framework/yi;
 
-    .line 302
+    .line 304
     move-result-object v0
-
-    .line 303
-    new-instance v1, Ljava/io/ByteArrayInputStream;
 
     .line 305
-    iget-object v0, v0, Lcom/kousei/framework/yi;->K:Lcom/kousei/framework/h3;
+    new-instance v1, Ljava/io/ByteArrayInputStream;
 
     .line 307
+    iget-object v0, v0, Lcom/kousei/framework/yi;->K:Lcom/kousei/framework/h3;
+
+    .line 309
     invoke-virtual {v0}, Lcom/kousei/framework/s;->getEncoded()[B
 
-    .line 310
+    .line 312
     move-result-object v0
 
-    .line 311
+    .line 313
     invoke-direct {v1, v0}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    .line 314
+    .line 316
     move-object/from16 v0, p2
 
-    .line 316
+    .line 318
     invoke-virtual {v0, v1}, Ljava/security/cert/CertificateFactory;->generateCertificate(Ljava/io/InputStream;)Ljava/security/cert/Certificate;
 
-    .line 319
+    .line 321
     move-result-object v0
-
-    .line 320
-    check-cast v0, Ljava/security/cert/X509Certificate;
 
     .line 322
-    new-instance v1, Ljava/util/ArrayList;
+    check-cast v0, Ljava/security/cert/X509Certificate;
 
     .line 324
+    new-instance v1, Ljava/util/ArrayList;
+
+    .line 326
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 327
+    .line 329
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 330
+    .line 332
     invoke-virtual {v1, v7}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 333
+    .line 335
     new-array v0, v8, [Ljava/security/cert/Certificate;
 
-    .line 335
+    .line 337
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 338
+    .line 340
     move-result-object v0
 
-    .line 339
-    check-cast v0, [Ljava/security/cert/Certificate;
-    :try_end_154
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_154} :catch_4c
-
     .line 341
+    check-cast v0, [Ljava/security/cert/Certificate;
+    :try_end_156
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_156} :catch_4c
+
+    .line 343
     return-object v0
 
-    .line 342
-    :goto_155
-    const-wide v1, -0x3361b49c48d3L
+    .line 344
+    :goto_157
+    const-wide v1, -0x5504df5b40d7L
 
-    .line 347
+    .line 349
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
-    .line 350
+    .line 352
     move-result-object v1
 
-    .line 351
-    const-wide v2, -0x337ab49c48d3L
+    .line 353
+    const-wide v2, -0x551bdf5b40d7L
 
-    .line 356
+    .line 358
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
-    .line 359
+    .line 361
     move-result-object v2
 
-    .line 360
+    .line 362
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 363
+    .line 365
     return-object p1
 .end method
 
-.method public static g(Ljava/security/cert/X509Certificate;Ljava/security/cert/CertificateFactory;)[Ljava/security/cert/Certificate;
-    .registers 15
+.method public static g(Ljava/security/cert/X509Certificate;Ljava/security/cert/CertificateFactory;Lcom/kousei/framework/h7;)[Ljava/security/cert/Certificate;
+    .registers 16
 
     .line 1
     const/4 v1, 0x0
@@ -2330,7 +2658,7 @@
     if-nez v8, :cond_ac
 
     .line 130
-    const-wide v8, -0x3441b49c48d3L
+    const-wide v8, -0x5224df5b40d7L
 
     .line 135
     invoke-static {v8, v9}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2348,7 +2676,7 @@
     new-instance v9, Ljava/security/spec/ECGenParameterSpec;
 
     .line 145
-    const-wide v10, -0x3444b49c48d3L
+    const-wide v10, -0x5221df5b40d7L
 
     .line 150
     invoke-static {v10, v11}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2469,93 +2797,93 @@
     move-result-object p0
 
     .line 232
-    invoke-static {v5, v4, v2}, Lcom/kousei/framework/m3;->c(Lcom/kousei/framework/a0;Lcom/kousei/framework/l;[Lcom/kousei/framework/k;)Lcom/kousei/framework/a8;
+    invoke-static {v5, v4, v2, p2}, Lcom/kousei/framework/m3;->c(Lcom/kousei/framework/a0;Lcom/kousei/framework/l;[Lcom/kousei/framework/k;Lcom/kousei/framework/h7;)Lcom/kousei/framework/a8;
 
     .line 235
-    move-result-object v2
+    move-result-object p2
 
     .line 236
-    iget-object v3, v6, Lcom/kousei/framework/m8;->b:Ljava/lang/Object;
+    iget-object v2, v6, Lcom/kousei/framework/m8;->b:Ljava/lang/Object;
 
     .line 238
-    check-cast v3, Lcom/kousei/framework/c8;
+    check-cast v2, Lcom/kousei/framework/c8;
 
     .line 240
-    invoke-virtual {v3, v2}, Lcom/kousei/framework/c8;->b(Lcom/kousei/framework/a8;)V
+    invoke-virtual {v2, p2}, Lcom/kousei/framework/c8;->b(Lcom/kousei/framework/a8;)V
 
     .line 243
-    iget-object v2, v0, Lcom/kousei/framework/yi;->L:Lcom/kousei/framework/b8;
+    iget-object p2, v0, Lcom/kousei/framework/yi;->L:Lcom/kousei/framework/b8;
 
     .line 245
-    invoke-virtual {v2}, Lcom/kousei/framework/b8;->h()[Lcom/kousei/framework/v;
+    invoke-virtual {p2}, Lcom/kousei/framework/b8;->h()[Lcom/kousei/framework/v;
 
     .line 248
-    move-result-object v2
+    move-result-object p2
 
     .line 249
-    array-length v3, v2
+    array-length v2, p2
 
     .line 250
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
     .line 251
-    move v5, v4
+    move v4, v3
 
     .line 252
     :goto_fb
-    if-ge v5, v3, :cond_122
+    if-ge v4, v2, :cond_122
 
     .line 254
-    aget-object v7, v2, v5
+    aget-object v5, p2, v4
 
     .line 256
-    invoke-virtual {v7}, Lcom/kousei/framework/v;->t()Ljava/lang/String;
+    invoke-virtual {v5}, Lcom/kousei/framework/v;->t()Ljava/lang/String;
 
     .line 259
-    move-result-object v7
+    move-result-object v5
 
     .line 260
-    sget-object v8, Lcom/kousei/framework/j3;->a:Lcom/kousei/framework/v;
+    sget-object v7, Lcom/kousei/framework/j3;->a:Lcom/kousei/framework/v;
 
     .line 262
-    invoke-virtual {v8}, Lcom/kousei/framework/v;->t()Ljava/lang/String;
+    invoke-virtual {v7}, Lcom/kousei/framework/v;->t()Ljava/lang/String;
 
     .line 265
-    move-result-object v8
-
-    .line 266
-    invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 269
-    move-result v8
-
-    .line 270
-    if-nez v8, :cond_11f
-
-    .line 272
-    new-instance v8, Lcom/kousei/framework/v;
-
-    .line 274
-    invoke-direct {v8, v7}, Lcom/kousei/framework/v;-><init>(Ljava/lang/String;)V
-
-    .line 277
-    invoke-virtual {v0, v8}, Lcom/kousei/framework/yi;->a(Lcom/kousei/framework/v;)Lcom/kousei/framework/a8;
-
-    .line 280
     move-result-object v7
 
+    .line 266
+    invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 269
+    move-result v7
+
+    .line 270
+    if-nez v7, :cond_11f
+
+    .line 272
+    new-instance v7, Lcom/kousei/framework/v;
+
+    .line 274
+    invoke-direct {v7, v5}, Lcom/kousei/framework/v;-><init>(Ljava/lang/String;)V
+
+    .line 277
+    invoke-virtual {v0, v7}, Lcom/kousei/framework/yi;->a(Lcom/kousei/framework/v;)Lcom/kousei/framework/a8;
+
+    .line 280
+    move-result-object v5
+
     .line 281
-    iget-object v8, v6, Lcom/kousei/framework/m8;->b:Ljava/lang/Object;
+    iget-object v7, v6, Lcom/kousei/framework/m8;->b:Ljava/lang/Object;
 
     .line 283
-    check-cast v8, Lcom/kousei/framework/c8;
+    check-cast v7, Lcom/kousei/framework/c8;
 
     .line 285
-    invoke-virtual {v8, v7}, Lcom/kousei/framework/c8;->b(Lcom/kousei/framework/a8;)V
+    invoke-virtual {v7, v5}, Lcom/kousei/framework/c8;->b(Lcom/kousei/framework/a8;)V
 
     .line 288
     :cond_11f
-    add-int/lit8 v5, v5, 0x1
+    add-int/lit8 v4, v4, 0x1
 
     .line 290
     goto :goto_fb
@@ -2568,7 +2896,7 @@
     move-result-object p0
 
     .line 295
-    new-instance v0, Ljava/io/ByteArrayInputStream;
+    new-instance p2, Ljava/io/ByteArrayInputStream;
 
     .line 297
     iget-object p0, p0, Lcom/kousei/framework/yi;->K:Lcom/kousei/framework/h3;
@@ -2580,10 +2908,10 @@
     move-result-object p0
 
     .line 303
-    invoke-direct {v0, p0}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+    invoke-direct {p2, p0}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
     .line 306
-    invoke-virtual {p1, v0}, Ljava/security/cert/CertificateFactory;->generateCertificate(Ljava/io/InputStream;)Ljava/security/cert/Certificate;
+    invoke-virtual {p1, p2}, Ljava/security/cert/CertificateFactory;->generateCertificate(Ljava/io/InputStream;)Ljava/security/cert/Certificate;
 
     .line 309
     move-result-object p0
@@ -2598,7 +2926,7 @@
     new-array p1, p1, [Ljava/security/cert/Certificate;
 
     .line 315
-    aput-object p0, p1, v4
+    aput-object p0, p1, v3
     :try_end_13c
     .catch Ljava/lang/Exception; {:try_start_6f .. :try_end_13c} :catch_50
 
@@ -2607,25 +2935,25 @@
 
     .line 318
     :goto_13d
-    const-wide v2, -0x3394b49c48d3L
+    const-wide p1, -0x52f1df5b40d7L
 
     .line 323
-    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    invoke-static {p1, p2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 326
     move-result-object p1
 
     .line 327
-    const-wide v2, -0x33adb49c48d3L
+    const-wide v2, -0x52c8df5b40d7L
 
     .line 332
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 335
-    move-result-object v0
+    move-result-object p2
 
     .line 336
-    invoke-static {p1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 339
     return-object v1
@@ -3005,7 +3333,7 @@
     if-eqz v0, :cond_17
 
     .line 14
-    const-wide v0, -0x32abb49c48d3L
+    const-wide v0, -0x55cadf5b40d7L
 
     .line 19
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -3031,7 +3359,7 @@
 
     .line 31
     :cond_1e
-    const-wide v0, -0x32bbb49c48d3L
+    const-wide v0, -0x55dadf5b40d7L
 
     .line 36
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -3041,7 +3369,7 @@
 
     .line 40
     :goto_27
-    const-wide v0, -0x32bcb49c48d3L
+    const-wide v0, -0x55d9df5b40d7L
 
     .line 45
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -3059,7 +3387,7 @@
     if-eqz p0, :cond_40
 
     .line 55
-    const-wide v0, -0x32c0b49c48d3L
+    const-wide v0, -0x55a5df5b40d7L
 
     .line 60
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -3072,7 +3400,7 @@
 
     .line 65
     :cond_40
-    const-wide v0, -0x32ceb49c48d3L
+    const-wide v0, -0x55b7df5b40d7L
 
     .line 70
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -3086,7 +3414,7 @@
     .line 75
     :cond_4a
     :goto_4a
-    const-wide v0, -0x329db49c48d3L
+    const-wide v0, -0x55f8df5b40d7L
 
     .line 80
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <permissions>
-    <privapp-permissions package="com.kousei.kaorios">
+    <privapp-permissions package="com.lth1503.penguinos">
     <!-- Have full network access -->
     <permission name="android.permission.INTERNET" />
     <!-- View network connections -->

@@ -640,6 +640,7 @@
     .line 325
     throw p1
 
+    .line 326
     nop
 
     .line 327

@@ -44,6 +44,7 @@
     .line 19
     return-void
 
+    .line 20
     nop
 
     .line 21

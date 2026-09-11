@@ -987,6 +987,7 @@
     .line 465
     return-object v0
 
+    .line 466
     nop
 
     .line 467
@@ -2175,6 +2176,7 @@
     .line 737
     return-object v3
 
+    .line 738
     nop
 
     .line 739

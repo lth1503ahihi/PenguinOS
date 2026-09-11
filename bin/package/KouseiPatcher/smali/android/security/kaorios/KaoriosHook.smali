@@ -1,10 +1,12 @@
 .class public final Landroid/security/kaorios/KaoriosHook;
 .super Ljava/lang/Object;
-.source "r8-map-id-5ae92ff21d09ad14f9452618f0eb059d5742c78e657d0492d02c35db86ae1101"
+.source "r8-map-id-ab9d9a36b7cfe29bbfb78ee9a77c1feaf549e881397fc2be336a306d7a6faedf"
 
 
 # static fields
 .field public static final a:Lcom/kousei/framework/aa;
+
+.field public static volatile b:Z
 
 
 # direct methods
@@ -12,13 +14,13 @@
     .registers 2
 
     .line 1
-    const-wide v0, -0x1642b49c48d3L
+    const-wide v0, -0x7023df5b40d7L
 
     .line 6
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 9
-    const-wide v0, -0x164eb49c48d3L
+    const-wide v0, -0x7037df5b40d7L
 
     .line 14
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -36,6 +38,12 @@
     sput-object v0, Landroid/security/kaorios/KaoriosHook;->a:Lcom/kousei/framework/aa;
 
     .line 25
+    const/4 v0, 0x0
+
+    .line 26
+    sput-boolean v0, Landroid/security/kaorios/KaoriosHook;->b:Z
+
+    .line 28
     return-void
 .end method
 
@@ -53,7 +61,7 @@
     .registers 6
 
     .line 1
-    if-eqz p0, :cond_7c
+    if-eqz p0, :cond_8c
 
     .line 3
     array-length v0, p0
@@ -62,7 +70,7 @@
     if-nez v0, :cond_7
 
     .line 6
-    goto/16 :goto_7c
+    goto/16 :goto_8c
 
     .line 8
     :cond_7
@@ -104,7 +112,7 @@
     move-result-object v1
 
     .line 32
-    iget-object v2, v1, Lcom/kousei/framework/gi;->f:Lcom/kousei/framework/da;
+    iget-object v2, v1, Lcom/kousei/framework/gi;->i:Lcom/kousei/framework/da;
 
     .line 34
     iget-object v2, v2, Lcom/kousei/framework/da;->a:Ljava/util/concurrent/ConcurrentHashMap;
@@ -115,8 +123,8 @@
     .line 39
     move-result v2
     :try_end_27
-    .catch Ljava/lang/Exception; {:try_start_1b .. :try_end_27} :catch_5f
-    .catchall {:try_start_1b .. :try_end_27} :catchall_5d
+    .catch Ljava/lang/Exception; {:try_start_1b .. :try_end_27} :catch_60
+    .catchall {:try_start_1b .. :try_end_27} :catchall_5e
 
     .line 40
     if-eqz v2, :cond_2f
@@ -153,98 +161,122 @@
     move-result-object v2
 
     .line 60
-    invoke-virtual {v1, v2}, Lcom/kousei/framework/gi;->h([Ljava/lang/String;)Z
+    invoke-virtual {v1, v2}, Lcom/kousei/framework/gi;->i([Ljava/lang/String;)Z
 
     .line 63
-    move-result v1
+    move-result v3
 
     .line 64
-    if-eqz v1, :cond_29
+    if-eqz v3, :cond_29
 
     .line 66
-    invoke-static {p0}, Lcom/kousei/framework/m3;->e([Ljava/security/cert/Certificate;)[Ljava/security/cert/Certificate;
+    invoke-virtual {v1, v2}, Lcom/kousei/framework/gi;->d([Ljava/lang/String;)Lcom/kousei/framework/h7;
 
     .line 69
     move-result-object v1
 
     .line 70
-    if-eqz v1, :cond_29
+    invoke-static {p0, v1}, Lcom/kousei/framework/m3;->e([Ljava/security/cert/Certificate;Lcom/kousei/framework/h7;)[Ljava/security/cert/Certificate;
 
-    .line 72
-    const-wide v2, -0xbd1b49c48d3L
-
-    .line 77
-    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 80
-    const-wide v2, -0xc00b49c48d3L
-
-    .line 85
-    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-    :try_end_57
-    .catch Ljava/lang/Exception; {:try_start_2f .. :try_end_57} :catch_5f
-    .catchall {:try_start_2f .. :try_end_57} :catchall_5d
-
-    .line 88
-    sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    .line 90
-    invoke-virtual {v0, p0}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
-
-    .line 93
-    return-object v1
-
-    .line 94
-    :catchall_5d
-    move-exception p0
-
-    .line 95
-    goto :goto_76
-
-    .line 96
-    :catch_5f
-    move-exception v1
-
-    .line 97
-    const-wide v2, -0xc0cb49c48d3L
-
-    .line 102
-    :try_start_65
-    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 105
+    .line 73
     move-result-object v2
 
-    .line 106
-    const-wide v3, -0xc18b49c48d3L
+    .line 74
+    if-eqz v2, :cond_29
 
-    .line 111
+    .line 76
+    const-wide v3, -0x6d36df5b40d7L
+
+    .line 81
     invoke-static {v3, v4}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
-    .line 114
-    move-result-object v3
+    .line 84
+    if-eqz v1, :cond_62
 
-    .line 115
-    invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-    :try_end_75
-    .catchall {:try_start_65 .. :try_end_75} :catchall_5d
+    .line 86
+    const-wide v3, -0x6ae7df5b40d7L
+
+    .line 91
+    invoke-static {v3, v4}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 94
+    goto :goto_62
+
+    .line 95
+    :catchall_5e
+    move-exception p0
+
+    .line 96
+    goto :goto_86
+
+    .line 97
+    :catch_60
+    move-exception v1
+
+    .line 98
+    goto :goto_70
+
+    .line 99
+    :cond_62
+    :goto_62
+    const-wide v3, -0x6affdf5b40d7L
+
+    .line 104
+    invoke-static {v3, v4}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    :try_end_6a
+    .catch Ljava/lang/Exception; {:try_start_2f .. :try_end_6a} :catch_60
+    .catchall {:try_start_2f .. :try_end_6a} :catchall_5e
+
+    .line 107
+    sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    .line 109
+    invoke-virtual {v0, p0}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+
+    .line 112
+    return-object v2
+
+    .line 113
+    :goto_70
+    const-wide v2, -0x6ac3df5b40d7L
 
     .line 118
-    goto :goto_29
-
-    .line 119
-    :goto_76
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    :try_start_75
+    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 121
+    move-result-object v2
+
+    .line 122
+    const-wide v3, -0x6ad7df5b40d7L
+
+    .line 127
+    invoke-static {v3, v4}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 130
+    move-result-object v3
+
+    .line 131
+    invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    :try_end_85
+    .catchall {:try_start_75 .. :try_end_85} :catchall_5e
+
+    .line 134
+    goto :goto_29
+
+    .line 135
+    :goto_86
+    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    .line 137
     invoke-virtual {v0, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
-    .line 124
+    .line 140
     throw p0
 
-    .line 125
-    :cond_7c
-    :goto_7c
+    .line 141
+    :cond_8c
+    :goto_8c
     return-object p0
 .end method
 
@@ -284,7 +316,7 @@
     .registers 15
 
     .line 1
-    const-wide v0, -0x1464b49c48d3L
+    const-wide v0, -0x7250df5b40d7L
 
     .line 6
     const/4 v2, 0x0
@@ -356,7 +388,7 @@
     invoke-direct {v4}, Lcom/kousei/framework/i3;-><init>()V
 
     .line 51
-    const-wide v5, -0x1474b49c48d3L
+    const-wide v5, -0x7220df5b40d7L
 
     .line 56
     invoke-static {v5, v6}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -380,7 +412,7 @@
     if-nez v5, :cond_58
 
     .line 68
-    const-wide v8, -0x1477b49c48d3L
+    const-wide v8, -0x722ddf5b40d7L
 
     .line 73
     invoke-static {v8, v9}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -542,7 +574,7 @@
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 166
-    const-wide v8, -0x147db49c48d3L
+    const-wide v8, -0x7237df5b40d7L
 
     .line 171
     invoke-static {v8, v9}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -603,7 +635,7 @@
 
     .line 211
     :cond_d2
-    const-wide v4, -0x148fb49c48d3L
+    const-wide v4, -0x7205df5b40d7L
 
     .line 216
     invoke-static {v4, v5}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -740,7 +772,7 @@
     move-result-object p1
 
     .line 297
-    const-wide p3, -0x14d5b49c48d3L
+    const-wide p3, -0x73cfdf5b40d7L
 
     .line 302
     invoke-static {p3, p4}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -800,7 +832,7 @@
     move-exception p0
 
     .line 337
-    const-wide p3, -0x1499b49c48d3L
+    const-wide p3, -0x720bdf5b40d7L
 
     .line 342
     invoke-static {p3, p4}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -815,7 +847,7 @@
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 351
-    const-wide v0, -0x14a5b49c48d3L
+    const-wide v0, -0x721fdf5b40d7L
 
     .line 356
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -847,7 +879,7 @@
 
     .line 374
     :goto_175
-    const-wide p3, -0x14ddb49c48d3L
+    const-wide p3, -0x73d7df5b40d7L
 
     .line 379
     invoke-static {p3, p4}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -862,7 +894,7 @@
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 388
-    const-wide v0, -0x14e9b49c48d3L
+    const-wide v0, -0x73dbdf5b40d7L
 
     .line 393
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -932,7 +964,7 @@
 
     move-result-object p1
 
-    const-wide p4, -0x13e2b49c48d3L
+    const-wide p4, -0x72d2df5b40d7L
 
     invoke-static {p4, p5}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
@@ -1110,14 +1142,14 @@
     return-object p0
 
     :goto_90
-    const-wide p1, -0x13eab49c48d3L
+    const-wide p1, -0x72dadf5b40d7L
 
     .line 18
     invoke-static {p1, p2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     move-result-object p1
 
-    const-wide p2, -0x13f6b49c48d3L
+    const-wide p2, -0x72aedf5b40d7L
 
     invoke-static {p2, p3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
@@ -1140,14 +1172,14 @@
 
     move-object p0, v0
 
-    const-wide p1, -0x142ab49c48d3L
+    const-wide p1, -0x729adf5b40d7L
 
     .line 20
     invoke-static {p1, p2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     move-result-object p1
 
-    const-wide p2, -0x1436b49c48d3L
+    const-wide p2, -0x726edf5b40d7L
 
     invoke-static {p2, p3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
@@ -1221,7 +1253,7 @@
     .registers 6
 
     .line 1
-    const-wide v0, -0x1512b49c48d3L
+    const-wide v0, -0x7382df5b40d7L
 
     .line 6
     :try_start_5
@@ -1240,7 +1272,7 @@
     if-nez v0, :cond_6a
 
     .line 16
-    const-wide v0, -0x1515b49c48d3L
+    const-wide v0, -0x738fdf5b40d7L
 
     .line 21
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1262,7 +1294,7 @@
 
     .line 32
     :cond_1f
-    const-wide v0, -0x1528b49c48d3L
+    const-wide v0, -0x739cdf5b40d7L
 
     .line 37
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1280,7 +1312,7 @@
     if-eqz v0, :cond_47
 
     .line 47
-    const-wide v0, -0x152cb49c48d3L
+    const-wide v0, -0x7398df5b40d7L
 
     .line 52
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1318,7 +1350,7 @@
 
     .line 72
     :cond_47
-    const-wide v0, -0x1530b49c48d3L
+    const-wide v0, -0x7364df5b40d7L
 
     .line 77
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1336,7 +1368,7 @@
     new-instance v1, Ljava/security/spec/ECGenParameterSpec;
 
     .line 87
-    const-wide v2, -0x1533b49c48d3L
+    const-wide v2, -0x7361df5b40d7L
 
     .line 92
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1362,7 +1394,7 @@
     .line 107
     :cond_6a
     :goto_6a
-    const-wide v0, -0x151bb49c48d3L
+    const-wide v0, -0x7389df5b40d7L
 
     .line 112
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1380,7 +1412,7 @@
     new-instance v1, Ljava/security/spec/ECGenParameterSpec;
 
     .line 122
-    const-wide v2, -0x151eb49c48d3L
+    const-wide v2, -0x7396df5b40d7L
 
     .line 127
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1407,7 +1439,7 @@
 
     .line 142
     :goto_8d
-    const-wide v1, -0x153db49c48d3L
+    const-wide v1, -0x7377df5b40d7L
 
     .line 147
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1422,7 +1454,7 @@
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 156
-    const-wide v3, -0x1549b49c48d3L
+    const-wide v3, -0x737bdf5b40d7L
 
     .line 161
     invoke-static {v3, v4}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1537,13 +1569,13 @@
 
     .line 21
     :catch_14
-    const-wide p0, -0x15a4b49c48d3L
+    const-wide p0, -0x7310df5b40d7L
 
     .line 26
     invoke-static {p0, p1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 29
-    const-wide p0, -0x15bab49c48d3L
+    const-wide p0, -0x70eadf5b40d7L
 
     .line 34
     invoke-static {p0, p1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1563,13 +1595,13 @@
 
     .line 43
     :cond_2a
-    const-wide p0, -0x15c6b49c48d3L
+    const-wide p0, -0x70fedf5b40d7L
 
     .line 48
     invoke-static {p0, p1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 51
-    const-wide p0, -0x15ebb49c48d3L
+    const-wide p0, -0x70d9df5b40d7L
 
     .line 56
     invoke-static {p0, p1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1656,7 +1688,7 @@
     if-nez v0, :cond_18
 
     .line 7
-    const-wide v0, -0x15f7b49c48d3L
+    const-wide v0, -0x70addf5b40d7L
 
     .line 12
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1730,7 +1762,7 @@
     move-result-object v1
 
     .line 6
-    const-wide v2, -0x1573b49c48d3L
+    const-wide v2, -0x7321df5b40d7L
 
     .line 11
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1784,7 +1816,7 @@
     :catch_26
     :catchall_26
     :cond_26
-    const-wide v1, -0x1585b49c48d3L
+    const-wide v1, -0x733fdf5b40d7L
 
     .line 44
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1793,7 +1825,7 @@
     move-result-object v1
 
     .line 48
-    const-wide v2, -0x1595b49c48d3L
+    const-wide v2, -0x730fdf5b40d7L
 
     .line 53
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1882,7 +1914,7 @@
     move-result-object v0
 
     .line 13
-    const-wide v1, -0x5fcb49c48d3L
+    const-wide v1, -0x631bdf5b40d7L
 
     .line 18
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1906,25 +1938,25 @@
     if-eqz v1, :cond_42
 
     .line 32
-    const-wide v1, -0x61bb49c48d3L
+    const-wide v1, -0x60fcdf5b40d7L
 
     .line 37
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 40
-    const-wide v1, -0x627b49c48d3L
+    const-wide v1, -0x60c0df5b40d7L
 
     .line 45
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 48
-    const-wide v1, -0x649b49c48d3L
+    const-wide v1, -0x60aedf5b40d7L
 
     .line 53
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 56
-    const-wide v1, -0x64db49c48d3L
+    const-wide v1, -0x60aadf5b40d7L
 
     .line 61
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1947,7 +1979,7 @@
 
     .line 68
     :goto_43
-    const-wide v1, -0x652b49c48d3L
+    const-wide v1, -0x60b5df5b40d7L
 
     .line 73
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1962,7 +1994,7 @@
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 82
-    const-wide v3, -0x65eb49c48d3L
+    const-wide v3, -0x60b9df5b40d7L
 
     .line 87
     invoke-static {v3, v4}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1992,7 +2024,7 @@
 .method public static initActivityThread(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .registers 6
 
-    const-wide v0, -0xa40b49c48d3L
+    const-wide v0, -0x6ca7df5b40d7L
 
     .line 201
     :try_start_5
@@ -2006,7 +2038,7 @@
 
     if-nez v0, :cond_af
 
-    const-wide v0, -0xa48b49c48d3L
+    const-wide v0, -0x6cafdf5b40d7L
 
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
@@ -2018,7 +2050,7 @@
 
     if-nez v0, :cond_af
 
-    const-wide v0, -0xa4fb49c48d3L
+    const-wide v0, -0x6ca8df5b40d7L
 
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
@@ -2033,16 +2065,16 @@
     goto/16 :goto_af
 
     :cond_2f
-    const-wide v0, -0xa6eb49c48d3L
+    const-wide v0, -0x6c89df5b40d7L
 
     .line 202
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
-    const-wide v0, -0xa7ab49c48d3L
+    const-wide v0, -0x6c9ddf5b40d7L
 
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
-    const-wide v0, -0xaabb49c48d3L
+    const-wide v0, -0x6c4cdf5b40d7L
 
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
@@ -2064,12 +2096,12 @@
     goto :goto_65
 
     :cond_55
-    const-wide v0, -0xab7b49c48d3L
+    const-wide v0, -0x6c50df5b40d7L
 
     .line 206
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
-    const-wide v0, -0xac3b49c48d3L
+    const-wide v0, -0x6c24df5b40d7L
 
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
@@ -2092,12 +2124,12 @@
     goto :goto_83
 
     :cond_73
-    const-wide v1, -0xae0b49c48d3L
+    const-wide v1, -0x6c07df5b40d7L
 
     .line 210
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
-    const-wide v1, -0xaecb49c48d3L
+    const-wide v1, -0x6c0bdf5b40d7L
 
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
@@ -2115,7 +2147,7 @@
     goto :goto_ac
 
     :cond_8d
-    const-wide v0, -0xb19b49c48d3L
+    const-wide v0, -0x6dfedf5b40d7L
 
     .line 213
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2128,12 +2160,12 @@
 
     if-eqz p2, :cond_ac
 
-    const-wide v0, -0xb38b49c48d3L
+    const-wide v0, -0x6ddfdf5b40d7L
 
     .line 214
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
-    const-wide v0, -0xb44b49c48d3L
+    const-wide v0, -0x6da3df5b40d7L
 
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
@@ -2151,14 +2183,14 @@
     :catchall_b0
     move-exception p0
 
-    const-wide p1, -0xb8db49c48d3L
+    const-wide p1, -0x6d6adf5b40d7L
 
     .line 216
     invoke-static {p1, p2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     move-result-object p1
 
-    const-wide v0, -0xb99b49c48d3L
+    const-wide v0, -0x6d7edf5b40d7L
 
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
@@ -2173,7 +2205,7 @@
     .registers 6
 
     .line 1
-    const-wide v0, -0x8afb49c48d3L
+    const-wide v0, -0x6e48df5b40d7L
 
     .line 6
     :try_start_5
@@ -2192,7 +2224,7 @@
     if-nez v0, :cond_b0
 
     .line 16
-    const-wide v0, -0x8b7b49c48d3L
+    const-wide v0, -0x6e50df5b40d7L
 
     .line 21
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2210,7 +2242,7 @@
     if-nez v0, :cond_b0
 
     .line 31
-    const-wide v0, -0x8beb49c48d3L
+    const-wide v0, -0x6e59df5b40d7L
 
     .line 36
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2232,19 +2264,19 @@
 
     .line 48
     :cond_2f
-    const-wide v0, -0x8ddb49c48d3L
+    const-wide v0, -0x6e3adf5b40d7L
 
     .line 53
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 56
-    const-wide v0, -0x8e9b49c48d3L
+    const-wide v0, -0x6e0edf5b40d7L
 
     .line 61
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 64
-    const-wide v0, -0x91ab49c48d3L
+    const-wide v0, -0x6ffddf5b40d7L
 
     .line 69
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2275,13 +2307,13 @@
 
     .line 87
     :cond_56
-    const-wide v1, -0x926b49c48d3L
+    const-wide v1, -0x6fc1df5b40d7L
 
     .line 92
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 95
-    const-wide v1, -0x932b49c48d3L
+    const-wide v1, -0x6fd5df5b40d7L
 
     .line 100
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2310,13 +2342,13 @@
 
     .line 117
     :cond_74
-    const-wide v2, -0x94fb49c48d3L
+    const-wide v2, -0x6fa8df5b40d7L
 
     .line 122
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 125
-    const-wide v2, -0x95bb49c48d3L
+    const-wide v2, -0x6fbcdf5b40d7L
 
     .line 130
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2339,7 +2371,7 @@
 
     .line 143
     :cond_8e
-    const-wide v1, -0x988b49c48d3L
+    const-wide v1, -0x6f6fdf5b40d7L
 
     .line 148
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2357,13 +2389,13 @@
     if-eqz p1, :cond_ad
 
     .line 158
-    const-wide v1, -0x9a7b49c48d3L
+    const-wide v1, -0x6f40df5b40d7L
 
     .line 163
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 166
-    const-wide v1, -0x9b3b49c48d3L
+    const-wide v1, -0x6f54df5b40d7L
 
     .line 171
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2385,7 +2417,7 @@
     move-exception p0
 
     .line 179
-    const-wide v0, -0x9fcb49c48d3L
+    const-wide v0, -0x6f1bdf5b40d7L
 
     .line 184
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2394,7 +2426,7 @@
     move-result-object p1
 
     .line 188
-    const-wide v0, -0xa08b49c48d3L
+    const-wide v0, -0x6cefdf5b40d7L
 
     .line 193
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2416,14 +2448,14 @@
     if-nez p0, :cond_13
 
     .line 3
-    const-wide v0, -0x6f7b49c48d3L
+    const-wide v0, -0x6010df5b40d7L
 
     .line 8
     :try_start_7
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 11
-    const-wide v0, -0x703b49c48d3L
+    const-wide v0, -0x61e4df5b40d7L
 
     .line 16
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2445,7 +2477,7 @@
     move-result-object v1
 
     .line 28
-    const-wide v2, -0x730b49c48d3L
+    const-wide v2, -0x61d7df5b40d7L
 
     .line 33
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2463,7 +2495,7 @@
     if-nez v2, :cond_ca
 
     .line 43
-    const-wide v2, -0x738b49c48d3L
+    const-wide v2, -0x61dfdf5b40d7L
 
     .line 48
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2481,7 +2513,7 @@
     if-nez v2, :cond_ca
 
     .line 58
-    const-wide v2, -0x73fb49c48d3L
+    const-wide v2, -0x61d8df5b40d7L
 
     .line 63
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2503,19 +2535,19 @@
 
     .line 75
     :cond_4a
-    const-wide v2, -0x75eb49c48d3L
+    const-wide v2, -0x61b9df5b40d7L
 
     .line 80
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 83
-    const-wide v2, -0x76ab49c48d3L
+    const-wide v2, -0x618ddf5b40d7L
 
     .line 88
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 91
-    const-wide v2, -0x793b49c48d3L
+    const-wide v2, -0x6174df5b40d7L
 
     .line 96
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2543,13 +2575,13 @@
 
     .line 113
     :cond_70
-    const-wide v2, -0x79fb49c48d3L
+    const-wide v2, -0x6178df5b40d7L
 
     .line 118
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 121
-    const-wide v2, -0x7abb49c48d3L
+    const-wide v2, -0x614cdf5b40d7L
 
     .line 126
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2578,13 +2610,13 @@
 
     .line 143
     :cond_8e
-    const-wide v3, -0x7c8b49c48d3L
+    const-wide v3, -0x612fdf5b40d7L
 
     .line 148
     invoke-static {v3, v4}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 151
-    const-wide v3, -0x7d4b49c48d3L
+    const-wide v3, -0x6133df5b40d7L
 
     .line 156
     invoke-static {v3, v4}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2607,7 +2639,7 @@
 
     .line 169
     :cond_a8
-    const-wide v1, -0x801b49c48d3L
+    const-wide v1, -0x6ee6df5b40d7L
 
     .line 174
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2625,13 +2657,13 @@
     if-eqz v1, :cond_c7
 
     .line 184
-    const-wide v1, -0x820b49c48d3L
+    const-wide v1, -0x6ec7df5b40d7L
 
     .line 189
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 192
-    const-wide v1, -0x82cb49c48d3L
+    const-wide v1, -0x6ecbdf5b40d7L
 
     .line 197
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2653,7 +2685,7 @@
     move-exception p0
 
     .line 205
-    const-wide v0, -0x873b49c48d3L
+    const-wide v0, -0x6e94df5b40d7L
 
     .line 210
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2662,7 +2694,7 @@
     move-result-object v0
 
     .line 214
-    const-wide v1, -0x87fb49c48d3L
+    const-wide v1, -0x6e98df5b40d7L
 
     .line 219
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2687,7 +2719,7 @@
     move-object/from16 v9, p1
 
     .line 5
-    const-wide v1, -0xcfeb49c48d3L
+    const-wide v1, -0x6bf1df5b40d7L
 
     .line 10
     const/4 v10, 0x0
@@ -2697,13 +2729,13 @@
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 14
-    const-wide v1, -0xd0ab49c48d3L
+    const-wide v1, -0x6bc5df5b40d7L
 
     .line 19
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 22
-    const-wide v1, -0xd2cb49c48d3L
+    const-wide v1, -0x6ba3df5b40d7L
 
     .line 27
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2724,19 +2756,19 @@
     check-cast v6, Ljava/lang/String;
 
     .line 38
-    const-wide v1, -0xd38b49c48d3L
+    const-wide v1, -0x6bb7df5b40d7L
 
     .line 43
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 46
-    const-wide v1, -0xd44b49c48d3L
+    const-wide v1, -0x6bbbdf5b40d7L
 
     .line 51
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 54
-    const-wide v1, -0xd52b49c48d3L
+    const-wide v1, -0x6b8ddf5b40d7L
 
     .line 59
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2751,10 +2783,10 @@
     move-result v1
 
     .line 67
-    if-nez v1, :cond_4fa
+    if-nez v1, :cond_53d
 
     .line 69
-    const-wide v1, -0xd66b49c48d3L
+    const-wide v1, -0x6b99df5b40d7L
 
     .line 74
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2772,7 +2804,7 @@
     if-eqz v1, :cond_55
 
     .line 84
-    goto/16 :goto_4fa
+    goto/16 :goto_53d
 
     .line 86
     :cond_55
@@ -2794,19 +2826,19 @@
     move-result-object v1
 
     .line 98
-    const-wide v2, -0xdb5b49c48d3L
+    const-wide v2, -0x6b2adf5b40d7L
 
     .line 103
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 106
-    const-wide v2, -0xdc1b49c48d3L
+    const-wide v2, -0x6b3edf5b40d7L
 
     .line 111
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 114
-    const-wide v2, -0xdcfb49c48d3L
+    const-wide v2, -0x6b00df5b40d7L
 
     .line 119
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2825,11 +2857,11 @@
     move-exception v0
 
     .line 129
-    goto/16 :goto_50b
+    goto/16 :goto_54e
 
     .line 131
     :cond_82
-    const-wide v2, -0xddcb49c48d3L
+    const-wide v2, -0x6b13df5b40d7L
 
     .line 136
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2842,22 +2874,22 @@
     move-result-object v2
 
     .line 143
-    invoke-virtual {v2, v1}, Lcom/kousei/framework/gi;->g([Ljava/lang/String;)Z
+    invoke-virtual {v2, v1}, Lcom/kousei/framework/gi;->h([Ljava/lang/String;)Z
 
     .line 146
-    move-result v1
+    move-result v2
 
     .line 147
-    if-nez v1, :cond_a5
+    if-nez v2, :cond_a5
 
     .line 149
-    const-wide v0, -0xde1b49c48d3L
+    const-wide v0, -0x6b1edf5b40d7L
 
     .line 154
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 157
-    const-wide v0, -0xdedb49c48d3L
+    const-wide v0, -0x68e2df5b40d7L
 
     .line 162
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2867,58 +2899,58 @@
 
     .line 166
     :cond_a5
-    const-wide v1, -0xe27b49c48d3L
+    const-wide v2, -0x68d8df5b40d7L
 
     .line 171
-    invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 174
-    const-wide v1, -0xe33b49c48d3L
-
-    .line 179
-    invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 182
-    const-wide v1, -0xe50b49c48d3L
-
-    .line 187
-    invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 190
-    move-result-object v1
-
-    .line 191
-    invoke-static {v0, v1}, Landroid/security/kaorios/KaoriosHook;->e(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 194
-    move-result-object v1
-
-    .line 195
-    check-cast v1, Ljava/lang/Integer;
-
-    .line 197
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    .line 200
-    move-result v1
-
-    .line 201
-    const-wide v2, -0xe5db49c48d3L
-
-    .line 206
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
-    .line 209
+    .line 174
+    const-wide v2, -0x68acdf5b40d7L
+
+    .line 179
+    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 182
+    const-wide v2, -0x688fdf5b40d7L
+
+    .line 187
+    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 190
     move-result-object v2
 
-    .line 210
+    .line 191
     invoke-static {v0, v2}, Landroid/security/kaorios/KaoriosHook;->e(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 213
+    .line 194
     move-result-object v2
 
+    .line 195
+    check-cast v2, Ljava/lang/Integer;
+
+    .line 197
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    .line 200
+    move-result v2
+
+    .line 201
+    const-wide v3, -0x6892df5b40d7L
+
+    .line 206
+    invoke-static {v3, v4}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 209
+    move-result-object v3
+
+    .line 210
+    invoke-static {v0, v3}, Landroid/security/kaorios/KaoriosHook;->e(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 213
+    move-result-object v3
+
     .line 214
-    move-object v11, v2
+    move-object v11, v3
 
     .line 215
     check-cast v11, Ljava/lang/Integer;
@@ -2927,1412 +2959,1437 @@
     invoke-virtual {v11}, Ljava/lang/Integer;->intValue()I
 
     .line 220
-    move-result v2
+    move-result v3
 
     .line 221
-    const-wide v3, -0xe71b49c48d3L
+    const-wide v7, -0x686edf5b40d7L
 
     .line 226
-    invoke-static {v3, v4}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    invoke-static {v7, v8}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 229
-    move-result-object v3
+    move-result-object v4
 
     .line 230
-    invoke-static {v0, v3}, Landroid/security/kaorios/KaoriosHook;->e(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v4}, Landroid/security/kaorios/KaoriosHook;->e(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 233
-    move-result-object v3
+    move-result-object v4
 
     .line 234
-    check-cast v3, Landroid/security/keystore/KeyGenParameterSpec;
+    check-cast v4, Landroid/security/keystore/KeyGenParameterSpec;
 
     .line 236
-    const-wide v7, -0xe77b49c48d3L
+    const-wide v7, -0x6868df5b40d7L
 
     .line 241
     invoke-static {v7, v8}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 244
-    const-wide v7, -0xe83b49c48d3L
+    const-wide v7, -0x687cdf5b40d7L
 
     .line 249
     invoke-static {v7, v8}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 252
-    const-wide v7, -0xe92b49c48d3L
+    const-wide v7, -0x684ddf5b40d7L
 
     .line 257
     invoke-static {v7, v8}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 260
-    const-wide v7, -0xeaab49c48d3L
+    const-wide v7, -0x6825df5b40d7L
 
     .line 265
     invoke-static {v7, v8}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 268
-    if-eqz v3, :cond_117
+    if-eqz v4, :cond_116
 
     .line 270
-    const-wide v7, -0xeb3b49c48d3L
+    const-wide v7, -0x682cdf5b40d7L
 
     .line 275
     invoke-static {v7, v8}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 278
-    :goto_115
-    move-object v4, v3
+    goto :goto_11e
 
     .line 279
-    goto :goto_120
+    :cond_116
+    const-wide v7, -0x6836df5b40d7L
 
-    .line 280
-    :cond_117
-    const-wide v7, -0xeb9b49c48d3L
-
-    .line 285
+    .line 284
     invoke-static {v7, v8}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
-    .line 288
-    goto :goto_115
+    .line 287
+    :goto_11e
+    new-instance v7, Lcom/kousei/framework/i3;
 
     .line 289
-    :goto_120
-    new-instance v3, Lcom/kousei/framework/i3;
+    invoke-direct {v7}, Lcom/kousei/framework/i3;-><init>()V
 
-    .line 291
-    invoke-direct {v3}, Lcom/kousei/framework/i3;-><init>()V
+    .line 292
+    iget-object v8, v7, Lcom/kousei/framework/i3;->j:Ljava/util/ArrayList;
 
     .line 294
-    iget-object v7, v3, Lcom/kousei/framework/i3;->j:Ljava/util/ArrayList;
+    iput v2, v7, Lcom/kousei/framework/i3;->a:I
 
     .line 296
-    iput v1, v3, Lcom/kousei/framework/i3;->a:I
+    iput v3, v7, Lcom/kousei/framework/i3;->b:I
 
     .line 298
-    iput v2, v3, Lcom/kousei/framework/i3;->b:I
-
-    .line 300
     invoke-virtual {v4}, Landroid/security/keystore/KeyGenParameterSpec;->getCertificateSubject()Ljavax/security/auth/x500/X500Principal;
 
-    .line 303
-    move-result-object v1
+    .line 301
+    move-result-object v2
+
+    .line 302
+    iput-object v2, v7, Lcom/kousei/framework/i3;->f:Ljavax/security/auth/x500/X500Principal;
 
     .line 304
-    iput-object v1, v3, Lcom/kousei/framework/i3;->f:Ljavax/security/auth/x500/X500Principal;
-
-    .line 306
     invoke-virtual {v4}, Landroid/security/keystore/KeyGenParameterSpec;->getCertificateSerialNumber()Ljava/math/BigInteger;
 
-    .line 309
-    move-result-object v1
+    .line 307
+    move-result-object v2
+
+    .line 308
+    iput-object v2, v7, Lcom/kousei/framework/i3;->c:Ljava/math/BigInteger;
 
     .line 310
-    iput-object v1, v3, Lcom/kousei/framework/i3;->c:Ljava/math/BigInteger;
-
-    .line 312
     invoke-virtual {v4}, Landroid/security/keystore/KeyGenParameterSpec;->getCertificateNotBefore()Ljava/util/Date;
 
-    .line 315
-    move-result-object v1
+    .line 313
+    move-result-object v2
+
+    .line 314
+    iput-object v2, v7, Lcom/kousei/framework/i3;->d:Ljava/util/Date;
 
     .line 316
-    iput-object v1, v3, Lcom/kousei/framework/i3;->d:Ljava/util/Date;
-
-    .line 318
     invoke-virtual {v4}, Landroid/security/keystore/KeyGenParameterSpec;->getCertificateNotAfter()Ljava/util/Date;
 
-    .line 321
-    move-result-object v1
+    .line 319
+    move-result-object v2
+
+    .line 320
+    iput-object v2, v7, Lcom/kousei/framework/i3;->e:Ljava/util/Date;
 
     .line 322
-    iput-object v1, v3, Lcom/kousei/framework/i3;->e:Ljava/util/Date;
+    const-wide v2, -0x6831df5b40d7L
 
-    .line 324
-    const-wide v1, -0xebeb49c48d3L
+    .line 327
+    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
-    .line 329
-    invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    .line 330
+    move-result-object v2
 
-    .line 332
-    move-result-object v1
+    .line 331
+    invoke-static {v0, v2}, Landroid/security/kaorios/KaoriosHook;->e(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 333
-    invoke-static {v0, v1}, Landroid/security/kaorios/KaoriosHook;->e(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    .line 334
+    move-result-object v2
 
-    .line 336
-    move-result-object v1
+    .line 335
+    instance-of v3, v2, Ljava/lang/Number;
 
     .line 337
-    instance-of v2, v1, Ljava/lang/Number;
+    if-eqz v3, :cond_15f
 
     .line 339
-    if-eqz v2, :cond_161
+    check-cast v2, Ljava/lang/Number;
 
     .line 341
-    check-cast v1, Ljava/lang/Number;
+    invoke-virtual {v2}, Ljava/lang/Number;->longValue()J
 
-    .line 343
-    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
+    .line 344
+    move-result-wide v2
 
-    .line 346
-    move-result-wide v1
+    .line 345
+    invoke-static {v2, v3}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
-    .line 347
-    invoke-static {v1, v2}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+    .line 348
+    move-result-object v2
 
-    .line 350
-    move-result-object v1
+    .line 349
+    iput-object v2, v7, Lcom/kousei/framework/i3;->g:Ljava/math/BigInteger;
 
     .line 351
-    iput-object v1, v3, Lcom/kousei/framework/i3;->g:Ljava/math/BigInteger;
+    goto :goto_167
 
-    .line 353
-    goto :goto_169
+    .line 352
+    :cond_15f
+    instance-of v3, v2, Ljava/math/BigInteger;
 
     .line 354
-    :cond_161
-    instance-of v2, v1, Ljava/math/BigInteger;
+    if-eqz v3, :cond_167
 
     .line 356
-    if-eqz v2, :cond_169
+    check-cast v2, Ljava/math/BigInteger;
 
     .line 358
-    check-cast v1, Ljava/math/BigInteger;
+    iput-object v2, v7, Lcom/kousei/framework/i3;->g:Ljava/math/BigInteger;
 
     .line 360
-    iput-object v1, v3, Lcom/kousei/framework/i3;->g:Ljava/math/BigInteger;
+    :cond_167
+    :goto_167
+    const-wide v2, -0x680edf5b40d7L
 
-    .line 362
-    :cond_169
-    :goto_169
-    const-wide v1, -0xed1b49c48d3L
+    .line 365
+    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
-    .line 367
-    invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    .line 368
+    move-result-object v2
 
-    .line 370
-    move-result-object v1
+    .line 369
+    invoke-static {v0, v2}, Landroid/security/kaorios/KaoriosHook;->e(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 371
-    invoke-static {v0, v1}, Landroid/security/kaorios/KaoriosHook;->e(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    .line 372
+    move-result-object v2
 
-    .line 374
-    move-result-object v1
+    .line 373
+    instance-of v3, v2, Ljava/lang/String;
 
     .line 375
-    instance-of v2, v1, Ljava/lang/String;
-
-    .line 377
     const/4 v12, 0x1
 
+    .line 376
+    if-eqz v3, :cond_17e
+
     .line 378
-    if-eqz v2, :cond_180
+    check-cast v2, Ljava/lang/String;
 
     .line 380
-    check-cast v1, Ljava/lang/String;
+    iput-object v2, v7, Lcom/kousei/framework/i3;->i:Ljava/lang/String;
 
     .line 382
-    iput-object v1, v3, Lcom/kousei/framework/i3;->i:Ljava/lang/String;
+    goto :goto_18d
 
-    .line 384
-    goto :goto_18f
+    .line 383
+    :cond_17e
+    instance-of v3, v2, Ljava/lang/Number;
 
     .line 385
-    :cond_180
-    instance-of v2, v1, Ljava/lang/Number;
+    if-eqz v3, :cond_18b
 
     .line 387
-    if-eqz v2, :cond_18d
+    check-cast v2, Ljava/lang/Number;
 
     .line 389
-    check-cast v1, Ljava/lang/Number;
+    invoke-virtual {v2}, Ljava/lang/Number;->intValue()I
 
-    .line 391
-    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
+    .line 392
+    move-result v2
 
-    .line 394
-    move-result v1
+    .line 393
+    iput v2, v7, Lcom/kousei/framework/i3;->h:I
 
     .line 395
-    iput v1, v3, Lcom/kousei/framework/i3;->h:I
+    goto :goto_18d
 
-    .line 397
-    goto :goto_18f
+    .line 396
+    :cond_18b
+    iput v12, v7, Lcom/kousei/framework/i3;->h:I
 
     .line 398
-    :cond_18d
-    iput v12, v3, Lcom/kousei/framework/i3;->h:I
-
-    .line 400
-    :goto_18f
+    :goto_18d
     invoke-virtual {v4}, Landroid/security/keystore/KeyGenParameterSpec;->getAttestationChallenge()[B
 
-    .line 403
-    move-result-object v1
+    .line 401
+    move-result-object v2
+
+    .line 402
+    iput-object v2, v7, Lcom/kousei/framework/i3;->l:[B
 
     .line 404
-    iput-object v1, v3, Lcom/kousei/framework/i3;->l:[B
+    const-wide v2, -0x6811df5b40d7L
 
-    .line 406
-    const-wide v1, -0xedeb49c48d3L
+    .line 409
+    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
-    .line 411
-    invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    .line 412
+    move-result-object v2
 
-    .line 414
-    move-result-object v1
+    .line 413
+    invoke-static {v0, v2}, Landroid/security/kaorios/KaoriosHook;->e(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 415
-    invoke-static {v0, v1}, Landroid/security/kaorios/KaoriosHook;->e(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    .line 416
+    move-result-object v2
 
-    .line 418
-    move-result-object v1
+    .line 417
+    instance-of v3, v2, [I
 
     .line 419
-    instance-of v2, v1, [I
+    if-eqz v3, :cond_1b6
 
     .line 421
-    const/4 v13, 0x0
+    check-cast v2, [I
 
-    .line 422
-    if-eqz v2, :cond_1b9
+    .line 423
+    array-length v3, v2
 
     .line 424
-    check-cast v1, [I
+    const/4 v14, 0x0
 
-    .line 426
-    array-length v2, v1
+    .line 425
+    :goto_1a8
+    if-ge v14, v3, :cond_1b6
 
     .line 427
-    move v8, v13
+    aget v15, v2, v14
 
-    .line 428
-    :goto_1ab
-    if-ge v8, v2, :cond_1b9
-
-    .line 430
-    aget v14, v1, v8
+    .line 429
+    invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 432
-    invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v15
 
-    .line 435
-    move-result-object v14
+    .line 433
+    invoke-virtual {v8, v15}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 436
-    invoke-virtual {v7, v14}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    add-int/lit8 v14, v14, 0x1
+
+    .line 438
+    goto :goto_1a8
 
     .line 439
-    add-int/lit8 v8, v8, 0x1
+    :cond_1b6
+    const-wide v2, -0x69eedf5b40d7L
 
-    .line 441
-    goto :goto_1ab
-
-    .line 442
-    :cond_1b9
-    const-wide v1, -0xef1b49c48d3L
+    .line 444
+    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 447
-    invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    move-result-object v2
 
-    .line 450
-    move-result-object v1
+    .line 448
+    invoke-static {v0, v2}, Landroid/security/kaorios/KaoriosHook;->e(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 451
-    invoke-static {v0, v1}, Landroid/security/kaorios/KaoriosHook;->e(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    move-result-object v2
+
+    .line 452
+    instance-of v3, v2, [I
 
     .line 454
-    move-result-object v1
+    if-eqz v3, :cond_1db
 
-    .line 455
-    instance-of v2, v1, [I
+    .line 456
+    check-cast v2, [I
 
-    .line 457
-    if-eqz v2, :cond_1de
+    .line 458
+    array-length v3, v2
 
     .line 459
-    check-cast v1, [I
+    const/4 v14, 0x0
 
-    .line 461
-    array-length v2, v1
+    .line 460
+    :goto_1cb
+    if-ge v14, v3, :cond_1db
 
     .line 462
-    move v8, v13
+    aget v15, v2, v14
 
-    .line 463
-    :goto_1ce
-    if-ge v8, v2, :cond_1de
+    .line 464
+    iget-object v13, v7, Lcom/kousei/framework/i3;->k:Ljava/util/ArrayList;
 
-    .line 465
-    aget v14, v1, v8
-
-    .line 467
-    iget-object v15, v3, Lcom/kousei/framework/i3;->k:Ljava/util/ArrayList;
+    .line 466
+    invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 469
-    invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v15
 
-    .line 472
-    move-result-object v14
+    .line 470
+    invoke-virtual {v13, v15}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 473
-    invoke-virtual {v15, v14}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    add-int/lit8 v14, v14, 0x1
+
+    .line 475
+    goto :goto_1cb
 
     .line 476
-    add-int/lit8 v8, v8, 0x1
-
-    .line 478
-    goto :goto_1ce
-
-    .line 479
-    :cond_1de
+    :cond_1db
     invoke-static {v4}, Landroid/security/kaorios/KaoriosHook;->h(Landroid/security/keystore/KeyGenParameterSpec;)Ljava/lang/String;
 
+    .line 479
+    move-result-object v2
+
+    .line 480
+    if-nez v2, :cond_21e
+
     .line 482
-    move-result-object v1
+    const-wide v13, -0x69fcdf5b40d7L
 
-    .line 483
-    if-nez v1, :cond_221
-
-    .line 485
-    const-wide v14, -0xf03b49c48d3L
+    .line 487
+    invoke-static {v13, v14}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 490
-    invoke-static {v14, v15}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    move-result-object v3
 
-    .line 493
-    move-result-object v2
+    .line 491
+    const-wide v13, -0x69ccdf5b40d7L
 
-    .line 494
-    const-wide v14, -0xf13b49c48d3L
+    .line 496
+    invoke-static {v13, v14}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 499
+    move-result-object v13
+
+    .line 500
+    const-wide v14, -0x69dddf5b40d7L
+
+    .line 505
     invoke-static {v14, v15}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 502
-    move-result-object v8
-
-    .line 503
-    const-wide v14, -0xf22b49c48d3L
 
     .line 508
-    invoke-static {v14, v15}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 511
     move-result-object v14
+
+    .line 509
+    filled-new-array {v3, v13, v14}, [Ljava/lang/String;
 
     .line 512
-    filled-new-array {v2, v8, v14}, [Ljava/lang/String;
+    move-result-object v3
 
-    .line 515
-    move-result-object v2
+    .line 513
+    const/4 v13, 0x0
 
-    .line 516
-    move v8, v13
-
-    .line 517
-    :goto_204
+    .line 514
+    :goto_201
     const/4 v14, 0x3
 
-    .line 518
-    if-ge v8, v14, :cond_221
+    .line 515
+    if-ge v13, v14, :cond_21e
 
-    .line 520
-    aget-object v14, v2, v8
-    :try_end_209
-    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_209} :catch_7f
+    .line 517
+    aget-object v14, v3, v13
+    :try_end_206
+    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_206} :catch_7f
 
-    .line 522
-    :try_start_209
+    .line 519
+    :try_start_206
     invoke-static {v0, v14}, Landroid/security/kaorios/KaoriosHook;->f(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 525
+    .line 522
     move-result-object v14
 
-    .line 526
+    .line 523
     instance-of v15, v14, Ljava/lang/String;
 
-    .line 528
-    if-eqz v15, :cond_21e
+    .line 525
+    if-eqz v15, :cond_21b
 
-    .line 530
+    .line 527
     move-object v15, v14
 
-    .line 531
+    .line 528
     check-cast v15, Ljava/lang/String;
 
-    .line 533
+    .line 530
     invoke-virtual {v15}, Ljava/lang/String;->isEmpty()Z
 
-    .line 536
+    .line 533
     move-result v15
 
-    .line 537
-    if-nez v15, :cond_21e
+    .line 534
+    if-nez v15, :cond_21b
+
+    .line 536
+    check-cast v14, Ljava/lang/String;
+    :try_end_219
+    .catchall {:try_start_206 .. :try_end_219} :catchall_21b
+
+    .line 538
+    move-object v2, v14
 
     .line 539
-    check-cast v14, Ljava/lang/String;
-    :try_end_21c
-    .catchall {:try_start_209 .. :try_end_21c} :catchall_21e
+    goto :goto_21e
 
-    .line 541
-    move-object v1, v14
+    .line 540
+    :catchall_21b
+    :cond_21b
+    add-int/lit8 v13, v13, 0x1
 
     .line 542
-    goto :goto_221
+    goto :goto_201
 
     .line 543
-    :catchall_21e
     :cond_21e
-    add-int/lit8 v8, v8, 0x1
+    :goto_21e
+    const/4 v3, 0x7
 
-    .line 545
-    goto :goto_204
-
-    .line 546
-    :cond_221
-    :goto_221
-    const/4 v2, 0x7
+    .line 544
+    :try_start_21f
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     .line 547
-    :try_start_222
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v3
 
-    .line 550
-    move-result-object v2
+    .line 548
+    invoke-virtual {v8, v3}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     .line 551
-    invoke-virtual {v7, v2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
-
-    .line 554
     move-result v8
 
-    .line 555
-    const-wide v14, -0xf2db49c48d3L
+    .line 552
+    const-wide v13, -0x69a2df5b40d7L
+
+    .line 557
+    invoke-static {v13, v14}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 560
-    invoke-static {v14, v15}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    const-wide v13, -0x69b6df5b40d7L
 
-    .line 563
-    const-wide v14, -0xf39b49c48d3L
+    .line 565
+    invoke-static {v13, v14}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 568
-    invoke-static {v14, v15}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 571
     invoke-virtual {v4}, Landroid/security/keystore/KeyGenParameterSpec;->isDevicePropertiesAttestationIncluded()Z
 
+    .line 571
+    move-result v3
+    :try_end_23b
+    .catch Ljava/lang/Exception; {:try_start_21f .. :try_end_23b} :catch_7f
+
+    .line 572
+    if-eqz v3, :cond_2b0
+
     .line 574
-    move-result v2
-    :try_end_23e
-    .catch Ljava/lang/Exception; {:try_start_222 .. :try_end_23e} :catch_7f
+    :try_start_23d
+    sget-object v3, Landroid/os/Build;->BRAND_FOR_ATTESTATION:Ljava/lang/String;
 
-    .line 575
-    if-eqz v2, :cond_2b3
-
-    .line 577
-    :try_start_240
-    sget-object v2, Landroid/os/Build;->BRAND_FOR_ATTESTATION:Ljava/lang/String;
+    .line 576
+    invoke-static {v3}, Landroid/security/kaorios/KaoriosHook;->g(Ljava/lang/String;)Z
 
     .line 579
-    invoke-static {v2}, Landroid/security/kaorios/KaoriosHook;->g(Ljava/lang/String;)Z
+    move-result v13
+
+    .line 580
+    if-eqz v13, :cond_247
 
     .line 582
-    move-result v7
+    sget-object v3, Landroid/os/Build;->BRAND:Ljava/lang/String;
 
-    .line 583
-    if-eqz v7, :cond_24a
+    .line 584
+    :cond_247
+    sget-object v13, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
-    .line 585
-    sget-object v2, Landroid/os/Build;->BRAND:Ljava/lang/String;
-
-    .line 587
-    :cond_24a
-    sget-object v7, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
+    .line 586
+    invoke-virtual {v3, v13}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
     .line 589
-    invoke-virtual {v2, v7}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+    move-result-object v3
+
+    .line 590
+    iput-object v3, v7, Lcom/kousei/framework/i3;->m:[B
 
     .line 592
-    move-result-object v2
+    sget-object v3, Landroid/os/Build;->DEVICE_FOR_ATTESTATION:Ljava/lang/String;
 
-    .line 593
-    iput-object v2, v3, Lcom/kousei/framework/i3;->m:[B
-
-    .line 595
-    sget-object v2, Landroid/os/Build;->DEVICE_FOR_ATTESTATION:Ljava/lang/String;
+    .line 594
+    invoke-static {v3}, Landroid/security/kaorios/KaoriosHook;->g(Ljava/lang/String;)Z
 
     .line 597
-    invoke-static {v2}, Landroid/security/kaorios/KaoriosHook;->g(Ljava/lang/String;)Z
+    move-result v14
+
+    .line 598
+    if-eqz v14, :cond_259
 
     .line 600
-    move-result v14
+    sget-object v3, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
-    .line 601
-    if-eqz v14, :cond_25c
-
-    .line 603
-    sget-object v2, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+    .line 602
+    :cond_259
+    invoke-virtual {v3, v13}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
     .line 605
-    :cond_25c
-    invoke-virtual {v2, v7}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+    move-result-object v3
+
+    .line 606
+    iput-object v3, v7, Lcom/kousei/framework/i3;->n:[B
 
     .line 608
-    move-result-object v2
+    sget-object v3, Landroid/os/Build;->PRODUCT_FOR_ATTESTATION:Ljava/lang/String;
 
-    .line 609
-    iput-object v2, v3, Lcom/kousei/framework/i3;->n:[B
-
-    .line 611
-    sget-object v2, Landroid/os/Build;->PRODUCT_FOR_ATTESTATION:Ljava/lang/String;
+    .line 610
+    invoke-static {v3}, Landroid/security/kaorios/KaoriosHook;->g(Ljava/lang/String;)Z
 
     .line 613
-    invoke-static {v2}, Landroid/security/kaorios/KaoriosHook;->g(Ljava/lang/String;)Z
+    move-result v14
+
+    .line 614
+    if-eqz v14, :cond_269
 
     .line 616
-    move-result v14
+    sget-object v3, Landroid/os/Build;->PRODUCT:Ljava/lang/String;
 
-    .line 617
-    if-eqz v14, :cond_26c
-
-    .line 619
-    sget-object v2, Landroid/os/Build;->PRODUCT:Ljava/lang/String;
+    .line 618
+    :cond_269
+    invoke-virtual {v3, v13}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
     .line 621
-    :cond_26c
-    invoke-virtual {v2, v7}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+    move-result-object v3
+
+    .line 622
+    iput-object v3, v7, Lcom/kousei/framework/i3;->o:[B
 
     .line 624
-    move-result-object v2
+    sget-object v3, Landroid/os/Build;->MANUFACTURER_FOR_ATTESTATION:Ljava/lang/String;
 
-    .line 625
-    iput-object v2, v3, Lcom/kousei/framework/i3;->o:[B
-
-    .line 627
-    sget-object v2, Landroid/os/Build;->MANUFACTURER_FOR_ATTESTATION:Ljava/lang/String;
+    .line 626
+    invoke-static {v3}, Landroid/security/kaorios/KaoriosHook;->g(Ljava/lang/String;)Z
 
     .line 629
-    invoke-static {v2}, Landroid/security/kaorios/KaoriosHook;->g(Ljava/lang/String;)Z
+    move-result v14
+
+    .line 630
+    if-eqz v14, :cond_279
 
     .line 632
-    move-result v14
+    sget-object v3, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
-    .line 633
-    if-eqz v14, :cond_27c
-
-    .line 635
-    sget-object v2, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+    .line 634
+    :cond_279
+    invoke-virtual {v3, v13}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
     .line 637
-    :cond_27c
-    invoke-virtual {v2, v7}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+    move-result-object v3
+
+    .line 638
+    iput-object v3, v7, Lcom/kousei/framework/i3;->p:[B
 
     .line 640
-    move-result-object v2
+    sget-object v3, Landroid/os/Build;->MODEL_FOR_ATTESTATION:Ljava/lang/String;
 
-    .line 641
-    iput-object v2, v3, Lcom/kousei/framework/i3;->p:[B
-
-    .line 643
-    sget-object v2, Landroid/os/Build;->MODEL_FOR_ATTESTATION:Ljava/lang/String;
+    .line 642
+    invoke-static {v3}, Landroid/security/kaorios/KaoriosHook;->g(Ljava/lang/String;)Z
 
     .line 645
-    invoke-static {v2}, Landroid/security/kaorios/KaoriosHook;->g(Ljava/lang/String;)Z
-
-    .line 648
     move-result v14
 
-    .line 649
-    if-eqz v14, :cond_28c
+    .line 646
+    if-eqz v14, :cond_289
 
-    .line 651
-    sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
+    .line 648
+    sget-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    .line 650
+    :cond_289
+    invoke-virtual {v3, v13}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
     .line 653
-    :cond_28c
-    invoke-virtual {v2, v7}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+    move-result-object v3
+
+    .line 654
+    iput-object v3, v7, Lcom/kousei/framework/i3;->q:[B
 
     .line 656
-    move-result-object v2
+    const-wide v13, -0x696edf5b40d7L
 
-    .line 657
-    iput-object v2, v3, Lcom/kousei/framework/i3;->q:[B
-
-    .line 659
-    const-wide v14, -0xf71b49c48d3L
+    .line 661
+    invoke-static {v13, v14}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 664
-    invoke-static {v14, v15}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    const-wide v13, -0x6972df5b40d7L
 
-    .line 667
-    const-wide v14, -0xf7db49c48d3L
+    .line 669
+    invoke-static {v13, v14}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    :try_end_29f
+    .catch Ljava/lang/Exception; {:try_start_23d .. :try_end_29f} :catch_2a0
 
     .line 672
-    invoke-static {v14, v15}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-    :try_end_2a2
-    .catch Ljava/lang/Exception; {:try_start_240 .. :try_end_2a2} :catch_2a3
+    goto :goto_2b0
 
-    .line 675
-    goto :goto_2b3
+    .line 673
+    :catch_2a0
+    const-wide v13, -0x692edf5b40d7L
 
-    .line 676
-    :catch_2a3
-    const-wide v14, -0xfb1b49c48d3L
+    .line 678
+    :try_start_2a5
+    invoke-static {v13, v14}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 681
-    :try_start_2a8
-    invoke-static {v14, v15}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    const-wide v13, -0x6932df5b40d7L
 
-    .line 684
-    const-wide v14, -0xfbdb49c48d3L
+    .line 686
+    invoke-static {v13, v14}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    :try_end_2b0
+    .catch Ljava/lang/Exception; {:try_start_2a5 .. :try_end_2b0} :catch_7f
 
     .line 689
-    invoke-static {v14, v15}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    :cond_2b0
+    :goto_2b0
+    :try_start_2b0
+    invoke-static {}, Lcom/kousei/framework/gi;->c()Lcom/kousei/framework/gi;
 
     .line 692
-    :cond_2b3
-    :goto_2b3
-    const-wide v14, -0xfedb49c48d3L
+    move-result-object v3
+
+    .line 693
+    invoke-virtual {v3, v1}, Lcom/kousei/framework/gi;->d([Ljava/lang/String;)Lcom/kousei/framework/h7;
+
+    .line 696
+    move-result-object v1
 
     .line 697
-    invoke-static {v14, v15}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    if-eqz v1, :cond_2f3
 
-    .line 700
-    const-wide v14, -0xff9b49c48d3L
+    .line 699
+    iget-object v3, v1, Lcom/kousei/framework/h7;->a:Ljava/lang/Object;
+
+    .line 701
+    check-cast v3, [B
+
+    .line 703
+    if-eqz v3, :cond_2c2
 
     .line 705
-    invoke-static {v14, v15}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    iput-object v3, v7, Lcom/kousei/framework/i3;->m:[B
 
-    .line 708
-    invoke-static {v3}, Lcom/kousei/framework/j3;->f(Lcom/kousei/framework/i3;)Ljava/security/KeyPair;
+    .line 707
+    :cond_2c2
+    iget-object v3, v1, Lcom/kousei/framework/h7;->b:Ljava/lang/Object;
+
+    .line 709
+    check-cast v3, [B
 
     .line 711
-    move-result-object v2
+    if-eqz v3, :cond_2ca
 
-    .line 712
-    if-eqz v2, :cond_4d6
+    .line 713
+    iput-object v3, v7, Lcom/kousei/framework/i3;->n:[B
 
-    .line 714
-    invoke-virtual {v4}, Landroid/security/keystore/KeyGenParameterSpec;->isStrongBoxBacked()Z
+    .line 715
+    :cond_2ca
+    iget-object v3, v1, Lcom/kousei/framework/h7;->c:Ljava/lang/Object;
 
     .line 717
-    move-result v4
+    check-cast v3, [B
 
-    .line 718
-    if-eqz v4, :cond_2d1
-
-    .line 720
-    const/4 v4, 0x2
+    .line 719
+    if-eqz v3, :cond_2d2
 
     .line 721
-    goto :goto_2de
+    iput-object v3, v7, Lcom/kousei/framework/i3;->o:[B
 
-    .line 722
-    :cond_2d1
-    instance-of v4, v9, Ljava/lang/Number;
+    .line 723
+    :cond_2d2
+    iget-object v3, v1, Lcom/kousei/framework/h7;->d:Ljava/lang/Object;
 
-    .line 724
-    if-eqz v4, :cond_2dd
-
-    .line 726
-    move-object v4, v9
+    .line 725
+    check-cast v3, [B
 
     .line 727
-    check-cast v4, Ljava/lang/Number;
+    if-eqz v3, :cond_2da
 
     .line 729
-    invoke-virtual {v4}, Ljava/lang/Number;->intValue()I
+    iput-object v3, v7, Lcom/kousei/framework/i3;->p:[B
 
-    .line 732
-    move-result v4
+    .line 731
+    :cond_2da
+    iget-object v1, v1, Lcom/kousei/framework/h7;->e:Ljava/lang/Object;
 
     .line 733
-    goto :goto_2de
-
-    .line 734
-    :cond_2dd
-    move v4, v12
+    check-cast v1, [B
 
     .line 735
-    :goto_2de
-    const-wide v14, -0x1085b49c48d3L
+    if-eqz v1, :cond_2f3
+
+    .line 737
+    iput-object v1, v7, Lcom/kousei/framework/i3;->q:[B
+    :try_end_2e2
+    .catchall {:try_start_2b0 .. :try_end_2e2} :catchall_2e3
+
+    .line 739
+    goto :goto_2f3
 
     .line 740
-    invoke-static {v14, v15}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    :catchall_2e3
+    const-wide v13, -0x76e2df5b40d7L
 
-    .line 743
-    const-wide v14, -0x1091b49c48d3L
+    .line 745
+    :try_start_2e8
+    invoke-static {v13, v14}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 748
-    invoke-static {v14, v15}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    const-wide v13, -0x76f6df5b40d7L
 
-    .line 751
-    const-wide v14, -0x10c6b49c48d3L
+    .line 753
+    invoke-static {v13, v14}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 756
-    invoke-static {v14, v15}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    :cond_2f3
+    :goto_2f3
+    const-wide v13, -0x76a7df5b40d7L
 
-    .line 759
-    const-wide v14, -0x10d2b49c48d3L
+    .line 761
+    invoke-static {v13, v14}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 764
-    invoke-static {v14, v15}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-    :try_end_2fe
-    .catch Ljava/lang/Exception; {:try_start_2a8 .. :try_end_2fe} :catch_7f
+    const-wide v13, -0x76abdf5b40d7L
 
-    .line 767
-    move-object v7, v1
+    .line 769
+    invoke-static {v13, v14}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
-    .line 768
-    move-object/from16 v1, p2
-
-    .line 770
-    :try_start_301
-    invoke-static/range {v0 .. v8}, Landroid/security/kaorios/KaoriosHook;->b(Ljava/lang/Object;Ljava/lang/Object;Ljava/security/KeyPair;Lcom/kousei/framework/i3;IILjava/lang/String;Ljava/lang/String;Z)Ljava/util/ArrayList;
+    .line 772
+    move-object v3, v7
 
     .line 773
-    move-result-object v3
+    move-object v7, v2
 
     .line 774
-    if-nez v3, :cond_321
+    invoke-static {v3}, Lcom/kousei/framework/j3;->f(Lcom/kousei/framework/i3;)Ljava/security/KeyPair;
 
-    .line 776
-    const-wide v0, -0x1108b49c48d3L
+    .line 777
+    move-result-object v2
 
-    .line 781
-    invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    .line 778
+    if-eqz v2, :cond_519
+
+    .line 780
+    invoke-virtual {v4}, Landroid/security/keystore/KeyGenParameterSpec;->isStrongBoxBacked()Z
+
+    .line 783
+    move-result v1
 
     .line 784
-    move-result-object v0
+    if-eqz v1, :cond_314
 
-    .line 785
-    const-wide v1, -0x1114b49c48d3L
+    .line 786
+    const/4 v1, 0x2
 
-    .line 790
-    invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    .line 787
+    :goto_312
+    move v4, v1
+
+    .line 788
+    goto :goto_321
+
+    .line 789
+    :cond_314
+    instance-of v1, v9, Ljava/lang/Number;
+
+    .line 791
+    if-eqz v1, :cond_320
 
     .line 793
-    move-result-object v1
+    move-object v1, v9
 
     .line 794
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    check-cast v1, Ljava/lang/Number;
 
-    .line 797
-    goto/16 :goto_4d5
+    .line 796
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
 
     .line 799
-    :catch_31e
-    move-exception v0
+    move-result v1
 
     .line 800
-    goto/16 :goto_4c0
+    goto :goto_312
+
+    .line 801
+    :cond_320
+    move v4, v12
 
     .line 802
-    :cond_321
-    invoke-virtual {v2}, Ljava/security/KeyPair;->getPrivate()Ljava/security/PrivateKey;
+    :goto_321
+    const-wide v13, -0x763fdf5b40d7L
 
-    .line 805
-    move-result-object v1
-
-    .line 806
-    invoke-interface {v1}, Ljava/security/Key;->getEncoded()[B
-
-    .line 809
-    move-result-object v1
+    .line 807
+    invoke-static {v13, v14}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 810
-    move-object v4, v9
-
-    .line 811
-    check-cast v4, Landroid/security/KeyStoreSecurityLevel;
-
-    .line 813
-    move-object/from16 v5, p2
+    const-wide v13, -0x7603df5b40d7L
 
     .line 815
-    check-cast v5, Landroid/system/keystore2/KeyDescriptor;
+    invoke-static {v13, v14}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
-    .line 817
-    const-wide v6, -0x1150b49c48d3L
+    .line 818
+    const-wide v13, -0x77fedf5b40d7L
 
-    .line 822
-    invoke-static {v6, v7}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    .line 823
+    invoke-static {v13, v14}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
-    .line 825
-    const-wide v6, -0x115cb49c48d3L
+    .line 826
+    const-wide v13, -0x77c2df5b40d7L
 
-    .line 830
-    invoke-static {v6, v7}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    .line 831
+    invoke-static {v13, v14}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    :try_end_341
+    .catch Ljava/lang/Exception; {:try_start_2e8 .. :try_end_341} :catch_7f
 
-    .line 833
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 834
+    move-object/from16 v1, p2
 
     .line 836
-    move-result-object v2
-    :try_end_344
-    .catch Ljava/lang/Exception; {:try_start_301 .. :try_end_344} :catch_31e
-
-    .line 837
-    :goto_344
-    if-eqz v2, :cond_359
+    :try_start_343
+    invoke-static/range {v0 .. v8}, Landroid/security/kaorios/KaoriosHook;->b(Ljava/lang/Object;Ljava/lang/Object;Ljava/security/KeyPair;Lcom/kousei/framework/i3;IILjava/lang/String;Ljava/lang/String;Z)Ljava/util/ArrayList;
 
     .line 839
-    const-wide v6, -0x1185b49c48d3L
+    move-result-object v3
 
-    .line 844
-    :try_start_34b
-    invoke-static {v6, v7}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    .line 840
+    if-nez v3, :cond_363
+
+    .line 842
+    const-wide v0, -0x77bcdf5b40d7L
 
     .line 847
-    move-result-object v6
+    invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
-    .line 848
-    invoke-virtual {v2, v6, v10}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    .line 850
+    move-result-object v0
 
     .line 851
-    move-result-object v2
-    :try_end_353
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_34b .. :try_end_353} :catch_354
-    .catch Ljava/lang/Exception; {:try_start_34b .. :try_end_353} :catch_31e
-
-    .line 852
-    goto :goto_35a
-
-    .line 853
-    :catch_354
-    :try_start_354
-    invoke-virtual {v2}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
+    const-wide v1, -0x7780df5b40d7L
 
     .line 856
-    move-result-object v2
-
-    .line 857
-    goto :goto_344
-
-    .line 858
-    :cond_359
-    move-object v2, v10
+    invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 859
-    :goto_35a
-    if-nez v2, :cond_373
+    move-result-object v1
 
-    .line 861
-    const-wide v0, -0x11a5b49c48d3L
+    .line 860
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 863
+    goto/16 :goto_518
+
+    .line 865
+    :catch_360
+    move-exception v0
 
     .line 866
-    invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    goto/16 :goto_503
 
-    .line 869
-    move-result-object v0
+    .line 868
+    :cond_363
+    invoke-virtual {v2}, Ljava/security/KeyPair;->getPrivate()Ljava/security/PrivateKey;
 
-    .line 870
-    const-wide v1, -0x11b1b49c48d3L
+    .line 871
+    move-result-object v1
+
+    .line 872
+    invoke-interface {v1}, Ljava/security/Key;->getEncoded()[B
 
     .line 875
-    invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 878
     move-result-object v1
+
+    .line 876
+    move-object v4, v9
+
+    .line 877
+    check-cast v4, Landroid/security/KeyStoreSecurityLevel;
 
     .line 879
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    move-object/from16 v5, p2
 
-    .line 882
-    goto/16 :goto_4d5
+    .line 881
+    check-cast v5, Landroid/system/keystore2/KeyDescriptor;
 
-    .line 884
-    :cond_373
-    invoke-virtual {v2, v12}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    .line 883
+    const-wide v6, -0x7744df5b40d7L
 
-    .line 887
-    invoke-virtual {v2, v0, v10}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 890
-    move-result-object v2
+    .line 888
+    invoke-static {v6, v7}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 891
-    check-cast v2, Ljava/util/Collection;
+    const-wide v6, -0x7748df5b40d7L
 
-    .line 893
-    new-instance v7, Ljava/util/ArrayList;
-
-    .line 895
-    invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
-
-    .line 898
-    invoke-interface {v2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    .line 901
-    move-result-object v2
-
-    .line 902
-    :cond_385
-    :goto_385
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 905
-    move-result v6
-
-    .line 906
-    if-eqz v6, :cond_3ca
-
-    .line 908
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 911
-    move-result-object v6
-
-    .line 912
-    check-cast v6, Landroid/hardware/security/keymint/KeyParameter;
-
-    .line 914
-    iget v8, v6, Landroid/hardware/security/keymint/KeyParameter;->tag:I
-
-    .line 916
-    const v9, -0x6ffffd3c
-
-    .line 919
-    if-eq v8, v9, :cond_385
-
-    .line 921
-    const v9, -0x6ffffd3b
-
-    .line 924
-    if-eq v8, v9, :cond_385
-
-    .line 926
-    const v9, -0x6ffffd3a
-
-    .line 929
-    if-eq v8, v9, :cond_385
-
-    .line 931
-    const v9, -0x6ffffd39
-
-    .line 934
-    if-eq v8, v9, :cond_385
-
-    .line 936
-    const v9, -0x6ffffd38
-
-    .line 939
-    if-eq v8, v9, :cond_385
-
-    .line 941
-    const v9, -0x6ffffd37
-
-    .line 944
-    if-eq v8, v9, :cond_385
-
-    .line 946
-    const v9, -0x6ffffd36
-
-    .line 949
-    if-eq v8, v9, :cond_385
-
-    .line 951
-    const v9, -0x6ffffd35
-
-    .line 954
-    if-eq v8, v9, :cond_385
-
-    .line 956
-    const v9, -0x6ffffd34
-
-    .line 959
-    if-eq v8, v9, :cond_385
-
-    .line 961
-    const v9, -0x6ffffd33
-
-    .line 964
-    if-ne v8, v9, :cond_3c6
-
-    .line 966
-    goto :goto_385
-
-    .line 967
-    :cond_3c6
-    invoke-virtual {v7, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 970
-    goto :goto_385
-
-    .line 971
-    :cond_3ca
-    const-wide v8, -0x11f5b49c48d3L
-
-    .line 976
-    invoke-static {v8, v9}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 979
-    const-wide v8, -0x1201b49c48d3L
-
-    .line 984
-    invoke-static {v8, v9}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 987
-    const/4 v6, 0x0
-
-    .line 988
-    const/4 v8, 0x0
-
-    .line 989
-    move-object v9, v1
-
-    .line 990
-    invoke-virtual/range {v4 .. v9}, Landroid/security/KeyStoreSecurityLevel;->importKey(Landroid/system/keystore2/KeyDescriptor;Landroid/system/keystore2/KeyDescriptor;Ljava/util/Collection;I[B)Landroid/system/keystore2/KeyMetadata;
-
-    .line 993
-    move-result-object v1
-
-    .line 994
-    invoke-virtual {v3}, Ljava/util/ArrayList;->isEmpty()Z
-
-    .line 997
-    move-result v2
-
-    .line 998
-    if-nez v2, :cond_406
-
-    .line 1000
-    invoke-virtual {v3, v13}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    .line 1003
-    move-result-object v2
-
-    .line 1004
-    check-cast v2, Ljava/security/cert/Certificate;
-
-    .line 1006
-    invoke-virtual {v2}, Ljava/security/cert/Certificate;->getEncoded()[B
-
-    .line 1009
-    move-result-object v2
-
-    .line 1010
-    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
-
-    .line 1013
-    move-result v6
-
-    .line 1014
-    if-le v6, v12, :cond_404
-
-    .line 1016
-    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
-
-    .line 1019
-    move-result v6
-
-    .line 1020
-    invoke-virtual {v3, v12, v6}, Ljava/util/ArrayList;->subList(II)Ljava/util/List;
-
-    .line 1023
-    move-result-object v3
-
-    .line 1024
-    invoke-static {v3}, Landroid/security/kaorios/KaoriosHook;->c(Ljava/util/List;)[B
-
-    .line 1027
-    move-result-object v3
-
-    .line 1028
-    goto :goto_408
-
-    .line 1029
-    :cond_404
-    move-object v3, v10
-
-    .line 1030
-    goto :goto_408
-
-    .line 1031
-    :cond_406
-    move-object v2, v10
-
-    .line 1032
-    move-object v3, v2
-
-    .line 1033
-    :goto_408
-    const-wide v6, -0x1213b49c48d3L
-
-    .line 1038
+    .line 896
     invoke-static {v6, v7}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
-    .line 1041
-    const-wide v6, -0x121fb49c48d3L
-
-    .line 1046
-    invoke-static {v6, v7}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 1049
-    const-wide v6, -0x123bb49c48d3L
-
-    .line 1054
-    invoke-static {v6, v7}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 1057
-    move-result-object v6
-
-    .line 1058
-    invoke-static {v0, v6}, Landroid/security/kaorios/KaoriosHook;->e(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 1061
-    move-result-object v0
-
-    .line 1062
-    check-cast v0, Landroid/security/KeyStore2;
-
-    .line 1064
-    invoke-virtual {v0, v5, v2, v3}, Landroid/security/KeyStore2;->updateSubcomponents(Landroid/system/keystore2/KeyDescriptor;[B[B)V
-
-    .line 1067
-    const-wide v2, -0x1245b49c48d3L
-
-    .line 1072
-    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 1075
-    const-wide v2, -0x1251b49c48d3L
-
-    .line 1080
-    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-    :try_end_43a
-    .catch Ljava/lang/Exception; {:try_start_354 .. :try_end_43a} :catch_31e
-
-    .line 1083
-    :try_start_43a
-    const-class v0, Landroid/security/keystore2/AndroidKeyStoreProvider;
-
-    .line 1085
-    const-wide v2, -0x1273b49c48d3L
-
-    .line 1090
-    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 1093
-    move-result-object v2
-
-    .line 1094
-    const-class v3, Landroid/system/keystore2/KeyDescriptor;
-
-    .line 1096
-    const-class v6, Landroid/system/keystore2/KeyMetadata;
-
-    .line 1098
-    const-class v7, Landroid/security/KeyStoreSecurityLevel;
-
-    .line 1100
-    sget-object v8, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    .line 1102
-    filled-new-array {v3, v6, v7, v8}, [Ljava/lang/Class;
-
-    .line 1105
-    move-result-object v3
-
-    .line 1106
-    invoke-virtual {v0, v2, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    .line 1109
-    move-result-object v0
-
-    .line 1110
-    invoke-virtual {v0, v12}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    .line 1113
-    filled-new-array {v5, v1, v4, v11}, [Ljava/lang/Object;
-
-    .line 1116
-    move-result-object v1
-
-    .line 1117
-    invoke-virtual {v0, v10, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 1120
-    move-result-object v0
-
-    .line 1121
-    check-cast v0, Landroid/security/keystore2/AndroidKeyStorePublicKey;
-    :try_end_462
-    .catch Ljava/lang/Exception; {:try_start_43a .. :try_end_462} :catch_4a9
-
-    .line 1123
-    :try_start_462
+    .line 899
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 1126
-    move-result-object v1
+    .line 902
+    move-result-object v2
+    :try_end_386
+    .catch Ljava/lang/Exception; {:try_start_343 .. :try_end_386} :catch_360
 
-    .line 1127
-    const-wide v2, -0x12f2b49c48d3L
+    .line 903
+    :goto_386
+    if-eqz v2, :cond_39b
 
-    .line 1132
-    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    .line 905
+    const-wide v6, -0x773fdf5b40d7L
 
-    .line 1135
+    .line 910
+    :try_start_38d
+    invoke-static {v6, v7}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 913
+    move-result-object v6
+
+    .line 914
+    invoke-virtual {v2, v6, v10}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    .line 917
+    move-result-object v2
+    :try_end_395
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_38d .. :try_end_395} :catch_396
+    .catch Ljava/lang/Exception; {:try_start_38d .. :try_end_395} :catch_360
+
+    .line 918
+    goto :goto_39c
+
+    .line 919
+    :catch_396
+    :try_start_396
+    invoke-virtual {v2}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
+
+    .line 922
     move-result-object v2
 
-    .line 1136
-    invoke-virtual {v1, v2, v10}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    .line 923
+    goto :goto_386
 
-    .line 1139
-    move-result-object v1
+    .line 924
+    :cond_39b
+    move-object v2, v10
 
-    .line 1140
-    invoke-virtual {v1, v12}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    .line 925
+    :goto_39c
+    if-nez v2, :cond_3b5
 
-    .line 1143
-    invoke-virtual {v1, v0, v10}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    .line 927
+    const-wide v0, -0x771fdf5b40d7L
 
-    .line 1146
-    move-result-object v1
-
-    .line 1147
-    check-cast v1, Ljava/security/PrivateKey;
-    :try_end_47c
-    .catch Ljava/lang/Exception; {:try_start_462 .. :try_end_47c} :catch_492
-
-    .line 1149
-    const-wide v2, -0x132bb49c48d3L
-
-    .line 1154
-    :try_start_481
-    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 1157
-    const-wide v2, -0x1337b49c48d3L
-
-    .line 1162
-    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 1165
-    new-instance v2, Ljava/security/KeyPair;
-
-    .line 1167
-    invoke-direct {v2, v0, v1}, Ljava/security/KeyPair;-><init>(Ljava/security/PublicKey;Ljava/security/PrivateKey;)V
-
-    .line 1170
-    return-object v2
-
-    .line 1171
-    :catch_492
-    move-exception v0
-
-    .line 1172
-    const-wide v1, -0x1300b49c48d3L
-
-    .line 1177
-    invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 1180
-    move-result-object v1
-
-    .line 1181
-    const-wide v2, -0x130cb49c48d3L
-
-    .line 1186
-    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 1189
-    move-result-object v2
-
-    .line 1190
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    .line 1193
-    goto :goto_4d5
-
-    .line 1194
-    :catch_4a9
-    move-exception v0
-
-    .line 1195
-    const-wide v1, -0x12a4b49c48d3L
-
-    .line 1200
-    invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 1203
-    move-result-object v1
-
-    .line 1204
-    const-wide v2, -0x12b0b49c48d3L
-
-    .line 1209
-    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 1212
-    move-result-object v2
-
-    .line 1213
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-    :try_end_4bf
-    .catch Ljava/lang/Exception; {:try_start_481 .. :try_end_4bf} :catch_31e
-
-    .line 1216
-    goto :goto_4d5
-
-    .line 1217
-    :goto_4c0
-    const-wide v1, -0x1360b49c48d3L
-
-    .line 1222
-    :try_start_4c5
-    invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 1225
-    move-result-object v1
-
-    .line 1226
-    const-wide v2, -0x136cb49c48d3L
-
-    .line 1231
-    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 1234
-    move-result-object v2
-
-    .line 1235
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    .line 1238
-    :goto_4d5
-    return-object v10
-
-    .line 1239
-    :cond_4d6
-    const-wide v0, -0x1026b49c48d3L
-
-    .line 1244
+    .line 932
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
-    .line 1247
+    .line 935
     move-result-object v0
 
-    .line 1248
-    const-wide v1, -0x1032b49c48d3L
+    .line 936
+    const-wide v1, -0x74e3df5b40d7L
 
-    .line 1253
+    .line 941
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
-    .line 1256
+    .line 944
     move-result-object v1
 
-    .line 1257
+    .line 945
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 948
+    goto/16 :goto_518
+
+    .line 950
+    :cond_3b5
+    invoke-virtual {v2, v12}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+
+    .line 953
+    invoke-virtual {v2, v0, v10}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 956
+    move-result-object v2
+
+    .line 957
+    check-cast v2, Ljava/util/Collection;
+
+    .line 959
+    new-instance v7, Ljava/util/ArrayList;
+
+    .line 961
+    invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
+
+    .line 964
+    invoke-interface {v2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    .line 967
+    move-result-object v2
+
+    .line 968
+    :cond_3c7
+    :goto_3c7
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 971
+    move-result v6
+
+    .line 972
+    if-eqz v6, :cond_40c
+
+    .line 974
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 977
+    move-result-object v6
+
+    .line 978
+    check-cast v6, Landroid/hardware/security/keymint/KeyParameter;
+
+    .line 980
+    iget v8, v6, Landroid/hardware/security/keymint/KeyParameter;->tag:I
+
+    .line 982
+    const v9, -0x6ffffd3c
+
+    .line 985
+    if-eq v8, v9, :cond_3c7
+
+    .line 987
+    const v9, -0x6ffffd3b
+
+    .line 990
+    if-eq v8, v9, :cond_3c7
+
+    .line 992
+    const v9, -0x6ffffd3a
+
+    .line 995
+    if-eq v8, v9, :cond_3c7
+
+    .line 997
+    const v9, -0x6ffffd39
+
+    .line 1000
+    if-eq v8, v9, :cond_3c7
+
+    .line 1002
+    const v9, -0x6ffffd38
+
+    .line 1005
+    if-eq v8, v9, :cond_3c7
+
+    .line 1007
+    const v9, -0x6ffffd37
+
+    .line 1010
+    if-eq v8, v9, :cond_3c7
+
+    .line 1012
+    const v9, -0x6ffffd36
+
+    .line 1015
+    if-eq v8, v9, :cond_3c7
+
+    .line 1017
+    const v9, -0x6ffffd35
+
+    .line 1020
+    if-eq v8, v9, :cond_3c7
+
+    .line 1022
+    const v9, -0x6ffffd34
+
+    .line 1025
+    if-eq v8, v9, :cond_3c7
+
+    .line 1027
+    const v9, -0x6ffffd33
+
+    .line 1030
+    if-ne v8, v9, :cond_408
+
+    .line 1032
+    goto :goto_3c7
+
+    .line 1033
+    :cond_408
+    invoke-virtual {v7, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 1036
+    goto :goto_3c7
+
+    .line 1037
+    :cond_40c
+    const-wide v8, -0x74afdf5b40d7L
+
+    .line 1042
+    invoke-static {v8, v9}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 1045
+    const-wide v8, -0x74b3df5b40d7L
+
+    .line 1050
+    invoke-static {v8, v9}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 1053
+    const/4 v6, 0x0
+
+    .line 1054
+    const/4 v8, 0x0
+
+    .line 1055
+    move-object v9, v1
+
+    .line 1056
+    invoke-virtual/range {v4 .. v9}, Landroid/security/KeyStoreSecurityLevel;->importKey(Landroid/system/keystore2/KeyDescriptor;Landroid/system/keystore2/KeyDescriptor;Ljava/util/Collection;I[B)Landroid/system/keystore2/KeyMetadata;
+
+    .line 1059
+    move-result-object v1
+
+    .line 1060
+    invoke-virtual {v3}, Ljava/util/ArrayList;->isEmpty()Z
+
+    .line 1063
+    move-result v2
+
+    .line 1064
+    if-nez v2, :cond_449
+
+    .line 1066
+    const/4 v2, 0x0
+
+    .line 1067
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    .line 1070
+    move-result-object v2
+
+    .line 1071
+    check-cast v2, Ljava/security/cert/Certificate;
+
+    .line 1073
+    invoke-virtual {v2}, Ljava/security/cert/Certificate;->getEncoded()[B
+
+    .line 1076
+    move-result-object v2
+
+    .line 1077
+    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
+
+    .line 1080
+    move-result v6
+
+    .line 1081
+    if-le v6, v12, :cond_447
+
+    .line 1083
+    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
+
+    .line 1086
+    move-result v6
+
+    .line 1087
+    invoke-virtual {v3, v12, v6}, Ljava/util/ArrayList;->subList(II)Ljava/util/List;
+
+    .line 1090
+    move-result-object v3
+
+    .line 1091
+    invoke-static {v3}, Landroid/security/kaorios/KaoriosHook;->c(Ljava/util/List;)[B
+
+    .line 1094
+    move-result-object v3
+
+    .line 1095
+    goto :goto_44b
+
+    .line 1096
+    :cond_447
+    move-object v3, v10
+
+    .line 1097
+    goto :goto_44b
+
+    .line 1098
+    :cond_449
+    move-object v2, v10
+
+    .line 1099
+    move-object v3, v2
+
+    .line 1100
+    :goto_44b
+    const-wide v6, -0x7481df5b40d7L
+
+    .line 1105
+    invoke-static {v6, v7}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 1108
+    const-wide v6, -0x7495df5b40d7L
+
+    .line 1113
+    invoke-static {v6, v7}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 1116
+    const-wide v6, -0x7469df5b40d7L
+
+    .line 1121
+    invoke-static {v6, v7}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 1124
+    move-result-object v6
+
+    .line 1125
+    invoke-static {v0, v6}, Landroid/security/kaorios/KaoriosHook;->e(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 1128
+    move-result-object v0
+
+    .line 1129
+    check-cast v0, Landroid/security/KeyStore2;
+
+    .line 1131
+    invoke-virtual {v0, v5, v2, v3}, Landroid/security/KeyStore2;->updateSubcomponents(Landroid/system/keystore2/KeyDescriptor;[B[B)V
+
+    .line 1134
+    const-wide v2, -0x747fdf5b40d7L
+
+    .line 1139
+    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 1142
+    const-wide v2, -0x7443df5b40d7L
+
+    .line 1147
+    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    :try_end_47d
+    .catch Ljava/lang/Exception; {:try_start_396 .. :try_end_47d} :catch_360
+
+    .line 1150
+    :try_start_47d
+    const-class v0, Landroid/security/keystore2/AndroidKeyStoreProvider;
+
+    .line 1152
+    const-wide v2, -0x7421df5b40d7L
+
+    .line 1157
+    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 1160
+    move-result-object v2
+
+    .line 1161
+    const-class v3, Landroid/system/keystore2/KeyDescriptor;
+
+    .line 1163
+    const-class v6, Landroid/system/keystore2/KeyMetadata;
+
+    .line 1165
+    const-class v7, Landroid/security/KeyStoreSecurityLevel;
+
+    .line 1167
+    sget-object v8, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    .line 1169
+    filled-new-array {v3, v6, v7, v8}, [Ljava/lang/Class;
+
+    .line 1172
+    move-result-object v3
+
+    .line 1173
+    invoke-virtual {v0, v2, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    .line 1176
+    move-result-object v0
+
+    .line 1177
+    invoke-virtual {v0, v12}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+
+    .line 1180
+    filled-new-array {v5, v1, v4, v11}, [Ljava/lang/Object;
+
+    .line 1183
+    move-result-object v1
+
+    .line 1184
+    invoke-virtual {v0, v10, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 1187
+    move-result-object v0
+
+    .line 1188
+    check-cast v0, Landroid/security/keystore2/AndroidKeyStorePublicKey;
+    :try_end_4a5
+    .catch Ljava/lang/Exception; {:try_start_47d .. :try_end_4a5} :catch_4ec
+
+    .line 1190
+    :try_start_4a5
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 1193
+    move-result-object v1
+
+    .line 1194
+    const-wide v2, -0x75a2df5b40d7L
+
+    .line 1199
+    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 1202
+    move-result-object v2
+
+    .line 1203
+    invoke-virtual {v1, v2, v10}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    .line 1206
+    move-result-object v1
+
+    .line 1207
+    invoke-virtual {v1, v12}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+
+    .line 1210
+    invoke-virtual {v1, v0, v10}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 1213
+    move-result-object v1
+
+    .line 1214
+    check-cast v1, Ljava/security/PrivateKey;
+    :try_end_4bf
+    .catch Ljava/lang/Exception; {:try_start_4a5 .. :try_end_4bf} :catch_4d5
+
+    .line 1216
+    const-wide v2, -0x7599df5b40d7L
+
+    .line 1221
+    :try_start_4c4
+    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 1224
+    const-wide v2, -0x756ddf5b40d7L
+
+    .line 1229
+    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 1232
+    new-instance v2, Ljava/security/KeyPair;
+
+    .line 1234
+    invoke-direct {v2, v0, v1}, Ljava/security/KeyPair;-><init>(Ljava/security/PublicKey;Ljava/security/PrivateKey;)V
+
+    .line 1237
+    return-object v2
+
+    .line 1238
+    :catch_4d5
+    move-exception v0
+
+    .line 1239
+    const-wide v1, -0x75b4df5b40d7L
+
+    .line 1244
+    invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 1247
+    move-result-object v1
+
+    .line 1248
+    const-wide v2, -0x75b8df5b40d7L
+
+    .line 1253
+    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 1256
+    move-result-object v2
+
+    .line 1257
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     .line 1260
-    new-instance v0, Ljava/security/ProviderException;
+    goto :goto_518
+
+    .line 1261
+    :catch_4ec
+    move-exception v0
 
     .line 1262
-    const-wide v1, -0x1065b49c48d3L
+    const-wide v1, -0x7410df5b40d7L
 
     .line 1267
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -4341,53 +4398,131 @@
     move-result-object v1
 
     .line 1271
-    invoke-direct {v0, v1}, Ljava/security/ProviderException;-><init>(Ljava/lang/String;)V
+    const-wide v2, -0x75e4df5b40d7L
 
-    .line 1274
-    throw v0
-
-    .line 1275
-    :cond_4fa
-    :goto_4fa
-    const-wide v0, -0xd82b49c48d3L
-
-    .line 1280
-    invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 1283
-    const-wide v0, -0xd8eb49c48d3L
-
-    .line 1288
-    invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-    :try_end_50a
-    .catch Ljava/lang/Exception; {:try_start_4c5 .. :try_end_50a} :catch_7f
-
-    .line 1291
-    return-object v10
-
-    .line 1292
-    :goto_50b
-    const-wide v1, -0x13a4b49c48d3L
-
-    .line 1297
-    invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
-
-    .line 1300
-    move-result-object v1
-
-    .line 1301
-    const-wide v2, -0x13b0b49c48d3L
-
-    .line 1306
+    .line 1276
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
-    .line 1309
+    .line 1279
     move-result-object v2
 
-    .line 1310
+    .line 1280
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    :try_end_502
+    .catch Ljava/lang/Exception; {:try_start_4c4 .. :try_end_502} :catch_360
+
+    .line 1283
+    goto :goto_518
+
+    .line 1284
+    :goto_503
+    const-wide v1, -0x7554df5b40d7L
+
+    .line 1289
+    :try_start_508
+    invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 1292
+    move-result-object v1
+
+    .line 1293
+    const-wide v2, -0x7558df5b40d7L
+
+    .line 1298
+    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 1301
+    move-result-object v2
+
+    .line 1302
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1313
+    .line 1305
+    :goto_518
+    return-object v10
+
+    .line 1306
+    :cond_519
+    const-wide v0, -0x769edf5b40d7L
+
+    .line 1311
+    invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 1314
+    move-result-object v0
+
+    .line 1315
+    const-wide v1, -0x7662df5b40d7L
+
+    .line 1320
+    invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 1323
+    move-result-object v1
+
+    .line 1324
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1327
+    new-instance v0, Ljava/security/ProviderException;
+
+    .line 1329
+    const-wide v1, -0x765fdf5b40d7L
+
+    .line 1334
+    invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 1337
+    move-result-object v1
+
+    .line 1338
+    invoke-direct {v0, v1}, Ljava/security/ProviderException;-><init>(Ljava/lang/String;)V
+
+    .line 1341
+    throw v0
+
+    .line 1342
+    :cond_53d
+    :goto_53d
+    const-wide v0, -0x6b7ddf5b40d7L
+
+    .line 1347
+    invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 1350
+    const-wide v0, -0x6b41df5b40d7L
+
+    .line 1355
+    invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+    :try_end_54d
+    .catch Ljava/lang/Exception; {:try_start_508 .. :try_end_54d} :catch_7f
+
+    .line 1358
+    return-object v10
+
+    .line 1359
+    :goto_54e
+    const-wide v1, -0x7510df5b40d7L
+
+    .line 1364
+    invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 1367
+    move-result-object v1
+
+    .line 1368
+    const-wide v2, -0x72e4df5b40d7L
+
+    .line 1373
+    invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 1376
+    move-result-object v2
+
+    .line 1377
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 1380
     return-object v10
 .end method
 
@@ -4405,7 +4540,7 @@
 
     .line 6
     :cond_5
-    const-wide v1, -0xc46b49c48d3L
+    const-wide v1, -0x6ab9df5b40d7L
 
     .line 11
     :try_start_a
@@ -4421,7 +4556,7 @@
     move-result-object v1
 
     .line 19
-    const-wide v2, -0xc50b49c48d3L
+    const-wide v2, -0x6a8fdf5b40d7L
 
     .line 24
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -4452,7 +4587,7 @@
 
     .line 42
     :cond_29
-    const-wide v3, -0xc56b49c48d3L
+    const-wide v3, -0x6a89df5b40d7L
 
     .line 47
     invoke-static {v3, v4}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -4470,7 +4605,7 @@
     check-cast v3, Ljava/lang/String;
 
     .line 57
-    const-wide v4, -0xc62b49c48d3L
+    const-wide v4, -0x6a9ddf5b40d7L
 
     .line 62
     invoke-static {v4, v5}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -4488,7 +4623,7 @@
     if-nez v4, :cond_b5
 
     .line 72
-    const-wide v4, -0xc76b49c48d3L
+    const-wide v4, -0x6a69df5b40d7L
 
     .line 77
     invoke-static {v4, v5}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -4541,7 +4676,7 @@
     move-result-object v5
 
     .line 107
-    invoke-virtual {v5, v4}, Lcom/kousei/framework/gi;->g([Ljava/lang/String;)Z
+    invoke-virtual {v5, v4}, Lcom/kousei/framework/gi;->h([Ljava/lang/String;)Z
 
     .line 110
     move-result v4
@@ -4598,7 +4733,7 @@
     iput-object v3, v2, Landroid/system/keystore2/KeyDescriptor;->alias:Ljava/lang/String;
 
     .line 139
-    const-wide v5, -0xc92b49c48d3L
+    const-wide v5, -0x6a4ddf5b40d7L
 
     .line 144
     invoke-static {v5, v6}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -4682,7 +4817,7 @@
 
     .line 183
     :goto_b6
-    const-wide v1, -0xca2b49c48d3L
+    const-wide v1, -0x6a5ddf5b40d7L
 
     .line 188
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -4691,7 +4826,7 @@
     move-result-object v1
 
     .line 192
-    const-wide v2, -0xcaeb49c48d3L
+    const-wide v2, -0x6a21df5b40d7L
 
     .line 197
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -4710,14 +4845,14 @@
     .registers 4
 
     .line 1
-    const-wide v0, -0x68ab49c48d3L
+    const-wide v0, -0x606ddf5b40d7L
 
     .line 6
     :try_start_5
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 9
-    const-wide v0, -0x696b49c48d3L
+    const-wide v0, -0x6071df5b40d7L
 
     .line 14
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -4729,7 +4864,7 @@
     move-result-object v0
 
     .line 21
-    invoke-virtual {v0}, Lcom/kousei/framework/gi;->e()V
+    invoke-virtual {v0}, Lcom/kousei/framework/gi;->f()V
 
     .line 24
     invoke-static {}, Lcom/kousei/framework/o0;->f()V
@@ -4744,7 +4879,7 @@
     move-exception v0
 
     .line 29
-    const-wide v1, -0x6beb49c48d3L
+    const-wide v1, -0x6059df5b40d7L
 
     .line 34
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -4753,7 +4888,7 @@
     move-result-object v1
 
     .line 38
-    const-wide v2, -0x6cab49c48d3L
+    const-wide v2, -0x602ddf5b40d7L
 
     .line 43
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -4766,6 +4901,146 @@
 
     .line 50
     return-void
+.end method
+
+.method public static isSecureFlag()Z
+    .registers 6
+
+    .line 1
+    invoke-static {}, Lcom/kousei/framework/KaoriosFramework;->obtainContentResolver()Landroid/content/ContentResolver;
+
+    .line 4
+    move-result-object v0
+
+    .line 5
+    sget-boolean v1, Landroid/security/kaorios/KaoriosHook;->b:Z
+
+    .line 7
+    const/4 v2, 0x1
+
+    .line 8
+    if-nez v1, :cond_32
+
+    .line 10
+    if-nez v0, :cond_c
+
+    .line 12
+    goto :goto_32
+
+    .line 13
+    :cond_c
+    const-class v1, Landroid/security/kaorios/KaoriosHook;
+
+    .line 15
+    monitor-enter v1
+
+    .line 16
+    :try_start_f
+    sget-boolean v3, Landroid/security/kaorios/KaoriosHook;->b:Z
+
+    .line 18
+    if-eqz v3, :cond_17
+
+    .line 20
+    monitor-exit v1
+    :try_end_14
+    .catchall {:try_start_f .. :try_end_14} :catchall_15
+
+    .line 21
+    goto :goto_32
+
+    .line 22
+    :catchall_15
+    move-exception v0
+
+    .line 23
+    goto :goto_30
+
+    .line 24
+    :cond_17
+    const-wide v3, -0x704edf5b40d7L
+
+    .line 29
+    :try_start_1c
+    invoke-static {v3, v4}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 32
+    move-result-object v3
+
+    .line 33
+    const-wide v4, -0x7025df5b40d7L
+
+    .line 38
+    invoke-static {v4, v5}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 41
+    move-result-object v4
+
+    .line 42
+    invoke-static {v0, v3, v4}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
+
+    .line 45
+    sput-boolean v2, Landroid/security/kaorios/KaoriosHook;->b:Z
+    :try_end_2e
+    .catchall {:try_start_1c .. :try_end_2e} :catchall_2e
+
+    .line 47
+    :catchall_2e
+    :try_start_2e
+    monitor-exit v1
+
+    .line 48
+    goto :goto_32
+
+    .line 49
+    :goto_30
+    monitor-exit v1
+    :try_end_31
+    .catchall {:try_start_2e .. :try_end_31} :catchall_15
+
+    .line 50
+    throw v0
+
+    .line 51
+    :cond_32
+    :goto_32
+    const/4 v1, 0x0
+
+    .line 52
+    if-nez v0, :cond_36
+
+    .line 54
+    return v1
+
+    .line 55
+    :cond_36
+    const-wide v3, -0x7072df5b40d7L
+
+    .line 60
+    invoke-static {v3, v4}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 63
+    move-result-object v3
+
+    .line 64
+    invoke-static {v0, v3, v1}, Lcom/kousei/framework/KaoriosFramework;->getGlobalInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    .line 67
+    move-result v0
+
+    .line 68
+    if-ne v0, v2, :cond_46
+
+    .line 70
+    goto :goto_47
+
+    .line 71
+    :cond_46
+    move v2, v1
+
+    .line 72
+    :goto_47
+    return v2
 .end method
 
 .method public static shouldHideAppList(Landroid/content/ContentResolver;Ljava/lang/String;)Z
@@ -4860,7 +5135,7 @@
     move-exception p0
 
     .line 17
-    const-wide v0, -0x15ffb49c48d3L
+    const-wide v0, -0x70b5df5b40d7L
 
     .line 22
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -4869,7 +5144,7 @@
     move-result-object v0
 
     .line 26
-    const-wide v1, -0x160bb49c48d3L
+    const-wide v1, -0x70b9df5b40d7L
 
     .line 31
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;

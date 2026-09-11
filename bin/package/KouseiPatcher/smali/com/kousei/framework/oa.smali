@@ -4412,6 +4412,7 @@
     .line 1559
     return-object p0
 
+    .line 1560
     nop
 
     .line 1561

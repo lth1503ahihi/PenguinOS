@@ -1207,6 +1207,7 @@
     .line 769
     return-object v1
 
+    .line 770
     nop
 
     .line 771

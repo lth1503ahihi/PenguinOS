@@ -2052,6 +2052,7 @@
     .line 1115
     return-object p0
 
+    .line 1116
     nop
 
     .line 1117
@@ -3309,6 +3310,7 @@
     .line 783
     return-object v1
 
+    .line 784
     nop
 
     .line 785

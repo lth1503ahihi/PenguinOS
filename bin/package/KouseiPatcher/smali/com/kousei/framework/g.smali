@@ -64,6 +64,7 @@
     .line 27
     return-void
 
+    .line 28
     nop
 
     .line 29

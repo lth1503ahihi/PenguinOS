@@ -398,6 +398,7 @@
     .line 11
     return-object p0
 
+    .line 12
     nop
 
     .line 13
@@ -429,6 +430,7 @@
     .line 11
     return p0
 
+    .line 12
     nop
 
     .line 13
@@ -592,6 +594,7 @@
     .line 117
     return p0
 
+    .line 118
     nop
 
     .line 119
@@ -1918,6 +1921,7 @@
     .line 125
     return-void
 
+    .line 126
     nop
 
     .line 127

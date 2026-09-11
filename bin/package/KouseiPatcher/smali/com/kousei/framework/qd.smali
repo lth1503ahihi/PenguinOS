@@ -4040,6 +4040,7 @@
     .line 1261
     return-object v0
 
+    .line 1262
     nop
 
     .line 1263

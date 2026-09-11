@@ -52,6 +52,7 @@
     .line 23
     return-void
 
+    .line 24
     nop
 
     .line 25

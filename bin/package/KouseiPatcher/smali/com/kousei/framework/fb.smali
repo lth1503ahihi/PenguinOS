@@ -392,6 +392,7 @@
     .line 215
     throw p0
 
+    .line 216
     nop
 
     .line 217

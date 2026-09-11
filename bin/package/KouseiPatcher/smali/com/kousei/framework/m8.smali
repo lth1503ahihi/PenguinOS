@@ -419,6 +419,7 @@
     .line 187
     return-object v1
 
+    .line 188
     nop
 
     .line 189

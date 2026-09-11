@@ -65,6 +65,7 @@
     .line 13
     return-object p0
 
+    .line 14
     nop
 
     .line 15

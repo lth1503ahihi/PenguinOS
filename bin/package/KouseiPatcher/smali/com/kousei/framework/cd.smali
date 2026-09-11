@@ -49,6 +49,7 @@
     .line 25
     return-void
 
+    .line 26
     nop
 
     .line 27
@@ -294,6 +295,7 @@
     :cond_82
     return-void
 
+    .line 132
     nop
 
     .line 133

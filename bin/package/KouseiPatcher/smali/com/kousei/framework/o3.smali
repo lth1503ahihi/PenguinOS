@@ -1494,6 +1494,7 @@
     :catch_47c
     return-object v1
 
+    .line 1150
     nop
 
     .line 1151

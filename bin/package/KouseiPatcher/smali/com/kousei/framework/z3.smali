@@ -4231,6 +4231,7 @@
     .line 95
     return p0
 
+    .line 96
     nop
 
     .line 97

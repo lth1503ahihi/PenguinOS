@@ -76,6 +76,7 @@
     .line 47
     return-void
 
+    .line 48
     nop
 
     .line 49

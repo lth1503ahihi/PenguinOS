@@ -1,6 +1,6 @@
 .class public Lcom/kousei/framework/KaoriosFramework;
 .super Ljava/lang/Object;
-.source "r8-map-id-5ae92ff21d09ad14f9452618f0eb059d5742c78e657d0492d02c35db86ae1101"
+.source "r8-map-id-ab9d9a36b7cfe29bbfb78ee9a77c1feaf549e881397fc2be336a306d7a6faedf"
 
 
 # static fields
@@ -38,276 +38,300 @@
     .registers 4
 
     .line 1
-    const-wide v0, -0x42bab49c48d3L
+    const-wide v0, -0x22dbdf5b40d7L
 
     .line 6
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 9
-    const-wide v0, -0x42cdb49c48d3L
+    const-wide v0, -0x22a8df5b40d7L
 
     .line 14
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 17
-    const-wide v0, -0x42deb49c48d3L
+    const-wide v0, -0x2287df5b40d7L
 
     .line 22
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 25
-    const-wide v0, -0x42e6b49c48d3L
+    const-wide v0, -0x228fdf5b40d7L
 
     .line 30
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 33
-    const-wide v0, -0x42f3b49c48d3L
+    const-wide v0, -0x2292df5b40d7L
 
     .line 38
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 41
-    const-wide v0, -0x4308b49c48d3L
+    const-wide v0, -0x226ddf5b40d7L
 
     .line 46
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 49
-    const-wide v0, -0x431db49c48d3L
+    const-wide v0, -0x2279df5b40d7L
 
     .line 54
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 57
-    const-wide v0, -0x4333b49c48d3L
+    const-wide v0, -0x2254df5b40d7L
 
     .line 62
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 65
-    const-wide v0, -0x4349b49c48d3L
+    const-wide v0, -0x222edf5b40d7L
 
     .line 70
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 73
-    const-wide v0, -0x435fb49c48d3L
+    const-wide v0, -0x2238df5b40d7L
 
     .line 78
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 81
-    const-wide v0, -0x4379b49c48d3L
+    const-wide v0, -0x221fdf5b40d7L
 
     .line 86
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 89
-    const-wide v0, -0x439ab49c48d3L
+    const-wide v0, -0x23e9df5b40d7L
 
     .line 94
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 97
-    const-wide v0, -0x43acb49c48d3L
+    const-wide v0, -0x23cfdf5b40d7L
 
     .line 102
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 105
-    const-wide v0, -0x43c5b49c48d3L
+    const-wide v0, -0x23aedf5b40d7L
 
     .line 110
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 113
-    const-wide v0, -0x43ddb49c48d3L
+    const-wide v0, -0x23bcdf5b40d7L
 
     .line 118
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 121
-    const-wide v0, -0x43f4b49c48d3L
+    const-wide v0, -0x2393df5b40d7L
 
     .line 126
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 129
-    const-wide v0, -0x4405b49c48d3L
+    const-wide v0, -0x236bdf5b40d7L
 
     .line 134
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 137
-    const-wide v0, -0x4418b49c48d3L
+    const-wide v0, -0x2344df5b40d7L
 
     .line 142
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 145
-    const-wide v0, -0x442eb49c48d3L
+    const-wide v0, -0x2353df5b40d7L
 
     .line 150
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 153
-    const-wide v0, -0x4448b49c48d3L
+    const-wide v0, -0x2320df5b40d7L
 
     .line 158
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 161
-    const-wide v0, -0x445fb49c48d3L
+    const-wide v0, -0x233adf5b40d7L
 
     .line 166
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 169
-    const-wide v0, -0x4478b49c48d3L
+    const-wide v0, -0x2310df5b40d7L
 
     .line 174
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 177
-    const-wide v0, -0x4496b49c48d3L
+    const-wide v0, -0x20e9df5b40d7L
 
     .line 182
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 185
-    const-wide v0, -0x44adb49c48d3L
+    const-wide v0, -0x20c0df5b40d7L
 
     .line 190
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 193
-    const-wide v0, -0x44bfb49c48d3L
+    const-wide v0, -0x20a2df5b40d7L
 
     .line 198
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 201
-    const-wide v0, -0x44d5b49c48d3L
+    const-wide v0, -0x20bbdf5b40d7L
 
     .line 206
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 209
-    const-wide v0, -0x44f3b49c48d3L
+    const-wide v0, -0x2089df5b40d7L
 
     .line 214
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 217
-    new-instance v0, Ljava/lang/Object;
-
-    .line 219
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-wide v0, -0x2063df5b40d7L
 
     .line 222
-    sput-object v0, Lcom/kousei/framework/KaoriosFramework;->a:Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
-    .line 224
-    new-instance v0, Ljava/lang/Object;
+    .line 225
+    const-wide v0, -0x2045df5b40d7L
 
-    .line 226
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    .line 229
-    sput-object v0, Lcom/kousei/framework/KaoriosFramework;->b:Ljava/lang/Object;
-
-    .line 231
-    new-instance v0, Ljava/lang/Object;
+    .line 230
+    invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
     .line 233
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    .line 236
-    sput-object v0, Lcom/kousei/framework/KaoriosFramework;->c:Ljava/lang/Object;
+    const-wide v0, -0x202edf5b40d7L
 
     .line 238
-    new-instance v0, Ljava/util/HashMap;
+    invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
-    .line 240
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    .line 241
+    const-wide v0, -0x2004df5b40d7L
 
-    .line 243
-    sput-object v0, Lcom/kousei/framework/KaoriosFramework;->d:Ljava/util/HashMap;
+    .line 246
+    invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
 
-    .line 245
-    new-instance v0, Ljava/util/HashMap;
+    .line 249
+    new-instance v0, Ljava/lang/Object;
 
-    .line 247
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    .line 250
-    sput-object v0, Lcom/kousei/framework/KaoriosFramework;->e:Ljava/util/HashMap;
-
-    .line 252
-    new-instance v0, Ljava/util/HashMap;
+    .line 251
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     .line 254
+    sput-object v0, Lcom/kousei/framework/KaoriosFramework;->a:Ljava/lang/Object;
+
+    .line 256
+    new-instance v0, Ljava/lang/Object;
+
+    .line 258
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    .line 261
+    sput-object v0, Lcom/kousei/framework/KaoriosFramework;->b:Ljava/lang/Object;
+
+    .line 263
+    new-instance v0, Ljava/lang/Object;
+
+    .line 265
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    .line 268
+    sput-object v0, Lcom/kousei/framework/KaoriosFramework;->c:Ljava/lang/Object;
+
+    .line 270
+    new-instance v0, Ljava/util/HashMap;
+
+    .line 272
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 257
-    sput-object v0, Lcom/kousei/framework/KaoriosFramework;->f:Ljava/util/HashMap;
+    .line 275
+    sput-object v0, Lcom/kousei/framework/KaoriosFramework;->d:Ljava/util/HashMap;
 
-    .line 259
-    const/4 v0, 0x0
-
-    .line 260
-    sput-object v0, Lcom/kousei/framework/KaoriosFramework;->g:Ljava/lang/String;
-
-    .line 262
-    new-instance v1, Ljava/util/concurrent/atomic/AtomicLong;
-
-    .line 264
-    const-wide/16 v2, 0x0
-
-    .line 266
-    invoke-direct {v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;-><init>(J)V
-
-    .line 269
-    sput-object v1, Lcom/kousei/framework/KaoriosFramework;->h:Ljava/util/concurrent/atomic/AtomicLong;
-
-    .line 271
-    new-instance v1, Ljava/util/HashMap;
-
-    .line 273
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
-
-    .line 276
-    sput-object v1, Lcom/kousei/framework/KaoriosFramework;->i:Ljava/util/HashMap;
-
-    .line 278
-    const/4 v1, 0x0
+    .line 277
+    new-instance v0, Ljava/util/HashMap;
 
     .line 279
-    sput-boolean v1, Lcom/kousei/framework/KaoriosFramework;->j:Z
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 281
-    new-instance v1, Ljava/lang/Object;
+    .line 282
+    sput-object v0, Lcom/kousei/framework/KaoriosFramework;->e:Ljava/util/HashMap;
 
-    .line 283
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+    .line 284
+    new-instance v0, Ljava/util/HashMap;
 
     .line 286
-    sput-object v1, Lcom/kousei/framework/KaoriosFramework;->k:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 288
-    sput-object v0, Lcom/kousei/framework/KaoriosFramework;->l:Lcom/kousei/framework/z9;
+    .line 289
+    sput-object v0, Lcom/kousei/framework/KaoriosFramework;->f:Ljava/util/HashMap;
 
-    .line 290
-    sget-object v1, Ljava/time/format/DateTimeFormatter;->BASIC_ISO_DATE:Ljava/time/format/DateTimeFormatter;
+    .line 291
+    const/4 v0, 0x0
 
     .line 292
-    sput-object v1, Lcom/kousei/framework/KaoriosFramework;->m:Ljava/time/format/DateTimeFormatter;
+    sput-object v0, Lcom/kousei/framework/KaoriosFramework;->g:Ljava/lang/String;
 
     .line 294
-    sput-object v0, Lcom/kousei/framework/KaoriosFramework;->n:Ljava/lang/Boolean;
+    new-instance v1, Ljava/util/concurrent/atomic/AtomicLong;
 
     .line 296
+    const-wide/16 v2, 0x0
+
+    .line 298
+    invoke-direct {v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;-><init>(J)V
+
+    .line 301
+    sput-object v1, Lcom/kousei/framework/KaoriosFramework;->h:Ljava/util/concurrent/atomic/AtomicLong;
+
+    .line 303
+    new-instance v1, Ljava/util/HashMap;
+
+    .line 305
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+
+    .line 308
+    sput-object v1, Lcom/kousei/framework/KaoriosFramework;->i:Ljava/util/HashMap;
+
+    .line 310
+    const/4 v1, 0x0
+
+    .line 311
+    sput-boolean v1, Lcom/kousei/framework/KaoriosFramework;->j:Z
+
+    .line 313
+    new-instance v1, Ljava/lang/Object;
+
+    .line 315
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    .line 318
+    sput-object v1, Lcom/kousei/framework/KaoriosFramework;->k:Ljava/lang/Object;
+
+    .line 320
+    sput-object v0, Lcom/kousei/framework/KaoriosFramework;->l:Lcom/kousei/framework/z9;
+
+    .line 322
+    sget-object v1, Ljava/time/format/DateTimeFormatter;->BASIC_ISO_DATE:Ljava/time/format/DateTimeFormatter;
+
+    .line 324
+    sput-object v1, Lcom/kousei/framework/KaoriosFramework;->m:Ljava/time/format/DateTimeFormatter;
+
+    .line 326
+    sput-object v0, Lcom/kousei/framework/KaoriosFramework;->n:Ljava/lang/Boolean;
+
+    .line 328
     return-void
 .end method
 
@@ -351,7 +375,7 @@
 
     .line 14
     :cond_d
-    const-wide v1, -0x404ab49c48d3L
+    const-wide v1, -0x272bdf5b40d7L
 
     .line 19
     :try_start_12
@@ -367,7 +391,7 @@
     move-result-object p0
 
     .line 27
-    const-wide v1, -0x4058b49c48d3L
+    const-wide v1, -0x273ddf5b40d7L
 
     .line 32
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -609,7 +633,7 @@
 
     .line 27
     :cond_1a
-    const-wide v0, -0x403cb49c48d3L
+    const-wide v0, -0x2759df5b40d7L
 
     .line 32
     const/4 v2, 0x0
@@ -641,7 +665,7 @@
     if-nez p0, :cond_35
 
     .line 45
-    const-wide v0, -0x4049b49c48d3L
+    const-wide v0, -0x272cdf5b40d7L
 
     .line 50
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1076,7 +1100,7 @@
     sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     .line 11
-    const-wide v2, -0x3fecb49c48d3L
+    const-wide v2, -0x2789df5b40d7L
 
     .line 16
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1174,7 +1198,7 @@
     .line 72
     :catchall_47
     :cond_47
-    const-wide v0, -0x3ffbb49c48d3L
+    const-wide v0, -0x279adf5b40d7L
 
     .line 77
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1233,7 +1257,7 @@
 
     .line 24
     :cond_17
-    const-wide v1, -0x427bb49c48d3L
+    const-wide v1, -0x251adf5b40d7L
 
     .line 29
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1264,7 +1288,7 @@
     move-result-object v1
 
     .line 46
-    const-wide v2, -0x4284b49c48d3L
+    const-wide v2, -0x22e1df5b40d7L
 
     .line 51
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1312,7 +1336,7 @@
     move-exception p0
 
     .line 78
-    const-wide v1, -0x4295b49c48d3L
+    const-wide v1, -0x22f0df5b40d7L
 
     .line 83
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1321,7 +1345,7 @@
     move-result-object p1
 
     .line 87
-    const-wide v1, -0x42a6b49c48d3L
+    const-wide v1, -0x22cfdf5b40d7L
 
     .line 92
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1352,7 +1376,7 @@
 
     .line 6
     :cond_5
-    const-wide v2, -0x4164b49c48d3L
+    const-wide v2, -0x2401df5b40d7L
 
     .line 11
     :try_start_a
@@ -1438,7 +1462,7 @@
 
     .line 26
     :sswitch_19
-    const-wide v0, -0x40f0b49c48d3L
+    const-wide v0, -0x2495df5b40d7L
 
     .line 31
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1469,7 +1493,7 @@
 
     .line 48
     :sswitch_2f
-    const-wide v0, -0x409cb49c48d3L
+    const-wide v0, -0x24f9df5b40d7L
 
     .line 53
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1487,7 +1511,7 @@
     if-eqz p0, :cond_16f
 
     .line 63
-    const-wide v0, -0x4115b49c48d3L
+    const-wide v0, -0x2470df5b40d7L
 
     .line 68
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1496,7 +1520,7 @@
     move-result-object p0
 
     .line 72
-    const-wide v0, -0x412bb49c48d3L
+    const-wide v0, -0x244adf5b40d7L
 
     .line 77
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1524,7 +1548,7 @@
 
     .line 93
     :cond_5c
-    const-wide v0, -0x412cb49c48d3L
+    const-wide v0, -0x2449df5b40d7L
 
     .line 98
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1533,7 +1557,7 @@
     move-result-object p0
 
     .line 102
-    const-wide v0, -0x4145b49c48d3L
+    const-wide v0, -0x2420df5b40d7L
 
     .line 107
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1582,7 +1606,7 @@
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 135
-    const-wide v0, -0x4146b49c48d3L
+    const-wide v0, -0x242fdf5b40d7L
 
     .line 140
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1610,7 +1634,7 @@
 
     .line 157
     :sswitch_9c
-    const-wide v0, -0x40e4b49c48d3L
+    const-wide v0, -0x2481df5b40d7L
 
     .line 162
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1635,7 +1659,7 @@
 
     .line 175
     :sswitch_ae
-    const-wide v0, -0x40cfb49c48d3L
+    const-wide v0, -0x24b6df5b40d7L
 
     .line 180
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1660,7 +1684,7 @@
 
     .line 193
     :sswitch_c0
-    const-wide v0, -0x40a7b49c48d3L
+    const-wide v0, -0x24cedf5b40d7L
 
     .line 198
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1685,7 +1709,7 @@
 
     .line 211
     :sswitch_d2
-    const-wide v0, -0x40bab49c48d3L
+    const-wide v0, -0x24dbdf5b40d7L
 
     .line 216
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1710,7 +1734,7 @@
 
     .line 229
     :sswitch_e4
-    const-wide v0, -0x40c7b49c48d3L
+    const-wide v0, -0x24aedf5b40d7L
 
     .line 234
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1735,7 +1759,7 @@
 
     .line 247
     :sswitch_f6
-    const-wide v0, -0x40f8b49c48d3L
+    const-wide v0, -0x249ddf5b40d7L
 
     .line 252
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1760,7 +1784,7 @@
 
     .line 265
     :sswitch_108
-    const-wide v0, -0x410eb49c48d3L
+    const-wide v0, -0x2477df5b40d7L
 
     .line 270
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1788,7 +1812,7 @@
 
     .line 285
     :sswitch_11c
-    const-wide v0, -0x4107b49c48d3L
+    const-wide v0, -0x246edf5b40d7L
 
     .line 290
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1806,7 +1830,7 @@
     if-eqz p0, :cond_16f
 
     .line 300
-    const-wide v0, -0x4148b49c48d3L
+    const-wide v0, -0x242ddf5b40d7L
 
     .line 305
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1825,7 +1849,7 @@
 
     .line 314
     :sswitch_139
-    const-wide v0, -0x40c0b49c48d3L
+    const-wide v0, -0x24a5df5b40d7L
 
     .line 319
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1850,7 +1874,7 @@
 
     .line 332
     :sswitch_14b
-    const-wide v0, -0x40d8b49c48d3L
+    const-wide v0, -0x24bddf5b40d7L
 
     .line 337
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1875,7 +1899,7 @@
 
     .line 350
     :sswitch_15d
-    const-wide v0, -0x40adb49c48d3L
+    const-wide v0, -0x24c8df5b40d7L
 
     .line 355
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1901,7 +1925,7 @@
     .line 368
     :cond_16f
     :goto_16f
-    const-wide v0, -0x4153b49c48d3L
+    const-wide v0, -0x2432df5b40d7L
 
     .line 373
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1915,7 +1939,7 @@
     .line 378
     :cond_179
     :goto_179
-    const-wide v0, -0x4094b49c48d3L
+    const-wide v0, -0x24f1df5b40d7L
 
     .line 383
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1926,6 +1950,7 @@
     .line 387
     return-object p0
 
+    .line 388
     nop
 
     .line 389
@@ -1957,7 +1982,7 @@
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 6
-    const-wide v1, -0x4025b49c48d3L
+    const-wide v1, -0x2740df5b40d7L
 
     .line 11
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -1978,7 +2003,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 25
-    const-wide v1, -0x4039b49c48d3L
+    const-wide v1, -0x275cdf5b40d7L
 
     .line 30
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2003,7 +2028,7 @@
     .registers 2
 
     .line 1
-    const-wide v0, -0x401db49c48d3L
+    const-wide v0, -0x2778df5b40d7L
 
     .line 6
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2029,7 +2054,7 @@
 
     .line 6
     :cond_5
-    const-wide v2, -0x417ab49c48d3L
+    const-wide v2, -0x241bdf5b40d7L
 
     .line 11
     :try_start_a
@@ -2237,7 +2262,7 @@
     invoke-static {p0}, Lcom/kousei/framework/KaoriosFramework;->d(Landroid/content/ContentResolver;)V
 
     .line 15
-    const-wide v0, -0x4187b49c48d3L
+    const-wide v0, -0x25eedf5b40d7L
 
     .line 20
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2368,7 +2393,7 @@
     sget-object v2, Lcom/kousei/framework/KaoriosFramework;->d:Ljava/util/HashMap;
 
     .line 31
-    const-wide v3, -0x3e8cb49c48d3L
+    const-wide v3, -0x5912df5b40d7L
 
     .line 36
     invoke-static {v3, v4}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2389,7 +2414,7 @@
     if-ne v2, v3, :cond_40
 
     .line 48
-    const-wide v2, -0x3ea1b49c48d3L
+    const-wide v2, -0x26eddf5b40d7L
 
     .line 53
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2452,7 +2477,7 @@
     move-result-object p0
 
     .line 85
-    const-wide v3, -0x3eb6b49c48d3L
+    const-wide v3, -0x26f8df5b40d7L
 
     .line 90
     invoke-static {v3, v4}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2539,7 +2564,7 @@
     new-instance v7, Lcom/kousei/framework/x9;
 
     .line 144
-    const-wide v8, -0x3eb8b49c48d3L
+    const-wide v8, -0x26c6df5b40d7L
 
     .line 149
     invoke-static {v8, v9}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2554,7 +2579,7 @@
     move-result v8
 
     .line 157
-    const-wide v9, -0x3ec0b49c48d3L
+    const-wide v9, -0x26cedf5b40d7L
 
     .line 162
     invoke-static {v9, v10}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2586,7 +2611,7 @@
 
     .line 179
     :cond_b2
-    const-wide v3, -0x3ec8b49c48d3L
+    const-wide v3, -0x26d6df5b40d7L
 
     .line 184
     invoke-static {v3, v4}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2663,7 +2688,7 @@
 
     .line 229
     :goto_e4
-    const-wide v3, -0x3ecab49c48d3L
+    const-wide v3, -0x26d4df5b40d7L
 
     .line 234
     :try_start_e9
@@ -2673,7 +2698,7 @@
     move-result-object v3
 
     .line 238
-    const-wide v4, -0x3edbb49c48d3L
+    const-wide v4, -0x26a3df5b40d7L
 
     .line 243
     invoke-static {v4, v5}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2862,7 +2887,7 @@
     if-nez p0, :cond_c
 
     .line 3
-    const-wide v0, -0x405ab49c48d3L
+    const-wide v0, -0x273bdf5b40d7L
 
     .line 8
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2875,7 +2900,7 @@
 
     .line 13
     :cond_c
-    const-wide v0, -0x405bb49c48d3L
+    const-wide v0, -0x273adf5b40d7L
 
     .line 18
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2884,7 +2909,7 @@
     move-result-object v0
 
     .line 22
-    const-wide v1, -0x4068b49c48d3L
+    const-wide v1, -0x270ddf5b40d7L
 
     .line 27
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2909,7 +2934,7 @@
     if-nez p0, :cond_c
 
     .line 3
-    const-wide v0, -0x3f98b49c48d3L
+    const-wide v0, -0x27fddf5b40d7L
 
     .line 8
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2922,7 +2947,7 @@
 
     .line 13
     :cond_c
-    const-wide v0, -0x3f9cb49c48d3L
+    const-wide v0, -0x27f9df5b40d7L
 
     .line 18
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2931,7 +2956,7 @@
     move-result-object v0
 
     .line 22
-    const-wide v1, -0x3fbab49c48d3L
+    const-wide v1, -0x27dbdf5b40d7L
 
     .line 27
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -2983,7 +3008,7 @@
     move-result-object p0
 
     .line 58
-    const-wide v0, -0x3fc2b49c48d3L
+    const-wide v0, -0x27a3df5b40d7L
 
     .line 63
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -3001,7 +3026,7 @@
     if-nez v0, :cond_70
 
     .line 73
-    const-wide v0, -0x3fc7b49c48d3L
+    const-wide v0, -0x27aedf5b40d7L
 
     .line 78
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -3019,7 +3044,7 @@
     if-nez v0, :cond_70
 
     .line 88
-    const-wide v0, -0x3fccb49c48d3L
+    const-wide v0, -0x27a9df5b40d7L
 
     .line 93
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -3041,7 +3066,7 @@
 
     .line 104
     :cond_67
-    const-wide v0, -0x3fd0b49c48d3L
+    const-wide v0, -0x27b5df5b40d7L
 
     .line 109
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -3057,7 +3082,7 @@
     .line 114
     :cond_71
     :goto_71
-    const-wide v0, -0x3fbeb49c48d3L
+    const-wide v0, -0x27a7df5b40d7L
 
     .line 119
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -3110,7 +3135,7 @@
 
     .line 20
     :cond_13
-    const-wide v0, -0x4071b49c48d3L
+    const-wide v0, -0x2714df5b40d7L
 
     .line 25
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -3132,7 +3157,7 @@
 
     .line 33
     :cond_20
-    const-wide p0, -0x4072b49c48d3L
+    const-wide p0, -0x2713df5b40d7L
 
     .line 38
     invoke-static {p0, p1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -3154,7 +3179,7 @@
 
     .line 46
     :cond_2d
-    const-wide p0, -0x4070b49c48d3L
+    const-wide p0, -0x2715df5b40d7L
 
     .line 51
     invoke-static {p0, p1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -3584,7 +3609,7 @@
 
     .line 6
     :cond_5
-    const-wide v2, -0x415bb49c48d3L
+    const-wide v2, -0x243adf5b40d7L
 
     .line 11
     :try_start_a
@@ -3642,7 +3667,7 @@
 
     .line 6
     :cond_5
-    const-wide v2, -0x416db49c48d3L
+    const-wide v2, -0x2408df5b40d7L
 
     .line 11
     :try_start_a
@@ -3737,7 +3762,7 @@
 
     .line 5
     :cond_4
-    const-wide v1, -0x3f52b49c48d3L
+    const-wide v1, -0x265cdf5b40d7L
 
     .line 10
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -3769,7 +3794,7 @@
 
     .line 5
     :cond_4
-    const-wide v1, -0x3f3cb49c48d3L
+    const-wide v1, -0x2642df5b40d7L
 
     .line 10
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -3801,7 +3826,7 @@
 
     .line 5
     :cond_4
-    const-wide v0, -0x3f7fb49c48d3L
+    const-wide v0, -0x27e6df5b40d7L
 
     .line 10
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -3836,7 +3861,39 @@
 
     .line 5
     :cond_4
-    const-wide v1, -0x3f68b49c48d3L
+    const-wide v1, -0x260ddf5b40d7L
+
+    .line 10
+    invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
+
+    .line 13
+    move-result-object v1
+
+    .line 14
+    invoke-static {p0, v1, v0}, Lcom/kousei/framework/KaoriosFramework;->getGlobalBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
+
+    .line 17
+    move-result p0
+
+    .line 18
+    return p0
+.end method
+
+.method public static isSecureFlagWorking(Landroid/content/ContentResolver;)Z
+    .registers 4
+
+    .line 1
+    const/4 v0, 0x0
+
+    .line 2
+    if-nez p0, :cond_4
+
+    .line 4
+    return v0
+
+    .line 5
+    :cond_4
+    const-wide v1, -0x2636df5b40d7L
 
     .line 10
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -3871,7 +3928,7 @@
 
     .line 8
     :cond_7
-    const-wide v0, -0x3fd4b49c48d3L
+    const-wide v0, -0x27b1df5b40d7L
 
     .line 13
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -3880,7 +3937,7 @@
     move-result-object v0
 
     .line 17
-    const-wide v1, -0x3febb49c48d3L
+    const-wide v1, -0x278adf5b40d7L
 
     .line 22
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -4004,7 +4061,7 @@
 
     .line 15
     :cond_e
-    const-wide v0, -0x4069b49c48d3L
+    const-wide v0, -0x270cdf5b40d7L
 
     .line 20
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -4022,7 +4079,7 @@
     if-nez p1, :cond_2f
 
     .line 30
-    const-wide v0, -0x406bb49c48d3L
+    const-wide v0, -0x270adf5b40d7L
 
     .line 35
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -4206,7 +4263,7 @@
     if-eqz p2, :cond_c
 
     .line 3
-    const-wide v0, -0x4221b49c48d3L
+    const-wide v0, -0x2544df5b40d7L
 
     .line 8
     :goto_7
@@ -4220,7 +4277,7 @@
 
     .line 13
     :cond_c
-    const-wide v0, -0x4223b49c48d3L
+    const-wide v0, -0x2542df5b40d7L
 
     .line 18
     goto :goto_7
@@ -4319,7 +4376,7 @@
 
     .line 14
     :cond_d
-    const-wide v1, -0x41e8b49c48d3L
+    const-wide v1, -0x258ddf5b40d7L
 
     .line 19
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -4357,7 +4414,7 @@
 
     .line 40
     :cond_27
-    const-wide v1, -0x41f6b49c48d3L
+    const-wide v1, -0x259fdf5b40d7L
 
     .line 45
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -4381,7 +4438,7 @@
 
     .line 57
     :cond_38
-    const-wide v1, -0x41f7b49c48d3L
+    const-wide v1, -0x259edf5b40d7L
 
     .line 62
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -4399,7 +4456,7 @@
     if-eqz v1, :cond_5a
 
     .line 72
-    const-wide v1, -0x4205b49c48d3L
+    const-wide v1, -0x2560df5b40d7L
 
     .line 77
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -4424,7 +4481,7 @@
 
     .line 91
     :cond_5a
-    const-wide v1, -0x4207b49c48d3L
+    const-wide v1, -0x256edf5b40d7L
 
     .line 96
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -4517,7 +4574,7 @@
     if-eqz p1, :cond_a0
 
     .line 149
-    const-wide v1, -0x4214b49c48d3L
+    const-wide v1, -0x2571df5b40d7L
 
     .line 154
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -4578,7 +4635,7 @@
     if-eqz p2, :cond_c
 
     .line 3
-    const-wide v0, -0x41e4b49c48d3L
+    const-wide v0, -0x2581df5b40d7L
 
     .line 8
     :goto_7
@@ -4592,7 +4649,7 @@
 
     .line 13
     :cond_c
-    const-wide v0, -0x41e6b49c48d3L
+    const-wide v0, -0x258fdf5b40d7L
 
     .line 18
     goto :goto_7
@@ -4708,7 +4765,7 @@
 
     .line 22
     :cond_15
-    const-wide v0, -0x41e3b49c48d3L
+    const-wide v0, -0x2582df5b40d7L
 
     .line 27
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -4759,7 +4816,7 @@
     if-eqz p2, :cond_c
 
     .line 3
-    const-wide v0, -0x41dfb49c48d3L
+    const-wide v0, -0x2586df5b40d7L
 
     .line 8
     :goto_7
@@ -4773,7 +4830,7 @@
 
     .line 13
     :cond_c
-    const-wide v0, -0x41e1b49c48d3L
+    const-wide v0, -0x2584df5b40d7L
 
     .line 18
     goto :goto_7
@@ -4889,7 +4946,7 @@
 
     .line 22
     :cond_15
-    const-wide v0, -0x41deb49c48d3L
+    const-wide v0, -0x2587df5b40d7L
 
     .line 27
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -4940,7 +4997,7 @@
     if-nez p0, :cond_c
 
     .line 3
-    const-wide v0, -0x3ef9b49c48d3L
+    const-wide v0, -0x2685df5b40d7L
 
     .line 8
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -4953,7 +5010,7 @@
 
     .line 13
     :cond_c
-    const-wide v0, -0x3efab49c48d3L
+    const-wide v0, -0x2684df5b40d7L
 
     .line 18
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -4962,7 +5019,7 @@
     move-result-object v0
 
     .line 22
-    const-wide v1, -0x3f11b49c48d3L
+    const-wide v1, -0x269ddf5b40d7L
 
     .line 27
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -4987,7 +5044,7 @@
     if-nez p0, :cond_c
 
     .line 3
-    const-wide v0, -0x3f25b49c48d3L
+    const-wide v0, -0x2669df5b40d7L
 
     .line 8
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -5000,7 +5057,7 @@
 
     .line 13
     :cond_c
-    const-wide v0, -0x3f26b49c48d3L
+    const-wide v0, -0x2668df5b40d7L
 
     .line 18
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -5009,7 +5066,7 @@
     move-result-object v0
 
     .line 22
-    const-wide v1, -0x3f3bb49c48d3L
+    const-wide v1, -0x2643df5b40d7L
 
     .line 27
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -5034,7 +5091,7 @@
     if-nez p0, :cond_c
 
     .line 3
-    const-wide v0, -0x3f12b49c48d3L
+    const-wide v0, -0x269cdf5b40d7L
 
     .line 8
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -5047,7 +5104,7 @@
 
     .line 13
     :cond_c
-    const-wide v0, -0x3f13b49c48d3L
+    const-wide v0, -0x269bdf5b40d7L
 
     .line 18
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -5056,7 +5113,7 @@
     move-result-object v0
 
     .line 22
-    const-wide v1, -0x3f24b49c48d3L
+    const-wide v1, -0x266adf5b40d7L
 
     .line 27
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -5110,7 +5167,7 @@
 
     .line 15
     :cond_e
-    const-wide v0, -0x4250b49c48d3L
+    const-wide v0, -0x2535df5b40d7L
 
     .line 20
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -5145,7 +5202,7 @@
     move-exception p0
 
     .line 37
-    const-wide v0, -0x4256b49c48d3L
+    const-wide v0, -0x253fdf5b40d7L
 
     .line 42
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -5154,7 +5211,7 @@
     move-result-object p1
 
     .line 46
-    const-wide v0, -0x4267b49c48d3L
+    const-wide v0, -0x250edf5b40d7L
 
     .line 51
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -5176,7 +5233,7 @@
     if-nez p0, :cond_c
 
     .line 3
-    const-wide v0, -0x403bb49c48d3L
+    const-wide v0, -0x275adf5b40d7L
 
     .line 8
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -5228,7 +5285,7 @@
 
     .line 14
     :cond_d
-    const-wide v0, -0x4006b49c48d3L
+    const-wide v0, -0x276fdf5b40d7L
 
     .line 19
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -5237,7 +5294,7 @@
     move-result-object v0
 
     .line 23
-    const-wide v1, -0x400db49c48d3L
+    const-wide v1, -0x2768df5b40d7L
 
     .line 28
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -5312,7 +5369,7 @@
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     .line 70
-    const-wide v1, -0x400eb49c48d3L
+    const-wide v1, -0x2777df5b40d7L
 
     .line 75
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -5440,7 +5497,7 @@
     if-nez p1, :cond_14
 
     .line 12
-    const-wide v0, -0x4073b49c48d3L
+    const-wide v0, -0x2712df5b40d7L
 
     .line 17
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -5463,7 +5520,7 @@
     move-exception p0
 
     .line 26
-    const-wide v0, -0x4074b49c48d3L
+    const-wide v0, -0x2711df5b40d7L
 
     .line 31
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -5472,7 +5529,7 @@
     move-result-object p1
 
     .line 35
-    const-wide v0, -0x4085b49c48d3L
+    const-wide v0, -0x24e0df5b40d7L
 
     .line 40
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -5516,7 +5573,7 @@
 
     .line 14
     :cond_d
-    const-wide v0, -0x4225b49c48d3L
+    const-wide v0, -0x2540df5b40d7L
 
     .line 19
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -5526,7 +5583,7 @@
 
     .line 23
     :goto_16
-    const-wide v0, -0x4226b49c48d3L
+    const-wide v0, -0x254fdf5b40d7L
 
     .line 28
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -5544,7 +5601,7 @@
     if-eqz v0, :cond_38
 
     .line 38
-    const-wide v0, -0x4234b49c48d3L
+    const-wide v0, -0x2551df5b40d7L
 
     .line 43
     invoke-static {v0, v1}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -5633,7 +5690,7 @@
 
     .line 94
     :cond_5d
-    const-wide v2, -0x4236b49c48d3L
+    const-wide v2, -0x255fdf5b40d7L
 
     .line 99
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -5663,7 +5720,7 @@
     if-eqz v1, :cond_85
 
     .line 116
-    const-wide v2, -0x4243b49c48d3L
+    const-wide v2, -0x2522df5b40d7L
 
     .line 121
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -5734,7 +5791,7 @@
     move-result-object v1
 
     .line 13
-    const-wide v2, -0x4195b49c48d3L
+    const-wide v2, -0x25f0df5b40d7L
 
     .line 18
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -5827,7 +5884,7 @@
     if-eqz v3, :cond_52
 
     .line 71
-    const-wide v4, -0x41a2b49c48d3L
+    const-wide v4, -0x25c3df5b40d7L
 
     .line 76
     invoke-static {v4, v5}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -5870,7 +5927,7 @@
 
     .line 90
     :goto_59
-    const-wide v1, -0x41afb49c48d3L
+    const-wide v1, -0x25d6df5b40d7L
 
     .line 95
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -5879,7 +5936,7 @@
     move-result-object v1
 
     .line 99
-    const-wide v2, -0x41c0b49c48d3L
+    const-wide v2, -0x25a5df5b40d7L
 
     .line 104
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;

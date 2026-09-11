@@ -376,6 +376,7 @@
     .line 227
     return-object p0
 
+    .line 228
     nop
 
     .line 229
@@ -666,6 +667,7 @@
     .line 175
     return-object p0
 
+    .line 176
     nop
 
     .line 177
@@ -3257,6 +3259,7 @@
     :goto_a8
     return-object p1
 
+    .line 170
     nop
 
     .line 171

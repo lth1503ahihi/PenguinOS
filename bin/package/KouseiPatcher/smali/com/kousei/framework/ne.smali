@@ -2010,6 +2010,7 @@
     .line 1243
     return-object v6
 
+    .line 1244
     nop
 
     .line 1245

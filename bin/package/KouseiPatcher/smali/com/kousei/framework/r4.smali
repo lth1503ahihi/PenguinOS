@@ -676,6 +676,7 @@
     :cond_b6
     return-void
 
+    .line 184
     nop
 
     .line 185
@@ -725,6 +726,7 @@
     .line 23
     return p0
 
+    .line 24
     nop
 
     .line 25
@@ -822,6 +824,7 @@
     .line 33
     return-object v0
 
+    .line 34
     nop
 
     .line 35
@@ -865,6 +868,7 @@
     .line 19
     return-object v0
 
+    .line 20
     nop
 
     .line 21
@@ -926,6 +930,7 @@
     .line 33
     return-object v0
 
+    .line 34
     nop
 
     .line 35
@@ -975,6 +980,7 @@
     .line 23
     return-object v0
 
+    .line 24
     nop
 
     .line 25

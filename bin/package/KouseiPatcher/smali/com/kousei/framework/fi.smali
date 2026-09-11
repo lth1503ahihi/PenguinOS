@@ -1,6 +1,6 @@
 .class public final enum Lcom/kousei/framework/fi;
 .super Ljava/lang/Enum;
-.source "r8-map-id-5ae92ff21d09ad14f9452618f0eb059d5742c78e657d0492d02c35db86ae1101"
+.source "r8-map-id-ab9d9a36b7cfe29bbfb78ee9a77c1feaf549e881397fc2be336a306d7a6faedf"
 
 
 # static fields
@@ -21,7 +21,7 @@
     new-instance v0, Lcom/kousei/framework/fi;
 
     .line 3
-    const-wide v1, -0x3a21b49c48d3L
+    const-wide v1, -0x5c44df5b40d7L
 
     .line 8
     invoke-static {v1, v2}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -42,7 +42,7 @@
     new-instance v1, Lcom/kousei/framework/fi;
 
     .line 20
-    const-wide v2, -0x3a26b49c48d3L
+    const-wide v2, -0x5c4fdf5b40d7L
 
     .line 25
     invoke-static {v2, v3}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;
@@ -63,7 +63,7 @@
     new-instance v2, Lcom/kousei/framework/fi;
 
     .line 37
-    const-wide v3, -0x3a30b49c48d3L
+    const-wide v3, -0x5c55df5b40d7L
 
     .line 42
     invoke-static {v3, v4}, Lcom/kousei/framework/j0;->Q(J)Ljava/lang/String;

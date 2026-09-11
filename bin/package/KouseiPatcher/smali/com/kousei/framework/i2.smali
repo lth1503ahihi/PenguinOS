@@ -314,6 +314,7 @@
     :goto_6a
     return-object v1
 
+    .line 108
     nop
 
     .line 109
@@ -452,6 +453,7 @@
     .line 73
     return-object v0
 
+    .line 74
     nop
 
     .line 75
