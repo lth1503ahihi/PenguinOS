@@ -10,6 +10,6 @@ for f in $(find . -type f -name "*.prop"); do
     sed -i 's/^persist.sys.sf_charge_anim_supported\s*=.*/persist.sys.sf_charge_anim_supported=true/' "$f"
     sed -i 's/^ro.miui.has_handy_mode_sf\s*=.*/ro.miui.has_handy_mode_sf=1/' "$f"
     sed -i 's/^persist.sys.advanced_visual_release\s*=.*/persist.sys.advanced_visual_release=3/' "$f"
-    sed -i 's/^persist.sys.power.default.powermode\s*=.*/persist.sys.power.default.powermode=1/' "$f"
+    sed -i 's/^persist.sys.power.default.powermode\s*=.*/persist.sys.power.default.powermode=0/' "$f"
     sed -i 's/^ro.miui.support_miui_ime_bottom\s*=.*/ro.miui.support_miui_ime_bottom=1/' "$f"
 done
