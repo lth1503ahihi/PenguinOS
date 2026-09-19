@@ -13,8 +13,7 @@ echo "Current device codename: $DEVICE_CODENAME"
 # Vòng lặp quét từng file, bọc trong nháy kép để chấp nhận mọi khoảng trắng
 find . -type f -name "*.prop" | while read -r f; do
     [ -f "$f" ] || continue
-    
-    if [ "$DEVICE_CODENAME" = "onyx" ]; then
+    if [ "$DEVICE_CODENAME" = "onyx" ] || [ "$DEVICE_CODENAME" = "nezha" ]; then
         sed -i \
             -e '/^persist\.sys\.computility\./d' \
             -e '/^persist\.sys\.advanced_visual_release=/d' \
