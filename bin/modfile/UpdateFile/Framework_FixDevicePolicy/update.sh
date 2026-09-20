@@ -5,6 +5,13 @@ deviceTYPE=$(cat $work_dir/bin/ddevice/device_type.txt)
 rom_os=$(cat $work_dir/bin/ddevice/rom_os.txt)
 tar1="$work_dir/bin/modfile/UpdateFile/Framework_FixDevicePolicy/enforceVersionPolicy.ini"
 repS="python3 $work_dir/bin/strRep.py"
+
+# BỎ QUA NẾU LÀ BASE ROM XIAOMI.EU (ĐÃ BYPASS SẴN, TRÁNH LỖI HỎNG SYSTEMSERVER)
+if [[ "${is_base_rom_eu}" == "true" ]]; then
+    patch "Bypass Devices Policy Check: Xiaomi.eu base detected, skipping to avoid bootloop."
+    exit 0
+fi
+
 jar_util() 
 {
     cd $work_dir
@@ -33,9 +40,6 @@ jar_util()
                         [[ -d "$dex.out" ]] && rm -rf $dex        
                     fi
                 done
-                # Create necessary directories and copy xBuild.smali
-                # mkdir -p $work_dir/jar_temp/$2.out/classes.dex.out/miuix/os
-                # cp $work_dir/bin/shPlugin/NOTIFICATION_FIX/A13/xBuild.smali $work_dir/jar_temp/$2.out/classes.dex.out/miuix/os/
             fi
         fi
     else 
@@ -54,12 +58,10 @@ jar_util()
                     fi
                 done
                 7za a -tzip -mx=0 $work_dir/jar_temp/$2_notal $work_dir/jar_temp/$2.out/. >/dev/null 2>&1
-                #zip -r -j -0 $work_dir/jar_temp/$2_notal $work_dir/jar_temp/$2.out/.
                 zipalign 4 $work_dir/jar_temp/$2_notal $work_dir/jar_temp/$2
                 if [[ -f $work_dir/jar_temp/$2 ]]; then
                     sudo cp -rf $work_dir/jar_temp/$2 $work_dir/build/baserom/images/system_ext/framework/miui-services.jar
                     final_dir="$work_dir/module/*"
-                    #7za a -tzip "$work_dir/miui-services_patched_$(date "+%d%m%y").zip" $final_dir
                     patch "Success"
                     rm -rf $work_dir/jar_temp/$2.out $work_dir/jar_temp/$2_notal 
                 else
@@ -75,7 +77,9 @@ miui-services() {
 
     p1=$(find "$work_dir/jar_temp/miui-services.jar.out" -type f -name SystemServerImpl.smali)
 
-    $repS $tar1 $p1
+    if [ -n "$p1" ]; then
+        $repS $tar1 $p1
+    fi
 
     jar_util a "miui-services.jar" 
 }
@@ -86,4 +90,3 @@ fi
 
 patch "Bypass Devices Policy Check..."
 miui-services
-
