@@ -20,11 +20,10 @@ else
 	status="Official"
 fi
 
-# Fix lỗi cấu hình gói apt/dpkg nếu có và cài đặt các phụ thuộc
+# Fix lỗi cấu hình gói apt/dpkg và cài đặt các phụ thuộc cần thiết
 sudo dpkg --configure -a 2>/dev/null || true
 sudo apt-get update -y
 sudo apt-get install -y xmlstarlet aapt libc++1 libc++abi1 libsparse-tools
-sudo ln -sf /usr/lib/x86_64-linux-gnu/libc++.so.1 /usr/lib/x86_64-linux-gnu/libc++.so 2>/dev/null || true
 
 check unzip aria2c 7z zip java zipalign python3 zstd bc xmlstarlet aapt
 
@@ -91,20 +90,19 @@ elif [[ ${baserom_type} == 'br' ]]; then
     unpack "File new.dat.br extracted."
 elif [[ ${is_base_rom_eu} == true ]]; then
     unpack "Extracting files from BASETROM [super.img]"
-    # Bung toàn bộ file mảnh super.img.* bất kể cấu trúc nén trong zip
     unzip -q "${baserom}" '*super.img*' -d build/baserom/ || error "Extracting [super.img] error"
     
-    # Tìm chính xác thư mục chứa các mảnh super.img
     super_dir=$(dirname $(find build/baserom -name "*super.img.0*" | head -n 1))
     if [ -z "$super_dir" ]; then
         super_dir="build/baserom/images"
     fi
 
     unpack "Merging super.img.* into super.img"
-    if command -v simg2img >/dev/null 2>&1; then
-        simg2img ${super_dir}/*super.img.* build/baserom/super.img
+    # DÙNG TRỰC TIẾP LỆNH HỆ THỐNG ĐỂ TRÁNH LỖI THƯ VIỆN LIBC++
+    if [ -x "/usr/bin/simg2img" ]; then
+        /usr/bin/simg2img ${super_dir}/*super.img.* build/baserom/super.img
     else
-        ${work_dir}/bin/Linux/x86_64/simg2img ${super_dir}/*super.img.* build/baserom/super.img
+        simg2img ${super_dir}/*super.img.* build/baserom/super.img
     fi
 
     if [[ ! -s build/baserom/super.img ]]; then
@@ -115,11 +113,10 @@ elif [[ ${is_base_rom_eu} == true ]]; then
     rm -rf ${super_dir}/*super.img.*
     unpack "[super.img] extracted."
 
-    # Xử lý cust.img nếu có
     cust_file=$(find build/baserom -name "cust.img.0" | head -n 1)
     if [[ -n "$cust_file" ]]; then
         cust_dir=$(dirname "$cust_file")
-        simg2img ${cust_dir}/cust.img.* build/baserom/images/cust.img 2>/dev/null || true
+        /usr/bin/simg2img ${cust_dir}/cust.img.* build/baserom/images/cust.img 2>/dev/null || true
         rm -rf ${cust_dir}/cust.img.*
     fi
 fi
@@ -137,17 +134,14 @@ elif [[ ${baserom_type} == 'br' ]]; then
     done
 elif [[ ${is_base_rom_eu} == true ]]; then
     unpack "Unpacking BASEROM [super.img]"
-    # Bung thẳng toàn bộ img từ super.img vào thư mục images/
     python3 bin/lpunpack.py build/baserom/super.img build/baserom/images/ >/dev/null 2>&1
     
-    # Xử lý tên phân vùng slot A/B (chuẩn hóa về .img sạch)
     for i in build/baserom/images/*_a.img; do
         if [ -f "$i" ]; then
             mv "$i" "${i%_a.img}.img"
         fi
     done
     
-    # Danh sách các phân vùng cần bung chi tiết
     super_list="system system_ext product vendor odm mi_ext"
 fi
 
