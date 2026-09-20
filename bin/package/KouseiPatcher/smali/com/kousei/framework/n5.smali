@@ -1,45 +1,27 @@
 .class public final Lcom/kousei/framework/n5;
-.super Lcom/kousei/framework/n2;
-
-
-# static fields
-.field public static final N:Ljava/math/BigInteger;
-
-.field public static final O:Ljava/math/BigInteger;
+.super Ljava/lang/Object;
+.source "r8-map-id-ec70a54ac4dd249b58de3765a20c96801dd38a23bdb543e33a18faed5ec9684e"
 
 
 # instance fields
-.field public M:Ljava/math/BigInteger;
+.field public final a:Z
+
+.field public final b:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .registers 2
+.method public constructor <init>(ZZ)V
+    .registers 3
 
     .line 1
-    const-wide/16 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+    .line 4
+    iput-boolean p1, p0, Lcom/kousei/framework/n5;->a:Z
 
     .line 6
-    move-result-object v0
+    iput-boolean p2, p0, Lcom/kousei/framework/n5;->b:Z
 
-    .line 7
-    sput-object v0, Lcom/kousei/framework/n5;->N:Ljava/math/BigInteger;
-
-    .line 9
-    const-wide/16 v0, 0x2
-
-    .line 11
-    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
-
-    .line 14
-    move-result-object v0
-
-    .line 15
-    sput-object v0, Lcom/kousei/framework/n5;->O:Ljava/math/BigInteger;
-
-    .line 17
+    .line 8
     return-void
 .end method

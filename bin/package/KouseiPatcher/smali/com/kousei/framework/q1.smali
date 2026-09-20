@@ -1,169 +1,63 @@
-.class public final Lcom/kousei/framework/q1;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/security/PrivateKey;
-.implements Ljava/security/Key;
+.class public Lcom/kousei/framework/q1;
+.super Ljava/lang/Exception;
 
 
 # instance fields
-.field public transient K:Lcom/kousei/framework/th;
+.field public final synthetic a:I
 
-.field public transient L:Lcom/kousei/framework/e0;
+.field public b:Ljava/lang/Exception;
 
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+# direct methods
+.method public synthetic constructor <init>(ILjava/lang/String;)V
     .registers 3
 
     .line 1
-    if-ne p1, p0, :cond_4
+    iput p1, p0, Lcom/kousei/framework/q1;->a:I
 
     .line 3
-    const/4 p0, 0x1
+    invoke-direct {p0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 4
-    return p0
-
-    .line 5
-    :cond_4
-    instance-of v0, p1, Lcom/kousei/framework/q1;
-
-    .line 7
-    if-eqz v0, :cond_1f
-
-    .line 9
-    check-cast p1, Lcom/kousei/framework/q1;
-
-    .line 11
-    iget-object p0, p0, Lcom/kousei/framework/q1;->K:Lcom/kousei/framework/th;
-
-    .line 13
-    iget-object p0, p0, Lcom/kousei/framework/th;->L:[B
-
-    .line 15
-    invoke-static {p0}, Lcom/kousei/framework/i0;->J([B)[B
-
-    .line 18
-    move-result-object p0
-
-    .line 19
-    iget-object p1, p1, Lcom/kousei/framework/q1;->K:Lcom/kousei/framework/th;
-
-    .line 21
-    iget-object p1, p1, Lcom/kousei/framework/th;->L:[B
-
-    .line 23
-    invoke-static {p1}, Lcom/kousei/framework/i0;->J([B)[B
-
-    .line 26
-    move-result-object p1
-
-    .line 27
-    invoke-static {p0, p1}, Ljava/util/Arrays;->equals([B[B)Z
-
-    .line 30
-    move-result p0
-
-    .line 31
-    return p0
-
-    .line 32
-    :cond_1f
-    const/4 p0, 0x0
-
-    .line 33
-    return p0
+    .line 6
+    return-void
 .end method
 
-.method public final getAlgorithm()Ljava/lang/String;
-    .registers 1
 
-    .line 1
-    iget-object p0, p0, Lcom/kousei/framework/q1;->K:Lcom/kousei/framework/th;
-
-    .line 3
-    iget-object p0, p0, Lcom/kousei/framework/th;->M:Lcom/kousei/framework/sh;
-
-    .line 5
-    iget-object p0, p0, Lcom/kousei/framework/sh;->a:Ljava/lang/String;
-
-    .line 7
-    invoke-static {p0}, Lcom/kousei/framework/wh;->e(Ljava/lang/String;)Ljava/lang/String;
-
-    .line 10
-    move-result-object p0
-
-    .line 11
-    return-object p0
-.end method
-
-.method public final getEncoded()[B
+# virtual methods
+.method public final getCause()Ljava/lang/Throwable;
     .registers 2
 
     .line 1
-    :try_start_0
-    iget-object v0, p0, Lcom/kousei/framework/q1;->K:Lcom/kousei/framework/th;
+    iget v0, p0, Lcom/kousei/framework/q1;->a:I
 
     .line 3
-    iget-object p0, p0, Lcom/kousei/framework/q1;->L:Lcom/kousei/framework/e0;
+    packed-switch v0, :pswitch_data_10
 
-    .line 5
-    invoke-static {v0, p0}, Lcom/kousei/framework/xc;->m(Lcom/kousei/framework/n0;Lcom/kousei/framework/e0;)Lcom/kousei/framework/kd;
+    .line 6
+    iget-object p0, p0, Lcom/kousei/framework/q1;->b:Ljava/lang/Exception;
 
     .line 8
-    move-result-object p0
+    check-cast p0, Ljava/security/GeneralSecurityException;
 
-    .line 9
-    invoke-virtual {p0}, Lcom/kousei/framework/s;->getEncoded()[B
-
-    .line 12
-    move-result-object p0
-    :try_end_c
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_c} :catch_d
-
-    .line 13
+    .line 10
     return-object p0
 
-    .line 14
-    :catch_d
-    const/4 p0, 0x0
+    .line 11
+    :pswitch_a  #0x0
+    iget-object p0, p0, Lcom/kousei/framework/q1;->b:Ljava/lang/Exception;
+
+    .line 13
+    check-cast p0, Ljava/io/IOException;
 
     .line 15
     return-object p0
-.end method
 
-.method public final getFormat()Ljava/lang/String;
-    .registers 1
+    .line 16
+    nop
 
-    .line 1
-    const-string p0, "PKCS#8"
-
-    .line 3
-    return-object p0
-.end method
-
-.method public final hashCode()I
-    .registers 1
-
-    .line 1
-    iget-object p0, p0, Lcom/kousei/framework/q1;->K:Lcom/kousei/framework/th;
-
-    .line 3
-    iget-object p0, p0, Lcom/kousei/framework/th;->L:[B
-
-    .line 5
-    invoke-static {p0}, Lcom/kousei/framework/i0;->J([B)[B
-
-    .line 8
-    move-result-object p0
-
-    .line 9
-    invoke-static {p0}, Lcom/kousei/framework/i0;->g1([B)I
-
-    .line 12
-    move-result p0
-
-    .line 13
-    return p0
+    .line 17
+    :pswitch_data_10
+    .packed-switch 0x0
+        :pswitch_a  #00000000
+    .end packed-switch
 .end method

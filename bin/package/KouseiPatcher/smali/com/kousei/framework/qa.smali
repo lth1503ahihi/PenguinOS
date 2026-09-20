@@ -1,669 +1,348 @@
-.class public final Lcom/kousei/framework/qa;
+.class public abstract Lcom/kousei/framework/qa;
 .super Ljava/lang/Object;
 
 
 # static fields
-.field public static final g:Lcom/kousei/framework/pa;
+.field public static final a:[S
 
-
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:Lcom/kousei/framework/v;
+.field public static final b:[B
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .registers 37
+    .registers 10
 
     .line 1
-    new-instance v0, Lcom/kousei/framework/qa;
+    const/16 v0, 0x80
 
     .line 3
-    sget-object v7, Lcom/kousei/framework/ec;->a:Lcom/kousei/framework/v;
+    new-array v1, v0, [S
 
     .line 5
-    const/4 v1, 0x1
+    sput-object v1, Lcom/kousei/framework/qa;->a:[S
 
-    .line 6
-    const/16 v2, 0x20
-
-    .line 8
-    const/4 v3, 0x1
+    .line 7
+    const/16 v1, 0x70
 
     .line 9
-    const/16 v4, 0x109
+    new-array v2, v1, [B
 
     .line 11
-    const/4 v5, 0x7
-
-    .line 12
-    move-object v6, v7
+    sput-object v2, Lcom/kousei/framework/qa;->b:[B
 
     .line 13
-    invoke-direct/range {v0 .. v6}, Lcom/kousei/framework/qa;-><init>(IIIIILcom/kousei/framework/v;)V
+    new-array v3, v0, [B
+
+    .line 15
+    const/4 v4, 0x0
 
     .line 16
-    move v8, v1
+    const/16 v5, 0xf
 
-    .line 17
-    new-instance v1, Lcom/kousei/framework/qa;
+    .line 18
+    const/4 v6, 0x1
 
     .line 19
-    const/16 v5, 0x85
-
-    .line 21
-    const/4 v6, 0x6
+    invoke-static {v3, v4, v5, v6}, Lcom/kousei/framework/qa;->a([BIIB)V
 
     .line 22
-    const/4 v2, 0x2
+    const/16 v5, 0x1f
 
-    .line 23
-    const/16 v3, 0x20
+    .line 24
+    const/4 v7, 0x2
 
     .line 25
-    const/4 v4, 0x2
+    const/16 v8, 0x10
 
-    .line 26
-    invoke-direct/range {v1 .. v7}, Lcom/kousei/framework/qa;-><init>(IIIIILcom/kousei/framework/v;)V
-
-    .line 29
-    move-object v9, v1
+    .line 27
+    invoke-static {v3, v8, v5, v7}, Lcom/kousei/framework/qa;->a([BIIB)V
 
     .line 30
-    move v10, v2
+    const/16 v5, 0x3f
 
-    .line 31
-    new-instance v1, Lcom/kousei/framework/qa;
+    .line 32
+    const/4 v7, 0x3
 
     .line 33
-    const/16 v5, 0x43
+    const/16 v9, 0x20
 
     .line 35
-    const/4 v6, 0x4
-
-    .line 36
-    const/4 v2, 0x3
-
-    .line 37
-    const/4 v4, 0x4
+    invoke-static {v3, v9, v5, v7}, Lcom/kousei/framework/qa;->a([BIIB)V
 
     .line 38
-    invoke-direct/range {v1 .. v7}, Lcom/kousei/framework/qa;-><init>(IIIIILcom/kousei/framework/v;)V
+    const/16 v5, 0x40
 
-    .line 41
-    move-object v11, v1
+    .line 40
+    const/16 v7, 0x41
 
     .line 42
-    move v12, v2
-
-    .line 43
-    new-instance v1, Lcom/kousei/framework/qa;
+    invoke-static {v3, v5, v7, v4}, Lcom/kousei/framework/qa;->a([BIIB)V
 
     .line 45
-    const/16 v5, 0x22
+    const/16 v5, 0x5f
 
     .line 47
-    const/4 v6, 0x0
+    const/4 v7, 0x4
 
     .line 48
-    const/4 v2, 0x4
+    const/16 v9, 0x42
 
-    .line 49
-    const/16 v4, 0x8
+    .line 50
+    invoke-static {v3, v9, v5, v7}, Lcom/kousei/framework/qa;->a([BIIB)V
 
-    .line 51
-    invoke-direct/range {v1 .. v7}, Lcom/kousei/framework/qa;-><init>(IIIIILcom/kousei/framework/v;)V
-
-    .line 54
-    move-object v13, v1
+    .line 53
+    const/16 v5, 0x60
 
     .line 55
-    move v14, v2
+    const/4 v7, 0x5
 
     .line 56
-    new-instance v1, Lcom/kousei/framework/qa;
+    invoke-static {v3, v5, v5, v7}, Lcom/kousei/framework/qa;->a([BIIB)V
 
-    .line 58
-    const/16 v5, 0xc8
+    .line 59
+    const/16 v5, 0x61
 
-    .line 60
-    const/16 v6, 0x8
-
-    .line 62
-    const/4 v2, 0x5
+    .line 61
+    const/16 v7, 0x6c
 
     .line 63
-    const/16 v3, 0x18
+    const/4 v9, 0x6
 
-    .line 65
-    const/4 v4, 0x1
+    .line 64
+    invoke-static {v3, v5, v7, v9}, Lcom/kousei/framework/qa;->a([BIIB)V
 
-    .line 66
-    invoke-direct/range {v1 .. v7}, Lcom/kousei/framework/qa;-><init>(IIIIILcom/kousei/framework/v;)V
+    .line 67
+    const/16 v5, 0x6d
 
     .line 69
-    move-object v15, v1
+    const/4 v7, 0x7
 
     .line 70
-    move/from16 v16, v2
+    invoke-static {v3, v5, v5, v7}, Lcom/kousei/framework/qa;->a([BIIB)V
 
-    .line 72
-    new-instance v1, Lcom/kousei/framework/qa;
+    .line 73
+    const/16 v5, 0x6e
 
-    .line 74
-    const/16 v5, 0x65
-
-    .line 76
-    const/4 v6, 0x6
+    .line 75
+    const/16 v7, 0x6f
 
     .line 77
-    const/4 v2, 0x6
+    invoke-static {v3, v5, v7, v9}, Lcom/kousei/framework/qa;->a([BIIB)V
 
-    .line 78
-    const/4 v4, 0x2
-
-    .line 79
-    invoke-direct/range {v1 .. v7}, Lcom/kousei/framework/qa;-><init>(IIIIILcom/kousei/framework/v;)V
+    .line 80
+    const/16 v5, 0x8
 
     .line 82
-    move/from16 v17, v2
+    invoke-static {v3, v1, v1, v5}, Lcom/kousei/framework/qa;->a([BIIB)V
 
-    .line 84
-    new-instance v2, Lcom/kousei/framework/qa;
+    .line 85
+    const/16 v1, 0x73
 
-    .line 86
-    const/16 v5, 0x33
-
-    .line 88
-    const/4 v6, 0x4
+    .line 87
+    const/16 v7, 0x9
 
     .line 89
-    move-object v3, v1
-
-    .line 90
-    move-object v1, v2
+    const/16 v9, 0x71
 
     .line 91
-    const/4 v2, 0x7
+    invoke-static {v3, v9, v1, v7}, Lcom/kousei/framework/qa;->a([BIIB)V
 
-    .line 92
-    move-object v4, v3
+    .line 94
+    const/16 v1, 0x74
 
-    .line 93
-    const/16 v3, 0x18
-
-    .line 95
-    move-object/from16 v18, v4
-
-    .line 97
-    const/4 v4, 0x4
+    .line 96
+    const/16 v7, 0xa
 
     .line 98
-    move/from16 v19, v8
+    invoke-static {v3, v1, v1, v7}, Lcom/kousei/framework/qa;->a([BIIB)V
 
-    .line 100
-    move-object/from16 v8, v18
+    .line 101
+    const/16 v1, 0x75
 
-    .line 102
-    invoke-direct/range {v1 .. v7}, Lcom/kousei/framework/qa;-><init>(IIIIILcom/kousei/framework/v;)V
+    .line 103
+    const/16 v7, 0x7f
 
     .line 105
-    move/from16 v18, v2
+    invoke-static {v3, v1, v7, v4}, Lcom/kousei/framework/qa;->a([BIIB)V
 
-    .line 107
-    new-instance v2, Lcom/kousei/framework/qa;
+    .line 108
+    array-length v1, v2
 
     .line 109
-    const/16 v5, 0x1a
+    sub-int/2addr v1, v6
+
+    .line 110
+    const/4 v6, -0x2
 
     .line 111
-    const/4 v6, 0x0
-
-    .line 112
-    move-object v3, v1
-
-    .line 113
-    move-object v1, v2
+    invoke-static {v2, v4, v1, v6}, Lcom/kousei/framework/qa;->a([BIIB)V
 
     .line 114
-    const/16 v2, 0x8
+    const/4 v1, -0x1
 
-    .line 116
-    move-object v4, v3
+    .line 115
+    const/16 v6, 0xb
 
     .line 117
-    const/16 v3, 0x18
+    invoke-static {v2, v5, v6, v1}, Lcom/kousei/framework/qa;->a([BIIB)V
 
-    .line 119
-    move-object/from16 v20, v4
+    .line 120
+    const/16 v1, 0x18
 
-    .line 121
-    const/16 v4, 0x8
+    .line 122
+    const/16 v7, 0x1b
 
-    .line 123
-    move/from16 v21, v10
-
-    .line 125
-    move-object/from16 v10, v20
+    .line 124
+    invoke-static {v2, v1, v7, v4}, Lcom/kousei/framework/qa;->a([BIIB)V
 
     .line 127
-    invoke-direct/range {v1 .. v7}, Lcom/kousei/framework/qa;-><init>(IIIIILcom/kousei/framework/v;)V
+    const/16 v1, 0x28
 
-    .line 130
-    new-instance v22, Lcom/kousei/framework/qa;
+    .line 129
+    const/16 v7, 0x2b
 
-    .line 132
-    sget-object v29, Lcom/kousei/framework/ec;->n:Lcom/kousei/framework/v;
+    .line 131
+    invoke-static {v2, v1, v7, v8}, Lcom/kousei/framework/qa;->a([BIIB)V
 
     .line 134
-    const/16 v23, 0x9
+    const/16 v1, 0x3a
 
     .line 136
-    const/16 v24, 0x20
+    const/16 v7, 0x3b
 
     .line 138
-    const/16 v25, 0x1
+    invoke-static {v2, v1, v7, v4}, Lcom/kousei/framework/qa;->a([BIIB)V
 
-    .line 140
-    const/16 v26, 0x109
+    .line 141
+    const/16 v1, 0x48
 
-    .line 142
-    const/16 v27, 0x7
+    .line 143
+    const/16 v7, 0x49
 
-    .line 144
-    move-object/from16 v28, v29
+    .line 145
+    invoke-static {v2, v1, v7, v4}, Lcom/kousei/framework/qa;->a([BIIB)V
 
-    .line 146
-    invoke-direct/range {v22 .. v28}, Lcom/kousei/framework/qa;-><init>(IIIIILcom/kousei/framework/v;)V
+    .line 148
+    const/16 v1, 0x59
 
-    .line 149
-    move-object/from16 v3, v22
+    .line 150
+    const/16 v7, 0x5b
 
-    .line 151
-    move/from16 v4, v23
-
-    .line 153
-    new-instance v23, Lcom/kousei/framework/qa;
+    .line 152
+    invoke-static {v2, v1, v7, v8}, Lcom/kousei/framework/qa;->a([BIIB)V
 
     .line 155
-    const/16 v27, 0x85
+    const/16 v1, 0x68
 
     .line 157
-    const/16 v28, 0x6
+    invoke-static {v2, v1, v1, v8}, Lcom/kousei/framework/qa;->a([BIIB)V
 
-    .line 159
-    const/16 v24, 0xa
+    .line 160
+    new-array v1, v6, [B
 
-    .line 161
-    const/16 v25, 0x20
-
-    .line 163
-    const/16 v26, 0x2
+    .line 162
+    fill-array-data v1, :array_be
 
     .line 165
-    invoke-direct/range {v23 .. v29}, Lcom/kousei/framework/qa;-><init>(IIIIILcom/kousei/framework/v;)V
+    new-array v2, v6, [B
 
-    .line 168
-    move-object/from16 v5, v23
+    .line 167
+    fill-array-data v2, :array_c8
 
     .line 170
-    move/from16 v6, v24
+    :goto_a9
+    if-ge v4, v0, :cond_bc
 
     .line 172
-    new-instance v23, Lcom/kousei/framework/qa;
+    aget-byte v6, v3, v4
 
     .line 174
-    const/16 v27, 0x43
+    aget-byte v7, v1, v6
 
     .line 176
-    const/16 v28, 0x4
+    and-int/2addr v7, v4
 
-    .line 178
-    const/16 v24, 0xb
+    .line 177
+    aget-byte v6, v2, v6
 
-    .line 180
-    const/16 v26, 0x4
+    .line 179
+    sget-object v8, Lcom/kousei/framework/qa;->a:[S
+
+    .line 181
+    shl-int/2addr v7, v5
 
     .line 182
-    invoke-direct/range {v23 .. v29}, Lcom/kousei/framework/qa;-><init>(IIIIILcom/kousei/framework/v;)V
+    or-int/2addr v6, v7
 
-    .line 185
-    move-object/from16 v7, v23
+    .line 183
+    int-to-short v6, v6
 
-    .line 187
-    move/from16 v20, v24
+    .line 184
+    aput-short v6, v8, v4
+
+    .line 186
+    add-int/lit8 v4, v4, 0x1
+
+    .line 188
+    goto :goto_a9
 
     .line 189
-    new-instance v23, Lcom/kousei/framework/qa;
+    :cond_bc
+    return-void
+
+    .line 190
+    nop
 
     .line 191
-    const/16 v27, 0x22
-
-    .line 193
-    const/16 v28, 0x0
-
-    .line 195
-    const/16 v24, 0xc
-
-    .line 197
-    const/16 v26, 0x8
-
-    .line 199
-    invoke-direct/range {v23 .. v29}, Lcom/kousei/framework/qa;-><init>(IIIIILcom/kousei/framework/v;)V
-
-    .line 202
-    move/from16 v22, v2
-
-    .line 204
-    move-object/from16 v2, v23
-
-    .line 206
-    move/from16 v30, v24
-
-    .line 208
-    new-instance v23, Lcom/kousei/framework/qa;
-
-    .line 210
-    const/16 v27, 0xc8
-
-    .line 212
-    const/16 v28, 0x8
-
-    .line 214
-    const/16 v24, 0xd
-
-    .line 216
-    const/16 v25, 0x18
-
-    .line 218
-    const/16 v26, 0x1
-
-    .line 220
-    invoke-direct/range {v23 .. v29}, Lcom/kousei/framework/qa;-><init>(IIIIILcom/kousei/framework/v;)V
-
-    .line 223
-    move/from16 v31, v4
-
-    .line 225
-    move-object/from16 v4, v23
-
-    .line 227
-    move/from16 v32, v24
-
-    .line 229
-    new-instance v23, Lcom/kousei/framework/qa;
-
-    .line 231
-    const/16 v27, 0x65
-
-    .line 233
-    const/16 v28, 0x6
-
-    .line 235
-    const/16 v24, 0xe
-
-    .line 237
-    const/16 v26, 0x2
-
-    .line 239
-    invoke-direct/range {v23 .. v29}, Lcom/kousei/framework/qa;-><init>(IIIIILcom/kousei/framework/v;)V
-
-    .line 242
-    move/from16 v33, v6
-
-    .line 244
-    move-object/from16 v6, v23
-
-    .line 246
-    move/from16 v34, v24
-
-    .line 248
-    new-instance v23, Lcom/kousei/framework/qa;
-
-    .line 250
-    const/16 v27, 0x33
-
-    .line 252
-    const/16 v28, 0x4
-
-    .line 254
-    const/16 v24, 0xf
-
-    .line 256
-    const/16 v26, 0x4
-
-    .line 258
-    invoke-direct/range {v23 .. v29}, Lcom/kousei/framework/qa;-><init>(IIIIILcom/kousei/framework/v;)V
-
-    .line 261
-    move/from16 v35, v12
-
-    .line 263
-    move-object/from16 v12, v23
-
-    .line 265
-    move/from16 v36, v24
-
-    .line 267
-    new-instance v23, Lcom/kousei/framework/qa;
-
-    .line 269
-    const/16 v27, 0x1a
-
-    .line 271
-    const/16 v28, 0x0
-
-    .line 273
-    const/16 v24, 0x10
-
-    .line 275
-    const/16 v26, 0x8
-
-    .line 277
-    invoke-direct/range {v23 .. v29}, Lcom/kousei/framework/qa;-><init>(IIIIILcom/kousei/framework/v;)V
-
-    .line 280
-    move/from16 v25, v14
-
-    .line 282
-    new-instance v14, Lcom/kousei/framework/pa;
-
-    .line 284
-    invoke-direct {v14}, Ljava/util/HashMap;-><init>()V
-
-    .line 287
-    move-object/from16 v26, v12
-
-    .line 289
-    invoke-static/range {v19 .. v19}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 292
-    move-result-object v12
-
-    .line 293
-    invoke-virtual {v14, v12, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 296
-    invoke-static/range {v21 .. v21}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 299
-    move-result-object v0
-
-    .line 300
-    invoke-virtual {v14, v0, v9}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 303
-    invoke-static/range {v35 .. v35}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 306
-    move-result-object v0
-
-    .line 307
-    invoke-virtual {v14, v0, v11}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 310
-    invoke-static/range {v25 .. v25}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 313
-    move-result-object v0
-
-    .line 314
-    invoke-virtual {v14, v0, v13}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 317
-    invoke-static/range {v16 .. v16}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 320
-    move-result-object v0
-
-    .line 321
-    invoke-virtual {v14, v0, v15}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 324
-    invoke-static/range {v17 .. v17}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 327
-    move-result-object v0
-
-    .line 328
-    invoke-virtual {v14, v0, v8}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 331
-    invoke-static/range {v18 .. v18}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 334
-    move-result-object v0
-
-    .line 335
-    invoke-virtual {v14, v0, v10}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 338
-    invoke-static/range {v22 .. v22}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 341
-    move-result-object v0
-
-    .line 342
-    invoke-virtual {v14, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 345
-    invoke-static/range {v31 .. v31}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 348
-    move-result-object v0
-
-    .line 349
-    invoke-virtual {v14, v0, v3}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 352
-    invoke-static/range {v33 .. v33}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 355
-    move-result-object v0
-
-    .line 356
-    invoke-virtual {v14, v0, v5}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 359
-    invoke-static/range {v20 .. v20}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 362
-    move-result-object v0
-
-    .line 363
-    invoke-virtual {v14, v0, v7}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 366
-    invoke-static/range {v30 .. v30}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 369
-    move-result-object v0
-
-    .line 370
-    invoke-virtual {v14, v0, v2}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 373
-    invoke-static/range {v32 .. v32}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 376
-    move-result-object v0
-
-    .line 377
-    invoke-virtual {v14, v0, v4}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 380
-    invoke-static/range {v34 .. v34}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 383
-    move-result-object v0
-
-    .line 384
-    invoke-virtual {v14, v0, v6}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 387
-    invoke-static/range {v36 .. v36}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 390
-    move-result-object v0
-
-    .line 391
-    move-object/from16 v12, v26
-
-    .line 393
-    invoke-virtual {v14, v0, v12}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 396
-    invoke-static/range {v24 .. v24}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    .line 399
-    move-result-object v0
-
-    .line 400
-    move-object/from16 v1, v23
-
-    .line 402
-    invoke-virtual {v14, v0, v1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 405
-    sput-object v14, Lcom/kousei/framework/qa;->g:Lcom/kousei/framework/pa;
-
-    .line 407
-    return-void
+    :array_be
+    .array-data 1
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x1ft
+        0xft
+        0xft
+        0xft
+        0x7t
+        0x7t
+        0x7t
+    .end array-data
+
+    .line 201
+    :array_c8
+    .array-data 1
+        -0x2t
+        -0x2t
+        -0x2t
+        -0x2t
+        0x0t
+        0x30t
+        0x10t
+        0x40t
+        0x50t
+        0x20t
+        0x60t
+    .end array-data
 .end method
 
-.method public constructor <init>(IIIIILcom/kousei/framework/v;)V
-    .registers 7
+.method public static a([BIIB)V
+    .registers 4
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :goto_0
+    if-gt p1, p2, :cond_7
 
-    .line 4
-    iput p1, p0, Lcom/kousei/framework/qa;->a:I
+    .line 3
+    aput-byte p3, p0, p1
 
-    .line 6
-    iput p2, p0, Lcom/kousei/framework/qa;->b:I
+    .line 5
+    add-int/lit8 p1, p1, 0x1
+
+    .line 7
+    goto :goto_0
 
     .line 8
-    iput p3, p0, Lcom/kousei/framework/qa;->c:I
-
-    .line 10
-    iput p4, p0, Lcom/kousei/framework/qa;->d:I
-
-    .line 12
-    iput p5, p0, Lcom/kousei/framework/qa;->e:I
-
-    .line 14
-    iput-object p6, p0, Lcom/kousei/framework/qa;->f:Lcom/kousei/framework/v;
-
-    .line 16
+    :cond_7
     return-void
 .end method

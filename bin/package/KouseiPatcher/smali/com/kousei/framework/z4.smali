@@ -1,83 +1,32 @@
-.class public abstract Lcom/kousei/framework/z4;
-.super Lcom/kousei/framework/n0;
+.class public final Lcom/kousei/framework/z4;
+.super Ljava/lang/Object;
+.source "r8-map-id-ec70a54ac4dd249b58de3765a20c96801dd38a23bdb543e33a18faed5ec9684e"
 
 
 # instance fields
-.field public final L:Lcom/kousei/framework/b5;
+.field public final a:Ljava/lang/String;
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(ZLcom/kousei/framework/b5;)V
-    .registers 3
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .registers 4
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/kousei/framework/n0;-><init>(Z)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 4
-    iput-object p2, p0, Lcom/kousei/framework/z4;->L:Lcom/kousei/framework/b5;
+    iput-object p1, p0, Lcom/kousei/framework/z4;->a:Ljava/lang/String;
 
     .line 6
-    return-void
-.end method
+    iput-object p2, p0, Lcom/kousei/framework/z4;->b:Ljava/lang/String;
 
-
-# virtual methods
-.method public equals(Ljava/lang/Object;)Z
-    .registers 3
-
-    .line 1
-    instance-of v0, p1, Lcom/kousei/framework/z4;
-
-    .line 3
-    if-nez v0, :cond_6
-
-    .line 5
-    const/4 p0, 0x0
-
-    .line 6
-    return p0
-
-    .line 7
-    :cond_6
-    check-cast p1, Lcom/kousei/framework/z4;
-
-    .line 9
-    iget-object p0, p0, Lcom/kousei/framework/z4;->L:Lcom/kousei/framework/b5;
-
-    .line 11
-    iget-object p1, p1, Lcom/kousei/framework/z4;->L:Lcom/kousei/framework/b5;
-
-    .line 13
-    invoke-virtual {p0, p1}, Lcom/kousei/framework/b5;->equals(Ljava/lang/Object;)Z
-
-    .line 16
-    move-result p0
-
-    .line 17
-    return p0
-.end method
-
-.method public hashCode()I
-    .registers 2
-
-    .line 1
-    iget-boolean v0, p0, Lcom/kousei/framework/n0;->K:Z
-
-    .line 3
-    xor-int/lit8 v0, v0, 0x1
-
-    .line 5
-    iget-object p0, p0, Lcom/kousei/framework/z4;->L:Lcom/kousei/framework/b5;
-
-    .line 7
-    invoke-virtual {p0}, Lcom/kousei/framework/b5;->hashCode()I
+    .line 8
+    iput-object p3, p0, Lcom/kousei/framework/z4;->c:Ljava/lang/String;
 
     .line 10
-    move-result p0
-
-    .line 11
-    xor-int/2addr p0, v0
-
-    .line 12
-    return p0
+    return-void
 .end method

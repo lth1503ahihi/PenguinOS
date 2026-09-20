@@ -1,108 +1,105 @@
 .class public final Lcom/kousei/framework/d3;
-.super Lcom/kousei/framework/n2;
+.super Ljava/lang/Object;
 
 
 # instance fields
-.field public final M:[B
+.field public final a:[B
+
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lcom/kousei/framework/b3;[B[B[B[B[B)V
-    .registers 8
+.method public constructor <init>(I[B)V
+    .registers 3
 
     .line 1
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    invoke-direct {p0, v0, p1}, Lcom/kousei/framework/n2;-><init>(ZLjava/lang/Object;)V
-
-    .line 5
-    array-length p1, p2
-
-    .line 6
-    array-length v0, p3
+    .line 4
+    invoke-static {p2}, Lcom/kousei/framework/h0;->J([B)[B
 
     .line 7
-    add-int/2addr p1, v0
+    move-result-object p2
 
     .line 8
-    array-length v0, p4
-
-    .line 9
-    add-int/2addr p1, v0
+    iput-object p2, p0, Lcom/kousei/framework/d3;->a:[B
 
     .line 10
-    array-length v0, p5
-
-    .line 11
-    add-int/2addr p1, v0
+    iput p1, p0, Lcom/kousei/framework/d3;->b:I
 
     .line 12
-    array-length v0, p6
+    return-void
+.end method
 
-    .line 13
-    add-int/2addr p1, v0
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .registers 4
+
+    .line 1
+    instance-of v0, p1, Lcom/kousei/framework/d3;
+
+    .line 3
+    if-nez v0, :cond_5
+
+    .line 5
+    goto :goto_d
+
+    .line 6
+    :cond_5
+    check-cast p1, Lcom/kousei/framework/d3;
+
+    .line 8
+    iget v0, p1, Lcom/kousei/framework/d3;->b:I
+
+    .line 10
+    iget v1, p0, Lcom/kousei/framework/d3;->b:I
+
+    .line 12
+    if-eq v0, v1, :cond_f
 
     .line 14
-    new-array p1, p1, [B
+    :goto_d
+    const/4 p0, 0x0
+
+    .line 15
+    return p0
 
     .line 16
-    iput-object p1, p0, Lcom/kousei/framework/d3;->M:[B
+    :cond_f
+    iget-object p0, p0, Lcom/kousei/framework/d3;->a:[B
 
     .line 18
-    array-length p0, p2
-
-    .line 19
-    const/4 v0, 0x0
+    iget-object p1, p1, Lcom/kousei/framework/d3;->a:[B
 
     .line 20
-    invoke-static {p2, v0, p1, v0, p0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-static {p0, p1}, Ljava/util/Arrays;->equals([B[B)Z
 
     .line 23
-    array-length p0, p2
+    move-result p0
 
     .line 24
-    array-length p2, p3
+    return p0
+.end method
 
-    .line 25
-    invoke-static {p3, v0, p1, p0, p2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+.method public final hashCode()I
+    .registers 2
 
-    .line 28
-    array-length p2, p3
+    .line 1
+    iget-object v0, p0, Lcom/kousei/framework/d3;->a:[B
 
-    .line 29
-    add-int/2addr p0, p2
+    .line 3
+    invoke-static {v0}, Lcom/kousei/framework/h0;->i0([B)I
 
-    .line 30
-    array-length p2, p4
+    .line 6
+    move-result v0
 
-    .line 31
-    invoke-static {p4, v0, p1, p0, p2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    .line 7
+    iget p0, p0, Lcom/kousei/framework/d3;->b:I
 
-    .line 34
-    array-length p2, p4
+    .line 9
+    xor-int/2addr p0, v0
 
-    .line 35
-    add-int/2addr p0, p2
-
-    .line 36
-    array-length p2, p5
-
-    .line 37
-    invoke-static {p5, v0, p1, p0, p2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 40
-    array-length p2, p5
-
-    .line 41
-    add-int/2addr p0, p2
-
-    .line 42
-    array-length p2, p6
-
-    .line 43
-    invoke-static {p6, v0, p1, p0, p2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 46
-    return-void
+    .line 10
+    return p0
 .end method

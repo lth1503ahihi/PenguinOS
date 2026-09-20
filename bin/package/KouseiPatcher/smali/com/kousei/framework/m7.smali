@@ -1,57 +1,72 @@
 .class public final Lcom/kousei/framework/m7;
-.super Lcom/kousei/framework/n0;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/security/PrivilegedAction;
 
 
 # instance fields
-.field public final L:[B
+.field public final synthetic a:I
 
-.field public M:Lcom/kousei/framework/n7;
+.field public final synthetic b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>([B)V
-    .registers 4
+.method public synthetic constructor <init>(ILjava/lang/String;)V
+    .registers 3
 
     .line 1
-    array-length v0, p1
+    iput p1, p0, Lcom/kousei/framework/m7;->a:I
 
-    .line 2
-    const/16 v1, 0x20
+    .line 3
+    iput-object p2, p0, Lcom/kousei/framework/m7;->b:Ljava/lang/String;
 
-    .line 4
-    if-ne v0, v1, :cond_12
+    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6
-    const/4 v0, 0x1
+    .line 8
+    return-void
+.end method
 
-    .line 7
-    invoke-direct {p0, v0}, Lcom/kousei/framework/n0;-><init>(Z)V
 
-    .line 10
-    new-array v0, v1, [B
+# virtual methods
+.method public final run()Ljava/lang/Object;
+    .registers 2
+
+    .line 1
+    iget v0, p0, Lcom/kousei/framework/m7;->a:I
+
+    .line 3
+    iget-object p0, p0, Lcom/kousei/framework/m7;->b:Ljava/lang/String;
+
+    .line 5
+    packed-switch v0, :pswitch_data_12
+
+    .line 8
+    invoke-static {p0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 11
+    move-result-object p0
 
     .line 12
-    iput-object v0, p0, Lcom/kousei/framework/m7;->L:[B
+    return-object p0
 
-    .line 14
-    const/4 p0, 0x0
+    .line 13
+    :pswitch_c  #0x0
+    invoke-static {p0}, Ljava/security/Security;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 15
-    invoke-static {p1, p0, v0, p0, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    .line 16
+    move-result-object p0
+
+    .line 17
+    return-object p0
 
     .line 18
-    return-void
+    nop
 
     .line 19
-    :cond_12
-    const-string p0, "\'buf\' must have length 32"
-
-    .line 21
-    invoke-static {p0}, Lcom/kousei/framework/f;->k(Ljava/lang/String;)V
-
-    .line 24
-    const/4 p0, 0x0
-
-    .line 25
-    throw p0
+    :pswitch_data_12
+    .packed-switch 0x0
+        :pswitch_c  #00000000
+    .end packed-switch
 .end method

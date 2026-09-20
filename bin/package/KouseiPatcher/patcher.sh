@@ -50,9 +50,6 @@ jar_util()
                         [[ -d "$dex.out" ]] && rm -rf $dex        
                     fi
                 done
-                # # Create necessary directories and copy xBuild.smali
-                # mkdir -p $dir/jar_temp/$2.out/classes.dex.out/miuix/os
-                # cp $dir/bin/shPlugin/noti/xBuild.smali $dir/jar_temp/$2.out/classes.dex.out/miuix/os/
             fi
         fi
     else 
@@ -71,7 +68,6 @@ jar_util()
                     fi
                 done
                 7za a -tzip -mx=0 $dir/jar_temp/$2_notal $dir/jar_temp/$2.out/. >/dev/null 2>&1
-                #zip -r -j -0 $dir/jar_temp/$2_notal $dir/jar_temp/$2.out/.
                 zipalign 4 $dir/jar_temp/$2_notal $dir/jar_temp/$2
                 if [[ -f $dir/jar_temp/$2 ]]; then
                     sudo cp -rf $dir/jar_temp/$2 $(get_file_dir $2)
@@ -160,6 +156,7 @@ Patch_Framework () {
     mvsml "Instrumentation.smali" "$new_dex_folder" >/dev/null 2>&1
     mvsml "AndroidKeyStoreKeyPairGeneratorSpi.smali" "$new_dex_folder" >/dev/null 2>&1
     mvsml "ApplicationPackageManager.smali" "$new_dex_folder" >/dev/null 2>&1
+    mvsml "Settings\$NameValueCache.smali" "$new_dex_folder" >/dev/null 2>&1
     cp -rf $dir/bin/package/KouseiPatcher/smali/* $new_dex_folder
     jar_util a 'framework.jar' fw 0 10
 

@@ -1,101 +1,187 @@
 .class public final Lcom/kousei/framework/l;
-.super Ljava/lang/Object;
+.super Lcom/kousei/framework/z;
 
 
 # static fields
-.field public static final d:[Lcom/kousei/framework/k;
+.field public static final b:Lcom/kousei/framework/d;
+
+.field public static final c:[Lcom/kousei/framework/l;
 
 
 # instance fields
-.field public a:[Lcom/kousei/framework/k;
-
-.field public b:I
-
-.field public c:Z
+.field public final a:[B
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .registers 1
+    .registers 3
 
     .line 1
-    const/4 v0, 0x0
+    new-instance v0, Lcom/kousei/framework/d;
 
-    .line 2
-    new-array v0, v0, [Lcom/kousei/framework/k;
+    .line 3
+    const-class v1, Lcom/kousei/framework/l;
 
-    .line 4
-    sput-object v0, Lcom/kousei/framework/l;->d:[Lcom/kousei/framework/k;
+    .line 5
+    const/4 v2, 0x3
 
     .line 6
-    return-void
-.end method
+    invoke-direct {v0, v1, v2}, Lcom/kousei/framework/d;-><init>(Ljava/lang/Class;I)V
 
-.method public constructor <init>()V
-    .registers 2
+    .line 9
+    sput-object v0, Lcom/kousei/framework/l;->b:Lcom/kousei/framework/d;
 
-    const/16 v0, 0xa
+    .line 11
+    const/16 v0, 0xc
 
-    .line 28
-    invoke-direct {p0, v0}, Lcom/kousei/framework/l;-><init>(I)V
+    .line 13
+    new-array v0, v0, [Lcom/kousei/framework/l;
 
+    .line 15
+    sput-object v0, Lcom/kousei/framework/l;->c:[Lcom/kousei/framework/l;
+
+    .line 17
     return-void
 .end method
 
 .method public constructor <init>(I)V
-    .registers 2
+    .registers 4
+
+    .line 57
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    if-ltz p1, :cond_11
+
+    int-to-long v0, p1
+
+    .line 58
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/math/BigInteger;->toByteArray()[B
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/kousei/framework/l;->a:[B
+
+    return-void
+
+    :cond_11
+    const-string p0, "enumerated must be non-negative"
+
+    invoke-static {p0}, Lcom/kousei/framework/e;->j(Ljava/lang/String;)V
+
+    const/4 p0, 0x0
+
+    throw p0
+.end method
+
+.method public constructor <init>([BZ)V
+    .registers 6
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 4
-    if-ltz p1, :cond_14
+    invoke-static {p1}, Lcom/kousei/framework/p;->v([B)Z
 
-    .line 6
-    if-nez p1, :cond_a
+    .line 7
+    move-result v0
 
     .line 8
-    sget-object p1, Lcom/kousei/framework/l;->d:[Lcom/kousei/framework/k;
+    const/4 v1, 0x0
 
-    .line 10
-    goto :goto_c
+    .line 9
+    if-nez v0, :cond_32
 
     .line 11
-    :cond_a
-    new-array p1, p1, [Lcom/kousei/framework/k;
+    const/4 v0, 0x0
 
-    .line 13
-    :goto_c
-    iput-object p1, p0, Lcom/kousei/framework/l;->a:[Lcom/kousei/framework/k;
+    .line 12
+    aget-byte v2, p1, v0
 
-    .line 15
-    const/4 p1, 0x0
+    .line 14
+    and-int/lit16 v2, v2, 0x80
 
     .line 16
-    iput p1, p0, Lcom/kousei/framework/l;->b:I
+    if-nez v2, :cond_2c
 
     .line 18
-    iput-boolean p1, p0, Lcom/kousei/framework/l;->c:Z
+    if-eqz p2, :cond_18
 
     .line 20
-    return-void
-
-    .line 21
-    :cond_14
-    const-string p0, "\'initialCapacity\' must not be negative"
+    invoke-static {p1}, Lcom/kousei/framework/h0;->J([B)[B
 
     .line 23
-    invoke-static {p0}, Lcom/kousei/framework/f;->k(Ljava/lang/String;)V
+    move-result-object p2
+
+    .line 24
+    goto :goto_19
+
+    .line 25
+    :cond_18
+    move-object p2, p1
 
     .line 26
-    const/4 p0, 0x0
+    :goto_19
+    iput-object p2, p0, Lcom/kousei/framework/l;->a:[B
 
-    .line 27
-    throw p0
+    .line 28
+    array-length p0, p1
+
+    .line 29
+    add-int/lit8 p0, p0, -0x1
+
+    .line 31
+    :goto_1e
+    if-ge v0, p0, :cond_2b
+
+    .line 33
+    aget-byte p2, p1, v0
+
+    .line 35
+    add-int/lit8 v0, v0, 0x1
+
+    .line 37
+    aget-byte v1, p1, v0
+
+    .line 39
+    shr-int/lit8 v1, v1, 0x7
+
+    .line 41
+    if-ne p2, v1, :cond_2b
+
+    .line 43
+    goto :goto_1e
+
+    .line 44
+    :cond_2b
+    return-void
+
+    .line 45
+    :cond_2c
+    const-string p0, "enumerated must be non-negative"
+
+    .line 47
+    invoke-static {p0}, Lcom/kousei/framework/e;->j(Ljava/lang/String;)V
+
+    .line 50
+    throw v1
+
+    .line 51
+    :cond_32
+    const-string p0, "malformed enumerated"
+
+    .line 53
+    invoke-static {p0}, Lcom/kousei/framework/e;->j(Ljava/lang/String;)V
+
+    .line 56
+    throw v1
 .end method
 
-.method public static b([Lcom/kousei/framework/k;)[Lcom/kousei/framework/k;
-    .registers 3
+.method public static r([BZ)Lcom/kousei/framework/l;
+    .registers 5
 
     .line 1
     array-length v0, p0
@@ -104,234 +190,299 @@
     const/4 v1, 0x1
 
     .line 3
-    if-ge v0, v1, :cond_7
+    if-le v0, v1, :cond_a
 
     .line 5
-    sget-object p0, Lcom/kousei/framework/l;->d:[Lcom/kousei/framework/k;
+    new-instance v0, Lcom/kousei/framework/l;
 
     .line 7
+    invoke-direct {v0, p0, p1}, Lcom/kousei/framework/l;-><init>([BZ)V
+
+    .line 10
+    return-object v0
+
+    .line 11
+    :cond_a
+    array-length v0, p0
+
+    .line 12
+    if-eqz v0, :cond_2a
+
+    .line 14
+    const/4 v0, 0x0
+
+    .line 15
+    aget-byte v0, p0, v0
+
+    .line 17
+    and-int/lit16 v0, v0, 0xff
+
+    .line 19
+    const/16 v1, 0xc
+
+    .line 21
+    if-lt v0, v1, :cond_1c
+
+    .line 23
+    new-instance v0, Lcom/kousei/framework/l;
+
+    .line 25
+    invoke-direct {v0, p0, p1}, Lcom/kousei/framework/l;-><init>([BZ)V
+
+    .line 28
+    return-object v0
+
+    .line 29
+    :cond_1c
+    sget-object v1, Lcom/kousei/framework/l;->c:[Lcom/kousei/framework/l;
+
+    .line 31
+    aget-object v2, v1, v0
+
+    .line 33
+    if-nez v2, :cond_29
+
+    .line 35
+    new-instance v2, Lcom/kousei/framework/l;
+
+    .line 37
+    invoke-direct {v2, p0, p1}, Lcom/kousei/framework/l;-><init>([BZ)V
+
+    .line 40
+    aput-object v2, v1, v0
+
+    .line 42
+    :cond_29
+    return-object v2
+
+    .line 43
+    :cond_2a
+    const-string p0, "ENUMERATED has zero length"
+
+    .line 45
+    invoke-static {p0}, Lcom/kousei/framework/e;->j(Ljava/lang/String;)V
+
+    .line 48
+    const/4 p0, 0x0
+
+    .line 49
     return-object p0
+.end method
+
+.method public static s(Lcom/kousei/framework/j;)Lcom/kousei/framework/l;
+    .registers 4
+
+    .line 1
+    if-eqz p0, :cond_42
+
+    .line 3
+    instance-of v0, p0, Lcom/kousei/framework/l;
+
+    .line 5
+    if-eqz v0, :cond_7
+
+    .line 7
+    goto :goto_42
 
     .line 8
     :cond_7
-    invoke-virtual {p0}, [Lcom/kousei/framework/k;->clone()Ljava/lang/Object;
+    instance-of v0, p0, [B
 
-    .line 11
-    move-result-object p0
+    .line 10
+    if-eqz v0, :cond_2f
 
     .line 12
-    check-cast p0, [Lcom/kousei/framework/k;
+    :try_start_b
+    sget-object v0, Lcom/kousei/framework/l;->b:Lcom/kousei/framework/d;
 
     .line 14
+    check-cast p0, [B
+
+    .line 16
+    invoke-virtual {v0, p0}, Lcom/kousei/framework/d;->b([B)Lcom/kousei/framework/z;
+
+    .line 19
+    move-result-object p0
+
+    .line 20
+    check-cast p0, Lcom/kousei/framework/l;
+    :try_end_15
+    .catch Ljava/lang/Exception; {:try_start_b .. :try_end_15} :catch_16
+
+    .line 22
+    return-object p0
+
+    .line 23
+    :catch_16
+    move-exception p0
+
+    .line 24
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    .line 26
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    .line 28
+    const-string v2, "encoding error in getInstance: "
+
+    .line 30
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 33
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 36
+    move-result-object p0
+
+    .line 37
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 40
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 43
+    move-result-object p0
+
+    .line 44
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    .line 47
+    throw v0
+
+    .line 48
+    :cond_2f
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 51
+    move-result-object p0
+
+    .line 52
+    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    .line 55
+    move-result-object p0
+
+    .line 56
+    const-string v0, "illegal object in getInstance: "
+
+    .line 58
+    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 61
+    move-result-object p0
+
+    .line 62
+    invoke-static {p0}, Lcom/kousei/framework/e;->j(Ljava/lang/String;)V
+
+    .line 65
+    const/4 p0, 0x0
+
+    .line 66
+    return-object p0
+
+    .line 67
+    :cond_42
+    :goto_42
+    check-cast p0, Lcom/kousei/framework/l;
+
+    .line 69
     return-object p0
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/kousei/framework/k;)V
-    .registers 7
+.method public final hashCode()I
+    .registers 1
 
     .line 1
-    if-eqz p1, :cond_31
+    iget-object p0, p0, Lcom/kousei/framework/l;->a:[B
 
     .line 3
-    iget-object v0, p0, Lcom/kousei/framework/l;->a:[Lcom/kousei/framework/k;
-
-    .line 5
-    array-length v1, v0
+    invoke-static {p0}, Lcom/kousei/framework/h0;->i0([B)I
 
     .line 6
-    iget v2, p0, Lcom/kousei/framework/l;->b:I
+    move-result p0
 
-    .line 8
-    const/4 v3, 0x1
-
-    .line 9
-    add-int/2addr v2, v3
-
-    .line 10
-    const/4 v4, 0x0
-
-    .line 11
-    if-le v2, v1, :cond_d
-
-    .line 13
-    goto :goto_e
-
-    .line 14
-    :cond_d
-    move v3, v4
-
-    .line 15
-    :goto_e
-    iget-boolean v1, p0, Lcom/kousei/framework/l;->c:Z
-
-    .line 17
-    or-int/2addr v1, v3
-
-    .line 18
-    if-eqz v1, :cond_28
-
-    .line 20
-    array-length v0, v0
-
-    .line 21
-    shr-int/lit8 v1, v2, 0x1
-
-    .line 23
-    add-int/2addr v1, v2
-
-    .line 24
-    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
-
-    .line 27
-    move-result v0
-
-    .line 28
-    new-array v0, v0, [Lcom/kousei/framework/k;
-
-    .line 30
-    iget-object v1, p0, Lcom/kousei/framework/l;->a:[Lcom/kousei/framework/k;
-
-    .line 32
-    iget v3, p0, Lcom/kousei/framework/l;->b:I
-
-    .line 34
-    invoke-static {v1, v4, v0, v4, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 37
-    iput-object v0, p0, Lcom/kousei/framework/l;->a:[Lcom/kousei/framework/k;
-
-    .line 39
-    iput-boolean v4, p0, Lcom/kousei/framework/l;->c:Z
-
-    .line 41
-    :cond_28
-    iget-object v0, p0, Lcom/kousei/framework/l;->a:[Lcom/kousei/framework/k;
-
-    .line 43
-    iget v1, p0, Lcom/kousei/framework/l;->b:I
-
-    .line 45
-    aput-object p1, v0, v1
-
-    .line 47
-    iput v2, p0, Lcom/kousei/framework/l;->b:I
-
-    .line 49
-    return-void
-
-    .line 50
-    :cond_31
-    const-string p0, "\'element\' cannot be null"
-
-    .line 52
-    invoke-static {p0}, Lcom/kousei/framework/f;->e(Ljava/lang/String;)V
-
-    .line 55
-    return-void
+    .line 7
+    return p0
 .end method
 
-.method public final c(I)Lcom/kousei/framework/k;
+.method public final i(Lcom/kousei/framework/z;)Z
+    .registers 3
+
+    .line 1
+    instance-of v0, p1, Lcom/kousei/framework/l;
+
+    .line 3
+    if-nez v0, :cond_6
+
+    .line 5
+    const/4 p0, 0x0
+
+    .line 6
+    return p0
+
+    .line 7
+    :cond_6
+    check-cast p1, Lcom/kousei/framework/l;
+
+    .line 9
+    iget-object p0, p0, Lcom/kousei/framework/l;->a:[B
+
+    .line 11
+    iget-object p1, p1, Lcom/kousei/framework/l;->a:[B
+
+    .line 13
+    invoke-static {p0, p1}, Ljava/util/Arrays;->equals([B[B)Z
+
+    .line 16
+    move-result p0
+
+    .line 17
+    return p0
+.end method
+
+.method public final j(Lcom/kousei/framework/x;Z)V
     .registers 4
 
     .line 1
-    iget v0, p0, Lcom/kousei/framework/l;->b:I
+    const/16 v0, 0xa
 
     .line 3
-    if-ge p1, v0, :cond_9
+    iget-object p0, p0, Lcom/kousei/framework/l;->a:[B
 
     .line 5
-    iget-object p0, p0, Lcom/kousei/framework/l;->a:[Lcom/kousei/framework/k;
-
-    .line 7
-    aget-object p0, p0, p1
-
-    .line 9
-    return-object p0
-
-    .line 10
-    :cond_9
-    new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
-
-    .line 12
-    iget p0, p0, Lcom/kousei/framework/l;->b:I
-
-    .line 14
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    .line 16
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    .line 19
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 22
-    const-string p1, " >= "
-
-    .line 24
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 27
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 30
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 33
-    move-result-object p0
-
-    .line 34
-    invoke-direct {v0, p0}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    .line 37
-    throw v0
-.end method
-
-.method public final d()[Lcom/kousei/framework/k;
-    .registers 4
-
-    .line 1
-    iget v0, p0, Lcom/kousei/framework/l;->b:I
-
-    .line 3
-    if-nez v0, :cond_7
-
-    .line 5
-    sget-object p0, Lcom/kousei/framework/l;->d:[Lcom/kousei/framework/k;
-
-    .line 7
-    return-object p0
+    invoke-virtual {p1, p2, v0, p0}, Lcom/kousei/framework/x;->j(ZI[B)V
 
     .line 8
-    :cond_7
-    iget-object v1, p0, Lcom/kousei/framework/l;->a:[Lcom/kousei/framework/k;
+    return-void
+.end method
 
-    .line 10
-    array-length v2, v1
+.method public final k()Z
+    .registers 1
 
-    .line 11
-    if-ne v2, v0, :cond_10
+    .line 1
+    const/4 p0, 0x0
 
-    .line 13
-    const/4 v0, 0x1
+    .line 2
+    return p0
+.end method
 
-    .line 14
-    iput-boolean v0, p0, Lcom/kousei/framework/l;->c:Z
+.method public final m(Z)I
+    .registers 2
 
-    .line 16
-    return-object v1
+    .line 1
+    iget-object p0, p0, Lcom/kousei/framework/l;->a:[B
 
-    .line 17
-    :cond_10
-    new-array p0, v0, [Lcom/kousei/framework/k;
+    .line 3
+    array-length p0, p0
 
-    .line 19
-    const/4 v2, 0x0
+    .line 4
+    invoke-static {p1, p0}, Lcom/kousei/framework/x;->d(ZI)I
 
-    .line 20
-    invoke-static {v1, v2, p0, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    .line 7
+    move-result p0
 
-    .line 23
-    return-object p0
+    .line 8
+    return p0
 .end method

@@ -1,3035 +1,1605 @@
-.class public final Lcom/kousei/framework/u5;
+.class public abstract Lcom/kousei/framework/u5;
 .super Ljava/lang/Object;
+.source "r8-map-id-ec70a54ac4dd249b58de3765a20c96801dd38a23bdb543e33a18faed5ec9684e"
 
 
 # static fields
-.field public static final a:Ljava/util/HashMap;
+.field public static final a:Ljava/util/regex/Pattern;
 
-.field public static final b:Ljava/util/HashSet;
+.field public static final b:Ljava/util/regex/Pattern;
 
-.field public static final c:Ljava/util/HashMap;
+.field public static final c:Ljava/util/regex/Pattern;
 
-.field public static final d:Ljava/util/HashMap;
+.field public static final d:Ljava/util/regex/Pattern;
+
+.field public static final e:Ljava/util/regex/Pattern;
+
+.field public static final f:Ljava/util/regex/Pattern;
+
+.field public static final g:Ljava/util/regex/Pattern;
+
+.field public static final h:Ljava/util/regex/Pattern;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .registers 177
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    sput-object v0, Lcom/kousei/framework/u5;->a:Ljava/util/HashMap;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    sput-object v0, Lcom/kousei/framework/u5;->b:Ljava/util/HashSet;
-
-    new-instance v1, Ljava/util/HashMap;
-
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
-
-    sput-object v1, Lcom/kousei/framework/u5;->c:Ljava/util/HashMap;
-
-    new-instance v1, Ljava/util/HashSet;
-
-    invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
-
-    new-instance v2, Ljava/util/HashMap;
-
-    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
-
-    sput-object v2, Lcom/kousei/framework/u5;->d:Ljava/util/HashMap;
-
-    sget-object v2, Lcom/kousei/framework/vc;->b:Lcom/kousei/framework/v;
-
-    const-string v3, "MD2WITHRSAENCRYPTION"
-
-    invoke-static {v2, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v3, "MD2WITHRSA"
-
-    invoke-static {v2, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/vc;->d:Lcom/kousei/framework/v;
-
-    const-string v4, "MD5WITHRSAENCRYPTION"
-
-    invoke-static {v3, v4}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v4, "MD5WITHRSA"
-
-    invoke-static {v3, v4}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v4, Lcom/kousei/framework/vc;->e:Lcom/kousei/framework/v;
-
-    const-string v5, "SHA1WITHRSAENCRYPTION"
-
-    invoke-static {v4, v5}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v5, "SHA1WITHRSA"
-
-    invoke-static {v4, v5}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v5, Lcom/kousei/framework/vc;->m:Lcom/kousei/framework/v;
-
-    const-string v6, "SHA224WITHRSAENCRYPTION"
-
-    invoke-static {v5, v6}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v6, "SHA224WITHRSA"
-
-    invoke-static {v5, v6}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v6, Lcom/kousei/framework/vc;->j:Lcom/kousei/framework/v;
-
-    const-string v7, "SHA256WITHRSAENCRYPTION"
-
-    invoke-static {v6, v7}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v7, "SHA256WITHRSA"
-
-    invoke-static {v6, v7}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v7, Lcom/kousei/framework/vc;->k:Lcom/kousei/framework/v;
-
-    const-string v8, "SHA384WITHRSAENCRYPTION"
-
-    invoke-static {v7, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v8, "SHA384WITHRSA"
-
-    invoke-static {v7, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/vc;->l:Lcom/kousei/framework/v;
-
-    const-string v9, "SHA512WITHRSAENCRYPTION"
-
-    invoke-static {v8, v9}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v9, "SHA512WITHRSA"
-
-    invoke-static {v8, v9}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v9, Lcom/kousei/framework/vc;->n:Lcom/kousei/framework/v;
-
-    const-string v10, "SHA512(224)WITHRSAENCRYPTION"
-
-    invoke-static {v9, v10}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v10, "SHA512(224)WITHRSA"
-
-    invoke-static {v9, v10}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v10, Lcom/kousei/framework/vc;->o:Lcom/kousei/framework/v;
-
-    const-string v11, "SHA512(256)WITHRSAENCRYPTION"
-
-    invoke-static {v10, v11}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v11, "SHA512(256)WITHRSA"
-
-    invoke-static {v10, v11}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v11, Lcom/kousei/framework/vc;->i:Lcom/kousei/framework/v;
-
-    const-string v12, "SHA1WITHRSAANDMGF1"
-
-    invoke-static {v11, v12}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v13, "SHA224WITHRSAANDMGF1"
-
-    invoke-static {v11, v13}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v14, "SHA256WITHRSAANDMGF1"
-
-    invoke-static {v11, v14}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v15, "SHA384WITHRSAANDMGF1"
-
-    invoke-static {v11, v15}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    move-object/from16 v16, v3
-
-    const-string v3, "SHA512WITHRSAANDMGF1"
-
-    invoke-static {v11, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    move-object/from16 v17, v2
-
-    const-string v2, "SHA3-224WITHRSAANDMGF1"
-
-    invoke-static {v11, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    move-object/from16 v18, v2
-
-    const-string v2, "SHA3-256WITHRSAANDMGF1"
-
-    invoke-static {v11, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    move-object/from16 v19, v2
-
-    const-string v2, "SHA3-384WITHRSAANDMGF1"
-
-    invoke-static {v11, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    move-object/from16 v20, v2
-
-    const-string v2, "SHA3-512WITHRSAANDMGF1"
-
-    invoke-static {v11, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v11, Lcom/kousei/framework/ci;->d:Lcom/kousei/framework/v;
-
-    move-object/from16 v21, v2
-
-    const-string v2, "RIPEMD160WITHRSAENCRYPTION"
-
-    invoke-static {v11, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v2, "RIPEMD160WITHRSA"
-
-    invoke-static {v11, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v2, Lcom/kousei/framework/ci;->e:Lcom/kousei/framework/v;
-
-    move-object/from16 v22, v3
-
-    const-string v3, "RIPEMD128WITHRSAENCRYPTION"
-
-    invoke-static {v2, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v3, "RIPEMD128WITHRSA"
-
-    invoke-static {v2, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/ci;->f:Lcom/kousei/framework/v;
-
-    move-object/from16 v23, v15
-
-    const-string v15, "RIPEMD256WITHRSAENCRYPTION"
-
-    invoke-static {v3, v15}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v15, "RIPEMD256WITHRSA"
-
-    invoke-static {v3, v15}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v15, Lcom/kousei/framework/ij;->I:Lcom/kousei/framework/v;
-
-    move-object/from16 v24, v14
-
-    const-string v14, "SHA1WITHDSA"
-
-    invoke-static {v15, v14}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v14, "DSAWITHSHA1"
-
-    invoke-static {v15, v14}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v14, Lcom/kousei/framework/ec;->v:Lcom/kousei/framework/v;
-
-    move-object/from16 v25, v13
-
-    const-string v13, "SHA224WITHDSA"
-
-    invoke-static {v14, v13}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v13, Lcom/kousei/framework/ec;->w:Lcom/kousei/framework/v;
-
-    move-object/from16 v26, v12
-
-    const-string v12, "SHA256WITHDSA"
-
-    invoke-static {v13, v12}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v12, Lcom/kousei/framework/ec;->x:Lcom/kousei/framework/v;
-
-    move-object/from16 v27, v2
-
-    const-string v2, "SHA384WITHDSA"
-
-    invoke-static {v12, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v2, Lcom/kousei/framework/ec;->y:Lcom/kousei/framework/v;
-
-    move-object/from16 v28, v3
-
-    const-string v3, "SHA512WITHDSA"
-
-    invoke-static {v2, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/ec;->z:Lcom/kousei/framework/v;
-
-    move-object/from16 v29, v10
-
-    const-string v10, "SHA3-224WITHDSA"
-
-    invoke-static {v3, v10}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v10, Lcom/kousei/framework/ec;->A:Lcom/kousei/framework/v;
-
-    move-object/from16 v30, v11
-
-    const-string v11, "SHA3-256WITHDSA"
-
-    invoke-static {v10, v11}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v11, Lcom/kousei/framework/ec;->B:Lcom/kousei/framework/v;
-
-    move-object/from16 v31, v6
-
-    const-string v6, "SHA3-384WITHDSA"
-
-    invoke-static {v11, v6}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v6, Lcom/kousei/framework/ec;->C:Lcom/kousei/framework/v;
-
-    move-object/from16 v32, v7
-
-    const-string v7, "SHA3-512WITHDSA"
-
-    invoke-static {v6, v7}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v7, Lcom/kousei/framework/ec;->D:Lcom/kousei/framework/v;
-
-    move-object/from16 v33, v8
-
-    const-string v8, "SHA3-224WITHECDSA"
-
-    invoke-static {v7, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/ec;->E:Lcom/kousei/framework/v;
-
-    move-object/from16 v34, v9
-
-    const-string v9, "SHA3-256WITHECDSA"
-
-    invoke-static {v8, v9}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v9, Lcom/kousei/framework/ec;->F:Lcom/kousei/framework/v;
-
-    move-object/from16 v35, v5
-
-    const-string v5, "SHA3-384WITHECDSA"
-
-    invoke-static {v9, v5}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v5, Lcom/kousei/framework/ec;->G:Lcom/kousei/framework/v;
-
-    move-object/from16 v36, v1
-
-    const-string v1, "SHA3-512WITHECDSA"
-
-    invoke-static {v5, v1}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v1, Lcom/kousei/framework/ec;->H:Lcom/kousei/framework/v;
-
-    move-object/from16 v37, v4
-
-    const-string v4, "SHA3-224WITHRSA"
-
-    invoke-static {v1, v4}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v4, Lcom/kousei/framework/ec;->I:Lcom/kousei/framework/v;
-
-    move-object/from16 v38, v5
-
-    const-string v5, "SHA3-256WITHRSA"
-
-    invoke-static {v4, v5}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v5, Lcom/kousei/framework/ec;->J:Lcom/kousei/framework/v;
-
-    move-object/from16 v39, v6
-
-    const-string v6, "SHA3-384WITHRSA"
-
-    invoke-static {v5, v6}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v6, Lcom/kousei/framework/ec;->K:Lcom/kousei/framework/v;
-
-    move-object/from16 v40, v7
-
-    const-string v7, "SHA3-512WITHRSA"
-
-    invoke-static {v6, v7}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v7, "SHA3-224WITHRSAENCRYPTION"
-
-    invoke-static {v1, v7}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v7, "SHA3-256WITHRSAENCRYPTION"
-
-    invoke-static {v4, v7}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v7, "SHA3-384WITHRSAENCRYPTION"
-
-    invoke-static {v5, v7}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v7, "SHA3-512WITHRSAENCRYPTION"
-
-    invoke-static {v6, v7}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v7, Lcom/kousei/framework/ij;->e:Lcom/kousei/framework/v;
-
-    move-object/from16 v41, v6
-
-    const-string v6, "SHA1WITHECDSA"
-
-    invoke-static {v7, v6}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v6, "ECDSAWITHSHA1"
-
-    invoke-static {v7, v6}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v6, Lcom/kousei/framework/ij;->g:Lcom/kousei/framework/v;
-
-    move-object/from16 v42, v5
-
-    const-string v5, "SHA224WITHECDSA"
-
-    invoke-static {v6, v5}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v5, Lcom/kousei/framework/ij;->h:Lcom/kousei/framework/v;
-
-    move-object/from16 v43, v4
-
-    const-string v4, "SHA256WITHECDSA"
-
-    invoke-static {v5, v4}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v4, Lcom/kousei/framework/ij;->i:Lcom/kousei/framework/v;
-
-    move-object/from16 v44, v1
-
-    const-string v1, "SHA384WITHECDSA"
-
-    invoke-static {v4, v1}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v1, Lcom/kousei/framework/ij;->j:Lcom/kousei/framework/v;
-
-    move-object/from16 v45, v8
-
-    const-string v8, "SHA512WITHECDSA"
-
-    invoke-static {v1, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/t3;->c:Lcom/kousei/framework/v;
-
-    move-object/from16 v46, v9
-
-    const-string v9, "GOST3411WITHGOST3410"
-
-    invoke-static {v8, v9}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v9, "GOST3411WITHGOST3410-94"
-
-    invoke-static {v8, v9}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v9, Lcom/kousei/framework/t3;->d:Lcom/kousei/framework/v;
-
-    move-object/from16 v47, v8
-
-    const-string v8, "GOST3411WITHECGOST3410"
-
-    invoke-static {v9, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v8, "GOST3411WITHECGOST3410-2001"
-
-    invoke-static {v9, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v8, "GOST3411WITHGOST3410-2001"
-
-    invoke-static {v9, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/ie;->c:Lcom/kousei/framework/v;
-
-    move-object/from16 v48, v9
-
-    const-string v9, "GOST3411WITHECGOST3410-2012-256"
-
-    invoke-static {v8, v9}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v9, Lcom/kousei/framework/ie;->d:Lcom/kousei/framework/v;
-
-    move-object/from16 v49, v2
-
-    const-string v2, "GOST3411WITHECGOST3410-2012-512"
-
-    invoke-static {v9, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v2, "GOST3411WITHGOST3410-2012-256"
-
-    invoke-static {v8, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v2, "GOST3411WITHGOST3410-2012-512"
-
-    invoke-static {v9, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v2, "GOST3411-2012-256WITHECGOST3410-2012-256"
-
-    invoke-static {v8, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v2, "GOST3411-2012-512WITHECGOST3410-2012-512"
-
-    invoke-static {v9, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v2, "GOST3411-2012-256WITHGOST3410-2012-256"
-
-    invoke-static {v8, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v2, "GOST3411-2012-512WITHGOST3410-2012-512"
-
-    invoke-static {v9, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v2, "SHA1WITHCVC-ECDSA"
-
-    move-object/from16 v50, v9
-
-    sget-object v9, Lcom/kousei/framework/j6;->a:Lcom/kousei/framework/v;
-
-    invoke-static {v9, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v2, "SHA224WITHCVC-ECDSA"
-
-    sget-object v9, Lcom/kousei/framework/j6;->b:Lcom/kousei/framework/v;
-
-    invoke-static {v9, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v2, "SHA256WITHCVC-ECDSA"
-
-    sget-object v9, Lcom/kousei/framework/j6;->c:Lcom/kousei/framework/v;
-
-    invoke-static {v9, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v2, "SHA384WITHCVC-ECDSA"
-
-    sget-object v9, Lcom/kousei/framework/j6;->d:Lcom/kousei/framework/v;
-
-    invoke-static {v9, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v2, "SHA512WITHCVC-ECDSA"
-
-    sget-object v9, Lcom/kousei/framework/j6;->e:Lcom/kousei/framework/v;
-
-    invoke-static {v9, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v2, Lcom/kousei/framework/l1;->c:Lcom/kousei/framework/v;
-
-    const-string v9, "SHA3-512WITHSPHINCS256"
-
-    invoke-static {v2, v9}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v9, Lcom/kousei/framework/l1;->b:Lcom/kousei/framework/v;
-
-    move-object/from16 v51, v2
-
-    const-string v2, "SHA512WITHSPHINCS256"
-
-    invoke-static {v9, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v2, "SHA1WITHPLAIN-ECDSA"
-
-    move-object/from16 v52, v9
-
-    sget-object v9, Lcom/kousei/framework/s2;->a:Lcom/kousei/framework/v;
-
-    invoke-static {v9, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v2, "RIPEMD160WITHPLAIN-ECDSA"
-
-    sget-object v9, Lcom/kousei/framework/s2;->f:Lcom/kousei/framework/v;
-
-    invoke-static {v9, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v2, Lcom/kousei/framework/s2;->b:Lcom/kousei/framework/v;
-
-    const-string v9, "SHA224WITHPLAIN-ECDSA"
-
-    invoke-static {v2, v9}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v9, Lcom/kousei/framework/s2;->c:Lcom/kousei/framework/v;
-
-    move-object/from16 v53, v8
-
-    const-string v8, "SHA256WITHPLAIN-ECDSA"
-
-    invoke-static {v9, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/s2;->d:Lcom/kousei/framework/v;
-
-    move-object/from16 v54, v2
-
-    const-string v2, "SHA384WITHPLAIN-ECDSA"
-
-    invoke-static {v8, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v2, Lcom/kousei/framework/s2;->e:Lcom/kousei/framework/v;
-
-    move-object/from16 v55, v8
-
-    const-string v8, "SHA512WITHPLAIN-ECDSA"
-
-    invoke-static {v2, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/s2;->g:Lcom/kousei/framework/v;
-
-    move-object/from16 v56, v2
-
-    const-string v2, "SHA3-224WITHPLAIN-ECDSA"
-
-    invoke-static {v8, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v2, Lcom/kousei/framework/s2;->h:Lcom/kousei/framework/v;
-
-    move-object/from16 v57, v8
-
-    const-string v8, "SHA3-256WITHPLAIN-ECDSA"
-
-    invoke-static {v2, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/s2;->i:Lcom/kousei/framework/v;
-
-    move-object/from16 v58, v2
-
-    const-string v2, "SHA3-384WITHPLAIN-ECDSA"
-
-    invoke-static {v8, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v2, Lcom/kousei/framework/s2;->j:Lcom/kousei/framework/v;
-
-    move-object/from16 v59, v8
-
-    const-string v8, "SHA3-512WITHPLAIN-ECDSA"
-
-    invoke-static {v2, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/s7;->a:Lcom/kousei/framework/v;
-
-    move-object/from16 v60, v2
-
-    const-string v2, "ED25519"
-
-    invoke-static {v8, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v2, Lcom/kousei/framework/s7;->b:Lcom/kousei/framework/v;
-
-    move-object/from16 v61, v8
-
-    const-string v8, "ED448"
-
-    invoke-static {v2, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/zi;->f:Lcom/kousei/framework/v;
-
-    move-object/from16 v62, v2
-
-    const-string v2, "SHAKE128WITHRSAPSS"
-
-    invoke-static {v8, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v2, Lcom/kousei/framework/zi;->g:Lcom/kousei/framework/v;
-
-    move-object/from16 v63, v9
-
-    const-string v9, "SHAKE256WITHRSAPSS"
-
-    invoke-static {v2, v9}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v9, "SHAKE128WITHRSASSA-PSS"
-
-    invoke-static {v8, v9}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v9, "SHAKE256WITHRSASSA-PSS"
-
-    invoke-static {v2, v9}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v9, Lcom/kousei/framework/zi;->h:Lcom/kousei/framework/v;
-
-    move-object/from16 v64, v2
-
-    const-string v2, "SHAKE128WITHECDSA"
-
-    invoke-static {v9, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v2, Lcom/kousei/framework/zi;->i:Lcom/kousei/framework/v;
-
-    move-object/from16 v65, v8
-
-    const-string v8, "SHAKE256WITHECDSA"
-
-    invoke-static {v2, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/u8;->f:Lcom/kousei/framework/v;
-
-    move-object/from16 v66, v2
-
-    const-string v2, "SHA256WITHSM2"
-
-    invoke-static {v8, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v2, Lcom/kousei/framework/u8;->e:Lcom/kousei/framework/v;
-
-    move-object/from16 v67, v9
-
-    const-string v9, "SM3WITHSM2"
-
-    invoke-static {v2, v9}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v9, Lcom/kousei/framework/l1;->e:Lcom/kousei/framework/v;
-
-    move-object/from16 v68, v2
-
-    const-string v2, "SHA256WITHXMSS"
-
-    invoke-static {v9, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v2, Lcom/kousei/framework/l1;->f:Lcom/kousei/framework/v;
-
-    move-object/from16 v69, v8
-
-    const-string v8, "SHA512WITHXMSS"
-
-    invoke-static {v2, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/l1;->m:Lcom/kousei/framework/v;
-
-    move-object/from16 v70, v3
-
-    const-string v3, "SHAKE128WITHXMSS"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/l1;->n:Lcom/kousei/framework/v;
-
-    move-object/from16 v71, v10
-
-    const-string v10, "SHAKE256WITHXMSS"
-
-    invoke-static {v3, v10}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v10, "SHAKE128(512)WITHXMSS"
-
-    move-object/from16 v72, v11
-
-    sget-object v11, Lcom/kousei/framework/l1;->g:Lcom/kousei/framework/v;
-
-    invoke-static {v11, v10}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v10, "SHAKE256(1024)WITHXMSS"
-
-    sget-object v11, Lcom/kousei/framework/l1;->h:Lcom/kousei/framework/v;
-
-    invoke-static {v11, v10}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v10, Lcom/kousei/framework/l1;->p:Lcom/kousei/framework/v;
-
-    const-string v11, "SHA256WITHXMSSMT"
-
-    invoke-static {v10, v11}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v11, Lcom/kousei/framework/l1;->q:Lcom/kousei/framework/v;
-
-    move-object/from16 v73, v12
-
-    const-string v12, "SHA512WITHXMSSMT"
-
-    invoke-static {v11, v12}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v12, Lcom/kousei/framework/l1;->x:Lcom/kousei/framework/v;
-
-    move-object/from16 v74, v13
-
-    const-string v13, "SHAKE128WITHXMSSMT"
-
-    invoke-static {v12, v13}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v13, Lcom/kousei/framework/l1;->y:Lcom/kousei/framework/v;
-
-    move-object/from16 v75, v14
-
-    const-string v14, "SHAKE256WITHXMSSMT"
-
-    invoke-static {v13, v14}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v14, "SHA256WITHXMSS-SHA256"
-
-    invoke-static {v9, v14}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v14, "SHA512WITHXMSS-SHA512"
-
-    invoke-static {v2, v14}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v14, "SHAKE128WITHXMSS-SHAKE128"
-
-    invoke-static {v8, v14}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v14, "SHAKE256WITHXMSS-SHAKE256"
-
-    invoke-static {v3, v14}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v14, "SHA256WITHXMSSMT-SHA256"
-
-    invoke-static {v10, v14}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v14, "SHA512WITHXMSSMT-SHA512"
-
-    invoke-static {v11, v14}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v14, "SHAKE128WITHXMSSMT-SHAKE128"
-
-    invoke-static {v12, v14}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v14, "SHAKE256WITHXMSSMT-SHAKE256"
-
-    invoke-static {v13, v14}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v14, "SHAKE128(512)WITHXMSSMT-SHAKE128"
-
-    move-object/from16 v76, v11
-
-    sget-object v11, Lcom/kousei/framework/l1;->r:Lcom/kousei/framework/v;
-
-    invoke-static {v11, v14}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v11, "SHAKE256(1024)WITHXMSSMT-SHAKE256"
-
-    sget-object v14, Lcom/kousei/framework/l1;->s:Lcom/kousei/framework/v;
-
-    invoke-static {v14, v11}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v11, Lcom/kousei/framework/vc;->A:Lcom/kousei/framework/v;
-
-    const-string v14, "LMS"
-
-    invoke-static {v11, v14}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v14, Lcom/kousei/framework/t9;->a:Lcom/kousei/framework/v;
-
-    move-object/from16 v77, v12
-
-    const-string v12, "XMSS"
-
-    invoke-static {v14, v12}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v12, Lcom/kousei/framework/l1;->i:Lcom/kousei/framework/v;
-
-    move-object/from16 v78, v14
-
-    const-string v14, "XMSS-SHA256"
-
-    invoke-static {v12, v14}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v14, Lcom/kousei/framework/l1;->j:Lcom/kousei/framework/v;
-
-    move-object/from16 v79, v12
-
-    const-string v12, "XMSS-SHA512"
-
-    invoke-static {v14, v12}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v12, Lcom/kousei/framework/l1;->k:Lcom/kousei/framework/v;
-
-    move-object/from16 v80, v14
-
-    const-string v14, "XMSS-SHAKE128"
-
-    invoke-static {v12, v14}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v14, Lcom/kousei/framework/l1;->l:Lcom/kousei/framework/v;
-
-    move-object/from16 v81, v12
-
-    const-string v12, "XMSS-SHAKE256"
-
-    invoke-static {v14, v12}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v12, Lcom/kousei/framework/t9;->b:Lcom/kousei/framework/v;
-
-    move-object/from16 v82, v14
-
-    const-string v14, "XMSSMT"
-
-    invoke-static {v12, v14}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v14, Lcom/kousei/framework/l1;->t:Lcom/kousei/framework/v;
-
-    move-object/from16 v83, v12
-
-    const-string v12, "XMSSMT-SHA256"
-
-    invoke-static {v14, v12}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v12, Lcom/kousei/framework/l1;->u:Lcom/kousei/framework/v;
-
-    move-object/from16 v84, v14
-
-    const-string v14, "XMSSMT-SHA512"
-
-    invoke-static {v12, v14}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v14, Lcom/kousei/framework/l1;->v:Lcom/kousei/framework/v;
-
-    move-object/from16 v85, v12
-
-    const-string v12, "XMSSMT-SHAKE128"
-
-    invoke-static {v14, v12}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v12, Lcom/kousei/framework/l1;->w:Lcom/kousei/framework/v;
-
-    move-object/from16 v86, v14
-
-    const-string v14, "XMSSMT-SHAKE256"
-
-    invoke-static {v12, v14}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v14, Lcom/kousei/framework/l1;->B:Lcom/kousei/framework/v;
-
-    move-object/from16 v87, v12
-
-    const-string v12, "SPHINCS+"
-
-    invoke-static {v14, v12}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v12, "SPHINCSPLUS"
-
-    invoke-static {v14, v12}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v12, Lcom/kousei/framework/l1;->o0:Lcom/kousei/framework/v;
-
-    move-object/from16 v88, v13
-
-    const-string v13, "SPHINCS+-SHA2-128S"
-
-    invoke-static {v12, v13}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v13, Lcom/kousei/framework/l1;->n0:Lcom/kousei/framework/v;
-
-    move-object/from16 v89, v2
-
-    const-string v2, "SPHINCS+-SHA2-128F"
-
-    invoke-static {v13, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v2, Lcom/kousei/framework/l1;->q0:Lcom/kousei/framework/v;
-
-    move-object/from16 v90, v3
-
-    const-string v3, "SPHINCS+-SHA2-192S"
-
-    invoke-static {v2, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/l1;->p0:Lcom/kousei/framework/v;
-
-    move-object/from16 v91, v8
-
-    const-string v8, "SPHINCS+-SHA2-192F"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/l1;->s0:Lcom/kousei/framework/v;
-
-    move-object/from16 v92, v10
-
-    const-string v10, "SPHINCS+-SHA2-256S"
-
-    invoke-static {v8, v10}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v10, Lcom/kousei/framework/l1;->r0:Lcom/kousei/framework/v;
-
-    move-object/from16 v93, v9
-
-    const-string v9, "SPHINCS+-SHA2-256F"
-
-    invoke-static {v10, v9}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v9, Lcom/kousei/framework/l1;->u0:Lcom/kousei/framework/v;
-
-    move-object/from16 v94, v11
-
-    const-string v11, "SPHINCS+-SHAKE-128S"
-
-    invoke-static {v9, v11}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v11, Lcom/kousei/framework/l1;->t0:Lcom/kousei/framework/v;
-
-    move-object/from16 v95, v10
-
-    const-string v10, "SPHINCS+-SHAKE-128F"
-
-    invoke-static {v11, v10}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v10, Lcom/kousei/framework/l1;->w0:Lcom/kousei/framework/v;
-
-    move-object/from16 v96, v3
-
-    const-string v3, "SPHINCS+-SHAKE-192S"
-
-    invoke-static {v10, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/l1;->v0:Lcom/kousei/framework/v;
-
-    move-object/from16 v97, v8
-
-    const-string v8, "SPHINCS+-SHAKE-192F"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/l1;->y0:Lcom/kousei/framework/v;
-
-    move-object/from16 v98, v3
-
-    const-string v3, "SPHINCS+-SHAKE-256S"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/l1;->x0:Lcom/kousei/framework/v;
-
-    move-object/from16 v99, v8
-
-    const-string v8, "SPHINCS+-SHAKE-256F"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/l1;->G:Lcom/kousei/framework/v;
-
-    move-object/from16 v100, v3
-
-    const-string v3, "SPHINCS+-HARAKA-128S-ROBUST"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/l1;->H:Lcom/kousei/framework/v;
-
-    move-object/from16 v101, v10
-
-    const-string v10, "SPHINCS+-HARAKA-128F-ROBUST"
-
-    invoke-static {v3, v10}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v10, Lcom/kousei/framework/l1;->M:Lcom/kousei/framework/v;
-
-    move-object/from16 v102, v2
-
-    const-string v2, "SPHINCS+-HARAKA-192S-ROBUST"
-
-    invoke-static {v10, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v2, Lcom/kousei/framework/l1;->N:Lcom/kousei/framework/v;
-
-    move-object/from16 v103, v9
-
-    const-string v9, "SPHINCS+-HARAKA-192F-ROBUST"
-
-    invoke-static {v2, v9}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v9, Lcom/kousei/framework/l1;->S:Lcom/kousei/framework/v;
-
-    move-object/from16 v104, v11
-
-    const-string v11, "SPHINCS+-HARAKA-256S-ROBUST"
-
-    invoke-static {v9, v11}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v11, Lcom/kousei/framework/l1;->T:Lcom/kousei/framework/v;
-
-    move-object/from16 v105, v13
-
-    const-string v13, "SPHINCS+-HARAKA-256F-ROBUST"
-
-    invoke-static {v11, v13}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v13, "SPHINCS+-HARAKA-128S-SIMPLE"
-
-    move-object/from16 v106, v9
-
-    sget-object v9, Lcom/kousei/framework/l1;->Y:Lcom/kousei/framework/v;
-
-    invoke-static {v9, v13}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v9, "SPHINCS+-HARAKA-128F-SIMPLE"
-
-    sget-object v13, Lcom/kousei/framework/l1;->Z:Lcom/kousei/framework/v;
-
-    invoke-static {v13, v9}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v9, "SPHINCS+-HARAKA-192S-SIMPLE"
-
-    sget-object v13, Lcom/kousei/framework/l1;->e0:Lcom/kousei/framework/v;
-
-    invoke-static {v13, v9}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v9, "SPHINCS+-HARAKA-192F-SIMPLE"
-
-    sget-object v13, Lcom/kousei/framework/l1;->f0:Lcom/kousei/framework/v;
-
-    invoke-static {v13, v9}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v9, "SPHINCS+-HARAKA-256S-SIMPLE"
-
-    sget-object v13, Lcom/kousei/framework/l1;->k0:Lcom/kousei/framework/v;
-
-    invoke-static {v13, v9}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v9, "SPHINCS+-HARAKA-256F-SIMPLE"
-
-    sget-object v13, Lcom/kousei/framework/l1;->l0:Lcom/kousei/framework/v;
-
-    invoke-static {v13, v9}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v9, Lcom/kousei/framework/ec;->L:Lcom/kousei/framework/v;
-
-    const-string v13, "DILITHIUM2"
-
-    invoke-static {v9, v13}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v13, Lcom/kousei/framework/ec;->M:Lcom/kousei/framework/v;
-
-    move-object/from16 v107, v11
-
-    const-string v11, "DILITHIUM3"
-
-    invoke-static {v13, v11}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v11, Lcom/kousei/framework/ec;->N:Lcom/kousei/framework/v;
-
-    move-object/from16 v108, v12
-
-    const-string v12, "DILITHIUM5"
-
-    invoke-static {v11, v12}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v12, Lcom/kousei/framework/l1;->a1:Lcom/kousei/framework/v;
-
-    move-object/from16 v109, v2
-
-    const-string v2, "DILITHIUM2-AES"
-
-    invoke-static {v12, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v2, Lcom/kousei/framework/l1;->b1:Lcom/kousei/framework/v;
-
-    move-object/from16 v110, v12
-
-    const-string v12, "DILITHIUM3-AES"
-
-    invoke-static {v2, v12}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v12, Lcom/kousei/framework/l1;->c1:Lcom/kousei/framework/v;
-
-    move-object/from16 v111, v2
-
-    const-string v2, "DILITHIUM5-AES"
-
-    invoke-static {v12, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v2, "ML-DSA-44"
-
-    invoke-static {v9, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v2, "ML-DSA-65"
-
-    invoke-static {v13, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    const-string v2, "ML-DSA-87"
-
-    invoke-static {v11, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v2, Lcom/kousei/framework/ec;->O:Lcom/kousei/framework/v;
-
-    move-object/from16 v112, v9
-
-    const-string v9, "ML-DSA-44-WITH-SHA512"
-
-    invoke-static {v2, v9}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v9, Lcom/kousei/framework/ec;->P:Lcom/kousei/framework/v;
-
-    move-object/from16 v113, v2
-
-    const-string v2, "ML-DSA-65-WITH-SHA512"
-
-    invoke-static {v9, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v2, Lcom/kousei/framework/ec;->Q:Lcom/kousei/framework/v;
-
-    move-object/from16 v114, v9
-
-    const-string v9, "ML-DSA-87-WITH-SHA512"
-
-    invoke-static {v2, v9}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v9, Lcom/kousei/framework/ec;->R:Lcom/kousei/framework/v;
-
-    move-object/from16 v115, v2
-
-    const-string v2, "SLH-DSA-SHA2-128S"
-
-    invoke-static {v9, v2}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v2, Lcom/kousei/framework/ec;->S:Lcom/kousei/framework/v;
-
-    move-object/from16 v116, v11
-
-    const-string v11, "SLH-DSA-SHA2-128F"
-
-    invoke-static {v2, v11}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v11, Lcom/kousei/framework/ec;->T:Lcom/kousei/framework/v;
-
-    move-object/from16 v117, v13
-
-    const-string v13, "SLH-DSA-SHA2-192S"
-
-    invoke-static {v11, v13}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v13, Lcom/kousei/framework/ec;->U:Lcom/kousei/framework/v;
-
-    move-object/from16 v118, v12
-
-    const-string v12, "SLH-DSA-SHA2-192F"
-
-    invoke-static {v13, v12}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v12, Lcom/kousei/framework/ec;->V:Lcom/kousei/framework/v;
-
-    move-object/from16 v119, v10
-
-    const-string v10, "SLH-DSA-SHA2-256S"
-
-    invoke-static {v12, v10}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v10, Lcom/kousei/framework/ec;->W:Lcom/kousei/framework/v;
-
-    move-object/from16 v120, v3
-
-    const-string v3, "SLH-DSA-SHA2-256F"
-
-    invoke-static {v10, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/ec;->X:Lcom/kousei/framework/v;
-
-    move-object/from16 v121, v8
-
-    const-string v8, "SLH-DSA-SHAKE-128S"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/ec;->Y:Lcom/kousei/framework/v;
-
-    move-object/from16 v122, v14
-
-    const-string v14, "SLH-DSA-SHAKE-128F"
-
-    invoke-static {v8, v14}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v14, Lcom/kousei/framework/ec;->Z:Lcom/kousei/framework/v;
-
-    move-object/from16 v123, v3
-
-    const-string v3, "SLH-DSA-SHAKE-192S"
-
-    invoke-static {v14, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/ec;->a0:Lcom/kousei/framework/v;
-
-    move-object/from16 v124, v8
-
-    const-string v8, "SLH-DSA-SHAKE-192F"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/ec;->b0:Lcom/kousei/framework/v;
-
-    move-object/from16 v125, v3
-
-    const-string v3, "SLH-DSA-SHAKE-256S"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/ec;->c0:Lcom/kousei/framework/v;
-
-    move-object/from16 v126, v8
-
-    const-string v8, "SLH-DSA-SHAKE-256F"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/ec;->d0:Lcom/kousei/framework/v;
-
-    move-object/from16 v127, v3
-
-    const-string v3, "SLH-DSA-SHA2-128S-WITH-SHA256"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/ec;->e0:Lcom/kousei/framework/v;
-
-    move-object/from16 v128, v8
-
-    const-string v8, "SLH-DSA-SHA2-128F-WITH-SHA256"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/ec;->f0:Lcom/kousei/framework/v;
-
-    move-object/from16 v129, v3
-
-    const-string v3, "SLH-DSA-SHA2-192S-WITH-SHA512"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/ec;->g0:Lcom/kousei/framework/v;
-
-    move-object/from16 v130, v8
-
-    const-string v8, "SLH-DSA-SHA2-192F-WITH-SHA512"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/ec;->h0:Lcom/kousei/framework/v;
-
-    move-object/from16 v131, v3
-
-    const-string v3, "SLH-DSA-SHA2-256S-WITH-SHA512"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/ec;->i0:Lcom/kousei/framework/v;
-
-    move-object/from16 v132, v8
-
-    const-string v8, "SLH-DSA-SHA2-256F-WITH-SHA512"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/ec;->j0:Lcom/kousei/framework/v;
-
-    move-object/from16 v133, v3
-
-    const-string v3, "SLH-DSA-SHAKE-128S-WITH-SHAKE128"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/ec;->k0:Lcom/kousei/framework/v;
-
-    move-object/from16 v134, v8
-
-    const-string v8, "SLH-DSA-SHAKE-128F-WITH-SHAKE128"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/ec;->l0:Lcom/kousei/framework/v;
-
-    move-object/from16 v135, v3
-
-    const-string v3, "SLH-DSA-SHAKE-192S-WITH-SHAKE256"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/ec;->m0:Lcom/kousei/framework/v;
-
-    move-object/from16 v136, v8
-
-    const-string v8, "SLH-DSA-SHAKE-192F-WITH-SHAKE256"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/ec;->n0:Lcom/kousei/framework/v;
-
-    move-object/from16 v137, v3
-
-    const-string v3, "SLH-DSA-SHAKE-256S-WITH-SHAKE256"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/ec;->o0:Lcom/kousei/framework/v;
-
-    move-object/from16 v138, v8
-
-    const-string v8, "SLH-DSA-SHAKE-256F-WITH-SHAKE256"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/l1;->U0:Lcom/kousei/framework/v;
-
-    move-object/from16 v139, v3
-
-    const-string v3, "FALCON-512"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/l1;->V0:Lcom/kousei/framework/v;
-
-    move-object/from16 v140, v8
-
-    const-string v8, "FALCON-1024"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/l1;->N0:Lcom/kousei/framework/v;
-
-    move-object/from16 v141, v3
-
-    const-string v3, "PICNIC"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/l1;->O0:Lcom/kousei/framework/v;
-
-    move-object/from16 v142, v8
-
-    const-string v8, "SHA512WITHPICNIC"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/l1;->Q0:Lcom/kousei/framework/v;
-
-    move-object/from16 v143, v3
-
-    const-string v3, "SHA3-512WITHPICNIC"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/l1;->P0:Lcom/kousei/framework/v;
-
-    move-object/from16 v144, v8
-
-    const-string v8, "SHAKE256WITHPICNIC"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/ac;->a:Lcom/kousei/framework/v;
-
-    move-object/from16 v145, v3
-
-    const-string v3, "HASHMLDSA44-RSA2048-PSS-SHA256"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/ac;->b:Lcom/kousei/framework/v;
-
-    move-object/from16 v146, v8
-
-    const-string v8, "HASHMLDSA44-RSA2048-PKCS15-SHA256"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/ac;->c:Lcom/kousei/framework/v;
-
-    move-object/from16 v147, v3
-
-    const-string v3, "HASHMLDSA44-ED25519-SHA512"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/ac;->d:Lcom/kousei/framework/v;
-
-    move-object/from16 v148, v8
-
-    const-string v8, "HASHMLDSA44-ECDSA-P256-SHA256"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/ac;->e:Lcom/kousei/framework/v;
-
-    move-object/from16 v149, v3
-
-    const-string v3, "HASHMLDSA65-RSA3072-PSS-SHA512"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/ac;->f:Lcom/kousei/framework/v;
-
-    move-object/from16 v150, v8
-
-    const-string v8, "HASHMLDSA65-RSA3072-PKCS15-SHA512"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/ac;->g:Lcom/kousei/framework/v;
-
-    move-object/from16 v151, v3
-
-    const-string v3, "HASHMLDSA65-RSA4096-PSS-SHA512"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/ac;->h:Lcom/kousei/framework/v;
-
-    move-object/from16 v152, v8
-
-    const-string v8, "HASHMLDSA65-RSA4096-PKCS15-SHA512"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/ac;->i:Lcom/kousei/framework/v;
-
-    move-object/from16 v153, v3
-
-    const-string v3, "HASHMLDSA65-ECDSA-P384-SHA512"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/ac;->j:Lcom/kousei/framework/v;
-
-    move-object/from16 v154, v8
-
-    const-string v8, "HASHMLDSA65-ECDSA-BRAINPOOLP256R1-SHA512"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/ac;->k:Lcom/kousei/framework/v;
-
-    move-object/from16 v155, v3
-
-    const-string v3, "HASHMLDSA65-ED25519-SHA512"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/ac;->l:Lcom/kousei/framework/v;
-
-    move-object/from16 v156, v8
-
-    const-string v8, "HASHMLDSA87-ECDSA-P384-SHA512"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/ac;->m:Lcom/kousei/framework/v;
-
-    move-object/from16 v157, v3
-
-    const-string v3, "HASHMLDSA87-ECDSA-BRAINPOOLP384R1-SHA512"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/ac;->n:Lcom/kousei/framework/v;
-
-    move-object/from16 v158, v8
-
-    const-string v8, "HASHMLDSA87-ED448-SHA512"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/n9;->a:Lcom/kousei/framework/v;
-
-    move-object/from16 v159, v3
-
-    const-string v3, "MLDSA44-RSA2048-PSS-SHA256"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/n9;->b:Lcom/kousei/framework/v;
-
-    move-object/from16 v160, v8
-
-    const-string v8, "MLDSA44-RSA2048-PKCS15-SHA256"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/n9;->c:Lcom/kousei/framework/v;
-
-    move-object/from16 v161, v3
-
-    const-string v3, "MLDSA44-ED25519-SHA512"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/n9;->d:Lcom/kousei/framework/v;
-
-    move-object/from16 v162, v8
-
-    const-string v8, "MLDSA44-ECDSA-P256-SHA256"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/n9;->e:Lcom/kousei/framework/v;
-
-    move-object/from16 v163, v3
-
-    const-string v3, "MLDSA65-RSA3072-PSS-SHA512"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/n9;->f:Lcom/kousei/framework/v;
-
-    move-object/from16 v164, v8
-
-    const-string v8, "MLDSA65-RSA3072-PKCS15-SHA512"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/n9;->g:Lcom/kousei/framework/v;
-
-    move-object/from16 v165, v3
-
-    const-string v3, "MLDSA65-RSA4096-PSS-SHA512"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/n9;->h:Lcom/kousei/framework/v;
-
-    move-object/from16 v166, v8
-
-    const-string v8, "MLDSA65-RSA4096-PKCS15-SHA512"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/n9;->i:Lcom/kousei/framework/v;
-
-    move-object/from16 v167, v3
-
-    const-string v3, "MLDSA65-ECDSA-P256-SHA512"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/n9;->j:Lcom/kousei/framework/v;
-
-    move-object/from16 v168, v8
-
-    const-string v8, "MLDSA65-ECDSA-P384-SHA512"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/n9;->k:Lcom/kousei/framework/v;
-
-    move-object/from16 v169, v3
-
-    const-string v3, "MLDSA65-ECDSA-BRAINPOOLP256R1-SHA512"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/n9;->l:Lcom/kousei/framework/v;
-
-    move-object/from16 v170, v8
-
-    const-string v8, "MLDSA65-ED25519-SHA512"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/n9;->m:Lcom/kousei/framework/v;
-
-    move-object/from16 v171, v3
-
-    const-string v3, "MLDSA87-ECDSA-P384-SHA512"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/n9;->n:Lcom/kousei/framework/v;
-
-    move-object/from16 v172, v8
-
-    const-string v8, "MLDSA87-ECDSA-BRAINPOOLP384R1-SHA512"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/n9;->o:Lcom/kousei/framework/v;
-
-    move-object/from16 v173, v3
-
-    const-string v3, "MLDSA87-ED448-SHAKE256"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/n9;->q:Lcom/kousei/framework/v;
-
-    move-object/from16 v174, v8
-
-    const-string v8, "MLDSA87-RSA4096-PSS-SHA512"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v8, Lcom/kousei/framework/n9;->r:Lcom/kousei/framework/v;
-
-    move-object/from16 v175, v3
-
-    const-string v3, "MLDSA87-ECDSA-P521-SHA512"
-
-    invoke-static {v8, v3}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/kousei/framework/n9;->p:Lcom/kousei/framework/v;
-
-    move-object/from16 v176, v8
-
-    const-string v8, "MLDSA87-RSA3072-PSS-SHA512"
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v7}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {v0, v6}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    .registers 2
 
     .line 1
-    invoke-static {v0, v5, v4, v1, v15}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    .line 2
-    sget-object v1, Lcom/kousei/framework/qc;->b:Lcom/kousei/framework/v;
-
-    move-object/from16 v6, v73
-
-    move-object/from16 v5, v74
-
-    move-object/from16 v4, v75
-
-    .line 3
-    invoke-static {v0, v1, v4, v5, v6}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v1, v49
-
-    move-object/from16 v7, v70
-
-    move-object/from16 v8, v71
-
-    move-object/from16 v15, v72
-
-    invoke-static {v0, v1, v7, v8, v15}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v15, v39
-
-    move-object/from16 v8, v40
-
-    move-object/from16 v7, v45
-
-    move-object/from16 v1, v46
-
-    invoke-static {v0, v15, v8, v7, v1}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v1, v38
-
-    move-object/from16 v7, v54
-
-    move-object/from16 v15, v55
-
-    move-object/from16 v8, v63
-
-    invoke-static {v0, v1, v7, v8, v15}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v7, v56
-
-    move-object/from16 v8, v57
-
-    move-object/from16 v15, v58
-
-    move-object/from16 v1, v59
-
-    invoke-static {v0, v7, v8, v15, v1}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v1, v47
-
-    move-object/from16 v7, v48
-
-    move-object/from16 v8, v53
-
-    move-object/from16 v15, v60
-
-    invoke-static {v0, v15, v1, v7, v8}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v15, v50
-
-    move-object/from16 v8, v51
-
-    move-object/from16 v7, v52
-
-    invoke-static {v0, v15, v7, v8, v9}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    invoke-static {v0, v2, v11, v13, v12}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v7, v123
-
-    move-object/from16 v8, v124
-
-    invoke-static {v0, v10, v7, v8, v14}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v50, v10
-
-    move-object/from16 v47, v14
-
-    move-object/from16 v14, v125
-
-    move-object/from16 v8, v126
-
-    move-object/from16 v7, v127
-
-    move-object/from16 v10, v129
-
-    invoke-static {v0, v14, v8, v7, v10}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v10, v128
-
-    move-object/from16 v7, v130
-
-    move-object/from16 v8, v131
-
-    move-object/from16 v14, v132
-
-    invoke-static {v0, v10, v7, v8, v14}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v14, v133
-
-    move-object/from16 v8, v134
-
-    move-object/from16 v7, v135
-
-    move-object/from16 v10, v136
-
-    invoke-static {v0, v14, v8, v7, v10}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v10, v122
-
-    move-object/from16 v7, v137
-
-    move-object/from16 v8, v138
-
-    move-object/from16 v14, v139
-
-    invoke-static {v0, v7, v8, v14, v10}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    .line 4
-    sget-object v10, Lcom/kousei/framework/l1;->C:Lcom/kousei/framework/v;
-
-    invoke-virtual {v0, v10}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    sget-object v14, Lcom/kousei/framework/l1;->D:Lcom/kousei/framework/v;
-
-    invoke-virtual {v0, v14}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    sget-object v8, Lcom/kousei/framework/l1;->E:Lcom/kousei/framework/v;
-
-    invoke-virtual {v0, v8}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    sget-object v7, Lcom/kousei/framework/l1;->F:Lcom/kousei/framework/v;
-
-    invoke-virtual {v0, v7}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    move-object/from16 v51, v12
-
-    move-object/from16 v12, v121
-
-    invoke-virtual {v0, v12}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    move-object/from16 v12, v120
-
-    invoke-virtual {v0, v12}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    sget-object v12, Lcom/kousei/framework/l1;->I:Lcom/kousei/framework/v;
-
-    invoke-virtual {v0, v12}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    move-object/from16 v52, v13
-
-    sget-object v13, Lcom/kousei/framework/l1;->J:Lcom/kousei/framework/v;
-
-    invoke-virtual {v0, v13}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    move-object/from16 v54, v11
-
-    sget-object v11, Lcom/kousei/framework/l1;->K:Lcom/kousei/framework/v;
-
-    invoke-virtual {v0, v11}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    move-object/from16 v55, v2
-
-    sget-object v2, Lcom/kousei/framework/l1;->L:Lcom/kousei/framework/v;
-
-    invoke-virtual {v0, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    move-object/from16 v56, v9
-
-    move-object/from16 v9, v119
-
-    invoke-virtual {v0, v9}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    move-object/from16 v9, v109
-
-    invoke-virtual {v0, v9}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    sget-object v9, Lcom/kousei/framework/l1;->O:Lcom/kousei/framework/v;
-
-    invoke-virtual {v0, v9}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    move-object/from16 v57, v9
-
-    sget-object v9, Lcom/kousei/framework/l1;->P:Lcom/kousei/framework/v;
-
-    invoke-virtual {v0, v9}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    move-object/from16 v58, v9
-
-    sget-object v9, Lcom/kousei/framework/l1;->Q:Lcom/kousei/framework/v;
-
-    invoke-virtual {v0, v9}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    move-object/from16 v59, v9
-
-    sget-object v9, Lcom/kousei/framework/l1;->R:Lcom/kousei/framework/v;
-
-    move-object/from16 v60, v2
-
-    move-object/from16 v63, v11
-
-    move-object/from16 v73, v13
-
-    move-object/from16 v11, v106
-
-    move-object/from16 v13, v107
-
-    move-object/from16 v2, v108
-
-    .line 5
-    invoke-static {v0, v9, v11, v13, v2}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v74, v9
-
-    move-object/from16 v13, v102
-
-    move-object/from16 v2, v103
-
-    move-object/from16 v9, v104
-
-    move-object/from16 v11, v105
-
-    invoke-static {v0, v11, v2, v9, v13}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v13, v96
-
-    move-object/from16 v9, v97
-
-    move-object/from16 v11, v98
-
-    move-object/from16 v2, v101
-
-    invoke-static {v0, v13, v2, v11, v9}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v9, v95
+    const-wide v0, -0x7318071fd36712b9L
 
     .line 6
-    invoke-virtual {v0, v9}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    move-object/from16 v9, v99
-
-    invoke-virtual {v0, v9}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    move-object/from16 v9, v100
-
-    invoke-virtual {v0, v9}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    sget-object v9, Lcom/kousei/framework/l1;->W0:Lcom/kousei/framework/v;
-
-    move-object/from16 v11, v110
-
-    move-object/from16 v2, v111
-
-    move-object/from16 v13, v118
-
-    .line 7
-    invoke-static {v0, v9, v11, v2, v13}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v94
-
-    move-object/from16 v9, v112
-
-    move-object/from16 v13, v116
-
-    move-object/from16 v11, v117
-
-    invoke-static {v0, v2, v9, v11, v13}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v113
-
-    .line 8
-    invoke-virtual {v0, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    move-object/from16 v2, v114
-
-    invoke-virtual {v0, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    move-object/from16 v2, v115
-
-    invoke-virtual {v0, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    sget-object v2, Lcom/kousei/framework/l1;->R0:Lcom/kousei/framework/v;
-
-    move-object/from16 v13, v140
-
-    move-object/from16 v11, v141
-
-    move-object/from16 v9, v142
+    invoke-static {v0, v1}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
 
     .line 9
-    invoke-static {v0, v2, v13, v11, v9}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v93
-
-    move-object/from16 v9, v143
-
-    move-object/from16 v11, v144
-
-    move-object/from16 v13, v145
-
-    invoke-static {v0, v9, v11, v13, v2}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v89
-
-    move-object/from16 v11, v90
-
-    move-object/from16 v9, v91
-
-    move-object/from16 v13, v92
-
-    invoke-static {v0, v2, v9, v11, v13}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v76
-
-    move-object/from16 v9, v77
-
-    move-object/from16 v11, v88
-
-    invoke-static {v0, v2, v9, v11, v9}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v79
-
-    move-object/from16 v9, v80
-
-    move-object/from16 v13, v81
-
-    invoke-static {v0, v11, v2, v9, v13}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v82
-
-    move-object/from16 v9, v84
-
-    move-object/from16 v11, v85
-
-    move-object/from16 v13, v86
-
-    invoke-static {v0, v2, v9, v11, v13}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v87
+    move-result-object v0
 
     .line 10
-    invoke-virtual {v0, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    move-object/from16 v2, v78
-
-    invoke-virtual {v0, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    move-object/from16 v2, v83
-
-    invoke-virtual {v0, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    sget-object v2, Lcom/kousei/framework/l1;->z:Lcom/kousei/framework/v;
-
-    invoke-virtual {v0, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    sget-object v2, Lcom/kousei/framework/l1;->A:Lcom/kousei/framework/v;
-
-    move-object/from16 v9, v61
-
-    move-object/from16 v13, v68
-
-    move-object/from16 v11, v69
-
-    .line 11
-    invoke-static {v0, v2, v11, v13, v9}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v62
-
-    move-object/from16 v13, v64
-
-    move-object/from16 v9, v65
-
-    move-object/from16 v11, v67
-
-    invoke-static {v0, v2, v9, v13, v11}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v66
-
-    move-object/from16 v11, v146
-
-    move-object/from16 v13, v147
-
-    move-object/from16 v9, v148
-
-    invoke-static {v0, v2, v11, v13, v9}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v9, v149
-
-    move-object/from16 v11, v150
-
-    move-object/from16 v13, v151
-
-    move-object/from16 v2, v152
-
-    invoke-static {v0, v9, v11, v13, v2}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v153
-
-    move-object/from16 v9, v154
-
-    move-object/from16 v11, v155
-
-    move-object/from16 v13, v156
-
-    invoke-static {v0, v2, v9, v11, v13}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v157
-
-    move-object/from16 v9, v158
-
-    move-object/from16 v11, v159
-
-    move-object/from16 v13, v160
-
-    invoke-static {v0, v2, v9, v11, v13}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v161
-
-    move-object/from16 v9, v162
-
-    move-object/from16 v11, v163
-
-    move-object/from16 v13, v164
-
-    invoke-static {v0, v2, v9, v11, v13}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v165
-
-    move-object/from16 v9, v166
-
-    move-object/from16 v11, v167
-
-    move-object/from16 v13, v168
-
-    invoke-static {v0, v2, v9, v11, v13}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v169
-
-    move-object/from16 v9, v170
-
-    move-object/from16 v11, v171
-
-    move-object/from16 v13, v172
-
-    invoke-static {v0, v2, v9, v11, v13}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v173
-
-    move-object/from16 v9, v174
-
-    move-object/from16 v11, v175
-
-    invoke-static {v0, v2, v9, v3, v11}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v176
-
-    .line 12
-    invoke-virtual {v0, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    move-object/from16 v0, v36
-
-    move-object/from16 v2, v37
-
-    invoke-virtual {v0, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    move-object/from16 v3, v35
-
-    invoke-virtual {v0, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    move-object/from16 v9, v31
-
-    move-object/from16 v11, v32
-
-    move-object/from16 v13, v33
-
-    move-object/from16 v31, v12
-
-    move-object/from16 v12, v34
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     .line 13
-    invoke-static {v0, v9, v11, v13, v12}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v32, v7
-
-    move-object/from16 v7, v29
-
-    move-object/from16 v29, v10
-
-    move-object/from16 v10, v28
-
-    move-object/from16 v28, v14
-
-    move-object/from16 v14, v27
-
-    move-object/from16 v27, v8
-
-    move-object/from16 v8, v30
-
-    invoke-static {v0, v7, v14, v8, v10}, Lcom/kousei/framework/k1;->i(Ljava/util/HashSet;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v30, v15
-
-    move-object/from16 v15, v44
+    move-result-object v0
 
     .line 14
-    invoke-virtual {v0, v15}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    move-object/from16 v33, v1
-
-    move-object/from16 v1, v43
-
-    invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    move-object/from16 v34, v10
-
-    move-object/from16 v10, v42
-
-    invoke-virtual {v0, v10}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    move-object/from16 v35, v8
-
-    move-object/from16 v8, v41
-
-    invoke-virtual {v0, v8}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    new-instance v0, Lcom/kousei/framework/k0;
-
-    move-object/from16 v36, v14
-
-    sget-object v14, Lcom/kousei/framework/qc;->a:Lcom/kousei/framework/v;
-
-    sget-object v2, Lcom/kousei/framework/m4;->K:Lcom/kousei/framework/m4;
-
-    invoke-direct {v0, v14, v2}, Lcom/kousei/framework/k0;-><init>(Lcom/kousei/framework/v;Lcom/kousei/framework/k;)V
-
-    move-object/from16 v41, v14
-
-    const/16 v14, 0x14
-
-    invoke-static {v14, v0}, Lcom/kousei/framework/u5;->d(ILcom/kousei/framework/k0;)Lcom/kousei/framework/be;
-
-    move-result-object v0
-
-    move-object/from16 v14, v26
-
-    invoke-static {v14, v0}, Lcom/kousei/framework/u5;->c(Ljava/lang/String;Lcom/kousei/framework/be;)V
-
-    new-instance v0, Lcom/kousei/framework/k0;
-
-    sget-object v14, Lcom/kousei/framework/ec;->d:Lcom/kousei/framework/v;
-
-    invoke-direct {v0, v14, v2}, Lcom/kousei/framework/k0;-><init>(Lcom/kousei/framework/v;Lcom/kousei/framework/k;)V
-
-    move-object/from16 v26, v8
-
-    const/16 v8, 0x1c
-
-    invoke-static {v8, v0}, Lcom/kousei/framework/u5;->d(ILcom/kousei/framework/k0;)Lcom/kousei/framework/be;
-
-    move-result-object v0
-
-    move-object/from16 v8, v25
-
-    invoke-static {v8, v0}, Lcom/kousei/framework/u5;->c(Ljava/lang/String;Lcom/kousei/framework/be;)V
-
-    new-instance v0, Lcom/kousei/framework/k0;
-
-    sget-object v8, Lcom/kousei/framework/ec;->a:Lcom/kousei/framework/v;
-
-    invoke-direct {v0, v8, v2}, Lcom/kousei/framework/k0;-><init>(Lcom/kousei/framework/v;Lcom/kousei/framework/k;)V
-
-    move-object/from16 v25, v10
-
-    const/16 v10, 0x20
-
-    invoke-static {v10, v0}, Lcom/kousei/framework/u5;->d(ILcom/kousei/framework/k0;)Lcom/kousei/framework/be;
-
-    move-result-object v0
-
-    move-object/from16 v10, v24
-
-    invoke-static {v10, v0}, Lcom/kousei/framework/u5;->c(Ljava/lang/String;Lcom/kousei/framework/be;)V
-
-    new-instance v0, Lcom/kousei/framework/k0;
-
-    sget-object v10, Lcom/kousei/framework/ec;->b:Lcom/kousei/framework/v;
-
-    invoke-direct {v0, v10, v2}, Lcom/kousei/framework/k0;-><init>(Lcom/kousei/framework/v;Lcom/kousei/framework/k;)V
-
-    move-object/from16 v24, v1
-
-    const/16 v1, 0x30
-
-    invoke-static {v1, v0}, Lcom/kousei/framework/u5;->d(ILcom/kousei/framework/k0;)Lcom/kousei/framework/be;
-
-    move-result-object v0
-
-    move-object/from16 v1, v23
-
-    invoke-static {v1, v0}, Lcom/kousei/framework/u5;->c(Ljava/lang/String;Lcom/kousei/framework/be;)V
-
-    new-instance v0, Lcom/kousei/framework/k0;
-
-    sget-object v1, Lcom/kousei/framework/ec;->c:Lcom/kousei/framework/v;
-
-    invoke-direct {v0, v1, v2}, Lcom/kousei/framework/k0;-><init>(Lcom/kousei/framework/v;Lcom/kousei/framework/k;)V
-
-    move-object/from16 v23, v15
-
-    const/16 v15, 0x40
-
-    invoke-static {v15, v0}, Lcom/kousei/framework/u5;->d(ILcom/kousei/framework/k0;)Lcom/kousei/framework/be;
-
-    move-result-object v0
-
-    move-object/from16 v15, v22
-
-    invoke-static {v15, v0}, Lcom/kousei/framework/u5;->c(Ljava/lang/String;Lcom/kousei/framework/be;)V
-
-    new-instance v0, Lcom/kousei/framework/k0;
-
-    sget-object v15, Lcom/kousei/framework/ec;->g:Lcom/kousei/framework/v;
-
-    invoke-direct {v0, v15, v2}, Lcom/kousei/framework/k0;-><init>(Lcom/kousei/framework/v;Lcom/kousei/framework/k;)V
-
-    move-object/from16 v22, v15
-
-    const/16 v15, 0x1c
-
-    invoke-static {v15, v0}, Lcom/kousei/framework/u5;->d(ILcom/kousei/framework/k0;)Lcom/kousei/framework/be;
-
-    move-result-object v0
-
-    move-object/from16 v15, v18
-
-    invoke-static {v15, v0}, Lcom/kousei/framework/u5;->c(Ljava/lang/String;Lcom/kousei/framework/be;)V
-
-    new-instance v0, Lcom/kousei/framework/k0;
-
-    sget-object v15, Lcom/kousei/framework/ec;->h:Lcom/kousei/framework/v;
-
-    invoke-direct {v0, v15, v2}, Lcom/kousei/framework/k0;-><init>(Lcom/kousei/framework/v;Lcom/kousei/framework/k;)V
-
-    move-object/from16 v18, v15
-
-    const/16 v15, 0x20
-
-    invoke-static {v15, v0}, Lcom/kousei/framework/u5;->d(ILcom/kousei/framework/k0;)Lcom/kousei/framework/be;
-
-    move-result-object v0
-
-    move-object/from16 v15, v19
-
-    invoke-static {v15, v0}, Lcom/kousei/framework/u5;->c(Ljava/lang/String;Lcom/kousei/framework/be;)V
-
-    new-instance v0, Lcom/kousei/framework/k0;
-
-    sget-object v15, Lcom/kousei/framework/ec;->i:Lcom/kousei/framework/v;
-
-    invoke-direct {v0, v15, v2}, Lcom/kousei/framework/k0;-><init>(Lcom/kousei/framework/v;Lcom/kousei/framework/k;)V
-
-    move-object/from16 v19, v15
-
-    const/16 v15, 0x30
-
-    invoke-static {v15, v0}, Lcom/kousei/framework/u5;->d(ILcom/kousei/framework/k0;)Lcom/kousei/framework/be;
-
-    move-result-object v0
-
-    move-object/from16 v15, v20
-
-    invoke-static {v15, v0}, Lcom/kousei/framework/u5;->c(Ljava/lang/String;Lcom/kousei/framework/be;)V
-
-    new-instance v0, Lcom/kousei/framework/k0;
-
-    sget-object v15, Lcom/kousei/framework/ec;->j:Lcom/kousei/framework/v;
-
-    invoke-direct {v0, v15, v2}, Lcom/kousei/framework/k0;-><init>(Lcom/kousei/framework/v;Lcom/kousei/framework/k;)V
-
-    const/16 v2, 0x40
-
-    invoke-static {v2, v0}, Lcom/kousei/framework/u5;->d(ILcom/kousei/framework/k0;)Lcom/kousei/framework/be;
-
-    move-result-object v0
-
-    move-object/from16 v2, v21
-
-    invoke-static {v2, v0}, Lcom/kousei/framework/u5;->c(Ljava/lang/String;Lcom/kousei/framework/be;)V
-
-    invoke-static {v3, v14}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    invoke-static {v9, v8}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    invoke-static {v11, v10}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    invoke-static {v13, v1}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    sget-object v0, Lcom/kousei/framework/ec;->e:Lcom/kousei/framework/v;
-
-    invoke-static {v12, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    sget-object v0, Lcom/kousei/framework/ec;->f:Lcom/kousei/framework/v;
-
-    invoke-static {v7, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    invoke-static {v4, v14}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    invoke-static {v5, v8}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    invoke-static {v6, v10}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v0, v49
-
-    invoke-static {v0, v1}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v0, v22
-
-    move-object/from16 v7, v70
-
-    invoke-static {v7, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v3, v18
-
-    move-object/from16 v2, v71
-
-    invoke-static {v2, v3}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v4, v19
-
-    move-object/from16 v2, v72
-
-    invoke-static {v2, v4}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v39
-
-    invoke-static {v2, v15}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v40
-
-    invoke-static {v2, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v7, v45
-
-    invoke-static {v7, v3}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v46
-
-    invoke-static {v2, v4}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v38
-
-    invoke-static {v2, v15}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v23
-
-    invoke-static {v2, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v0, v24
-
-    invoke-static {v0, v3}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v10, v25
-
-    invoke-static {v10, v4}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v0, v26
-
-    invoke-static {v0, v15}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    sget-object v0, Lcom/kousei/framework/vc;->s:Lcom/kousei/framework/v;
-
-    move-object/from16 v2, v17
-
-    invoke-static {v2, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    sget-object v0, Lcom/kousei/framework/vc;->c:Lcom/kousei/framework/v;
-
-    sget-object v2, Lcom/kousei/framework/vc;->t:Lcom/kousei/framework/v;
-
-    invoke-static {v0, v2}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    sget-object v0, Lcom/kousei/framework/vc;->u:Lcom/kousei/framework/v;
-
-    move-object/from16 v2, v16
-
-    invoke-static {v2, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v37
-
-    move-object/from16 v0, v41
-
-    invoke-static {v2, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    sget-object v0, Lcom/kousei/framework/ci;->b:Lcom/kousei/framework/v;
-
-    move-object/from16 v14, v36
-
-    invoke-static {v14, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    sget-object v0, Lcom/kousei/framework/ci;->a:Lcom/kousei/framework/v;
-
-    move-object/from16 v2, v35
-
-    invoke-static {v2, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    sget-object v0, Lcom/kousei/framework/ci;->c:Lcom/kousei/framework/v;
-
-    move-object/from16 v10, v34
-
-    invoke-static {v10, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    sget-object v0, Lcom/kousei/framework/t3;->a:Lcom/kousei/framework/v;
-
-    move-object/from16 v2, v33
-
-    invoke-static {v2, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v7, v48
-
-    invoke-static {v7, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    sget-object v0, Lcom/kousei/framework/ie;->a:Lcom/kousei/framework/v;
-
-    move-object/from16 v2, v53
-
-    invoke-static {v2, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    sget-object v0, Lcom/kousei/framework/ie;->b:Lcom/kousei/framework/v;
-
-    move-object/from16 v15, v30
-
-    invoke-static {v15, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v0, v29
-
-    invoke-static {v0, v8}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v0, v28
-
-    invoke-static {v0, v8}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    sget-object v0, Lcom/kousei/framework/ec;->l:Lcom/kousei/framework/v;
-
-    move-object/from16 v2, v27
-
-    invoke-static {v2, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v32
-
-    invoke-static {v2, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v31
-
-    invoke-static {v2, v8}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v73
-
-    invoke-static {v2, v8}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v63
-
-    invoke-static {v2, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v60
-
-    invoke-static {v2, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v57
-
-    invoke-static {v2, v8}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v58
-
-    invoke-static {v2, v8}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v59
-
-    invoke-static {v2, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v74
-
-    invoke-static {v2, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    sget-object v2, Lcom/kousei/framework/l1;->U:Lcom/kousei/framework/v;
-
-    invoke-static {v2, v8}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    sget-object v2, Lcom/kousei/framework/l1;->V:Lcom/kousei/framework/v;
-
-    invoke-static {v2, v8}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    sget-object v2, Lcom/kousei/framework/l1;->W:Lcom/kousei/framework/v;
-
-    invoke-static {v2, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    sget-object v2, Lcom/kousei/framework/l1;->X:Lcom/kousei/framework/v;
-
-    invoke-static {v2, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    sget-object v2, Lcom/kousei/framework/l1;->a0:Lcom/kousei/framework/v;
-
-    invoke-static {v2, v8}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    sget-object v2, Lcom/kousei/framework/l1;->b0:Lcom/kousei/framework/v;
-
-    invoke-static {v2, v8}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    sget-object v2, Lcom/kousei/framework/l1;->c0:Lcom/kousei/framework/v;
-
-    invoke-static {v2, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    sget-object v2, Lcom/kousei/framework/l1;->d0:Lcom/kousei/framework/v;
-
-    invoke-static {v2, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    sget-object v2, Lcom/kousei/framework/l1;->g0:Lcom/kousei/framework/v;
-
-    invoke-static {v2, v8}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    sget-object v2, Lcom/kousei/framework/l1;->h0:Lcom/kousei/framework/v;
-
-    invoke-static {v2, v8}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    sget-object v2, Lcom/kousei/framework/l1;->i0:Lcom/kousei/framework/v;
-
-    invoke-static {v2, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    sget-object v2, Lcom/kousei/framework/l1;->j0:Lcom/kousei/framework/v;
-
-    invoke-static {v2, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v108
-
-    invoke-static {v2, v8}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v11, v105
-
-    invoke-static {v11, v8}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v103
-
-    invoke-static {v2, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v9, v104
-
-    invoke-static {v9, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v13, v102
-
-    invoke-static {v13, v8}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v13, v96
-
-    invoke-static {v13, v8}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v2, v101
-
-    invoke-static {v2, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v11, v98
-
-    invoke-static {v11, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v9, v97
-
-    invoke-static {v9, v8}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v9, v95
-
-    invoke-static {v9, v8}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v9, v99
-
-    invoke-static {v9, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v9, v100
-
-    invoke-static {v9, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v11, v69
-
-    invoke-static {v11, v8}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    sget-object v2, Lcom/kousei/framework/u8;->d:Lcom/kousei/framework/v;
-
-    move-object/from16 v13, v68
-
-    invoke-static {v13, v2}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    sget-object v2, Lcom/kousei/framework/ec;->k:Lcom/kousei/framework/v;
-
-    move-object/from16 v9, v65
-
-    invoke-static {v9, v2}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v13, v64
-
-    invoke-static {v13, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v11, v67
-
-    invoke-static {v11, v2}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v3, v66
-
-    invoke-static {v3, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v9, v112
-
-    invoke-static {v9, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v11, v117
-
-    invoke-static {v11, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v13, v116
-
-    invoke-static {v13, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v3, v113
-
-    invoke-static {v3, v1}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v3, v114
-
-    invoke-static {v3, v1}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v3, v115
-
-    invoke-static {v3, v1}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v3, v56
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v3, v55
-
-    invoke-static {v3, v8}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v3, v54
-
-    invoke-static {v3, v1}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v3, v52
-
-    invoke-static {v3, v1}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v3, v51
-
-    invoke-static {v3, v1}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v3, v50
-
-    invoke-static {v3, v1}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v7, v123
-
-    invoke-static {v7, v2}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v3, v124
-
-    invoke-static {v3, v2}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v3, v47
-
-    invoke-static {v3, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v14, v125
-
-    invoke-static {v14, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v3, v126
-
-    invoke-static {v3, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v7, v127
-
-    invoke-static {v7, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v10, v129
-
-    invoke-static {v10, v8}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v10, v128
-
-    invoke-static {v10, v8}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v7, v130
-
-    invoke-static {v7, v1}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v8, v131
-
-    invoke-static {v8, v1}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v14, v132
-
-    invoke-static {v14, v1}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v14, v133
-
-    invoke-static {v14, v1}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v8, v134
-
-    invoke-static {v8, v2}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v7, v135
-
-    invoke-static {v7, v2}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v10, v136
-
-    invoke-static {v10, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v7, v137
-
-    invoke-static {v7, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v8, v138
-
-    invoke-static {v8, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    move-object/from16 v14, v139
-
-    invoke-static {v14, v0}, Lcom/kousei/framework/u5;->b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-
-    return-void
-.end method
-
-.method public static a(Lcom/kousei/framework/v;Ljava/lang/String;)V
-    .registers 4
-
-    .line 1
-    sget-object v0, Lcom/kousei/framework/u5;->a:Ljava/util/HashMap;
-
-    .line 3
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-
-    .line 6
-    move-result v1
-
-    .line 7
-    if-nez v1, :cond_c
-
-    .line 9
-    invoke-virtual {v0, p1, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 12
-    return-void
-
-    .line 13
-    :cond_c
-    const-string p0, "algorithmName already present in addAlgorithm"
-
-    .line 15
-    invoke-static {p0}, Lcom/kousei/framework/f;->m(Ljava/lang/String;)V
-
-    .line 18
-    return-void
-.end method
-
-.method public static b(Lcom/kousei/framework/v;Lcom/kousei/framework/v;)V
-    .registers 4
-
-    .line 1
-    sget-object v0, Lcom/kousei/framework/u5;->d:Ljava/util/HashMap;
-
-    .line 3
-    invoke-virtual {v0, p0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-
-    .line 6
-    move-result v1
-
-    .line 7
-    if-nez v1, :cond_c
-
-    .line 9
-    invoke-virtual {v0, p0, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 12
-    return-void
-
-    .line 13
-    :cond_c
-    const-string p0, "signatureOid already present in addDigestOid"
-
-    .line 15
-    invoke-static {p0}, Lcom/kousei/framework/f;->m(Ljava/lang/String;)V
-
-    .line 18
-    return-void
-.end method
-
-.method public static c(Ljava/lang/String;Lcom/kousei/framework/be;)V
-    .registers 4
-
-    .line 1
-    sget-object v0, Lcom/kousei/framework/u5;->c:Ljava/util/HashMap;
-
-    .line 3
-    invoke-virtual {v0, p0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-
-    .line 6
-    move-result v1
-
-    .line 7
-    if-nez v1, :cond_c
-
-    .line 9
-    invoke-virtual {v0, p0, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 12
-    return-void
-
-    .line 13
-    :cond_c
-    const-string p0, "algorithmName already present in addParameters"
-
-    .line 15
-    invoke-static {p0}, Lcom/kousei/framework/f;->m(Ljava/lang/String;)V
-
-    .line 18
-    return-void
-.end method
-
-.method public static d(ILcom/kousei/framework/k0;)Lcom/kousei/framework/be;
-    .registers 5
-
-    .line 1
-    new-instance v0, Lcom/kousei/framework/be;
-
-    .line 3
-    new-instance v1, Lcom/kousei/framework/k0;
-
-    .line 5
-    sget-object v2, Lcom/kousei/framework/vc;->g:Lcom/kousei/framework/v;
-
-    .line 7
-    invoke-direct {v1, v2, p1}, Lcom/kousei/framework/k0;-><init>(Lcom/kousei/framework/v;Lcom/kousei/framework/k;)V
-
-    .line 10
-    invoke-static {p0}, Lcom/kousei/framework/q;->z(I)Lcom/kousei/framework/q;
-
-    .line 13
-    move-result-object p0
-
-    .line 14
-    sget-object v2, Lcom/kousei/framework/be;->R:Lcom/kousei/framework/q;
+    sput-object v0, Lcom/kousei/framework/u5;->a:Ljava/util/regex/Pattern;
 
     .line 16
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    .line 19
-    iput-object p1, v0, Lcom/kousei/framework/be;->K:Lcom/kousei/framework/k0;
+    const-wide v0, -0x7318072fd36712b9L  # -1.714259232258679E-246
 
     .line 21
-    iput-object v1, v0, Lcom/kousei/framework/be;->L:Lcom/kousei/framework/k0;
+    invoke-static {v0, v1}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
 
-    .line 23
-    iput-object p0, v0, Lcom/kousei/framework/be;->M:Lcom/kousei/framework/q;
+    .line 24
+    move-result-object v0
 
     .line 25
-    iput-object v2, v0, Lcom/kousei/framework/be;->N:Lcom/kousei/framework/q;
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    .line 28
+    move-result-object v0
+
+    .line 29
+    sput-object v0, Lcom/kousei/framework/u5;->b:Ljava/util/regex/Pattern;
+
+    .line 31
+    const-wide v0, -0x7318073ed36712b9L  # -1.714242864663001E-246
+
+    .line 36
+    invoke-static {v0, v1}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 39
+    move-result-object v0
+
+    .line 40
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    .line 43
+    move-result-object v0
+
+    .line 44
+    sput-object v0, Lcom/kousei/framework/u5;->c:Ljava/util/regex/Pattern;
+
+    .line 46
+    const-wide v0, -0x73180748d36712b9L  # -1.714231952932549E-246
+
+    .line 51
+    invoke-static {v0, v1}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 54
+    move-result-object v0
+
+    .line 55
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    .line 58
+    move-result-object v0
+
+    .line 59
+    sput-object v0, Lcom/kousei/framework/u5;->d:Ljava/util/regex/Pattern;
+
+    .line 61
+    const-wide v0, -0x73180771d36712b9L
+
+    .line 66
+    invoke-static {v0, v1}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 69
+    move-result-object v0
+
+    .line 70
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    .line 73
+    move-result-object v0
+
+    .line 74
+    sput-object v0, Lcom/kousei/framework/u5;->e:Ljava/util/regex/Pattern;
+
+    .line 76
+    const-wide v0, -0x73180793d36712b9L
+
+    .line 81
+    invoke-static {v0, v1}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 84
+    move-result-object v0
+
+    .line 85
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    .line 88
+    move-result-object v0
+
+    .line 89
+    sput-object v0, Lcom/kousei/framework/u5;->f:Ljava/util/regex/Pattern;
+
+    .line 91
+    const-wide v0, -0x731807bad36712b9L
+
+    .line 96
+    invoke-static {v0, v1}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 99
+    move-result-object v0
+
+    .line 100
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    .line 103
+    move-result-object v0
+
+    .line 104
+    sput-object v0, Lcom/kousei/framework/u5;->g:Ljava/util/regex/Pattern;
+
+    .line 106
+    const-wide v0, -0x731807f0d36712b9L
+
+    .line 111
+    invoke-static {v0, v1}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 114
+    move-result-object v0
+
+    .line 115
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    .line 118
+    move-result-object v0
+
+    .line 119
+    sput-object v0, Lcom/kousei/framework/u5;->h:Ljava/util/regex/Pattern;
+
+    .line 121
+    return-void
+.end method
+
+.method public static a(Ljava/lang/String;)Ljava/lang/String;
+    .registers 20
+
+    .line 1
+    move-object/from16 v0, p0
+
+    .line 3
+    if-eqz v0, :cond_212
+
+    .line 5
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+
+    .line 8
+    move-result v1
+
+    .line 9
+    if-eqz v1, :cond_c
+
+    .line 11
+    goto/16 :goto_212
+
+    .line 13
+    :cond_c
+    new-instance v1, Ljava/util/ArrayList;
+
+    .line 15
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    .line 18
+    const-wide v2, -0x73180695d36712b9L
+
+    .line 23
+    invoke-static {v2, v3}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 26
+    move-result-object v2
 
     .line 27
+    const/4 v3, -0x1
+
+    .line 28
+    invoke-virtual {v0, v2, v3}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
+
+    .line 31
+    move-result-object v0
+
+    .line 32
+    array-length v2, v0
+
+    .line 33
+    const/4 v3, 0x0
+
+    .line 34
+    move v4, v3
+
+    .line 35
+    move v5, v4
+
+    .line 36
+    move v6, v5
+
+    .line 37
+    :goto_24
+    if-ge v4, v2, :cond_1dc
+
+    .line 39
+    aget-object v7, v0, v4
+
+    .line 41
+    const/16 v8, 0xd
+
+    .line 43
+    invoke-virtual {v7, v8}, Ljava/lang/String;->indexOf(I)I
+
+    .line 46
+    move-result v8
+
+    .line 47
+    if-gez v8, :cond_31
+
+    .line 49
+    goto :goto_47
+
+    .line 50
+    :cond_31
+    const-wide v8, -0x731806cdd36712b9L  # -1.714366167217109E-246
+
+    .line 55
+    invoke-static {v8, v9}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 58
+    move-result-object v8
+
+    .line 59
+    const-wide v9, -0x731806cfd36712b9L
+
+    .line 64
+    invoke-static {v9, v10}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 67
+    move-result-object v9
+
+    .line 68
+    invoke-virtual {v7, v8, v9}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    .line 71
+    move-result-object v7
+
+    .line 72
+    :goto_47
+    invoke-virtual {v7}, Ljava/lang/String;->length()I
+
+    .line 75
+    move-result v8
+
+    .line 76
+    move v9, v3
+
+    .line 77
+    :goto_4c
+    if-ge v9, v8, :cond_5e
+
+    .line 79
+    invoke-virtual {v7, v9}, Ljava/lang/String;->charAt(I)C
+
+    .line 82
+    move-result v10
+
+    .line 83
+    const/16 v11, 0x20
+
+    .line 85
+    if-eq v10, v11, :cond_5b
+
+    .line 87
+    const/16 v11, 0x9
+
+    .line 89
+    if-eq v10, v11, :cond_5b
+
+    .line 91
+    goto :goto_5e
+
+    .line 92
+    :cond_5b
+    add-int/lit8 v9, v9, 0x1
+
+    .line 94
+    goto :goto_4c
+
+    .line 95
+    :cond_5e
+    :goto_5e
+    if-nez v9, :cond_61
+
+    .line 97
+    goto :goto_65
+
+    .line 98
+    :cond_61
+    invoke-virtual {v7, v9}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    .line 101
+    move-result-object v7
+
+    .line 102
+    :goto_65
+    invoke-virtual {v7}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    .line 105
+    move-result-object v8
+
+    .line 106
+    const-wide v9, -0x731806a0d36712b9L  # -1.714415270004143E-246
+
+    .line 111
+    invoke-static {v9, v10}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 114
+    move-result-object v9
+
+    .line 115
+    invoke-virtual {v8, v9}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    .line 118
+    move-result v9
+
+    .line 119
+    if-eqz v9, :cond_7a
+
+    .line 121
+    goto/16 :goto_1d7
+
+    .line 123
+    :cond_7a
+    invoke-virtual {v8}, Ljava/lang/String;->isEmpty()Z
+
+    .line 126
+    move-result v9
+
+    .line 127
+    if-eqz v9, :cond_96
+
+    .line 129
+    if-eqz v5, :cond_1d7
+
+    .line 131
+    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
+
+    .line 134
+    move-result v7
+
+    .line 135
+    if-nez v7, :cond_1d7
+
+    .line 137
+    const-wide v7, -0x731806a2d36712b9L
+
+    .line 142
+    invoke-static {v7, v8}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 145
+    move-result-object v7
+
+    .line 146
+    invoke-virtual {v1, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 149
+    goto/16 :goto_1d7
+
+    .line 151
+    :cond_96
+    invoke-virtual {v8, v3}, Ljava/lang/String;->charAt(I)C
+
+    .line 154
+    move-result v9
+
+    .line 155
+    const/16 v10, 0x3c
+
+    .line 157
+    if-ne v9, v10, :cond_b8
+
+    .line 159
+    sget-object v5, Lcom/kousei/framework/u5;->c:Ljava/util/regex/Pattern;
+
+    .line 161
+    invoke-virtual {v5, v8}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    .line 164
+    move-result-object v5
+
+    .line 165
+    const-wide v6, -0x731806a3d36712b9L
+
+    .line 170
+    invoke-static {v6, v7}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 173
+    move-result-object v6
+
+    .line 174
+    invoke-virtual {v5, v6}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 177
+    move-result-object v5
+
+    .line 178
+    invoke-virtual {v1, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 181
+    move v5, v3
+
+    .line 182
+    move v6, v5
+
+    .line 183
+    goto/16 :goto_1d7
+
+    .line 185
+    :cond_b8
+    const-wide v9, -0x731806a5d36712b9L  # -1.714409814138917E-246
+
+    .line 190
+    invoke-static {v9, v10}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 193
+    move-result-object v11
+
+    .line 194
+    const/4 v12, 0x0
+
+    .line 195
+    const/16 v13, 0x9
+
+    .line 197
+    const/4 v9, 0x1
+
+    .line 198
+    const/4 v10, 0x0
+
+    .line 199
+    invoke-virtual/range {v8 .. v13}, Ljava/lang/String;->regionMatches(ZILjava/lang/String;II)Z
+
+    .line 202
+    move-result v9
+
+    .line 203
+    if-eqz v9, :cond_d3
+
+    .line 205
+    invoke-virtual {v1, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 208
+    const/4 v5, 0x1
+
+    .line 209
+    const/4 v6, 0x1
+
+    .line 210
+    goto/16 :goto_1d7
+
+    .line 212
+    :cond_d3
+    const-wide v9, -0x731806b0d36712b9L
+
+    .line 217
+    invoke-static {v9, v10}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 220
+    move-result-object v11
+
+    .line 221
+    const/4 v12, 0x0
+
+    .line 222
+    const/4 v13, 0x7
+
+    .line 223
+    const/4 v9, 0x1
+
+    .line 224
+    const/4 v10, 0x0
+
+    .line 225
+    invoke-virtual/range {v8 .. v13}, Ljava/lang/String;->regionMatches(ZILjava/lang/String;II)Z
+
+    .line 228
+    move-result v9
+
+    .line 229
+    if-eqz v9, :cond_ed
+
+    .line 231
+    invoke-virtual {v1, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 234
+    move v6, v3
+
+    .line 235
+    :goto_ea
+    const/4 v5, 0x1
+
+    .line 236
+    goto/16 :goto_1d7
+
+    .line 238
+    :cond_ed
+    const/16 v11, 0x39
+
+    .line 240
+    const/16 v12, 0x30
+
+    .line 242
+    const/16 v13, 0x7a
+
+    .line 244
+    const/16 v14, 0x61
+
+    .line 246
+    const/16 v3, 0x5a
+
+    .line 248
+    const/16 v15, 0x41
+
+    .line 250
+    if-eqz v6, :cond_131
+
+    .line 252
+    invoke-virtual {v8}, Ljava/lang/String;->isEmpty()Z
+
+    .line 255
+    move-result v16
+
+    .line 256
+    if-eqz v16, :cond_103
+
+    .line 258
+    goto/16 :goto_1d7
+
+    .line 260
+    :cond_103
+    const/4 v9, 0x0
+
+    .line 261
+    :goto_104
+    invoke-virtual {v8}, Ljava/lang/String;->length()I
+
+    .line 264
+    move-result v10
+
+    .line 265
+    if-ge v9, v10, :cond_12d
+
+    .line 267
+    invoke-virtual {v8, v9}, Ljava/lang/String;->charAt(I)C
+
+    .line 270
+    move-result v10
+
+    .line 271
+    if-lt v10, v15, :cond_112
+
+    .line 273
+    if-le v10, v3, :cond_128
+
+    .line 275
+    :cond_112
+    if-lt v10, v14, :cond_116
+
+    .line 277
+    if-le v10, v13, :cond_128
+
+    .line 279
+    :cond_116
+    if-lt v10, v12, :cond_11a
+
+    .line 281
+    if-le v10, v11, :cond_128
+
+    .line 283
+    :cond_11a
+    const/16 v11, 0x2b
+
+    .line 285
+    if-eq v10, v11, :cond_128
+
+    .line 287
+    const/16 v11, 0x2f
+
+    .line 289
+    if-eq v10, v11, :cond_128
+
+    .line 291
+    const/16 v11, 0x3d
+
+    .line 293
+    if-eq v10, v11, :cond_128
+
+    .line 295
+    goto/16 :goto_1d7
+
+    .line 297
+    :cond_128
+    add-int/lit8 v9, v9, 0x1
+
+    .line 299
+    const/16 v11, 0x39
+
+    .line 301
+    goto :goto_104
+
+    .line 302
+    :cond_12d
+    invoke-virtual {v1, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 305
+    goto :goto_ea
+
+    .line 306
+    :cond_131
+    const-wide v9, -0x731806b9d36712b9L  # -1.714387990678013E-246
+
+    .line 311
+    invoke-static {v9, v10}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 314
+    move-result-object v11
+
+    .line 315
+    move v9, v12
+
+    .line 316
+    const/4 v12, 0x0
+
+    .line 317
+    move v10, v13
+
+    .line 318
+    const/16 v13, 0x9
+
+    .line 320
+    move/from16 v17, v9
+
+    .line 322
+    const/4 v9, 0x1
+
+    .line 323
+    move/from16 v18, v10
+
+    .line 325
+    const/4 v10, 0x0
+
+    .line 326
+    move/from16 v14, v17
+
+    .line 328
+    const/16 v3, 0x2b
+
+    .line 330
+    const/16 v15, 0x39
+
+    .line 332
+    invoke-virtual/range {v8 .. v13}, Ljava/lang/String;->regionMatches(ZILjava/lang/String;II)Z
+
+    .line 335
+    move-result v9
+
+    .line 336
+    if-eqz v9, :cond_153
+
+    .line 338
+    goto/16 :goto_1d2
+
+    .line 340
+    :cond_153
+    const-wide v9, -0x731806c4d36712b9L
+
+    .line 345
+    invoke-static {v9, v10}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 348
+    move-result-object v11
+
+    .line 349
+    const/4 v12, 0x0
+
+    .line 350
+    const/4 v13, 0x7
+
+    .line 351
+    const/4 v9, 0x1
+
+    .line 352
+    const/4 v10, 0x0
+
+    .line 353
+    invoke-virtual/range {v8 .. v13}, Ljava/lang/String;->regionMatches(ZILjava/lang/String;II)Z
+
+    .line 356
+    move-result v9
+
+    .line 357
+    if-eqz v9, :cond_168
+
+    .line 359
+    goto/16 :goto_1d2
+
+    .line 361
+    :cond_168
+    invoke-virtual {v8}, Ljava/lang/String;->length()I
+
+    .line 364
+    move-result v9
+
+    .line 365
+    const/16 v10, 0x8
+
+    .line 367
+    if-ge v9, v10, :cond_172
+
+    .line 369
+    goto/16 :goto_1d7
+
+    .line 371
+    :cond_172
+    invoke-virtual {v8}, Ljava/lang/String;->length()I
+
+    .line 374
+    move-result v9
+
+    .line 375
+    const/16 v10, 0x40
+
+    .line 377
+    if-ge v9, v10, :cond_197
+
+    .line 379
+    const/4 v9, 0x0
+
+    .line 380
+    :goto_17b
+    invoke-virtual {v8}, Ljava/lang/String;->length()I
+
+    .line 383
+    move-result v10
+
+    .line 384
+    if-ge v9, v10, :cond_1d7
+
+    .line 386
+    invoke-virtual {v8, v9}, Ljava/lang/String;->charAt(I)C
+
+    .line 389
+    move-result v10
+
+    .line 390
+    if-lt v10, v14, :cond_189
+
+    .line 392
+    if-le v10, v15, :cond_197
+
+    .line 394
+    :cond_189
+    if-eq v10, v3, :cond_197
+
+    .line 396
+    const/16 v11, 0x2f
+
+    .line 398
+    if-eq v10, v11, :cond_197
+
+    .line 400
+    const/16 v11, 0x3d
+
+    .line 402
+    if-ne v10, v11, :cond_194
+
+    .line 404
+    goto :goto_197
+
+    .line 405
+    :cond_194
+    add-int/lit8 v9, v9, 0x1
+
+    .line 407
+    goto :goto_17b
+
+    .line 408
+    :cond_197
+    :goto_197
+    const/4 v9, 0x0
+
+    .line 409
+    :goto_198
+    invoke-virtual {v8}, Ljava/lang/String;->length()I
+
+    .line 412
+    move-result v10
+
+    .line 413
+    if-ge v9, v10, :cond_1d2
+
+    .line 415
+    invoke-virtual {v8, v9}, Ljava/lang/String;->charAt(I)C
+
+    .line 418
+    move-result v10
+
+    .line 419
+    const/16 v11, 0x41
+
+    .line 421
+    const/16 v12, 0x5a
+
+    .line 423
+    if-lt v10, v11, :cond_1aa
+
+    .line 425
+    if-le v10, v12, :cond_1ad
+
+    .line 427
+    :cond_1aa
+    const/16 v13, 0x61
+
+    .line 429
+    goto :goto_1b4
+
+    .line 430
+    :cond_1ad
+    const/16 v3, 0x3d
+
+    .line 432
+    const/16 v11, 0x7a
+
+    .line 434
+    const/16 v13, 0x61
+
+    .line 436
+    goto :goto_1cd
+
+    .line 437
+    :goto_1b4
+    const/16 v11, 0x7a
+
+    .line 439
+    if-lt v10, v13, :cond_1be
+
+    .line 441
+    if-le v10, v11, :cond_1bb
+
+    .line 443
+    goto :goto_1be
+
+    .line 444
+    :cond_1bb
+    const/16 v3, 0x3d
+
+    .line 446
+    goto :goto_1cd
+
+    .line 447
+    :cond_1be
+    :goto_1be
+    if-lt v10, v14, :cond_1c2
+
+    .line 449
+    if-le v10, v15, :cond_1bb
+
+    .line 451
+    :cond_1c2
+    if-eq v10, v3, :cond_1bb
+
+    .line 453
+    const/16 v3, 0x2f
+
+    .line 455
+    if-eq v10, v3, :cond_1bb
+
+    .line 457
+    const/16 v3, 0x3d
+
+    .line 459
+    if-eq v10, v3, :cond_1cd
+
+    .line 461
+    goto :goto_1d7
+
+    .line 462
+    :cond_1cd
+    :goto_1cd
+    add-int/lit8 v9, v9, 0x1
+
+    .line 464
+    const/16 v3, 0x2b
+
+    .line 466
+    goto :goto_198
+
+    .line 467
+    :cond_1d2
+    :goto_1d2
+    invoke-virtual {v1, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 470
+    goto/16 :goto_ea
+
+    .line 472
+    :cond_1d7
+    :goto_1d7
+    add-int/lit8 v4, v4, 0x1
+
+    .line 474
+    const/4 v3, 0x0
+
+    .line 475
+    goto/16 :goto_24
+
+    .line 477
+    :cond_1dc
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    .line 480
+    move-result v0
+
+    .line 481
+    :goto_1e0
+    if-lez v0, :cond_1f3
+
+    .line 483
+    add-int/lit8 v2, v0, -0x1
+
+    .line 485
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    .line 488
+    move-result-object v2
+
+    .line 489
+    check-cast v2, Ljava/lang/String;
+
+    .line 491
+    invoke-virtual {v2}, Ljava/lang/String;->isEmpty()Z
+
+    .line 494
+    move-result v2
+
+    .line 495
+    if-eqz v2, :cond_1f3
+
+    .line 497
+    add-int/lit8 v0, v0, -0x1
+
+    .line 499
+    goto :goto_1e0
+
+    .line 500
+    :cond_1f3
+    if-nez v0, :cond_1ff
+
+    .line 502
+    const-wide v0, -0x731806d0d36712b9L
+
+    .line 507
+    invoke-static {v0, v1}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 510
+    move-result-object v0
+
+    .line 511
+    return-object v0
+
+    .line 512
+    :cond_1ff
+    const-wide v2, -0x731806d1d36712b9L  # -1.714361802524928E-246
+
+    .line 517
+    invoke-static {v2, v3}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 520
+    move-result-object v2
+
+    .line 521
+    const/4 v3, 0x0
+
+    .line 522
+    invoke-virtual {v1, v3, v0}, Ljava/util/ArrayList;->subList(II)Ljava/util/List;
+
+    .line 525
+    move-result-object v0
+
+    .line 526
+    invoke-static {v2, v0}, Ljava/lang/String;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
+
+    .line 529
+    move-result-object v0
+
+    .line 530
+    return-object v0
+
+    .line 531
+    :cond_212
+    :goto_212
+    const-wide v0, -0x73180694d36712b9L
+
+    .line 536
+    invoke-static {v0, v1}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 539
+    move-result-object v0
+
+    .line 540
     return-object v0
 .end method
 
-.method public static e(Ljava/lang/String;)Lcom/kousei/framework/k0;
-    .registers 3
+.method public static b(Ljava/lang/String;)Ljava/lang/String;
+    .registers 7
 
     .line 1
-    invoke-static {p0}, Lcom/kousei/framework/wh;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
     .line 4
-    move-result-object v0
+    move-result v0
 
     .line 5
-    sget-object v1, Lcom/kousei/framework/u5;->a:Ljava/util/HashMap;
+    if-eqz v0, :cond_10
 
     .line 7
-    invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    const-wide v0, -0x73180691d36712b9L  # -1.714431637599821E-246
 
-    .line 10
-    move-result-object v1
-
-    .line 11
-    check-cast v1, Lcom/kousei/framework/v;
-
-    .line 13
-    if-eqz v1, :cond_2e
+    .line 12
+    invoke-static {v0, v1}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
 
     .line 15
-    sget-object p0, Lcom/kousei/framework/u5;->b:Ljava/util/HashSet;
+    move-result-object p0
+
+    .line 16
+    return-object p0
 
     .line 17
-    invoke-virtual {p0, v1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+    :cond_10
+    invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     .line 20
-    move-result p0
+    move-result-object p0
 
     .line 21
-    if-eqz p0, :cond_1c
+    invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
-    .line 23
-    new-instance p0, Lcom/kousei/framework/k0;
+    .line 24
+    move-result v0
 
     .line 25
-    invoke-direct {p0, v1}, Lcom/kousei/framework/k0;-><init>(Lcom/kousei/framework/v;)V
+    if-eqz v0, :cond_1b
+
+    .line 27
+    goto :goto_55
 
     .line 28
-    return-object p0
+    :cond_1b
+    const/4 v0, 0x0
 
     .line 29
-    :cond_1c
-    sget-object p0, Lcom/kousei/framework/u5;->c:Ljava/util/HashMap;
+    invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
-    .line 31
-    invoke-virtual {p0, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 32
+    move-result v1
+
+    .line 33
+    const/4 v2, 0x1
 
     .line 34
-    move-result-object p0
-
-    .line 35
-    check-cast p0, Lcom/kousei/framework/k;
+    const v3, 0xfeff
 
     .line 37
-    if-nez p0, :cond_28
+    if-eq v1, v3, :cond_4d
 
     .line 39
-    sget-object p0, Lcom/kousei/framework/m4;->K:Lcom/kousei/framework/m4;
+    invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
-    .line 41
-    :cond_28
-    new-instance v0, Lcom/kousei/framework/k0;
+    .line 42
+    move-result v1
 
     .line 43
-    invoke-direct {v0, v1, p0}, Lcom/kousei/framework/k0;-><init>(Lcom/kousei/framework/v;Lcom/kousei/framework/k;)V
+    const v4, 0xfffe
 
     .line 46
-    return-object v0
+    if-ne v1, v4, :cond_30
 
-    .line 47
-    :cond_2e
-    const-string v0, "Unknown signature type requested: "
+    .line 48
+    goto :goto_4d
 
     .line 49
-    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    :cond_30
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     .line 52
-    move-result-object p0
+    move-result v1
 
     .line 53
-    invoke-static {p0}, Lcom/kousei/framework/f;->k(Ljava/lang/String;)V
+    const/4 v4, 0x3
+
+    .line 54
+    if-lt v1, v4, :cond_55
 
     .line 56
-    const/4 p0, 0x0
+    invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
-    .line 57
+    .line 59
+    move-result v0
+
+    .line 60
+    if-nez v0, :cond_55
+
+    .line 62
+    invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
+
+    .line 65
+    move-result v0
+
+    .line 66
+    if-ne v0, v3, :cond_55
+
+    .line 68
+    const/4 v0, 0x2
+
+    .line 69
+    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    .line 72
+    move-result-object p0
+
+    .line 73
+    invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    .line 76
+    move-result-object p0
+
+    .line 77
+    goto :goto_55
+
+    .line 78
+    :cond_4d
+    :goto_4d
+    invoke-virtual {p0, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    .line 81
+    move-result-object p0
+
+    .line 82
+    invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    .line 85
+    move-result-object p0
+
+    .line 86
+    :cond_55
+    :goto_55
+    sget-object v0, Lcom/kousei/framework/u5;->a:Ljava/util/regex/Pattern;
+
+    .line 88
+    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    .line 91
+    move-result-object v0
+
+    .line 92
+    const-wide v1, -0x73180692d36712b9L  # -1.714430546426776E-246
+
+    .line 97
+    invoke-static {v1, v2}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 100
+    move-result-object v1
+
+    .line 101
+    invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 104
+    move-result-object v0
+
+    .line 105
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 108
+    move-result p0
+
+    .line 109
+    if-eqz p0, :cond_17b
+
+    .line 111
+    sget-object p0, Lcom/kousei/framework/u5;->b:Ljava/util/regex/Pattern;
+
+    .line 113
+    invoke-virtual {p0, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    .line 116
+    move-result-object p0
+
+    .line 117
+    const-wide v0, -0x73180693d36712b9L
+
+    .line 122
+    invoke-static {v0, v1}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 125
+    move-result-object v0
+
+    .line 126
+    invoke-virtual {p0, v0}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 129
+    move-result-object p0
+
+    .line 130
+    if-eqz p0, :cond_c3
+
+    .line 132
+    invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
+
+    .line 135
+    move-result v0
+
+    .line 136
+    if-eqz v0, :cond_8a
+
+    .line 138
+    goto :goto_c3
+
+    .line 139
+    :cond_8a
+    sget-object v0, Lcom/kousei/framework/u5;->d:Ljava/util/regex/Pattern;
+
+    .line 141
+    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    .line 144
+    move-result-object p0
+
+    .line 145
+    const-wide v0, -0x73180650d36712b9L
+
+    .line 150
+    invoke-static {v0, v1}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 153
+    move-result-object v0
+
+    .line 154
+    invoke-virtual {p0, v0}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 157
+    move-result-object p0
+
+    .line 158
+    sget-object v0, Lcom/kousei/framework/u5;->e:Ljava/util/regex/Pattern;
+
+    .line 160
+    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    .line 163
+    move-result-object p0
+
+    .line 164
+    const-wide v0, -0x73180656d36712b9L  # -1.714496016809488E-246
+
+    .line 169
+    invoke-static {v0, v1}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 172
+    move-result-object v0
+
+    .line 173
+    invoke-virtual {p0, v0}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 176
+    move-result-object p0
+
+    .line 177
+    sget-object v0, Lcom/kousei/framework/u5;->f:Ljava/util/regex/Pattern;
+
+    .line 179
+    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    .line 182
+    move-result-object p0
+
+    .line 183
+    const-wide v0, -0x7318065cd36712b9L  # -1.714489469771217E-246
+
+    .line 188
+    invoke-static {v0, v1}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 191
+    move-result-object v0
+
+    .line 192
+    invoke-virtual {p0, v0}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 195
+    move-result-object p0
+
+    .line 196
+    :cond_c3
+    :goto_c3
+    invoke-static {p0}, Lcom/kousei/framework/u5;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 199
+    move-result-object p0
+
+    .line 200
+    if-eqz p0, :cond_11d
+
+    .line 202
+    invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
+
+    .line 205
+    move-result v0
+
+    .line 206
+    if-eqz v0, :cond_d0
+
+    .line 208
+    goto :goto_11d
+
+    .line 209
+    :cond_d0
+    invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
+
+    .line 212
+    move-result v0
+
+    .line 213
+    if-eqz v0, :cond_e0
+
+    .line 215
+    const-wide v0, -0x731806d3d36712b9L
+
+    .line 220
+    invoke-static {v0, v1}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 223
+    move-result-object p0
+
+    .line 224
+    goto :goto_f6
+
+    .line 225
+    :cond_e0
+    const-wide v0, -0x731806d4d36712b9L
+
+    .line 230
+    invoke-static {v0, v1}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 233
+    move-result-object v0
+
+    .line 234
+    const-wide v1, -0x731806d7d36712b9L  # -1.714355255486657E-246
+
+    .line 239
+    invoke-static {v1, v2}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 242
+    move-result-object v1
+
+    .line 243
+    invoke-virtual {p0, v0, v1}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    .line 246
+    move-result-object p0
+
+    .line 247
+    :goto_f6
+    sget-object v0, Lcom/kousei/framework/u5;->h:Ljava/util/regex/Pattern;
+
+    .line 249
+    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    .line 252
+    move-result-object p0
+
+    .line 253
+    const-wide v0, -0x73180663d36712b9L
+
+    .line 258
+    invoke-static {v0, v1}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 261
+    move-result-object v0
+
+    .line 262
+    invoke-virtual {p0, v0}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 265
+    move-result-object p0
+
+    .line 266
+    sget-object v0, Lcom/kousei/framework/u5;->g:Ljava/util/regex/Pattern;
+
+    .line 268
+    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    .line 271
+    move-result-object p0
+
+    .line 272
+    const-wide v0, -0x73180669d36712b9L
+
+    .line 277
+    invoke-static {v0, v1}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 280
+    move-result-object v0
+
+    .line 281
+    invoke-virtual {p0, v0}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 284
+    move-result-object p0
+
+    .line 285
+    goto :goto_126
+
+    .line 286
+    :cond_11d
+    :goto_11d
+    const-wide v0, -0x73180662d36712b9L
+
+    .line 291
+    invoke-static {v0, v1}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 294
+    move-result-object p0
+
+    .line 295
+    :goto_126
+    invoke-static {p0}, Lcom/kousei/framework/u5;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 298
+    move-result-object v0
+
+    .line 299
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+
+    .line 302
+    move-result p0
+
+    .line 303
+    if-eqz p0, :cond_13a
+
+    .line 305
+    const-wide v0, -0x731806dbd36712b9L  # -1.714350890794476E-246
+
+    .line 310
+    invoke-static {v0, v1}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 313
+    move-result-object p0
+
+    .line 314
     return-object p0
+
+    .line 315
+    :cond_13a
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    .line 318
+    move-result p0
+
+    .line 319
+    const/4 v1, 0x5
+
+    .line 320
+    if-lt p0, v1, :cond_155
+
+    .line 322
+    const-wide v1, -0x731806dcd36712b9L  # -1.714349799621431E-246
+
+    .line 327
+    invoke-static {v1, v2}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 330
+    move-result-object v3
+
+    .line 331
+    const/4 v4, 0x0
+
+    .line 332
+    const/4 v5, 0x5
+
+    .line 333
+    const/4 v1, 0x1
+
+    .line 334
+    const/4 v2, 0x0
+
+    .line 335
+    invoke-virtual/range {v0 .. v5}, Ljava/lang/String;->regionMatches(ZILjava/lang/String;II)Z
+
+    .line 338
+    move-result p0
+
+    .line 339
+    if-eqz p0, :cond_155
+
+    .line 341
+    goto :goto_17a
+
+    .line 342
+    :cond_155
+    const-wide v1, -0x731806e2d36712b9L
+
+    .line 347
+    invoke-static {v1, v2}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 350
+    move-result-object p0
+
+    .line 351
+    invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    .line 354
+    move-result-object v1
+
+    .line 355
+    invoke-virtual {p0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    .line 358
+    move-result-object p0
+
+    .line 359
+    invoke-virtual {v1, p0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    .line 362
+    move-result p0
+
+    .line 363
+    if-eqz p0, :cond_17a
+
+    .line 365
+    const-wide v1, -0x731806f7d36712b9L
+
+    .line 370
+    invoke-static {v1, v2}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
+
+    .line 373
+    move-result-object p0
+
+    .line 374
+    invoke-virtual {p0, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 377
+    move-result-object p0
+
+    .line 378
+    return-object p0
+
+    .line 379
+    :cond_17a
+    :goto_17a
+    return-object v0
+
+    .line 380
+    :cond_17b
+    move-object p0, v0
+
+    .line 381
+    goto/16 :goto_55
 .end method

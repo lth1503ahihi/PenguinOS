@@ -1,121 +1,67 @@
-.class public final Lcom/kousei/framework/ab;
+.class public abstract Lcom/kousei/framework/ab;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/util/Enumeration;
 
 
 # instance fields
-.field public a:Lcom/kousei/framework/p;
-
-.field public b:Lcom/kousei/framework/a0;
+.field public a:Lcom/kousei/framework/u3;
 
 
 # virtual methods
-.method public final a()Lcom/kousei/framework/a0;
-    .registers 4
-
-    .line 1
-    :try_start_0
-    iget-object p0, p0, Lcom/kousei/framework/ab;->a:Lcom/kousei/framework/p;
-
-    .line 3
-    invoke-virtual {p0}, Lcom/kousei/framework/p;->f()Lcom/kousei/framework/a0;
-
-    .line 6
-    move-result-object p0
-    :try_end_6
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_6} :catch_7
-
-    .line 7
-    return-object p0
-
-    .line 8
-    :catch_7
-    move-exception p0
-
-    .line 9
-    new-instance v0, Lcom/kousei/framework/z;
-
-    .line 11
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    .line 13
-    const-string v2, "malformed ASN.1: "
-
-    .line 15
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 18
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 21
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 24
-    move-result-object v1
-
-    .line 25
-    const/4 v2, 0x0
-
-    .line 26
-    invoke-direct {v0, v1, p0, v2}, Lcom/kousei/framework/z;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
-
-    .line 29
-    throw v0
+.method public abstract a()Lcom/kousei/framework/u3;
 .end method
 
-.method public final hasMoreElements()Z
-    .registers 1
+.method public final declared-synchronized b()Lcom/kousei/framework/u3;
+    .registers 2
 
     .line 1
-    iget-object p0, p0, Lcom/kousei/framework/ab;->b:Lcom/kousei/framework/a0;
+    monitor-enter p0
 
-    .line 3
-    if-eqz p0, :cond_6
+    .line 2
+    :try_start_1
+    iget-object v0, p0, Lcom/kousei/framework/ab;->a:Lcom/kousei/framework/u3;
 
-    .line 5
-    const/4 p0, 0x1
+    .line 4
+    if-nez v0, :cond_e
 
     .line 6
-    return p0
-
-    .line 7
-    :cond_6
-    const/4 p0, 0x0
-
-    .line 8
-    return p0
-.end method
-
-.method public final nextElement()Ljava/lang/Object;
-    .registers 3
-
-    .line 1
-    iget-object v0, p0, Lcom/kousei/framework/ab;->b:Lcom/kousei/framework/a0;
-
-    .line 3
-    if-eqz v0, :cond_b
-
-    .line 5
-    invoke-virtual {p0}, Lcom/kousei/framework/ab;->a()Lcom/kousei/framework/a0;
-
-    .line 8
-    move-result-object v1
+    invoke-virtual {p0}, Lcom/kousei/framework/ab;->a()Lcom/kousei/framework/u3;
 
     .line 9
-    iput-object v1, p0, Lcom/kousei/framework/ab;->b:Lcom/kousei/framework/a0;
+    move-result-object v0
 
-    .line 11
-    return-object v0
+    .line 10
+    iput-object v0, p0, Lcom/kousei/framework/ab;->a:Lcom/kousei/framework/u3;
 
     .line 12
-    :cond_b
-    new-instance p0, Ljava/util/NoSuchElementException;
+    goto :goto_e
+
+    .line 13
+    :catchall_c
+    move-exception v0
 
     .line 14
-    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
+    goto :goto_12
+
+    .line 15
+    :cond_e
+    :goto_e
+    iget-object v0, p0, Lcom/kousei/framework/ab;->a:Lcom/kousei/framework/u3;
+    :try_end_10
+    .catchall {:try_start_1 .. :try_end_10} :catchall_c
 
     .line 17
-    throw p0
+    monitor-exit p0
+
+    .line 18
+    return-object v0
+
+    .line 19
+    :goto_12
+    :try_start_12
+    monitor-exit p0
+    :try_end_13
+    .catchall {:try_start_12 .. :try_end_13} :catchall_c
+
+    .line 20
+    throw v0
 .end method

@@ -1,172 +1,107 @@
 .class public final Lcom/kousei/framework/e1;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Ljava/security/PrivateKey;
-.implements Ljava/security/Key;
-
 
 # instance fields
-.field public transient K:Lcom/kousei/framework/wb;
+.field public final a:Ljava/util/WeakHashMap;
 
-.field public transient L:Lcom/kousei/framework/e0;
+.field public final b:[Ljava/math/BigInteger;
+
+.field public c:I
 
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .registers 3
-
-    .line 1
-    if-ne p1, p0, :cond_4
-
-    .line 3
-    const/4 p0, 0x1
-
-    .line 4
-    return p0
-
-    .line 5
-    :cond_4
-    instance-of v0, p1, Lcom/kousei/framework/e1;
-
-    .line 7
-    if-eqz v0, :cond_1f
-
-    .line 9
-    check-cast p1, Lcom/kousei/framework/e1;
-
-    .line 11
-    iget-object p0, p0, Lcom/kousei/framework/e1;->K:Lcom/kousei/framework/wb;
-
-    .line 13
-    iget-object p0, p0, Lcom/kousei/framework/wb;->M:[B
-
-    .line 15
-    invoke-static {p0}, Lcom/kousei/framework/i0;->J([B)[B
-
-    .line 18
-    move-result-object p0
-
-    .line 19
-    iget-object p1, p1, Lcom/kousei/framework/e1;->K:Lcom/kousei/framework/wb;
-
-    .line 21
-    iget-object p1, p1, Lcom/kousei/framework/wb;->M:[B
-
-    .line 23
-    invoke-static {p1}, Lcom/kousei/framework/i0;->J([B)[B
-
-    .line 26
-    move-result-object p1
-
-    .line 27
-    invoke-static {p0, p1}, Ljava/util/Arrays;->equals([B[B)Z
-
-    .line 30
-    move-result p0
-
-    .line 31
-    return p0
-
-    .line 32
-    :cond_1f
-    const/4 p0, 0x0
-
-    .line 33
-    return p0
-.end method
-
-.method public final getAlgorithm()Ljava/lang/String;
-    .registers 1
-
-    .line 1
-    iget-object p0, p0, Lcom/kousei/framework/e1;->K:Lcom/kousei/framework/wb;
-
-    .line 3
-    iget-object p0, p0, Lcom/kousei/framework/n2;->L:Ljava/lang/Object;
-
-    .line 5
-    check-cast p0, Lcom/kousei/framework/vb;
-
-    .line 7
-    iget-object p0, p0, Lcom/kousei/framework/vb;->a:Ljava/lang/String;
-
-    .line 9
-    invoke-static {p0}, Lcom/kousei/framework/wh;->e(Ljava/lang/String;)Ljava/lang/String;
-
-    .line 12
-    move-result-object p0
-
-    .line 13
-    return-object p0
-.end method
-
-.method public final getEncoded()[B
+# direct methods
+.method public constructor <init>()V
     .registers 2
 
     .line 1
-    :try_start_0
-    iget-object v0, p0, Lcom/kousei/framework/e1;->K:Lcom/kousei/framework/wb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    iget-object p0, p0, Lcom/kousei/framework/e1;->L:Lcom/kousei/framework/e0;
+    .line 4
+    new-instance v0, Ljava/util/WeakHashMap;
 
-    .line 5
-    invoke-static {v0, p0}, Lcom/kousei/framework/xc;->m(Lcom/kousei/framework/n0;Lcom/kousei/framework/e0;)Lcom/kousei/framework/kd;
-
-    .line 8
-    move-result-object p0
+    .line 6
+    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
 
     .line 9
-    invoke-virtual {p0}, Lcom/kousei/framework/s;->getEncoded()[B
+    iput-object v0, p0, Lcom/kousei/framework/e1;->a:Ljava/util/WeakHashMap;
 
-    .line 12
-    move-result-object p0
-    :try_end_c
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_c} :catch_d
+    .line 11
+    const/16 v0, 0x8
 
     .line 13
-    return-object p0
-
-    .line 14
-    :catch_d
-    const/4 p0, 0x0
+    new-array v0, v0, [Ljava/math/BigInteger;
 
     .line 15
-    return-object p0
+    iput-object v0, p0, Lcom/kousei/framework/e1;->b:[Ljava/math/BigInteger;
+
+    .line 17
+    const/4 v0, 0x0
+
+    .line 18
+    iput v0, p0, Lcom/kousei/framework/e1;->c:I
+
+    .line 20
+    return-void
 .end method
 
-.method public final getFormat()Ljava/lang/String;
-    .registers 1
+
+# virtual methods
+.method public final declared-synchronized a(Ljava/math/BigInteger;)V
+    .registers 4
 
     .line 1
-    const-string p0, "PKCS#8"
+    monitor-enter p0
 
-    .line 3
-    return-object p0
-.end method
+    .line 2
+    :try_start_1
+    iget-object v0, p0, Lcom/kousei/framework/e1;->a:Ljava/util/WeakHashMap;
 
-.method public final hashCode()I
-    .registers 1
+    .line 4
+    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    .line 1
-    iget-object p0, p0, Lcom/kousei/framework/e1;->K:Lcom/kousei/framework/wb;
-
-    .line 3
-    iget-object p0, p0, Lcom/kousei/framework/wb;->M:[B
-
-    .line 5
-    invoke-static {p0}, Lcom/kousei/framework/i0;->J([B)[B
-
-    .line 8
-    move-result-object p0
+    .line 6
+    invoke-virtual {v0, p1, v1}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 9
-    invoke-static {p0}, Lcom/kousei/framework/i0;->g1([B)I
+    iget-object v0, p0, Lcom/kousei/framework/e1;->b:[Ljava/math/BigInteger;
 
-    .line 12
-    move-result p0
+    .line 11
+    iget v1, p0, Lcom/kousei/framework/e1;->c:I
 
     .line 13
-    return p0
+    aput-object p1, v0, v1
+
+    .line 15
+    add-int/lit8 v1, v1, 0x1
+
+    .line 17
+    array-length p1, v0
+
+    .line 18
+    rem-int/2addr v1, p1
+
+    .line 19
+    iput v1, p0, Lcom/kousei/framework/e1;->c:I
+    :try_end_14
+    .catchall {:try_start_1 .. :try_end_14} :catchall_16
+
+    .line 21
+    monitor-exit p0
+
+    .line 22
+    return-void
+
+    .line 23
+    :catchall_16
+    move-exception p1
+
+    .line 24
+    :try_start_17
+    monitor-exit p0
+    :try_end_18
+    .catchall {:try_start_17 .. :try_end_18} :catchall_16
+
+    .line 25
+    throw p1
 .end method

@@ -1,520 +1,583 @@
-.class public final Lcom/kousei/framework/c8;
+.class public interface abstract Lcom/kousei/framework/c8;
 .super Ljava/lang/Object;
 
 
 # static fields
-.field public static final c:Ljava/util/Set;
+.field public static final A:Lcom/kousei/framework/u;
 
+.field public static final B:Lcom/kousei/framework/u;
 
-# instance fields
-.field public final a:Ljava/util/Hashtable;
+.field public static final C:Lcom/kousei/framework/u;
 
-.field public final b:Ljava/util/Vector;
+.field public static final D:Lcom/kousei/framework/u;
+
+.field public static final E:Lcom/kousei/framework/u;
+
+.field public static final F:Lcom/kousei/framework/u;
+
+.field public static final G:Lcom/kousei/framework/u;
+
+.field public static final a:Lcom/kousei/framework/u;
+
+.field public static final b:Lcom/kousei/framework/u;
+
+.field public static final c:Lcom/kousei/framework/u;
+
+.field public static final d:Lcom/kousei/framework/u;
+
+.field public static final e:Lcom/kousei/framework/u;
+
+.field public static final f:Lcom/kousei/framework/u;
+
+.field public static final g:Lcom/kousei/framework/u;
+
+.field public static final h:Lcom/kousei/framework/u;
+
+.field public static final i:Lcom/kousei/framework/u;
+
+.field public static final j:Lcom/kousei/framework/u;
+
+.field public static final k:Lcom/kousei/framework/u;
+
+.field public static final l:Lcom/kousei/framework/u;
+
+.field public static final m:Lcom/kousei/framework/u;
+
+.field public static final n:Lcom/kousei/framework/u;
+
+.field public static final o:Lcom/kousei/framework/u;
+
+.field public static final p:Lcom/kousei/framework/u;
+
+.field public static final q:Lcom/kousei/framework/u;
+
+.field public static final r:Lcom/kousei/framework/u;
+
+.field public static final s:Lcom/kousei/framework/u;
+
+.field public static final t:Lcom/kousei/framework/u;
+
+.field public static final u:Lcom/kousei/framework/u;
+
+.field public static final v:Lcom/kousei/framework/u;
+
+.field public static final w:Lcom/kousei/framework/u;
+
+.field public static final x:Lcom/kousei/framework/u;
+
+.field public static final y:Lcom/kousei/framework/u;
+
+.field public static final z:Lcom/kousei/framework/u;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .registers 2
+    .registers 15
 
     .line 1
-    new-instance v0, Ljava/util/HashSet;
+    new-instance v0, Lcom/kousei/framework/u;
 
     .line 3
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    .line 6
-    sget-object v1, Lcom/kousei/framework/a8;->P:Lcom/kousei/framework/v;
-
-    .line 8
-    invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    .line 11
-    sget-object v1, Lcom/kousei/framework/a8;->Q:Lcom/kousei/framework/v;
-
-    .line 13
-    invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    .line 16
-    sget-object v1, Lcom/kousei/framework/a8;->N:Lcom/kousei/framework/v;
-
-    .line 18
-    invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    .line 21
-    sget-object v1, Lcom/kousei/framework/a8;->R:Lcom/kousei/framework/v;
-
-    .line 23
-    invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    .line 26
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    .line 29
-    move-result-object v0
-
-    .line 30
-    sput-object v0, Lcom/kousei/framework/c8;->c:Ljava/util/Set;
-
-    .line 32
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .registers 2
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 4
-    new-instance v0, Ljava/util/Hashtable;
-
-    .line 6
-    invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
-
-    .line 9
-    iput-object v0, p0, Lcom/kousei/framework/c8;->a:Ljava/util/Hashtable;
-
-    .line 11
-    new-instance v0, Ljava/util/Vector;
-
-    .line 13
-    invoke-direct {v0}, Ljava/util/Vector;-><init>()V
-
-    .line 16
-    iput-object v0, p0, Lcom/kousei/framework/c8;->b:Ljava/util/Vector;
-
-    .line 18
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lcom/kousei/framework/v;Lcom/kousei/framework/ha;)V
-    .registers 8
-
-    .line 1
-    iget-object v0, p0, Lcom/kousei/framework/c8;->a:Ljava/util/Hashtable;
-
-    .line 3
-    invoke-virtual {v0, p1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 6
-    move-result-object v1
-
-    .line 7
-    check-cast v1, Lcom/kousei/framework/a8;
-
-    .line 9
-    const/4 v2, 0x1
-
-    .line 10
-    if-eqz v1, :cond_8b
-
-    .line 12
-    iget-object p0, p2, Lcom/kousei/framework/ha;->K:Lcom/kousei/framework/g4;
-
-    .line 14
-    invoke-virtual {p0}, Lcom/kousei/framework/s;->g()[B
-
-    .line 17
-    move-result-object p0
-
-    .line 18
-    iget-object p1, v1, Lcom/kousei/framework/a8;->K:Lcom/kousei/framework/v;
-
-    .line 20
-    sget-object p2, Lcom/kousei/framework/c8;->c:Ljava/util/Set;
-
-    .line 22
-    invoke-interface {p2, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    .line 25
-    move-result p2
-
-    .line 26
-    if-eqz p2, :cond_83
-
-    .line 28
-    iget-object p2, v1, Lcom/kousei/framework/a8;->M:Lcom/kousei/framework/w;
-
-    .line 30
-    invoke-static {p2}, Lcom/kousei/framework/w;->q(Ljava/lang/Object;)Lcom/kousei/framework/w;
-
-    .line 33
-    move-result-object p2
-
-    .line 34
-    iget-object p2, p2, Lcom/kousei/framework/w;->K:[B
-
-    .line 36
-    invoke-static {p2}, Lcom/kousei/framework/d0;->s(Ljava/lang/Object;)Lcom/kousei/framework/d0;
-
-    .line 39
-    move-result-object p2
-
-    .line 40
-    invoke-static {p0}, Lcom/kousei/framework/d0;->s(Ljava/lang/Object;)Lcom/kousei/framework/d0;
-
-    .line 43
-    move-result-object p0
-
-    .line 44
-    new-instance v1, Lcom/kousei/framework/l;
-
-    .line 46
-    invoke-virtual {p2}, Lcom/kousei/framework/d0;->size()I
-
-    .line 49
-    move-result v3
-
-    .line 50
-    invoke-virtual {p0}, Lcom/kousei/framework/d0;->size()I
-
-    .line 53
-    move-result v4
-
-    .line 54
-    add-int/2addr v4, v3
-
-    .line 55
-    invoke-direct {v1, v4}, Lcom/kousei/framework/l;-><init>(I)V
-
-    .line 58
-    invoke-virtual {p2}, Lcom/kousei/framework/d0;->u()Ljava/util/Enumeration;
-
-    .line 61
-    move-result-object p2
-
-    .line 62
-    :goto_3d
-    invoke-interface {p2}, Ljava/util/Enumeration;->hasMoreElements()Z
-
-    .line 65
-    move-result v3
-
-    .line 66
-    if-eqz v3, :cond_4d
-
-    .line 68
-    invoke-interface {p2}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
-
-    .line 71
-    move-result-object v3
-
-    .line 72
-    check-cast v3, Lcom/kousei/framework/k;
-
-    .line 74
-    invoke-virtual {v1, v3}, Lcom/kousei/framework/l;->a(Lcom/kousei/framework/k;)V
-
-    .line 77
-    goto :goto_3d
-
-    .line 78
-    :cond_4d
-    invoke-virtual {p0}, Lcom/kousei/framework/d0;->u()Ljava/util/Enumeration;
-
-    .line 81
-    move-result-object p0
-
-    .line 82
-    :goto_51
-    invoke-interface {p0}, Ljava/util/Enumeration;->hasMoreElements()Z
-
-    .line 85
-    move-result p2
-
-    .line 86
-    if-eqz p2, :cond_61
-
-    .line 88
-    invoke-interface {p0}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
-
-    .line 91
-    move-result-object p2
-
-    .line 92
-    check-cast p2, Lcom/kousei/framework/k;
-
-    .line 94
-    invoke-virtual {v1, p2}, Lcom/kousei/framework/l;->a(Lcom/kousei/framework/k;)V
-
-    .line 97
-    goto :goto_51
-
-    .line 98
-    :cond_61
-    const/4 p0, 0x0
-
-    .line 99
-    :try_start_62
-    new-instance p2, Lcom/kousei/framework/a8;
-
-    .line 101
-    new-instance v3, Lcom/kousei/framework/o4;
-
-    .line 103
-    new-instance v4, Lcom/kousei/framework/r4;
-
-    .line 105
-    invoke-direct {v4, v1, p0}, Lcom/kousei/framework/r4;-><init>(Lcom/kousei/framework/l;Z)V
-
-    .line 108
-    const/4 v1, -0x1
-
-    .line 109
-    iput v1, v4, Lcom/kousei/framework/r4;->N:I
-
-    .line 111
-    invoke-direct {v3, v4}, Lcom/kousei/framework/o4;-><init>(Lcom/kousei/framework/s;)V
-
-    .line 114
-    invoke-direct {p2, p1, v2, v3}, Lcom/kousei/framework/a8;-><init>(Lcom/kousei/framework/v;ZLcom/kousei/framework/o4;)V
-
-    .line 117
-    invoke-virtual {v0, p1, p2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_77
-    .catch Ljava/io/IOException; {:try_start_62 .. :try_end_77} :catch_78
-
-    .line 120
-    return-void
-
-    .line 121
-    :catch_78
-    move-exception p1
-
-    .line 122
-    new-instance p2, Lcom/kousei/framework/z;
-
-    .line 124
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    .line 127
-    move-result-object v0
-
-    .line 128
-    invoke-direct {p2, v0, p1, p0}, Lcom/kousei/framework/z;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
-
-    .line 131
-    throw p2
-
-    .line 132
-    :cond_83
-    const-string p0, "extension "
-
-    .line 134
-    const-string p2, " already added"
-
-    .line 136
-    invoke-static {p0, p1, p2}, Lcom/kousei/framework/f;->h(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 139
-    return-void
-
-    .line 140
-    :cond_8b
-    new-instance v1, Lcom/kousei/framework/a8;
-
-    .line 142
-    new-instance v3, Lcom/kousei/framework/o4;
-
-    .line 144
-    invoke-direct {v3, p2}, Lcom/kousei/framework/o4;-><init>(Lcom/kousei/framework/s;)V
-
-    .line 147
-    invoke-direct {v1, p1, v2, v3}, Lcom/kousei/framework/a8;-><init>(Lcom/kousei/framework/v;ZLcom/kousei/framework/o4;)V
-
-    .line 150
-    iget-object p0, p0, Lcom/kousei/framework/c8;->b:Ljava/util/Vector;
-
-    .line 152
-    invoke-virtual {p0, p1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
-
-    .line 155
-    invoke-virtual {v0, p1, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 158
-    return-void
-.end method
-
-.method public final b(Lcom/kousei/framework/a8;)V
-    .registers 5
-
-    .line 1
-    iget-object v0, p1, Lcom/kousei/framework/a8;->K:Lcom/kousei/framework/v;
-
-    .line 3
-    iget-object v1, p1, Lcom/kousei/framework/a8;->K:Lcom/kousei/framework/v;
+    const-string v1, "1.3.132"
 
     .line 5
-    iget-object v2, p0, Lcom/kousei/framework/c8;->a:Ljava/util/Hashtable;
+    invoke-direct {v0, v1}, Lcom/kousei/framework/u;-><init>(Ljava/lang/String;)V
 
-    .line 7
-    invoke-virtual {v2, v0}, Ljava/util/Hashtable;->containsKey(Ljava/lang/Object;)Z
+    .line 8
+    const-string v1, "0"
 
     .line 10
-    move-result v0
-
-    .line 11
-    if-nez v0, :cond_15
+    invoke-virtual {v0, v1}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
 
     .line 13
-    iget-object p0, p0, Lcom/kousei/framework/c8;->b:Ljava/util/Vector;
-
-    .line 15
-    invoke-virtual {p0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
-
-    .line 18
-    invoke-virtual {v2, v1, p1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 21
-    return-void
-
-    .line 22
-    :cond_15
-    const-string p0, "extension "
-
-    .line 24
-    const-string p1, " already added"
-
-    .line 26
-    invoke-static {p0, v1, p1}, Lcom/kousei/framework/f;->h(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 29
-    return-void
-.end method
-
-.method public final c()Lcom/kousei/framework/b8;
-    .registers 8
-
-    .line 1
-    iget-object v0, p0, Lcom/kousei/framework/c8;->b:Ljava/util/Vector;
-
-    .line 3
-    invoke-virtual {v0}, Ljava/util/Vector;->size()I
-
-    .line 6
-    move-result v1
-
-    .line 7
-    new-array v2, v1, [Lcom/kousei/framework/a8;
-
-    .line 9
-    const/4 v3, 0x0
-
-    .line 10
-    move v4, v3
-
-    .line 11
-    :goto_a
-    invoke-virtual {v0}, Ljava/util/Vector;->size()I
+    move-result-object v2
 
     .line 14
-    move-result v5
+    const-string v3, "1"
 
-    .line 15
-    if-eq v4, v5, :cond_21
-
-    .line 17
-    iget-object v5, p0, Lcom/kousei/framework/c8;->a:Ljava/util/Hashtable;
+    .line 16
+    invoke-virtual {v2, v3}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
 
     .line 19
-    invoke-virtual {v0, v4}, Ljava/util/Vector;->elementAt(I)Ljava/lang/Object;
+    move-result-object v4
+
+    .line 20
+    sput-object v4, Lcom/kousei/framework/c8;->a:Lcom/kousei/framework/u;
 
     .line 22
-    move-result-object v6
+    const-string v4, "2"
 
-    .line 23
-    invoke-virtual {v5, v6}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 26
-    move-result-object v5
+    .line 24
+    invoke-virtual {v2, v4}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
 
     .line 27
-    check-cast v5, Lcom/kousei/framework/a8;
+    move-result-object v5
 
-    .line 29
-    aput-object v5, v2, v4
+    .line 28
+    sput-object v5, Lcom/kousei/framework/c8;->b:Lcom/kousei/framework/u;
 
-    .line 31
-    add-int/lit8 v4, v4, 0x1
+    .line 30
+    const-string v5, "3"
 
-    .line 33
-    goto :goto_a
+    .line 32
+    invoke-virtual {v2, v5}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
 
-    .line 34
-    :cond_21
-    new-instance p0, Lcom/kousei/framework/b8;
+    .line 35
+    move-result-object v6
 
     .line 36
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v6, Lcom/kousei/framework/c8;->c:Lcom/kousei/framework/u;
 
-    .line 39
-    new-instance v0, Ljava/util/Hashtable;
+    .line 38
+    const-string v6, "4"
 
-    .line 41
-    invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
+    .line 40
+    invoke-virtual {v2, v6}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 43
+    move-result-object v7
 
     .line 44
-    iput-object v0, p0, Lcom/kousei/framework/b8;->K:Ljava/util/Hashtable;
+    sput-object v7, Lcom/kousei/framework/c8;->d:Lcom/kousei/framework/u;
 
     .line 46
-    new-instance v0, Ljava/util/Vector;
+    const-string v7, "5"
 
     .line 48
-    invoke-direct {v0}, Ljava/util/Vector;-><init>()V
+    invoke-virtual {v2, v7}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
 
     .line 51
-    iput-object v0, p0, Lcom/kousei/framework/b8;->L:Ljava/util/Vector;
+    move-result-object v8
 
-    .line 53
-    if-eqz v1, :cond_4c
+    .line 52
+    sput-object v8, Lcom/kousei/framework/c8;->e:Lcom/kousei/framework/u;
 
-    .line 55
-    :goto_36
-    if-eq v3, v1, :cond_4b
+    .line 54
+    const-string v8, "6"
 
-    .line 57
-    aget-object v0, v2, v3
+    .line 56
+    invoke-virtual {v2, v8}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
 
     .line 59
-    iget-object v4, p0, Lcom/kousei/framework/b8;->L:Ljava/util/Vector;
+    move-result-object v9
 
-    .line 61
-    iget-object v5, v0, Lcom/kousei/framework/a8;->K:Lcom/kousei/framework/v;
+    .line 60
+    sput-object v9, Lcom/kousei/framework/c8;->f:Lcom/kousei/framework/u;
 
-    .line 63
-    invoke-virtual {v4, v5}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
+    .line 62
+    const-string v9, "7"
 
-    .line 66
-    iget-object v4, p0, Lcom/kousei/framework/b8;->K:Ljava/util/Hashtable;
+    .line 64
+    invoke-virtual {v2, v9}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 67
+    move-result-object v10
 
     .line 68
-    iget-object v5, v0, Lcom/kousei/framework/a8;->K:Lcom/kousei/framework/v;
+    sput-object v10, Lcom/kousei/framework/c8;->g:Lcom/kousei/framework/u;
 
     .line 70
-    invoke-virtual {v4, v5, v0}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v10, "8"
 
-    .line 73
-    add-int/lit8 v3, v3, 0x1
+    .line 72
+    invoke-virtual {v2, v10}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
 
     .line 75
-    goto :goto_36
+    move-result-object v11
 
     .line 76
-    :cond_4b
-    return-object p0
+    sput-object v11, Lcom/kousei/framework/c8;->h:Lcom/kousei/framework/u;
 
-    .line 77
-    :cond_4c
-    const-string p0, "extension array cannot be null or empty"
+    .line 78
+    const-string v11, "9"
 
-    .line 79
-    invoke-static {p0}, Lcom/kousei/framework/f;->k(Ljava/lang/String;)V
-
-    .line 82
-    const/4 p0, 0x0
+    .line 80
+    invoke-virtual {v2, v11}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
 
     .line 83
-    return-object p0
+    move-result-object v11
+
+    .line 84
+    sput-object v11, Lcom/kousei/framework/c8;->i:Lcom/kousei/framework/u;
+
+    .line 86
+    const-string v11, "10"
+
+    .line 88
+    invoke-virtual {v2, v11}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 91
+    move-result-object v11
+
+    .line 92
+    sput-object v11, Lcom/kousei/framework/c8;->j:Lcom/kousei/framework/u;
+
+    .line 94
+    const-string v11, "15"
+
+    .line 96
+    invoke-virtual {v2, v11}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 99
+    move-result-object v12
+
+    .line 100
+    sput-object v12, Lcom/kousei/framework/c8;->k:Lcom/kousei/framework/u;
+
+    .line 102
+    const-string v12, "16"
+
+    .line 104
+    invoke-virtual {v2, v12}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 107
+    move-result-object v13
+
+    .line 108
+    sput-object v13, Lcom/kousei/framework/c8;->l:Lcom/kousei/framework/u;
+
+    .line 110
+    const-string v13, "17"
+
+    .line 112
+    invoke-virtual {v2, v13}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 115
+    move-result-object v14
+
+    .line 116
+    sput-object v14, Lcom/kousei/framework/c8;->m:Lcom/kousei/framework/u;
+
+    .line 118
+    const-string v14, "22"
+
+    .line 120
+    invoke-virtual {v2, v14}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 123
+    move-result-object v14
+
+    .line 124
+    sput-object v14, Lcom/kousei/framework/c8;->n:Lcom/kousei/framework/u;
+
+    .line 126
+    const-string v14, "23"
+
+    .line 128
+    invoke-virtual {v2, v14}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 131
+    move-result-object v14
+
+    .line 132
+    sput-object v14, Lcom/kousei/framework/c8;->o:Lcom/kousei/framework/u;
+
+    .line 134
+    const-string v14, "24"
+
+    .line 136
+    invoke-virtual {v2, v14}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 139
+    move-result-object v14
+
+    .line 140
+    sput-object v14, Lcom/kousei/framework/c8;->p:Lcom/kousei/framework/u;
+
+    .line 142
+    const-string v14, "25"
+
+    .line 144
+    invoke-virtual {v2, v14}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 147
+    move-result-object v14
+
+    .line 148
+    sput-object v14, Lcom/kousei/framework/c8;->q:Lcom/kousei/framework/u;
+
+    .line 150
+    const-string v14, "26"
+
+    .line 152
+    invoke-virtual {v2, v14}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 155
+    move-result-object v14
+
+    .line 156
+    sput-object v14, Lcom/kousei/framework/c8;->r:Lcom/kousei/framework/u;
+
+    .line 158
+    const-string v14, "27"
+
+    .line 160
+    invoke-virtual {v2, v14}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 163
+    move-result-object v14
+
+    .line 164
+    sput-object v14, Lcom/kousei/framework/c8;->s:Lcom/kousei/framework/u;
+
+    .line 166
+    const-string v14, "28"
+
+    .line 168
+    invoke-virtual {v2, v14}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 171
+    move-result-object v14
+
+    .line 172
+    sput-object v14, Lcom/kousei/framework/c8;->t:Lcom/kousei/framework/u;
+
+    .line 174
+    const-string v14, "29"
+
+    .line 176
+    invoke-virtual {v2, v14}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 179
+    move-result-object v14
+
+    .line 180
+    sput-object v14, Lcom/kousei/framework/c8;->u:Lcom/kousei/framework/u;
+
+    .line 182
+    const-string v14, "30"
+
+    .line 184
+    invoke-virtual {v2, v14}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 187
+    move-result-object v14
+
+    .line 188
+    sput-object v14, Lcom/kousei/framework/c8;->v:Lcom/kousei/framework/u;
+
+    .line 190
+    const-string v14, "31"
+
+    .line 192
+    invoke-virtual {v2, v14}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 195
+    move-result-object v14
+
+    .line 196
+    sput-object v14, Lcom/kousei/framework/c8;->w:Lcom/kousei/framework/u;
+
+    .line 198
+    const-string v14, "32"
+
+    .line 200
+    invoke-virtual {v2, v14}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 203
+    move-result-object v14
+
+    .line 204
+    sput-object v14, Lcom/kousei/framework/c8;->x:Lcom/kousei/framework/u;
+
+    .line 206
+    const-string v14, "33"
+
+    .line 208
+    invoke-virtual {v2, v14}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 211
+    move-result-object v14
+
+    .line 212
+    sput-object v14, Lcom/kousei/framework/c8;->y:Lcom/kousei/framework/u;
+
+    .line 214
+    const-string v14, "34"
+
+    .line 216
+    invoke-virtual {v2, v14}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 219
+    move-result-object v14
+
+    .line 220
+    sput-object v14, Lcom/kousei/framework/c8;->z:Lcom/kousei/framework/u;
+
+    .line 222
+    const-string v14, "35"
+
+    .line 224
+    invoke-virtual {v2, v14}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 227
+    move-result-object v14
+
+    .line 228
+    sput-object v14, Lcom/kousei/framework/c8;->A:Lcom/kousei/framework/u;
+
+    .line 230
+    const-string v14, "36"
+
+    .line 232
+    invoke-virtual {v2, v14}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 235
+    move-result-object v14
+
+    .line 236
+    sput-object v14, Lcom/kousei/framework/c8;->B:Lcom/kousei/framework/u;
+
+    .line 238
+    const-string v14, "37"
+
+    .line 240
+    invoke-virtual {v2, v14}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 243
+    move-result-object v14
+
+    .line 244
+    sput-object v14, Lcom/kousei/framework/c8;->C:Lcom/kousei/framework/u;
+
+    .line 246
+    const-string v14, "38"
+
+    .line 248
+    invoke-virtual {v2, v14}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 251
+    move-result-object v14
+
+    .line 252
+    sput-object v14, Lcom/kousei/framework/c8;->D:Lcom/kousei/framework/u;
+
+    .line 254
+    const-string v14, "39"
+
+    .line 256
+    invoke-virtual {v2, v14}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 259
+    move-result-object v2
+
+    .line 260
+    sput-object v2, Lcom/kousei/framework/c8;->E:Lcom/kousei/framework/u;
+
+    .line 262
+    sget-object v2, Lcom/kousei/framework/bb;->v:Lcom/kousei/framework/u;
+
+    .line 264
+    sput-object v2, Lcom/kousei/framework/c8;->F:Lcom/kousei/framework/u;
+
+    .line 266
+    sget-object v2, Lcom/kousei/framework/bb;->B:Lcom/kousei/framework/u;
+
+    .line 268
+    sput-object v2, Lcom/kousei/framework/c8;->G:Lcom/kousei/framework/u;
+
+    .line 270
+    invoke-static {v0, v3, v3, v4, v5}, Lcom/kousei/framework/p0;->b(Lcom/kousei/framework/u;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 273
+    move-result-object v0
+
+    .line 274
+    invoke-static {v0, v6, v7, v8, v9}, Lcom/kousei/framework/p0;->e(Lcom/kousei/framework/u;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 277
+    invoke-virtual {v0, v10}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 280
+    const-string v2, "11"
+
+    .line 282
+    invoke-virtual {v0, v2}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 285
+    move-result-object v2
+
+    .line 286
+    invoke-virtual {v2, v1}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 289
+    invoke-virtual {v2, v3}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 292
+    invoke-virtual {v2, v4}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 295
+    invoke-virtual {v2, v5}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 298
+    const-string v2, "12"
+
+    .line 300
+    invoke-virtual {v0, v2}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 303
+    const-string v2, "13"
+
+    .line 305
+    invoke-virtual {v0, v2}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 308
+    const-string v2, "14"
+
+    .line 310
+    invoke-virtual {v0, v2}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 313
+    move-result-object v2
+
+    .line 314
+    invoke-virtual {v2, v1}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 317
+    invoke-virtual {v2, v3}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 320
+    invoke-virtual {v2, v4}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 323
+    invoke-virtual {v2, v5}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 326
+    invoke-virtual {v0, v11}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 329
+    move-result-object v2
+
+    .line 330
+    invoke-static {v2, v1, v3, v4, v5}, Lcom/kousei/framework/p0;->e(Lcom/kousei/framework/u;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 333
+    invoke-static {v0, v12, v1, v3, v4}, Lcom/kousei/framework/p0;->b(Lcom/kousei/framework/u;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 336
+    move-result-object v2
+
+    .line 337
+    invoke-virtual {v2, v5}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 340
+    invoke-virtual {v0, v13}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 343
+    move-result-object v0
+
+    .line 344
+    invoke-virtual {v0, v1}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 347
+    invoke-virtual {v0, v3}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 350
+    invoke-virtual {v0, v4}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 353
+    invoke-virtual {v0, v5}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 356
+    return-void
 .end method

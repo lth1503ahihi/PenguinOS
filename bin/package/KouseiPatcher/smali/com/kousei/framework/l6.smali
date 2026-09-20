@@ -3,15 +3,11 @@
 
 
 # static fields
-.field public static final a:Ljava/math/BigInteger;
+.field public static final a:Lcom/kousei/framework/u;
 
-.field public static final b:Ljava/math/BigInteger;
+.field public static final b:Lcom/kousei/framework/u;
 
-.field public static final c:Ljava/math/BigInteger;
-
-.field public static final d:Ljava/math/BigInteger;
-
-.field public static final e:Ljava/math/BigInteger;
+.field public static final c:Lcom/kousei/framework/u;
 
 
 # direct methods
@@ -19,71 +15,68 @@
     .registers 2
 
     .line 1
-    const-wide/16 v0, 0x0
+    new-instance v0, Lcom/kousei/framework/u;
 
     .line 3
-    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+    const-string v1, "1.2.392.200011.61.1.1.1.2"
 
-    .line 6
-    move-result-object v0
+    .line 5
+    invoke-direct {v0, v1}, Lcom/kousei/framework/u;-><init>(Ljava/lang/String;)V
 
-    .line 7
-    sput-object v0, Lcom/kousei/framework/l6;->a:Ljava/math/BigInteger;
+    .line 8
+    new-instance v0, Lcom/kousei/framework/u;
 
-    .line 9
-    const-wide/16 v0, 0x1
+    .line 10
+    const-string v1, "1.2.392.200011.61.1.1.1.3"
 
-    .line 11
-    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
-
-    .line 14
-    move-result-object v0
+    .line 12
+    invoke-direct {v0, v1}, Lcom/kousei/framework/u;-><init>(Ljava/lang/String;)V
 
     .line 15
-    sput-object v0, Lcom/kousei/framework/l6;->b:Ljava/math/BigInteger;
+    new-instance v0, Lcom/kousei/framework/u;
 
     .line 17
-    const-wide/16 v0, 0x2
+    const-string v1, "1.2.392.200011.61.1.1.1.4"
 
     .line 19
-    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+    invoke-direct {v0, v1}, Lcom/kousei/framework/u;-><init>(Ljava/lang/String;)V
 
     .line 22
-    move-result-object v0
+    new-instance v0, Lcom/kousei/framework/u;
 
-    .line 23
-    sput-object v0, Lcom/kousei/framework/l6;->c:Ljava/math/BigInteger;
+    .line 24
+    const-string v1, "1.2.392.200011.61.1.1.3.2"
 
-    .line 25
-    const-wide/16 v0, 0x3
+    .line 26
+    invoke-direct {v0, v1}, Lcom/kousei/framework/u;-><init>(Ljava/lang/String;)V
 
-    .line 27
-    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
-
-    .line 30
-    move-result-object v0
+    .line 29
+    sput-object v0, Lcom/kousei/framework/l6;->a:Lcom/kousei/framework/u;
 
     .line 31
-    sput-object v0, Lcom/kousei/framework/l6;->d:Ljava/math/BigInteger;
+    new-instance v0, Lcom/kousei/framework/u;
 
     .line 33
-    const-wide/16 v0, 0x4
+    const-string v1, "1.2.392.200011.61.1.1.3.3"
 
     .line 35
-    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+    invoke-direct {v0, v1}, Lcom/kousei/framework/u;-><init>(Ljava/lang/String;)V
 
     .line 38
-    move-result-object v0
+    sput-object v0, Lcom/kousei/framework/l6;->b:Lcom/kousei/framework/u;
 
-    .line 39
-    sput-object v0, Lcom/kousei/framework/l6;->e:Ljava/math/BigInteger;
+    .line 40
+    new-instance v0, Lcom/kousei/framework/u;
 
-    .line 41
-    const-wide/16 v0, 0x8
+    .line 42
+    const-string v1, "1.2.392.200011.61.1.1.3.4"
 
-    .line 43
-    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+    .line 44
+    invoke-direct {v0, v1}, Lcom/kousei/framework/u;-><init>(Ljava/lang/String;)V
 
-    .line 46
+    .line 47
+    sput-object v0, Lcom/kousei/framework/l6;->c:Lcom/kousei/framework/u;
+
+    .line 49
     return-void
 .end method

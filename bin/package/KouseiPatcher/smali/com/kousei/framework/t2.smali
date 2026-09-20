@@ -1,345 +1,462 @@
-.class public abstract Lcom/kousei/framework/t2;
-.super Ljava/security/KeyFactorySpi;
+.class public final Lcom/kousei/framework/t2;
+.super Lcom/kousei/framework/z;
 
 # interfaces
-.implements Lcom/kousei/framework/m0;
+.implements Lcom/kousei/framework/f0;
 
 
 # instance fields
-.field public final a:Ljava/util/Set;
-
-.field public final b:Lcom/kousei/framework/v;
+.field public final a:[B
 
 
 # direct methods
-.method public constructor <init>(Lcom/kousei/framework/v;)V
-    .registers 2
+.method static constructor <clinit>()V
+    .registers 3
 
     .line 1
-    invoke-direct {p0}, Ljava/security/KeyFactorySpi;-><init>()V
+    new-instance v0, Lcom/kousei/framework/d;
 
-    .line 4
-    iput-object p1, p0, Lcom/kousei/framework/t2;->b:Lcom/kousei/framework/v;
+    .line 3
+    const-class v1, Lcom/kousei/framework/t2;
 
-    .line 6
-    const/4 p1, 0x0
+    .line 5
+    const/16 v2, 0x15
 
     .line 7
-    iput-object p1, p0, Lcom/kousei/framework/t2;->a:Ljava/util/Set;
+    invoke-direct {v0, v1, v2}, Lcom/kousei/framework/d;-><init>(Ljava/lang/Class;I)V
 
-    .line 9
+    .line 10
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/Set;)V
-    .registers 3
+.method public constructor <init>(Ljava/lang/String;)V
+    .registers 4
+
+    .line 1
+    sget v0, Lcom/kousei/framework/ia;->a:I
+
+    .line 3
+    invoke-virtual {p1}, Ljava/lang/String;->toCharArray()[C
+
+    .line 6
+    move-result-object p1
+
+    .line 7
+    array-length v0, p1
+
+    .line 8
+    new-instance v1, Ljava/io/ByteArrayOutputStream;
 
     .line 10
-    invoke-direct {p0}, Ljava/security/KeyFactorySpi;-><init>()V
+    invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    const/4 v0, 0x0
+    .line 13
+    :try_start_c
+    invoke-static {p1, v0, v1}, Lcom/kousei/framework/ia;->d([CILjava/io/ByteArrayOutputStream;)V
+    :try_end_f
+    .catch Ljava/io/IOException; {:try_start_c .. :try_end_f} :catch_17
 
-    iput-object v0, p0, Lcom/kousei/framework/t2;->b:Lcom/kousei/framework/v;
+    .line 16
+    invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
-    iput-object p1, p0, Lcom/kousei/framework/t2;->a:Ljava/util/Set;
+    .line 19
+    move-result-object p1
+
+    .line 20
+    invoke-direct {p0, p1}, Lcom/kousei/framework/t2;-><init>([B)V
+
+    .line 23
+    return-void
+
+    .line 24
+    :catch_17
+    const-string p0, "cannot encode string to byte array!"
+
+    .line 26
+    invoke-static {p0}, Lcom/kousei/framework/e;->l(Ljava/lang/String;)V
+
+    .line 29
+    const/4 p0, 0x0
+
+    .line 30
+    throw p0
+.end method
+
+.method public constructor <init>([B)V
+    .registers 2
+
+    .line 31
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 32
+    iput-object p1, p0, Lcom/kousei/framework/t2;->a:[B
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Lcom/kousei/framework/v;)V
-    .registers 4
+.method public final c()Ljava/lang/String;
+    .registers 11
 
     .line 1
-    const-string v0, "incorrect algorithm OID for key: "
+    sget v0, Lcom/kousei/framework/ia;->a:I
 
     .line 3
-    iget-object v1, p0, Lcom/kousei/framework/t2;->b:Lcom/kousei/framework/v;
+    iget-object p0, p0, Lcom/kousei/framework/t2;->a:[B
 
     .line 5
-    if-eqz v1, :cond_1f
-
-    .line 7
-    invoke-virtual {v1, p1}, Lcom/kousei/framework/a0;->m(Lcom/kousei/framework/a0;)Z
-
-    .line 10
-    move-result p0
-
-    .line 11
-    if-eqz p0, :cond_d
-
-    .line 13
-    goto :goto_27
-
-    .line 14
-    :cond_d
-    new-instance p0, Ljava/security/spec/InvalidKeySpecException;
-
-    .line 16
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    .line 18
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 21
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 24
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 27
-    move-result-object p1
-
-    .line 28
-    invoke-direct {p0, p1}, Ljava/security/spec/InvalidKeySpecException;-><init>(Ljava/lang/String;)V
-
-    .line 31
-    throw p0
-
-    .line 32
-    :cond_1f
-    iget-object p0, p0, Lcom/kousei/framework/t2;->a:Ljava/util/Set;
-
-    .line 34
-    invoke-interface {p0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    .line 37
-    move-result p0
-
-    .line 38
-    if-eqz p0, :cond_28
-
-    .line 40
-    :goto_27
-    return-void
-
-    .line 41
-    :cond_28
-    new-instance p0, Ljava/security/spec/InvalidKeySpecException;
-
-    .line 43
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    .line 45
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 48
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 51
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 54
-    move-result-object p1
-
-    .line 55
-    invoke-direct {p0, p1}, Ljava/security/spec/InvalidKeySpecException;-><init>(Ljava/lang/String;)V
-
-    .line 58
-    throw p0
-.end method
-
-.method public engineGeneratePrivate(Ljava/security/spec/KeySpec;)Ljava/security/PrivateKey;
-    .registers 4
-
-    .line 1
-    instance-of v0, p1, Ljava/security/spec/PKCS8EncodedKeySpec;
-
-    .line 3
-    if-eqz v0, :cond_2d
-
-    .line 5
-    check-cast p1, Ljava/security/spec/PKCS8EncodedKeySpec;
-
-    .line 7
-    invoke-virtual {p1}, Ljava/security/spec/PKCS8EncodedKeySpec;->getEncoded()[B
-
-    .line 10
-    move-result-object p1
-
-    .line 11
-    :try_start_a
-    invoke-static {p1}, Lcom/kousei/framework/kd;->h(Ljava/lang/Object;)Lcom/kousei/framework/kd;
-
-    .line 14
-    move-result-object p1
-
-    .line 15
-    iget-object v0, p1, Lcom/kousei/framework/kd;->L:Lcom/kousei/framework/k0;
-
-    .line 17
-    iget-object v0, v0, Lcom/kousei/framework/k0;->K:Lcom/kousei/framework/v;
-
-    .line 19
-    invoke-virtual {p0, v0}, Lcom/kousei/framework/t2;->c(Lcom/kousei/framework/v;)V
-
-    .line 22
-    invoke-interface {p0, p1}, Lcom/kousei/framework/m0;->a(Lcom/kousei/framework/kd;)Ljava/security/PrivateKey;
-
-    .line 25
-    move-result-object p0
-    :try_end_19
-    .catch Ljava/security/spec/InvalidKeySpecException; {:try_start_a .. :try_end_19} :catch_2b
-    .catch Ljava/lang/IllegalStateException; {:try_start_a .. :try_end_19} :catch_20
-    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_19} :catch_1a
-
-    .line 26
-    return-object p0
-
-    .line 27
-    :catch_1a
-    move-exception p0
-
-    .line 28
-    invoke-static {p0}, Lcom/kousei/framework/f;->c(Ljava/lang/Object;)V
-
-    .line 31
-    const/4 p0, 0x0
-
-    .line 32
-    return-object p0
-
-    .line 33
-    :catch_20
-    move-exception p0
-
-    .line 34
-    new-instance p1, Ljava/security/spec/InvalidKeySpecException;
-
-    .line 36
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    .line 39
-    move-result-object p0
-
-    .line 40
-    invoke-direct {p1, p0}, Ljava/security/spec/InvalidKeySpecException;-><init>(Ljava/lang/String;)V
-
-    .line 43
-    throw p1
-
-    .line 44
-    :catch_2b
-    move-exception p0
-
-    .line 45
-    throw p0
-
-    .line 46
-    :cond_2d
-    new-instance p0, Ljava/security/spec/InvalidKeySpecException;
-
-    .line 48
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 51
-    move-result-object p1
-
-    .line 52
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    .line 54
-    const-string v1, "Unsupported key specification: "
-
-    .line 56
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 59
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 62
-    const-string p1, "."
-
-    .line 64
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 67
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 70
-    move-result-object p1
-
-    .line 71
-    invoke-direct {p0, p1}, Ljava/security/spec/InvalidKeySpecException;-><init>(Ljava/lang/String;)V
-
-    .line 74
-    throw p0
-.end method
-
-.method public engineGeneratePublic(Ljava/security/spec/KeySpec;)Ljava/security/PublicKey;
-    .registers 4
-
-    .line 1
-    instance-of v0, p1, Ljava/security/spec/X509EncodedKeySpec;
-
-    .line 3
-    const/4 v1, 0x0
-
-    .line 4
-    if-eqz v0, :cond_22
+    array-length v0, p0
 
     .line 6
-    check-cast p1, Ljava/security/spec/X509EncodedKeySpec;
+    new-array v1, v0, [C
 
     .line 8
-    invoke-virtual {p1}, Ljava/security/spec/X509EncodedKeySpec;->getEncoded()[B
+    sget-object v2, Lcom/kousei/framework/qa;->a:[S
+
+    .line 10
+    const/4 v2, 0x0
 
     .line 11
-    move-result-object p1
+    move v3, v2
 
     .line 12
-    :try_start_b
-    invoke-static {p1}, Lcom/kousei/framework/xh;->h(Ljava/lang/Object;)Lcom/kousei/framework/xh;
+    move v4, v3
+
+    .line 13
+    :goto_c
+    if-ge v3, v0, :cond_73
 
     .line 15
-    move-result-object p1
+    add-int/lit8 v5, v3, 0x1
 
-    .line 16
-    iget-object v0, p1, Lcom/kousei/framework/xh;->K:Lcom/kousei/framework/k0;
+    .line 17
+    aget-byte v3, p0, v3
 
-    .line 18
-    iget-object v0, v0, Lcom/kousei/framework/k0;->K:Lcom/kousei/framework/v;
+    .line 19
+    const/4 v6, -0x1
 
     .line 20
-    invoke-virtual {p0, v0}, Lcom/kousei/framework/t2;->c(Lcom/kousei/framework/v;)V
+    if-ltz v3, :cond_21
 
-    .line 23
-    invoke-interface {p0, p1}, Lcom/kousei/framework/m0;->b(Lcom/kousei/framework/xh;)Ljava/security/PublicKey;
+    .line 22
+    if-lt v4, v0, :cond_19
+
+    .line 24
+    :goto_17
+    move v4, v6
+
+    .line 25
+    goto :goto_73
 
     .line 26
-    move-result-object p0
-    :try_end_1a
-    .catch Ljava/security/spec/InvalidKeySpecException; {:try_start_b .. :try_end_1a} :catch_20
-    .catch Ljava/lang/Exception; {:try_start_b .. :try_end_1a} :catch_1b
-
-    .line 27
-    return-object p0
+    :cond_19
+    add-int/lit8 v6, v4, 0x1
 
     .line 28
-    :catch_1b
-    move-exception p0
+    int-to-char v3, v3
 
     .line 29
-    invoke-static {p0}, Lcom/kousei/framework/f;->c(Ljava/lang/Object;)V
+    aput-char v3, v1, v4
+
+    .line 31
+    move v3, v5
 
     .line 32
-    return-object v1
+    move v4, v6
 
     .line 33
-    :catch_20
-    move-exception p0
+    goto :goto_c
 
     .line 34
-    throw p0
+    :cond_21
+    sget-object v7, Lcom/kousei/framework/qa;->a:[S
 
-    .line 35
-    :cond_22
-    const-string p0, "Unknown key specification: "
+    .line 36
+    and-int/lit8 v3, v3, 0x7f
 
-    .line 37
-    invoke-static {p1, p0}, Lcom/kousei/framework/f;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 38
+    aget-short v3, v7, v3
 
     .line 40
-    return-object v1
+    ushr-int/lit8 v7, v3, 0x8
+
+    .line 42
+    int-to-byte v3, v3
+
+    .line 43
+    :goto_2a
+    if-ltz v3, :cond_43
+
+    .line 45
+    if-lt v5, v0, :cond_2f
+
+    .line 47
+    goto :goto_17
+
+    .line 48
+    :cond_2f
+    add-int/lit8 v8, v5, 0x1
+
+    .line 50
+    aget-byte v5, p0, v5
+
+    .line 52
+    shl-int/lit8 v7, v7, 0x6
+
+    .line 54
+    and-int/lit8 v9, v5, 0x3f
+
+    .line 56
+    or-int/2addr v7, v9
+
+    .line 57
+    sget-object v9, Lcom/kousei/framework/qa;->b:[B
+
+    .line 59
+    and-int/lit16 v5, v5, 0xff
+
+    .line 61
+    ushr-int/lit8 v5, v5, 0x4
+
+    .line 63
+    add-int/2addr v3, v5
+
+    .line 64
+    aget-byte v3, v9, v3
+
+    .line 66
+    move v5, v8
+
+    .line 67
+    goto :goto_2a
+
+    .line 68
+    :cond_43
+    const/4 v8, -0x2
+
+    .line 69
+    if-ne v3, v8, :cond_47
+
+    .line 71
+    goto :goto_17
+
+    .line 72
+    :cond_47
+    const v3, 0xffff
+
+    .line 75
+    if-gt v7, v3, :cond_56
+
+    .line 77
+    if-lt v4, v0, :cond_4f
+
+    .line 79
+    goto :goto_17
+
+    .line 80
+    :cond_4f
+    add-int/lit8 v3, v4, 0x1
+
+    .line 82
+    int-to-char v6, v7
+
+    .line 83
+    aput-char v6, v1, v4
+
+    .line 85
+    move v4, v3
+
+    .line 86
+    goto :goto_71
+
+    .line 87
+    :cond_56
+    add-int/lit8 v3, v0, -0x1
+
+    .line 89
+    if-lt v4, v3, :cond_5b
+
+    .line 91
+    goto :goto_17
+
+    .line 92
+    :cond_5b
+    add-int/lit8 v3, v4, 0x1
+
+    .line 94
+    ushr-int/lit8 v6, v7, 0xa
+
+    .line 96
+    const v8, 0xd7c0
+
+    .line 99
+    add-int/2addr v6, v8
+
+    .line 100
+    int-to-char v6, v6
+
+    .line 101
+    aput-char v6, v1, v4
+
+    .line 103
+    add-int/lit8 v4, v4, 0x2
+
+    .line 105
+    and-int/lit16 v6, v7, 0x3ff
+
+    .line 107
+    const v7, 0xdc00
+
+    .line 110
+    or-int/2addr v6, v7
+
+    .line 111
+    int-to-char v6, v6
+
+    .line 112
+    aput-char v6, v1, v3
+
+    .line 114
+    :goto_71
+    move v3, v5
+
+    .line 115
+    goto :goto_c
+
+    .line 116
+    :cond_73
+    :goto_73
+    if-ltz v4, :cond_7b
+
+    .line 118
+    new-instance p0, Ljava/lang/String;
+
+    .line 120
+    invoke-direct {p0, v1, v2, v4}, Ljava/lang/String;-><init>([CII)V
+
+    .line 123
+    return-object p0
+
+    .line 124
+    :cond_7b
+    const-string p0, "Invalid UTF-8 input"
+
+    .line 126
+    invoke-static {p0}, Lcom/kousei/framework/e;->j(Ljava/lang/String;)V
+
+    .line 129
+    const/4 p0, 0x0
+
+    .line 130
+    return-object p0
+.end method
+
+.method public final hashCode()I
+    .registers 1
+
+    .line 1
+    iget-object p0, p0, Lcom/kousei/framework/t2;->a:[B
+
+    .line 3
+    invoke-static {p0}, Lcom/kousei/framework/h0;->i0([B)I
+
+    .line 6
+    move-result p0
+
+    .line 7
+    return p0
+.end method
+
+.method public final i(Lcom/kousei/framework/z;)Z
+    .registers 3
+
+    .line 1
+    instance-of v0, p1, Lcom/kousei/framework/t2;
+
+    .line 3
+    if-nez v0, :cond_6
+
+    .line 5
+    const/4 p0, 0x0
+
+    .line 6
+    return p0
+
+    .line 7
+    :cond_6
+    check-cast p1, Lcom/kousei/framework/t2;
+
+    .line 9
+    iget-object p0, p0, Lcom/kousei/framework/t2;->a:[B
+
+    .line 11
+    iget-object p1, p1, Lcom/kousei/framework/t2;->a:[B
+
+    .line 13
+    invoke-static {p0, p1}, Ljava/util/Arrays;->equals([B[B)Z
+
+    .line 16
+    move-result p0
+
+    .line 17
+    return p0
+.end method
+
+.method public final j(Lcom/kousei/framework/x;Z)V
+    .registers 4
+
+    .line 1
+    const/16 v0, 0xc
+
+    .line 3
+    iget-object p0, p0, Lcom/kousei/framework/t2;->a:[B
+
+    .line 5
+    invoke-virtual {p1, p2, v0, p0}, Lcom/kousei/framework/x;->j(ZI[B)V
+
+    .line 8
+    return-void
+.end method
+
+.method public final k()Z
+    .registers 1
+
+    .line 1
+    const/4 p0, 0x0
+
+    .line 2
+    return p0
+.end method
+
+.method public final m(Z)I
+    .registers 2
+
+    .line 1
+    iget-object p0, p0, Lcom/kousei/framework/t2;->a:[B
+
+    .line 3
+    array-length p0, p0
+
+    .line 4
+    invoke-static {p1, p0}, Lcom/kousei/framework/x;->d(ZI)I
+
+    .line 7
+    move-result p0
+
+    .line 8
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .registers 1
+
+    .line 1
+    invoke-virtual {p0}, Lcom/kousei/framework/t2;->c()Ljava/lang/String;
+
+    .line 4
+    move-result-object p0
+
+    .line 5
+    return-object p0
 .end method

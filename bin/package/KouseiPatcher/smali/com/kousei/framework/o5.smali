@@ -1,105 +1,55 @@
 .class public final Lcom/kousei/framework/o5;
 .super Ljava/lang/Object;
+.source "r8-map-id-ec70a54ac4dd249b58de3765a20c96801dd38a23bdb543e33a18faed5ec9684e"
 
 
 # instance fields
-.field public final a:[B
+.field public final a:Ljava/lang/String;
 
-.field public final b:I
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(I[B)V
-    .registers 3
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .registers 5
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 4
-    invoke-static {p2}, Lcom/kousei/framework/i0;->J([B)[B
-
-    .line 7
-    move-result-object p2
-
-    .line 8
-    iput-object p2, p0, Lcom/kousei/framework/o5;->a:[B
-
-    .line 10
-    iput p1, p0, Lcom/kousei/framework/o5;->b:I
-
-    .line 12
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .registers 4
-
-    .line 1
-    instance-of v0, p1, Lcom/kousei/framework/o5;
-
-    .line 3
-    if-nez v0, :cond_5
-
-    .line 5
-    goto :goto_d
+    if-eqz p1, :cond_6
 
     .line 6
-    :cond_5
-    check-cast p1, Lcom/kousei/framework/o5;
+    goto :goto_f
 
-    .line 8
-    iget v0, p1, Lcom/kousei/framework/o5;->b:I
-
-    .line 10
-    iget v1, p0, Lcom/kousei/framework/o5;->b:I
+    .line 7
+    :cond_6
+    const-wide v0, -0x731807fdd36712b9L
 
     .line 12
-    if-eq v0, v1, :cond_f
-
-    .line 14
-    :goto_d
-    const/4 p0, 0x0
+    invoke-static {v0, v1}, Lcom/kousei/framework/h0;->c0(J)Ljava/lang/String;
 
     .line 15
-    return p0
+    move-result-object p1
 
     .line 16
-    :cond_f
-    iget-object p0, p0, Lcom/kousei/framework/o5;->a:[B
+    :goto_f
+    iput-object p1, p0, Lcom/kousei/framework/o5;->a:Ljava/lang/String;
 
     .line 18
-    iget-object p1, p1, Lcom/kousei/framework/o5;->a:[B
+    if-eqz p2, :cond_14
 
     .line 20
-    invoke-static {p0, p1}, Ljava/util/Arrays;->equals([B[B)Z
+    goto :goto_15
 
-    .line 23
-    move-result p0
+    .line 21
+    :cond_14
+    move-object p2, p1
+
+    .line 22
+    :goto_15
+    iput-object p2, p0, Lcom/kousei/framework/o5;->b:Ljava/lang/String;
 
     .line 24
-    return p0
-.end method
-
-.method public final hashCode()I
-    .registers 2
-
-    .line 1
-    iget-object v0, p0, Lcom/kousei/framework/o5;->a:[B
-
-    .line 3
-    invoke-static {v0}, Lcom/kousei/framework/i0;->g1([B)I
-
-    .line 6
-    move-result v0
-
-    .line 7
-    iget p0, p0, Lcom/kousei/framework/o5;->b:I
-
-    .line 9
-    xor-int/2addr p0, v0
-
-    .line 10
-    return p0
+    return-void
 .end method

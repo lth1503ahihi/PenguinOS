@@ -1,116 +1,123 @@
 .class public final Lcom/kousei/framework/o4;
-.super Lcom/kousei/framework/w;
+.super Ljava/lang/Object;
 
 
-# static fields
-.field public static final synthetic N:I
+# instance fields
+.field public final a:[I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>([I)V
     .registers 2
 
     .line 1
-    new-instance v0, Lcom/kousei/framework/o4;
-
-    .line 3
-    sget-object v1, Lcom/kousei/framework/w;->M:[B
-
-    .line 5
-    invoke-direct {v0, v1}, Lcom/kousei/framework/w;-><init>([B)V
-
-    .line 8
-    return-void
-.end method
-
-.method public constructor <init>(Lcom/kousei/framework/s;)V
-    .registers 2
-
-    .line 1
-    invoke-interface {p1}, Lcom/kousei/framework/k;->b()Lcom/kousei/framework/a0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 4
-    move-result-object p1
+    invoke-virtual {p1}, [I->clone()Ljava/lang/Object;
 
-    .line 5
-    invoke-virtual {p1}, Lcom/kousei/framework/s;->g()[B
+    .line 7
+    move-result-object p1
 
     .line 8
-    move-result-object p1
+    check-cast p1, [I
 
-    .line 9
-    invoke-direct {p0, p1}, Lcom/kousei/framework/w;-><init>([B)V
+    .line 10
+    iput-object p1, p0, Lcom/kousei/framework/o4;->a:[I
 
     .line 12
     return-void
 .end method
 
-.method public constructor <init>([B)V
-    .registers 2
-
-    .line 13
-    invoke-direct {p0, p1}, Lcom/kousei/framework/w;-><init>([B)V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final i(Lcom/kousei/framework/y;Z)V
+.method public final equals(Ljava/lang/Object;)Z
+    .registers 3
+
+    .line 1
+    if-ne p0, p1, :cond_4
+
+    .line 3
+    const/4 p0, 0x1
+
+    .line 4
+    return p0
+
+    .line 5
+    :cond_4
+    instance-of v0, p1, Lcom/kousei/framework/o4;
+
+    .line 7
+    if-nez v0, :cond_a
+
+    .line 9
+    const/4 p0, 0x0
+
+    .line 10
+    return p0
+
+    .line 11
+    :cond_a
+    check-cast p1, Lcom/kousei/framework/o4;
+
+    .line 13
+    iget-object p0, p0, Lcom/kousei/framework/o4;->a:[I
+
+    .line 15
+    iget-object p1, p1, Lcom/kousei/framework/o4;->a:[I
+
+    .line 17
+    invoke-static {p0, p1}, Ljava/util/Arrays;->equals([I[I)Z
+
+    .line 20
+    move-result p0
+
+    .line 21
+    return p0
+.end method
+
+.method public final hashCode()I
     .registers 4
 
     .line 1
-    const/4 v0, 0x4
-
-    .line 2
-    iget-object p0, p0, Lcom/kousei/framework/w;->K:[B
-
-    .line 4
-    invoke-virtual {p1, v0, p2, p0}, Lcom/kousei/framework/y;->t(IZ[B)V
-
-    .line 7
-    return-void
-.end method
-
-.method public final j()Z
-    .registers 1
-
-    .line 1
-    const/4 p0, 0x0
-
-    .line 2
-    return p0
-.end method
-
-.method public final l(Z)I
-    .registers 2
-
-    .line 1
-    iget-object p0, p0, Lcom/kousei/framework/w;->K:[B
+    iget-object p0, p0, Lcom/kousei/framework/o4;->a:[I
 
     .line 3
-    array-length p0, p0
+    if-nez p0, :cond_6
 
-    .line 4
-    invoke-static {p1, p0}, Lcom/kousei/framework/y;->g(ZI)I
+    .line 5
+    const/4 p0, 0x0
+
+    .line 6
+    return p0
 
     .line 7
-    move-result p0
+    :cond_6
+    array-length v0, p0
 
     .line 8
-    return p0
-.end method
+    add-int/lit8 v1, v0, 0x1
 
-.method public final o()Lcom/kousei/framework/a0;
-    .registers 1
+    .line 10
+    :goto_9
+    add-int/lit8 v0, v0, -0x1
 
-    .line 1
-    return-object p0
-.end method
+    .line 12
+    if-ltz v0, :cond_13
 
-.method public final p()Lcom/kousei/framework/a0;
-    .registers 1
+    .line 14
+    mul-int/lit16 v1, v1, 0x101
 
-    .line 1
-    return-object p0
+    .line 16
+    aget v2, p0, v0
+
+    .line 18
+    xor-int/2addr v1, v2
+
+    .line 19
+    goto :goto_9
+
+    .line 20
+    :cond_13
+    return v1
 .end method

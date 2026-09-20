@@ -1,134 +1,52 @@
 .class public final Lcom/kousei/framework/p5;
-.super Lcom/kousei/framework/s;
+.super Ljava/lang/Object;
+.source "r8-map-id-ec70a54ac4dd249b58de3765a20c96801dd38a23bdb543e33a18faed5ec9684e"
 
 
-# instance fields
-.field public K:I
-
-.field public L:I
-
-.field public M:I
-
-.field public N:I
-
-
-# virtual methods
-.method public final b()Lcom/kousei/framework/a0;
-    .registers 7
+# direct methods
+.method public constructor <init>(Ljava/util/List;Ljava/util/List;)V
+    .registers 3
 
     .line 1
-    iget v0, p0, Lcom/kousei/framework/p5;->L:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    new-instance v1, Lcom/kousei/framework/l;
-
-    .line 5
-    const/4 v2, 0x2
+    .line 4
+    if-eqz p1, :cond_6
 
     .line 6
-    invoke-direct {v1, v2}, Lcom/kousei/framework/l;-><init>(I)V
+    goto :goto_8
+
+    .line 7
+    :cond_6
+    sget-object p0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
     .line 9
-    iget v2, p0, Lcom/kousei/framework/p5;->K:I
+    :goto_8
+    if-eqz p2, :cond_b
 
     .line 11
-    invoke-static {v2}, Lcom/kousei/framework/q;->z(I)Lcom/kousei/framework/q;
+    return-void
+
+    .line 12
+    :cond_b
+    sget-object p0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
     .line 14
-    move-result-object v2
+    return-void
+.end method
 
-    .line 15
-    invoke-virtual {v1, v2}, Lcom/kousei/framework/l;->a(Lcom/kousei/framework/k;)V
+.method public static a()Lcom/kousei/framework/p5;
+    .registers 2
 
-    .line 18
-    iget v2, p0, Lcom/kousei/framework/p5;->M:I
+    .line 1
+    new-instance v0, Lcom/kousei/framework/p5;
 
-    .line 20
-    const/4 v3, -0x1
+    .line 3
+    sget-object v1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    .line 21
-    if-nez v2, :cond_1e
+    .line 5
+    invoke-direct {v0, v1, v1}, Lcom/kousei/framework/p5;-><init>(Ljava/util/List;Ljava/util/List;)V
 
-    .line 23
-    invoke-static {v0}, Lcom/kousei/framework/q;->z(I)Lcom/kousei/framework/q;
-
-    .line 26
-    move-result-object p0
-
-    .line 27
-    invoke-virtual {v1, p0}, Lcom/kousei/framework/l;->a(Lcom/kousei/framework/k;)V
-
-    .line 30
-    goto :goto_46
-
-    .line 31
-    :cond_1e
-    new-instance v4, Lcom/kousei/framework/l;
-
-    .line 33
-    const/4 v5, 0x3
-
-    .line 34
-    invoke-direct {v4, v5}, Lcom/kousei/framework/l;-><init>(I)V
-
-    .line 37
-    invoke-static {v0}, Lcom/kousei/framework/q;->z(I)Lcom/kousei/framework/q;
-
-    .line 40
-    move-result-object v0
-
-    .line 41
-    invoke-virtual {v4, v0}, Lcom/kousei/framework/l;->a(Lcom/kousei/framework/k;)V
-
-    .line 44
-    invoke-static {v2}, Lcom/kousei/framework/q;->z(I)Lcom/kousei/framework/q;
-
-    .line 47
-    move-result-object v0
-
-    .line 48
-    invoke-virtual {v4, v0}, Lcom/kousei/framework/l;->a(Lcom/kousei/framework/k;)V
-
-    .line 51
-    iget p0, p0, Lcom/kousei/framework/p5;->N:I
-
-    .line 53
-    invoke-static {p0}, Lcom/kousei/framework/q;->z(I)Lcom/kousei/framework/q;
-
-    .line 56
-    move-result-object p0
-
-    .line 57
-    invoke-virtual {v4, p0}, Lcom/kousei/framework/l;->a(Lcom/kousei/framework/k;)V
-
-    .line 60
-    new-instance p0, Lcom/kousei/framework/r4;
-
-    .line 62
-    const/4 v0, 0x0
-
-    .line 63
-    invoke-direct {p0, v4, v0}, Lcom/kousei/framework/r4;-><init>(Lcom/kousei/framework/l;Z)V
-
-    .line 66
-    iput v3, p0, Lcom/kousei/framework/r4;->N:I
-
-    .line 68
-    invoke-virtual {v1, p0}, Lcom/kousei/framework/l;->a(Lcom/kousei/framework/k;)V
-
-    .line 71
-    :goto_46
-    new-instance p0, Lcom/kousei/framework/r4;
-
-    .line 73
-    const/4 v0, 0x0
-
-    .line 74
-    invoke-direct {p0, v1, v0}, Lcom/kousei/framework/r4;-><init>(Lcom/kousei/framework/l;Z)V
-
-    .line 77
-    iput v3, p0, Lcom/kousei/framework/r4;->N:I
-
-    .line 79
-    return-object p0
+    .line 8
+    return-object v0
 .end method

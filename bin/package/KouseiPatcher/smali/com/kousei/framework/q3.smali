@@ -1,277 +1,224 @@
-.class public final Lcom/kousei/framework/q3;
-.super Ljava/io/InputStream;
-
-
-# instance fields
-.field public final K:Lcom/kousei/framework/f0;
-
-.field public L:Z
-
-.field public M:Ljava/io/InputStream;
+.class public abstract Lcom/kousei/framework/q3;
+.super Lcom/kousei/framework/u3;
 
 
 # direct methods
-.method public constructor <init>(Lcom/kousei/framework/f0;)V
-    .registers 3
+.method public constructor <init>(Ljava/math/BigInteger;)V
+    .registers 6
 
     .line 1
-    invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
+    sget-object v0, Lcom/kousei/framework/l4;->a:Lcom/kousei/framework/i7;
 
-    .line 4
-    const/4 v0, 0x1
+    .line 3
+    invoke-virtual {p1}, Ljava/math/BigInteger;->bitLength()I
 
-    .line 5
-    iput-boolean v0, p0, Lcom/kousei/framework/q3;->L:Z
+    .line 6
+    move-result v0
 
     .line 7
-    iput-object p1, p0, Lcom/kousei/framework/q3;->K:Lcom/kousei/framework/f0;
+    invoke-virtual {p1}, Ljava/math/BigInteger;->signum()I
 
-    .line 9
+    .line 10
+    move-result v1
+
+    .line 11
+    if-lez v1, :cond_3d
+
+    .line 13
+    const/4 v1, 0x2
+
+    .line 14
+    if-lt v0, v1, :cond_3d
+
+    .line 16
+    const/4 v2, 0x3
+
+    .line 17
+    if-ge v0, v2, :cond_33
+
+    .line 19
+    sget-object v0, Lcom/kousei/framework/f1;->a:Ljava/math/BigInteger;
+
+    .line 21
+    invoke-virtual {p1}, Ljava/math/BigInteger;->bitLength()I
+
+    .line 24
+    move-result v0
+
+    .line 25
+    const/16 v3, 0x1f
+
+    .line 27
+    if-gt v0, v3, :cond_2b
+
+    .line 29
+    invoke-virtual {p1}, Ljava/math/BigInteger;->intValue()I
+
+    .line 32
+    move-result v0
+
+    .line 33
+    if-eq v0, v1, :cond_28
+
+    .line 35
+    if-eq v0, v2, :cond_25
+
+    .line 37
+    goto :goto_33
+
+    .line 38
+    :cond_25
+    sget-object p1, Lcom/kousei/framework/l4;->b:Lcom/kousei/framework/i7;
+
+    .line 40
+    goto :goto_39
+
+    .line 41
+    :cond_28
+    sget-object p1, Lcom/kousei/framework/l4;->a:Lcom/kousei/framework/i7;
+
+    .line 43
+    goto :goto_39
+
+    .line 44
+    :cond_2b
+    new-instance p0, Ljava/lang/ArithmeticException;
+
+    .line 46
+    const-string p1, "BigInteger out of int range"
+
+    .line 48
+    invoke-direct {p0, p1}, Ljava/lang/ArithmeticException;-><init>(Ljava/lang/String;)V
+
+    .line 51
+    throw p0
+
+    .line 52
+    :cond_33
+    :goto_33
+    new-instance v0, Lcom/kousei/framework/i7;
+
+    .line 54
+    invoke-direct {v0, p1}, Lcom/kousei/framework/i7;-><init>(Ljava/math/BigInteger;)V
+
+    .line 57
+    move-object p1, v0
+
+    .line 58
+    :goto_39
+    invoke-direct {p0, p1}, Lcom/kousei/framework/u3;-><init>(Lcom/kousei/framework/k4;)V
+
+    .line 61
     return-void
+
+    .line 62
+    :cond_3d
+    const-string p0, "\'characteristic\' must be >= 2"
+
+    .line 64
+    invoke-static {p0}, Lcom/kousei/framework/e;->j(Ljava/lang/String;)V
+
+    .line 67
+    const/4 p0, 0x0
+
+    .line 68
+    throw p0
 .end method
 
 
 # virtual methods
-.method public final a()Lcom/kousei/framework/x;
-    .registers 3
+.method public l(Ljava/security/SecureRandom;)Lcom/kousei/framework/h0;
+    .registers 6
 
     .line 1
-    iget-object p0, p0, Lcom/kousei/framework/q3;->K:Lcom/kousei/framework/f0;
-
-    .line 3
-    iget-object v0, p0, Lcom/kousei/framework/f0;->a:Lcom/kousei/framework/cb;
-
-    .line 5
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    .line 8
-    move-result v0
-
-    .line 9
-    const/4 v1, 0x0
-
-    .line 10
-    if-gez v0, :cond_d
-
-    .line 12
-    move-object p0, v1
-
-    .line 13
-    goto :goto_11
-
-    .line 14
-    :cond_d
-    invoke-virtual {p0, v0}, Lcom/kousei/framework/f0;->a(I)Lcom/kousei/framework/k;
-
-    .line 17
-    move-result-object p0
-
-    .line 18
-    :goto_11
-    if-nez p0, :cond_14
-
-    .line 20
-    return-object v1
-
-    .line 21
-    :cond_14
-    instance-of v0, p0, Lcom/kousei/framework/x;
-
-    .line 23
-    if-eqz v0, :cond_1b
-
-    .line 25
-    check-cast p0, Lcom/kousei/framework/x;
-
-    .line 27
-    return-object p0
-
-    .line 28
-    :cond_1b
-    const-string v0, "unknown object encountered: "
-
-    .line 30
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 33
-    move-result-object p0
-
-    .line 34
-    invoke-static {p0, v0}, Lcom/kousei/framework/f;->j(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 37
-    return-object v1
-.end method
-
-.method public final read()I
-    .registers 4
-
-    .line 57
-    iget-object v0, p0, Lcom/kousei/framework/q3;->M:Ljava/io/InputStream;
-
-    const/4 v1, -0x1
-
-    if-nez v0, :cond_1a
-
-    iget-boolean v0, p0, Lcom/kousei/framework/q3;->L:Z
-
-    if-nez v0, :cond_a
-
-    goto :goto_10
-
-    :cond_a
-    invoke-virtual {p0}, Lcom/kousei/framework/q3;->a()Lcom/kousei/framework/x;
-
-    move-result-object v0
-
-    if-nez v0, :cond_11
-
-    :goto_10
-    return v1
-
-    :cond_11
-    const/4 v2, 0x0
-
-    iput-boolean v2, p0, Lcom/kousei/framework/q3;->L:Z
-
-    :cond_14
-    invoke-interface {v0}, Lcom/kousei/framework/x;->a()Ljava/io/InputStream;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/kousei/framework/q3;->M:Ljava/io/InputStream;
-
-    :cond_1a
-    iget-object v0, p0, Lcom/kousei/framework/q3;->M:Ljava/io/InputStream;
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    move-result v0
-
-    if-ltz v0, :cond_23
-
-    return v0
-
-    :cond_23
-    invoke-virtual {p0}, Lcom/kousei/framework/q3;->a()Lcom/kousei/framework/x;
-
-    move-result-object v0
-
-    if-nez v0, :cond_14
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/kousei/framework/q3;->M:Ljava/io/InputStream;
-
-    return v1
-.end method
-
-.method public final read([BII)I
-    .registers 8
-
-    .line 1
-    iget-object v0, p0, Lcom/kousei/framework/q3;->M:Ljava/io/InputStream;
-
-    .line 3
-    const/4 v1, 0x0
+    invoke-virtual {p0}, Lcom/kousei/framework/q3;->n()Ljava/math/BigInteger;
 
     .line 4
-    if-nez v0, :cond_19
+    move-result-object v0
 
-    .line 6
-    iget-boolean v0, p0, Lcom/kousei/framework/q3;->L:Z
+    .line 5
+    :cond_4
+    invoke-virtual {v0}, Ljava/math/BigInteger;->bitLength()I
 
     .line 8
-    if-nez v0, :cond_a
+    move-result v1
 
-    .line 10
-    goto :goto_35
+    .line 9
+    invoke-static {v1, p1}, Lcom/kousei/framework/f1;->a(ILjava/security/SecureRandom;)Ljava/math/BigInteger;
 
-    .line 11
-    :cond_a
-    invoke-virtual {p0}, Lcom/kousei/framework/q3;->a()Lcom/kousei/framework/x;
+    .line 12
+    move-result-object v1
 
-    .line 14
-    move-result-object v0
+    .line 13
+    invoke-virtual {v1}, Ljava/math/BigInteger;->signum()I
 
-    .line 15
-    if-nez v0, :cond_11
+    .line 16
+    move-result v2
 
     .line 17
-    goto :goto_35
+    if-lez v2, :cond_4
 
-    .line 18
-    :cond_11
-    iput-boolean v1, p0, Lcom/kousei/framework/q3;->L:Z
+    .line 19
+    invoke-virtual {v1, v0}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
 
-    .line 20
-    :cond_13
-    invoke-interface {v0}, Lcom/kousei/framework/x;->a()Ljava/io/InputStream;
+    .line 22
+    move-result v2
 
     .line 23
-    move-result-object v0
+    if-gez v2, :cond_4
 
-    .line 24
-    iput-object v0, p0, Lcom/kousei/framework/q3;->M:Ljava/io/InputStream;
-
-    .line 26
-    :cond_19
-    iget-object v0, p0, Lcom/kousei/framework/q3;->M:Ljava/io/InputStream;
+    .line 25
+    invoke-virtual {p0, v1}, Lcom/kousei/framework/u3;->f(Ljava/math/BigInteger;)Lcom/kousei/framework/h0;
 
     .line 28
-    add-int v2, p2, v1
+    move-result-object v1
 
-    .line 30
-    sub-int v3, p3, v1
+    .line 29
+    :cond_1c
+    invoke-virtual {v0}, Ljava/math/BigInteger;->bitLength()I
 
     .line 32
-    invoke-virtual {v0, p1, v2, v3}, Ljava/io/InputStream;->read([BII)I
+    move-result v2
 
-    .line 35
-    move-result v0
+    .line 33
+    invoke-static {v2, p1}, Lcom/kousei/framework/f1;->a(ILjava/security/SecureRandom;)Ljava/math/BigInteger;
 
     .line 36
-    if-ltz v0, :cond_29
+    move-result-object v2
 
-    .line 38
-    add-int/2addr v1, v0
+    .line 37
+    invoke-virtual {v2}, Ljava/math/BigInteger;->signum()I
 
-    .line 39
-    if-ne v1, p3, :cond_19
+    .line 40
+    move-result v3
 
     .line 41
-    return v1
+    if-lez v3, :cond_1c
 
-    .line 42
-    :cond_29
-    invoke-virtual {p0}, Lcom/kousei/framework/q3;->a()Lcom/kousei/framework/x;
-
-    .line 45
-    move-result-object v0
+    .line 43
+    invoke-virtual {v2, v0}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
 
     .line 46
-    if-nez v0, :cond_13
+    move-result v3
 
-    .line 48
-    const/4 p1, 0x0
+    .line 47
+    if-gez v3, :cond_1c
 
     .line 49
-    iput-object p1, p0, Lcom/kousei/framework/q3;->M:Ljava/io/InputStream;
-
-    .line 51
-    const/4 p0, 0x1
+    invoke-virtual {p0, v2}, Lcom/kousei/framework/u3;->f(Ljava/math/BigInteger;)Lcom/kousei/framework/h0;
 
     .line 52
-    if-ge v1, p0, :cond_37
+    move-result-object p0
 
-    .line 54
-    :goto_35
-    const/4 p0, -0x1
-
-    .line 55
-    return p0
+    .line 53
+    invoke-virtual {v1, p0}, Lcom/kousei/framework/h0;->Q0(Lcom/kousei/framework/h0;)Lcom/kousei/framework/h0;
 
     .line 56
-    :cond_37
-    return v1
+    move-result-object p0
+
+    .line 57
+    return-object p0
+.end method
+
+.method public abstract n()Ljava/math/BigInteger;
 .end method

@@ -1,317 +1,438 @@
-.class public final Lcom/kousei/framework/g6;
-.super Lcom/kousei/framework/n2;
+.class public abstract Lcom/kousei/framework/g6;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final M:[B
-
-.field public final N:[B
-
-.field public final O:[B
-
-.field public final P:[B
-
-.field public final Q:[B
-
-.field public final R:[B
-
-.field public final S:[B
+# static fields
+.field public static final a:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(Lcom/kousei/framework/f6;[BLcom/kousei/framework/h6;)V
-    .registers 13
+.method static constructor <clinit>()V
+    .registers 23
 
     .line 1
-    const/4 v0, 0x1
+    new-instance v0, Ljava/util/HashMap;
 
-    .line 2
-    invoke-direct {p0, v0, p1}, Lcom/kousei/framework/n2;-><init>(ZLjava/lang/Object;)V
+    .line 3
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 5
-    iget p1, p1, Lcom/kousei/framework/f6;->a:I
+    .line 6
+    sput-object v0, Lcom/kousei/framework/g6;->a:Ljava/util/HashMap;
 
-    .line 7
-    new-instance v0, Lcom/kousei/framework/te;
+    .line 8
+    new-instance v1, Ljava/util/HashMap;
 
-    .line 9
-    const/16 v1, 0x100
+    .line 10
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    .line 11
-    invoke-direct {v0, v1}, Lcom/kousei/framework/te;-><init>(I)V
-
-    .line 14
-    const/4 v0, 0x2
+    .line 13
+    sget-object v2, Lcom/kousei/framework/d7;->r:Lcom/kousei/framework/u;
 
     .line 15
-    const/4 v2, 0x0
+    const-string v3, "MD2"
 
-    .line 16
-    const/high16 v3, 0x20000
-
-    .line 18
-    const/16 v4, 0x80
+    .line 17
+    invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 20
-    const/16 v5, 0x60
+    sget-object v2, Lcom/kousei/framework/d7;->s:Lcom/kousei/framework/u;
 
     .line 22
-    const/high16 v6, 0x80000
+    const-string v3, "MD4"
 
     .line 24
-    if-eq p1, v0, :cond_2f
-
-    .line 26
-    const/4 v0, 0x3
+    invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 27
-    const/4 v7, 0x5
+    sget-object v2, Lcom/kousei/framework/d7;->t:Lcom/kousei/framework/u;
 
-    .line 28
-    if-eq p1, v0, :cond_2c
+    .line 29
+    const-string v3, "MD5"
 
-    .line 30
-    if-ne p1, v7, :cond_24
-
-    .line 32
-    const/16 p1, 0x8
+    .line 31
+    invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 34
-    const/4 v7, 0x7
-
-    .line 35
-    :goto_22
-    move v0, v6
+    sget-object v2, Lcom/kousei/framework/n6;->a:Lcom/kousei/framework/u;
 
     .line 36
-    goto :goto_32
+    const-string v3, "SHA-1"
 
-    .line 37
-    :cond_24
-    const-string p0, "The mode "
-
-    .line 39
-    const-string p2, "is not supported by Crystals Dilithium!"
+    .line 38
+    invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 41
-    invoke-static {p0, p1, p2}, Lcom/kousei/framework/f;->f(Ljava/lang/String;ILjava/lang/Object;)V
+    sget-object v4, Lcom/kousei/framework/k6;->d:Lcom/kousei/framework/u;
 
-    .line 44
-    throw v2
+    .line 43
+    const-string v5, "SHA-224"
 
     .line 45
-    :cond_2c
-    const/4 p1, 0x6
-
-    .line 46
-    move v5, v4
-
-    .line 47
-    goto :goto_22
+    invoke-virtual {v0, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 48
-    :cond_2f
-    const/4 v7, 0x4
-
-    .line 49
-    move v0, v3
+    sget-object v6, Lcom/kousei/framework/k6;->a:Lcom/kousei/framework/u;
 
     .line 50
-    move p1, v7
+    const-string v7, "SHA-256"
 
-    .line 51
-    :goto_32
-    new-instance v8, Lcom/kousei/framework/te;
+    .line 52
+    invoke-virtual {v0, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 53
-    invoke-direct {v8, v4}, Lcom/kousei/framework/ba;-><init>(I)V
+    .line 55
+    sget-object v8, Lcom/kousei/framework/k6;->b:Lcom/kousei/framework/u;
 
-    .line 56
-    new-instance v8, Lcom/kousei/framework/te;
+    .line 57
+    const-string v9, "SHA-384"
 
-    .line 58
-    invoke-direct {v8, v1}, Lcom/kousei/framework/te;-><init>(I)V
+    .line 59
+    invoke-virtual {v0, v8, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 61
-    if-ne v0, v3, :cond_3f
-
-    .line 63
-    goto :goto_41
+    .line 62
+    sget-object v10, Lcom/kousei/framework/k6;->c:Lcom/kousei/framework/u;
 
     .line 64
-    :cond_3f
-    if-ne v0, v6, :cond_7f
+    const-string v11, "SHA-512"
 
     .line 66
-    :goto_41
-    const/4 v0, 0x0
-
-    .line 67
-    const/16 v1, 0x20
+    invoke-virtual {v0, v10, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 69
-    invoke-static {p2, v0, v1}, Lcom/kousei/framework/i0;->e0([BII)[B
+    sget-object v12, Lcom/kousei/framework/k6;->e:Lcom/kousei/framework/u;
 
-    .line 72
-    move-result-object v0
+    .line 71
+    const-string v13, "SHA-512(224)"
 
     .line 73
-    iput-object v0, p0, Lcom/kousei/framework/g6;->M:[B
+    invoke-virtual {v0, v12, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 75
-    const/16 v0, 0x40
+    .line 76
+    sget-object v12, Lcom/kousei/framework/k6;->f:Lcom/kousei/framework/u;
 
-    .line 77
-    invoke-static {p2, v1, v0}, Lcom/kousei/framework/i0;->e0([BII)[B
+    .line 78
+    const-string v13, "SHA-512(256)"
 
     .line 80
-    move-result-object v1
-
-    .line 81
-    iput-object v1, p0, Lcom/kousei/framework/g6;->N:[B
+    invoke-virtual {v0, v12, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 83
-    invoke-static {p2, v0, v4}, Lcom/kousei/framework/i0;->e0([BII)[B
+    sget-object v12, Lcom/kousei/framework/na;->b:Lcom/kousei/framework/u;
 
-    .line 86
-    move-result-object v0
+    .line 85
+    const-string v13, "RIPEMD-128"
 
     .line 87
-    iput-object v0, p0, Lcom/kousei/framework/g6;->O:[B
-
-    .line 89
-    mul-int/2addr v7, v5
+    invoke-virtual {v0, v12, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 90
-    add-int/2addr v7, v4
+    sget-object v12, Lcom/kousei/framework/na;->a:Lcom/kousei/framework/u;
 
-    .line 91
-    invoke-static {p2, v4, v7}, Lcom/kousei/framework/i0;->e0([BII)[B
+    .line 92
+    const-string v14, "RIPEMD-160"
 
     .line 94
-    move-result-object v0
-
-    .line 95
-    iput-object v0, p0, Lcom/kousei/framework/g6;->P:[B
+    invoke-virtual {v0, v12, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 97
-    mul-int/2addr v5, p1
-
-    .line 98
-    add-int/2addr v5, v7
+    sget-object v12, Lcom/kousei/framework/na;->c:Lcom/kousei/framework/u;
 
     .line 99
-    invoke-static {p2, v7, v5}, Lcom/kousei/framework/i0;->e0([BII)[B
+    invoke-virtual {v0, v12, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 102
-    move-result-object v0
+    sget-object v12, Lcom/kousei/framework/f5;->b:Lcom/kousei/framework/u;
 
-    .line 103
-    iput-object v0, p0, Lcom/kousei/framework/g6;->Q:[B
-
-    .line 105
-    mul-int/lit16 p1, p1, 0x1a0
+    .line 104
+    invoke-virtual {v0, v12, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 107
-    add-int/2addr p1, v5
+    sget-object v12, Lcom/kousei/framework/f5;->a:Lcom/kousei/framework/u;
 
-    .line 108
-    invoke-static {p2, v5, p1}, Lcom/kousei/framework/i0;->e0([BII)[B
-
-    .line 111
-    move-result-object p1
+    .line 109
+    invoke-virtual {v0, v12, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 112
-    iput-object p1, p0, Lcom/kousei/framework/g6;->R:[B
+    sget-object v12, Lcom/kousei/framework/r1;->a:Lcom/kousei/framework/u;
 
     .line 114
-    if-eqz p3, :cond_7c
+    const-string v13, "GOST3411"
 
     .line 116
-    iget-object p1, p3, Lcom/kousei/framework/h6;->N:[B
+    invoke-virtual {v0, v12, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 118
-    invoke-static {p1}, Lcom/kousei/framework/i0;->J([B)[B
+    .line 119
+    sget-object v12, Lcom/kousei/framework/r4;->a:Lcom/kousei/framework/u;
 
     .line 121
-    move-result-object p1
+    const-string v13, "Tiger"
 
-    .line 122
-    iput-object p1, p0, Lcom/kousei/framework/g6;->S:[B
+    .line 123
+    invoke-virtual {v0, v12, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 124
-    return-void
-
-    .line 125
-    :cond_7c
-    iput-object v2, p0, Lcom/kousei/framework/g6;->S:[B
-
-    .line 127
-    return-void
+    .line 126
+    sget-object v12, Lcom/kousei/framework/f5;->c:Lcom/kousei/framework/u;
 
     .line 128
-    :cond_7f
-    new-instance p0, Ljava/lang/RuntimeException;
+    const-string v13, "Whirlpool"
 
     .line 130
-    const-string p1, "Wrong Dilithium Gamma1!"
+    invoke-virtual {v0, v12, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 132
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    .line 133
+    sget-object v12, Lcom/kousei/framework/k6;->g:Lcom/kousei/framework/u;
 
     .line 135
-    throw p0
-.end method
+    const-string v13, "SHA3-224"
 
-.method public constructor <init>(Lcom/kousei/framework/f6;[B[B[B[B[B[B[B)V
-    .registers 10
+    .line 137
+    invoke-virtual {v0, v12, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v0, 0x1
+    .line 140
+    sget-object v14, Lcom/kousei/framework/k6;->h:Lcom/kousei/framework/u;
 
-    .line 136
-    invoke-direct {p0, v0, p1}, Lcom/kousei/framework/n2;-><init>(ZLjava/lang/Object;)V
+    .line 142
+    const-string v15, "SHA3-256"
 
-    invoke-static {p2}, Lcom/kousei/framework/i0;->J([B)[B
+    .line 144
+    invoke-virtual {v0, v14, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    .line 147
+    move-object/from16 v16, v15
 
-    iput-object p1, p0, Lcom/kousei/framework/g6;->M:[B
+    .line 149
+    sget-object v15, Lcom/kousei/framework/k6;->i:Lcom/kousei/framework/u;
 
-    invoke-static {p3}, Lcom/kousei/framework/i0;->J([B)[B
+    .line 151
+    move-object/from16 v17, v14
 
-    move-result-object p1
+    .line 153
+    const-string v14, "SHA3-384"
 
-    iput-object p1, p0, Lcom/kousei/framework/g6;->N:[B
+    .line 155
+    invoke-virtual {v0, v15, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {p4}, Lcom/kousei/framework/i0;->J([B)[B
+    .line 158
+    move-object/from16 v18, v14
 
-    move-result-object p1
+    .line 160
+    sget-object v14, Lcom/kousei/framework/k6;->j:Lcom/kousei/framework/u;
 
-    iput-object p1, p0, Lcom/kousei/framework/g6;->O:[B
+    .line 162
+    move-object/from16 v19, v15
 
-    invoke-static {p5}, Lcom/kousei/framework/i0;->J([B)[B
+    .line 164
+    const-string v15, "SHA3-512"
 
-    move-result-object p1
+    .line 166
+    invoke-virtual {v0, v14, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput-object p1, p0, Lcom/kousei/framework/g6;->P:[B
+    .line 169
+    move-object/from16 v20, v15
 
-    invoke-static {p6}, Lcom/kousei/framework/i0;->J([B)[B
+    .line 171
+    sget-object v15, Lcom/kousei/framework/k6;->k:Lcom/kousei/framework/u;
 
-    move-result-object p1
+    .line 173
+    move-object/from16 v21, v14
 
-    iput-object p1, p0, Lcom/kousei/framework/g6;->Q:[B
+    .line 175
+    const-string v14, "SHAKE128"
 
-    invoke-static {p7}, Lcom/kousei/framework/i0;->J([B)[B
+    .line 177
+    invoke-virtual {v0, v15, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    .line 180
+    sget-object v14, Lcom/kousei/framework/k6;->l:Lcom/kousei/framework/u;
 
-    iput-object p1, p0, Lcom/kousei/framework/g6;->R:[B
+    .line 182
+    const-string v15, "SHAKE256"
 
-    invoke-static {p8}, Lcom/kousei/framework/i0;->J([B)[B
+    .line 184
+    invoke-virtual {v0, v14, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    .line 187
+    sget-object v14, Lcom/kousei/framework/q4;->d:Lcom/kousei/framework/u;
 
-    iput-object p1, p0, Lcom/kousei/framework/g6;->S:[B
+    .line 189
+    const-string v15, "SM3"
 
+    .line 191
+    invoke-virtual {v0, v14, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 194
+    sget-object v14, Lcom/kousei/framework/h6;->b:Lcom/kousei/framework/u;
+
+    .line 196
+    const-string v15, "BLAKE3-256"
+
+    .line 198
+    invoke-virtual {v0, v14, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 201
+    new-instance v0, Lcom/kousei/framework/j0;
+
+    .line 203
+    move-object/from16 v22, v15
+
+    .line 205
+    sget-object v15, Lcom/kousei/framework/k2;->a:Lcom/kousei/framework/k2;
+
+    .line 207
+    invoke-direct {v0, v2, v15}, Lcom/kousei/framework/j0;-><init>(Lcom/kousei/framework/u;Lcom/kousei/framework/j;)V
+
+    .line 210
+    invoke-virtual {v1, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 213
+    new-instance v0, Lcom/kousei/framework/j0;
+
+    .line 215
+    invoke-direct {v0, v4}, Lcom/kousei/framework/j0;-><init>(Lcom/kousei/framework/u;)V
+
+    .line 218
+    invoke-virtual {v1, v5, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 221
+    new-instance v0, Lcom/kousei/framework/j0;
+
+    .line 223
+    invoke-direct {v0, v4}, Lcom/kousei/framework/j0;-><init>(Lcom/kousei/framework/u;)V
+
+    .line 226
+    const-string v2, "SHA224"
+
+    .line 228
+    invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 231
+    new-instance v0, Lcom/kousei/framework/j0;
+
+    .line 233
+    invoke-direct {v0, v6}, Lcom/kousei/framework/j0;-><init>(Lcom/kousei/framework/u;)V
+
+    .line 236
+    invoke-virtual {v1, v7, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 239
+    new-instance v0, Lcom/kousei/framework/j0;
+
+    .line 241
+    invoke-direct {v0, v6}, Lcom/kousei/framework/j0;-><init>(Lcom/kousei/framework/u;)V
+
+    .line 244
+    const-string v2, "SHA256"
+
+    .line 246
+    invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 249
+    new-instance v0, Lcom/kousei/framework/j0;
+
+    .line 251
+    invoke-direct {v0, v8}, Lcom/kousei/framework/j0;-><init>(Lcom/kousei/framework/u;)V
+
+    .line 254
+    invoke-virtual {v1, v9, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 257
+    new-instance v0, Lcom/kousei/framework/j0;
+
+    .line 259
+    invoke-direct {v0, v8}, Lcom/kousei/framework/j0;-><init>(Lcom/kousei/framework/u;)V
+
+    .line 262
+    const-string v2, "SHA384"
+
+    .line 264
+    invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 267
+    new-instance v0, Lcom/kousei/framework/j0;
+
+    .line 269
+    invoke-direct {v0, v10}, Lcom/kousei/framework/j0;-><init>(Lcom/kousei/framework/u;)V
+
+    .line 272
+    invoke-virtual {v1, v11, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 275
+    new-instance v0, Lcom/kousei/framework/j0;
+
+    .line 277
+    invoke-direct {v0, v10}, Lcom/kousei/framework/j0;-><init>(Lcom/kousei/framework/u;)V
+
+    .line 280
+    const-string v2, "SHA512"
+
+    .line 282
+    invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 285
+    new-instance v0, Lcom/kousei/framework/j0;
+
+    .line 287
+    invoke-direct {v0, v12}, Lcom/kousei/framework/j0;-><init>(Lcom/kousei/framework/u;)V
+
+    .line 290
+    invoke-virtual {v1, v13, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 293
+    new-instance v0, Lcom/kousei/framework/j0;
+
+    .line 295
+    move-object/from16 v2, v17
+
+    .line 297
+    invoke-direct {v0, v2}, Lcom/kousei/framework/j0;-><init>(Lcom/kousei/framework/u;)V
+
+    .line 300
+    move-object/from16 v2, v16
+
+    .line 302
+    invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 305
+    new-instance v0, Lcom/kousei/framework/j0;
+
+    .line 307
+    move-object/from16 v2, v19
+
+    .line 309
+    invoke-direct {v0, v2}, Lcom/kousei/framework/j0;-><init>(Lcom/kousei/framework/u;)V
+
+    .line 312
+    move-object/from16 v2, v18
+
+    .line 314
+    invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 317
+    new-instance v0, Lcom/kousei/framework/j0;
+
+    .line 319
+    move-object/from16 v2, v21
+
+    .line 321
+    invoke-direct {v0, v2}, Lcom/kousei/framework/j0;-><init>(Lcom/kousei/framework/u;)V
+
+    .line 324
+    move-object/from16 v2, v20
+
+    .line 326
+    invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 329
+    new-instance v0, Lcom/kousei/framework/j0;
+
+    .line 331
+    invoke-direct {v0, v14}, Lcom/kousei/framework/j0;-><init>(Lcom/kousei/framework/u;)V
+
+    .line 334
+    move-object/from16 v2, v22
+
+    .line 336
+    invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 339
     return-void
 .end method

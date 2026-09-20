@@ -2,178 +2,327 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/security/PrivateKey;
-.implements Ljava/security/Key;
+.implements Lcom/kousei/framework/w;
 
 
 # instance fields
-.field public transient K:Lcom/kousei/framework/g8;
+.field public final synthetic a:I
 
-.field public transient L:Ljava/lang/String;
-
-.field public transient M:[B
-
-.field public transient N:Lcom/kousei/framework/e0;
+.field public b:Ljava/lang/Object;
 
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+# direct methods
+.method public synthetic constructor <init>()V
+    .registers 2
+
+    .line 10
+    const/4 v0, 0x1
+
+    iput v0, p0, Lcom/kousei/framework/w0;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/kousei/framework/e0;)V
     .registers 3
 
     .line 1
-    if-ne p1, p0, :cond_4
+    const/4 v0, 0x0
 
-    .line 3
-    const/4 p0, 0x1
-
-    .line 4
-    return p0
-
-    .line 5
-    :cond_4
-    instance-of v0, p1, Lcom/kousei/framework/w0;
-
-    .line 7
-    if-eqz v0, :cond_17
-
-    .line 9
-    check-cast p1, Lcom/kousei/framework/w0;
-
-    .line 11
-    invoke-virtual {p0}, Lcom/kousei/framework/w0;->getEncoded()[B
-
-    .line 14
-    move-result-object p0
-
-    .line 15
-    invoke-virtual {p1}, Lcom/kousei/framework/w0;->getEncoded()[B
-
-    .line 18
-    move-result-object p1
-
-    .line 19
-    invoke-static {p0, p1}, Ljava/util/Arrays;->equals([B[B)Z
-
-    .line 22
-    move-result p0
-
-    .line 23
-    return p0
-
-    .line 24
-    :cond_17
-    const/4 p0, 0x0
-
-    .line 25
-    return p0
-.end method
-
-.method public final getAlgorithm()Ljava/lang/String;
-    .registers 1
-
-    .line 1
-    iget-object p0, p0, Lcom/kousei/framework/w0;->L:Ljava/lang/String;
-
-    .line 3
-    return-object p0
-.end method
-
-.method public final getEncoded()[B
-    .registers 5
-
-    .line 1
-    iget-object v0, p0, Lcom/kousei/framework/w0;->M:[B
-
-    .line 3
-    if-nez v0, :cond_1e
-
-    .line 5
-    iget-object v0, p0, Lcom/kousei/framework/w0;->K:Lcom/kousei/framework/g8;
-
-    .line 7
-    iget-object v1, p0, Lcom/kousei/framework/w0;->N:Lcom/kousei/framework/e0;
-
-    .line 9
-    iget-boolean v2, v0, Lcom/kousei/framework/n0;->K:Z
-
-    .line 11
-    const/4 v3, 0x0
-
-    .line 12
-    if-eqz v2, :cond_18
-
-    .line 14
-    :try_start_d
-    invoke-static {v0, v1}, Lcom/kousei/framework/xc;->m(Lcom/kousei/framework/n0;Lcom/kousei/framework/e0;)Lcom/kousei/framework/kd;
-
-    .line 17
-    move-result-object v0
-
-    .line 18
-    invoke-virtual {v0}, Lcom/kousei/framework/s;->g()[B
-
-    .line 21
-    move-result-object v3
-    :try_end_15
-    .catch Ljava/lang/Exception; {:try_start_d .. :try_end_15} :catch_15
-
-    .line 22
-    :catch_15
-    iput-object v3, p0, Lcom/kousei/framework/w0;->M:[B
-
-    .line 24
-    goto :goto_1e
-
-    .line 25
-    :cond_18
-    const-string p0, "public key found"
-
-    .line 27
-    invoke-static {p0}, Lcom/kousei/framework/f;->k(Ljava/lang/String;)V
-
-    .line 30
-    return-object v3
-
-    .line 31
-    :cond_1e
-    :goto_1e
-    iget-object p0, p0, Lcom/kousei/framework/w0;->M:[B
-
-    .line 33
-    invoke-static {p0}, Lcom/kousei/framework/i0;->J([B)[B
-
-    .line 36
-    move-result-object p0
-
-    .line 37
-    return-object p0
-.end method
-
-.method public final getFormat()Ljava/lang/String;
-    .registers 1
-
-    .line 1
-    const-string p0, "PKCS#8"
-
-    .line 3
-    return-object p0
-.end method
-
-.method public final hashCode()I
-    .registers 1
-
-    .line 1
-    invoke-virtual {p0}, Lcom/kousei/framework/w0;->getEncoded()[B
+    .line 2
+    iput v0, p0, Lcom/kousei/framework/w0;->a:I
 
     .line 4
-    move-result-object p0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
-    invoke-static {p0}, Lcom/kousei/framework/i0;->g1([B)I
+    .line 7
+    iput-object p1, p0, Lcom/kousei/framework/w0;->b:Ljava/lang/Object;
+
+    .line 9
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Ljava/io/InputStream;
+    .registers 2
+
+    .line 1
+    iget v0, p0, Lcom/kousei/framework/w0;->a:I
+
+    .line 3
+    packed-switch v0, :pswitch_data_14
+
+    .line 6
+    iget-object p0, p0, Lcom/kousei/framework/w0;->b:Ljava/lang/Object;
 
     .line 8
-    move-result p0
+    check-cast p0, Lcom/kousei/framework/i3;
+
+    .line 10
+    return-object p0
+
+    .line 11
+    :pswitch_a  #0x0
+    new-instance v0, Lcom/kousei/framework/o1;
+
+    .line 13
+    iget-object p0, p0, Lcom/kousei/framework/w0;->b:Ljava/lang/Object;
+
+    .line 15
+    check-cast p0, Lcom/kousei/framework/e0;
+
+    .line 17
+    invoke-direct {v0, p0}, Lcom/kousei/framework/o1;-><init>(Lcom/kousei/framework/e0;)V
+
+    .line 20
+    return-object v0
+
+    .line 21
+    :pswitch_data_14
+    .packed-switch 0x0
+        :pswitch_a  #00000000
+    .end packed-switch
+.end method
+
+.method public final b()Lcom/kousei/framework/z;
+    .registers 9
+
+    .line 1
+    iget v0, p0, Lcom/kousei/framework/w0;->a:I
+
+    .line 3
+    const-string v1, "IOException converting stream to byte array: "
+
+    .line 5
+    const/4 v2, 0x0
+
+    .line 6
+    packed-switch v0, :pswitch_data_48
 
     .line 9
-    return p0
+    :try_start_8
+    invoke-virtual {p0}, Lcom/kousei/framework/w0;->e()Lcom/kousei/framework/z;
+
+    .line 12
+    move-result-object v2
+    :try_end_c
+    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_c} :catch_d
+
+    .line 13
+    goto :goto_15
+
+    .line 14
+    :catch_d
+    move-exception p0
+
+    .line 15
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    .line 18
+    move-result-object v0
+
+    .line 19
+    invoke-static {v1, v0, p0}, Lcom/kousei/framework/e;->f(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Exception;)V
+
+    .line 22
+    :goto_15
+    return-object v2
+
+    .line 23
+    :pswitch_16  #0x0
+    :try_start_16
+    iget-object p0, p0, Lcom/kousei/framework/w0;->b:Ljava/lang/Object;
+
+    .line 25
+    check-cast p0, Lcom/kousei/framework/e0;
+
+    .line 27
+    new-instance v0, Lcom/kousei/framework/v0;
+
+    .line 29
+    new-instance v3, Lcom/kousei/framework/o1;
+
+    .line 31
+    invoke-direct {v3, p0}, Lcom/kousei/framework/o1;-><init>(Lcom/kousei/framework/e0;)V
+
+    .line 34
+    new-instance p0, Ljava/io/ByteArrayOutputStream;
+
+    .line 36
+    invoke-direct {p0}, Ljava/io/ByteArrayOutputStream;-><init>()V
+
+    .line 39
+    const/16 v4, 0x1000
+
+    .line 41
+    new-array v5, v4, [B
+
+    .line 43
+    :goto_2a
+    const/4 v6, 0x0
+
+    .line 44
+    invoke-virtual {v3, v5, v6, v4}, Lcom/kousei/framework/o1;->read([BII)I
+
+    .line 47
+    move-result v7
+
+    .line 48
+    if-ltz v7, :cond_35
+
+    .line 50
+    invoke-virtual {p0, v5, v6, v7}, Ljava/io/OutputStream;->write([BII)V
+
+    .line 53
+    goto :goto_2a
+
+    .line 54
+    :cond_35
+    invoke-virtual {p0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+
+    .line 57
+    move-result-object p0
+
+    .line 58
+    invoke-direct {v0, p0, v2}, Lcom/kousei/framework/v0;-><init>([B[Lcom/kousei/framework/v;)V
+    :try_end_3c
+    .catch Ljava/io/IOException; {:try_start_16 .. :try_end_3c} :catch_3e
+
+    .line 61
+    move-object v2, v0
+
+    .line 62
+    goto :goto_46
+
+    .line 63
+    :catch_3e
+    move-exception p0
+
+    .line 64
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    .line 67
+    move-result-object v0
+
+    .line 68
+    invoke-static {v1, v0, p0}, Lcom/kousei/framework/e;->f(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Exception;)V
+
+    .line 71
+    :goto_46
+    return-object v2
+
+    .line 72
+    nop
+
+    .line 73
+    :pswitch_data_48
+    .packed-switch 0x0
+        :pswitch_16  #00000000
+    .end packed-switch
+.end method
+
+.method public final e()Lcom/kousei/framework/z;
+    .registers 7
+
+    .line 1
+    iget v0, p0, Lcom/kousei/framework/w0;->a:I
+
+    .line 3
+    packed-switch v0, :pswitch_data_3c
+
+    .line 6
+    new-instance v0, Lcom/kousei/framework/m2;
+
+    .line 8
+    iget-object p0, p0, Lcom/kousei/framework/w0;->b:Ljava/lang/Object;
+
+    .line 10
+    check-cast p0, Lcom/kousei/framework/i3;
+
+    .line 12
+    invoke-virtual {p0}, Lcom/kousei/framework/i3;->b()[B
+
+    .line 15
+    move-result-object p0
+
+    .line 16
+    invoke-direct {v0, p0}, Lcom/kousei/framework/v;-><init>([B)V
+
+    .line 19
+    return-object v0
+
+    .line 20
+    :pswitch_13  #0x0
+    iget-object p0, p0, Lcom/kousei/framework/w0;->b:Ljava/lang/Object;
+
+    .line 22
+    check-cast p0, Lcom/kousei/framework/e0;
+
+    .line 24
+    new-instance v0, Lcom/kousei/framework/v0;
+
+    .line 26
+    new-instance v1, Lcom/kousei/framework/o1;
+
+    .line 28
+    invoke-direct {v1, p0}, Lcom/kousei/framework/o1;-><init>(Lcom/kousei/framework/e0;)V
+
+    .line 31
+    new-instance p0, Ljava/io/ByteArrayOutputStream;
+
+    .line 33
+    invoke-direct {p0}, Ljava/io/ByteArrayOutputStream;-><init>()V
+
+    .line 36
+    const/16 v2, 0x1000
+
+    .line 38
+    new-array v3, v2, [B
+
+    .line 40
+    :goto_27
+    const/4 v4, 0x0
+
+    .line 41
+    invoke-virtual {v1, v3, v4, v2}, Lcom/kousei/framework/o1;->read([BII)I
+
+    .line 44
+    move-result v5
+
+    .line 45
+    if-ltz v5, :cond_32
+
+    .line 47
+    invoke-virtual {p0, v3, v4, v5}, Ljava/io/OutputStream;->write([BII)V
+
+    .line 50
+    goto :goto_27
+
+    .line 51
+    :cond_32
+    invoke-virtual {p0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+
+    .line 54
+    move-result-object p0
+
+    .line 55
+    const/4 v1, 0x0
+
+    .line 56
+    invoke-direct {v0, p0, v1}, Lcom/kousei/framework/v0;-><init>([B[Lcom/kousei/framework/v;)V
+
+    .line 59
+    return-object v0
+
+    .line 60
+    nop
+
+    .line 61
+    :pswitch_data_3c
+    .packed-switch 0x0
+        :pswitch_13  #00000000
+    .end packed-switch
 .end method

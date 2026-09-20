@@ -1,729 +1,534 @@
-.class public final Lcom/kousei/framework/e;
+.class public final synthetic Lcom/kousei/framework/e;
 .super Ljava/lang/Object;
-
-
-# instance fields
-.field public final a:Ljava/lang/Class;
-
-.field public final synthetic b:I
+.source "r8-map-id-ec70a54ac4dd249b58de3765a20c96801dd38a23bdb543e33a18faed5ec9684e"
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Class;I)V
-    .registers 3
+.method public static a()Lcom/kousei/framework/x5;
+    .registers 11
 
     .line 1
-    iput p2, p0, Lcom/kousei/framework/e;->b:I
+    const-string v0, "Revocation HTTP "
 
     .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v1, Ljava/net/URL;
 
-    .line 6
-    iput-object p1, p0, Lcom/kousei/framework/e;->a:Ljava/lang/Class;
-
-    .line 8
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lcom/kousei/framework/a0;)V
-    .registers 2
-
-    .line 1
-    iget-object p0, p0, Lcom/kousei/framework/e;->a:Ljava/lang/Class;
-
-    .line 3
-    invoke-virtual {p0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
-
-    .line 6
-    move-result p0
+    .line 5
+    const-string v2, "https://android.googleapis.com/attestation/status?encrypted=0"
 
     .line 7
-    if-eqz p0, :cond_9
-
-    .line 9
-    return-void
+    invoke-direct {v1, v2}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
     .line 10
-    :cond_9
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v1}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     .line 13
-    move-result-object p0
-
-    .line 14
-    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    .line 17
-    move-result-object p0
-
-    .line 18
-    const-string p1, "unexpected object: "
-
-    .line 20
-    invoke-virtual {p1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    .line 23
-    move-result-object p0
-
-    .line 24
-    invoke-static {p0}, Lcom/kousei/framework/f;->m(Ljava/lang/String;)V
-
-    .line 27
-    return-void
-.end method
-
-.method public final b([B)Lcom/kousei/framework/a0;
-    .registers 2
-
-    .line 1
-    invoke-static {p1}, Lcom/kousei/framework/a0;->n([B)Lcom/kousei/framework/a0;
-
-    .line 4
-    move-result-object p1
-
-    .line 5
-    invoke-virtual {p0, p1}, Lcom/kousei/framework/e;->a(Lcom/kousei/framework/a0;)V
-
-    .line 8
-    return-object p1
-.end method
-
-.method public c(Lcom/kousei/framework/d0;)Lcom/kousei/framework/a0;
-    .registers 3
-
-    .line 1
-    iget p0, p0, Lcom/kousei/framework/e;->b:I
-
-    .line 3
-    const-string v0, "unexpected implicit constructed encoding"
-
-    .line 5
-    sparse-switch p0, :sswitch_data_28
-
-    .line 8
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    .line 10
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    .line 13
-    throw p0
-
-    .line 14
-    :sswitch_d
-    invoke-virtual {p1}, Lcom/kousei/framework/d0;->y()Lcom/kousei/framework/e0;
-
-    .line 17
-    move-result-object p0
-
-    .line 18
-    return-object p0
-
-    .line 19
-    :sswitch_12
-    return-object p1
-
-    .line 20
-    :sswitch_13
-    invoke-virtual {p1}, Lcom/kousei/framework/d0;->x()Lcom/kousei/framework/w;
-
-    .line 23
-    move-result-object p0
-
-    .line 24
-    return-object p0
-
-    .line 25
-    :sswitch_18
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    .line 27
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    .line 30
-    throw p0
-
-    .line 31
-    :sswitch_1e
-    invoke-virtual {p1}, Lcom/kousei/framework/d0;->w()Lcom/kousei/framework/h4;
-
-    .line 34
-    move-result-object p0
-
-    .line 35
-    return-object p0
-
-    .line 36
-    :sswitch_23
-    invoke-virtual {p1}, Lcom/kousei/framework/d0;->v()Lcom/kousei/framework/g;
-
-    .line 39
-    move-result-object p0
-
-    .line 40
-    return-object p0
-
-    .line 41
-    :sswitch_data_28
-    .sparse-switch
-        0x1 -> :sswitch_23
-        0x4 -> :sswitch_1e
-        0xc -> :sswitch_18
-        0xe -> :sswitch_13
-        0x11 -> :sswitch_12
-        0x12 -> :sswitch_d
-    .end sparse-switch
-.end method
-
-.method public final d(Lcom/kousei/framework/k2;Z)Lcom/kousei/framework/a0;
-    .registers 8
-
-    .line 1
-    invoke-static {p1}, Lcom/kousei/framework/i0;->H(Lcom/kousei/framework/k2;)V
-
-    .line 4
-    iget v0, p1, Lcom/kousei/framework/k2;->K:I
-
-    .line 6
-    iget-object v1, p1, Lcom/kousei/framework/k2;->N:Lcom/kousei/framework/k;
-
-    .line 8
-    const/4 v2, 0x0
-
-    .line 9
-    if-eqz p2, :cond_1f
-
-    .line 11
-    invoke-virtual {p1}, Lcom/kousei/framework/k2;->s()Z
-
-    .line 14
-    move-result p1
-
-    .line 15
-    if-eqz p1, :cond_19
-
-    .line 17
-    invoke-interface {v1}, Lcom/kousei/framework/k;->b()Lcom/kousei/framework/a0;
-
-    .line 20
-    move-result-object p1
-
-    .line 21
-    invoke-virtual {p0, p1}, Lcom/kousei/framework/e;->a(Lcom/kousei/framework/a0;)V
-
-    .line 24
-    goto/16 :goto_124
-
-    .line 26
-    :cond_19
-    const-string p0, "object implicit - explicit expected."
-
-    .line 28
-    :goto_1b
-    invoke-static {p0}, Lcom/kousei/framework/f;->m(Ljava/lang/String;)V
-
-    .line 31
-    return-object v2
-
-    .line 32
-    :cond_1f
-    const/4 p2, 0x1
-
-    .line 33
-    if-eq p2, v0, :cond_128
-
-    .line 35
-    invoke-interface {v1}, Lcom/kousei/framework/k;->b()Lcom/kousei/framework/a0;
-
-    .line 38
     move-result-object v1
 
-    .line 39
-    const/4 v3, 0x3
+    .line 14
+    check-cast v1, Ljava/net/HttpURLConnection;
 
-    .line 40
-    const/4 v4, 0x0
+    .line 16
+    const/16 v2, 0x2710
+
+    .line 18
+    invoke-virtual {v1, v2}, Ljava/net/URLConnection;->setConnectTimeout(I)V
+
+    .line 21
+    const/16 v2, 0x3a98
+
+    .line 23
+    invoke-virtual {v1, v2}, Ljava/net/URLConnection;->setReadTimeout(I)V
+
+    .line 26
+    const-string v2, "Accept"
+
+    .line 28
+    const-string v3, "application/json"
+
+    .line 30
+    invoke-virtual {v1, v2, v3}, Ljava/net/URLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 33
+    :try_start_20
+    invoke-virtual {v1}, Ljava/net/HttpURLConnection;->getResponseCode()I
+
+    .line 36
+    move-result v2
+
+    .line 37
+    const/16 v3, 0xc8
+
+    .line 39
+    if-ne v2, v3, :cond_7b
 
     .line 41
-    if-eq v0, v3, :cond_105
-
-    .line 43
-    const/4 p1, 0x4
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     .line 44
-    if-eq v0, p1, :cond_33
+    move-result-wide v5
 
-    .line 46
-    invoke-virtual {p0, v1}, Lcom/kousei/framework/e;->a(Lcom/kousei/framework/a0;)V
+    .line 45
+    const-string v0, "Cache-Control"
 
-    .line 49
-    :pswitch_30  #0xe
-    move-object p1, v1
+    .line 47
+    invoke-virtual {v1, v0}, Ljava/net/URLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
 
     .line 50
-    goto/16 :goto_124
+    move-result-object v0
 
-    .line 52
-    :cond_33
-    instance-of p1, v1, Lcom/kousei/framework/d0;
+    .line 51
+    const-wide/16 v2, 0x0
 
-    .line 54
-    if-eqz p1, :cond_3f
+    .line 53
+    const-wide/16 v7, -0x1
 
-    .line 56
-    check-cast v1, Lcom/kousei/framework/d0;
+    .line 55
+    if-eqz v0, :cond_5f
 
-    .line 58
-    invoke-virtual {p0, v1}, Lcom/kousei/framework/e;->c(Lcom/kousei/framework/d0;)Lcom/kousei/framework/a0;
+    .line 57
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+
+    .line 60
+    move-result v4
 
     .line 61
-    move-result-object p1
+    if-eqz v4, :cond_3f
 
-    .line 62
-    goto/16 :goto_124
+    .line 63
+    goto :goto_5f
 
     .line 64
     :cond_3f
-    check-cast v1, Lcom/kousei/framework/o4;
+    const-string v4, "(?i)\\bmax-age\\s*=\\s*(\\d+)"
 
     .line 66
-    iget p1, p0, Lcom/kousei/framework/e;->b:I
+    invoke-static {v4}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
-    .line 68
-    packed-switch p1, :pswitch_data_12c
+    .line 69
+    move-result-object v4
 
-    .line 71
-    :pswitch_46  #0x4, 0x11, 0x12
-    new-instance p0, Ljava/lang/IllegalStateException;
+    .line 70
+    invoke-virtual {v4, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     .line 73
-    const-string p1, "unexpected implicit primitive encoding"
+    move-result-object v0
 
-    .line 75
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    .line 74
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
+
+    .line 77
+    move-result v4
+    :try_end_4d
+    .catchall {:try_start_20 .. :try_end_4d} :catchall_79
 
     .line 78
-    throw p0
+    if-eqz v4, :cond_5f
 
-    .line 79
-    :pswitch_4e  #0x18
-    iget-object p1, v1, Lcom/kousei/framework/w;->K:[B
+    .line 80
+    const/4 v4, 0x1
 
     .line 81
-    new-instance p2, Lcom/kousei/framework/y4;
+    :try_start_50
+    invoke-virtual {v0, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
-    .line 83
-    invoke-direct {p2, p1}, Lcom/kousei/framework/y4;-><init>([B)V
+    .line 84
+    move-result-object v0
 
-    .line 86
-    :goto_55
-    move-object p1, p2
+    .line 85
+    invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
-    .line 87
-    goto/16 :goto_124
+    .line 88
+    move-result-wide v9
+    :try_end_58
+    .catch Ljava/lang/NumberFormatException; {:try_start_50 .. :try_end_58} :catch_5f
+    .catchall {:try_start_50 .. :try_end_58} :catchall_79
 
     .line 89
-    :pswitch_58  #0x17
-    iget-object p1, v1, Lcom/kousei/framework/w;->K:[B
+    cmp-long v0, v9, v2
 
     .line 91
-    new-instance p2, Lcom/kousei/framework/x4;
+    if-ltz v0, :cond_5f
 
     .line 93
-    invoke-direct {p2, p1}, Lcom/kousei/framework/x4;-><init>([B)V
+    const-wide/16 v7, 0x3e8
+
+    .line 95
+    mul-long/2addr v7, v9
 
     .line 96
-    goto :goto_55
+    :catch_5f
+    :cond_5f
+    :goto_5f
+    cmp-long v0, v7, v2
 
-    .line 97
-    :pswitch_60  #0x16
-    iget-object p1, v1, Lcom/kousei/framework/w;->K:[B
+    .line 98
+    if-lez v0, :cond_64
 
-    .line 99
-    new-instance p2, Lcom/kousei/framework/w4;
+    .line 100
+    goto :goto_67
 
     .line 101
-    invoke-direct {p2, p1}, Lcom/kousei/framework/w4;-><init>([B)V
+    :cond_64
+    const-wide/32 v7, 0x5265c00
 
     .line 104
-    goto :goto_55
+    :goto_67
+    add-long/2addr v7, v5
 
     .line 105
-    :pswitch_68  #0x15
-    iget-object p1, v1, Lcom/kousei/framework/w;->K:[B
+    :try_start_68
+    new-instance v4, Lcom/kousei/framework/x5;
 
     .line 107
-    new-instance p2, Lcom/kousei/framework/v4;
+    invoke-static {v1}, Lcom/kousei/framework/y5;->c(Ljava/net/HttpURLConnection;)Ljava/lang/String;
 
-    .line 109
-    invoke-direct {p2, p1}, Lcom/kousei/framework/v4;-><init>([B)V
+    .line 110
+    move-result-object v0
 
-    .line 112
-    goto :goto_55
+    .line 111
+    invoke-static {v0}, Lcom/kousei/framework/y5;->b(Ljava/lang/String;)Ljava/util/Map;
 
-    .line 113
-    :pswitch_70  #0x14
-    iget-object p1, v1, Lcom/kousei/framework/w;->K:[B
+    .line 114
+    move-result-object v9
 
     .line 115
-    new-instance p2, Lcom/kousei/framework/h0;
+    invoke-direct/range {v4 .. v9}, Lcom/kousei/framework/x5;-><init>(JJLjava/util/Map;)V
+    :try_end_75
+    .catchall {:try_start_68 .. :try_end_75} :catchall_79
 
-    .line 117
-    invoke-direct {p2, p1}, Lcom/kousei/framework/h0;-><init>([B)V
-
-    .line 120
-    goto :goto_55
+    .line 118
+    invoke-virtual {v1}, Ljava/net/HttpURLConnection;->disconnect()V
 
     .line 121
-    :pswitch_78  #0x13
-    iget-object p1, v1, Lcom/kousei/framework/w;->K:[B
+    return-object v4
+
+    .line 122
+    :catchall_79
+    move-exception v0
 
     .line 123
-    new-instance p2, Lcom/kousei/framework/t4;
+    goto :goto_91
 
-    .line 125
-    invoke-direct {p2, p1}, Lcom/kousei/framework/t4;-><init>([B)V
+    .line 124
+    :cond_7b
+    :try_start_7b
+    new-instance v2, Ljava/lang/IllegalStateException;
+
+    .line 126
+    new-instance v3, Ljava/lang/StringBuilder;
 
     .line 128
-    goto :goto_55
-
-    .line 129
-    :pswitch_80  #0x10
-    iget-object p1, v1, Lcom/kousei/framework/w;->K:[B
+    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 131
-    invoke-static {p1, v4}, Lcom/kousei/framework/b0;->q([BZ)Lcom/kousei/framework/b0;
+    invoke-virtual {v1}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
     .line 134
-    move-result-object p1
+    move-result v0
 
     .line 135
-    goto/16 :goto_124
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 137
-    :pswitch_88  #0xf
-    iget-object p1, v1, Lcom/kousei/framework/w;->K:[B
-
-    .line 139
-    new-instance p2, Lcom/kousei/framework/q4;
+    .line 138
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 141
-    invoke-direct {p2, p1}, Lcom/kousei/framework/q4;-><init>([B)V
+    move-result-object v0
 
-    .line 144
-    goto :goto_55
+    .line 142
+    invoke-direct {v2, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     .line 145
-    :pswitch_90  #0xd
-    iget-object p1, v1, Lcom/kousei/framework/w;->K:[B
-
-    .line 147
-    invoke-static {p1, v4}, Lcom/kousei/framework/v;->s([BZ)Lcom/kousei/framework/v;
-
-    .line 150
-    move-result-object p1
-
-    .line 151
-    goto/16 :goto_124
-
-    .line 153
-    :pswitch_98  #0xc
-    new-instance p1, Lcom/kousei/framework/t;
-
-    .line 155
-    iget-object p2, v1, Lcom/kousei/framework/w;->K:[B
-
-    .line 157
-    new-instance v0, Lcom/kousei/framework/k4;
-
-    .line 159
-    invoke-direct {v0, p2}, Lcom/kousei/framework/k4;-><init>([B)V
-
-    .line 162
-    invoke-direct {p1, v0}, Lcom/kousei/framework/t;-><init>(Lcom/kousei/framework/k4;)V
-
-    .line 165
-    goto/16 :goto_124
-
-    .line 167
-    :pswitch_a6  #0xb
-    iget-object p1, v1, Lcom/kousei/framework/w;->K:[B
-
-    .line 169
-    new-instance p2, Lcom/kousei/framework/n4;
-
-    .line 171
-    invoke-direct {p2, p1}, Lcom/kousei/framework/n4;-><init>([B)V
-
-    .line 174
-    goto :goto_55
-
-    .line 175
-    :pswitch_ae  #0xa
-    iget-object p1, v1, Lcom/kousei/framework/w;->K:[B
-
-    .line 177
-    array-length p1, p1
-
-    .line 178
-    if-nez p1, :cond_b6
-
-    .line 180
-    sget-object v2, Lcom/kousei/framework/m4;->K:Lcom/kousei/framework/m4;
-
-    .line 182
-    goto :goto_bb
-
-    .line 183
-    :cond_b6
-    const-string p1, "malformed NULL encoding encountered"
-
-    .line 185
-    invoke-static {p1}, Lcom/kousei/framework/f;->m(Ljava/lang/String;)V
-
-    .line 188
-    :goto_bb
-    move-object p1, v2
-
-    .line 189
-    goto :goto_124
-
-    .line 190
-    :pswitch_bd  #0x9
-    iget-object p1, v1, Lcom/kousei/framework/w;->K:[B
-
-    .line 192
-    new-instance p2, Lcom/kousei/framework/q;
-
-    .line 194
-    invoke-direct {p2, p1}, Lcom/kousei/framework/q;-><init>([B)V
-
-    .line 197
-    goto :goto_55
-
-    .line 198
-    :pswitch_c5  #0x8
-    iget-object p1, v1, Lcom/kousei/framework/w;->K:[B
-
-    .line 200
-    new-instance p2, Lcom/kousei/framework/l4;
-
-    .line 202
-    invoke-direct {p2, p1}, Lcom/kousei/framework/l4;-><init>([B)V
-
-    .line 205
-    goto :goto_55
-
-    .line 206
-    :pswitch_cd  #0x7
-    iget-object p1, v1, Lcom/kousei/framework/w;->K:[B
-
-    .line 208
-    new-instance p2, Lcom/kousei/framework/k4;
-
-    .line 210
-    invoke-direct {p2, p1}, Lcom/kousei/framework/k4;-><init>([B)V
-
-    .line 213
-    goto :goto_55
-
-    .line 214
-    :pswitch_d5  #0x6
-    iget-object p1, v1, Lcom/kousei/framework/w;->K:[B
-
-    .line 216
-    new-instance p2, Lcom/kousei/framework/o;
-
-    .line 218
-    invoke-direct {p2, p1}, Lcom/kousei/framework/o;-><init>([B)V
-
-    .line 221
-    goto/16 :goto_55
-
-    .line 223
-    :pswitch_de  #0x5
-    iget-object p1, v1, Lcom/kousei/framework/w;->K:[B
-
-    .line 225
-    new-instance p2, Lcom/kousei/framework/i4;
-
-    .line 227
-    invoke-direct {p2, p1}, Lcom/kousei/framework/i4;-><init>([B)V
-
-    .line 230
-    goto/16 :goto_55
-
-    .line 232
-    :pswitch_e7  #0x3
-    iget-object p1, v1, Lcom/kousei/framework/w;->K:[B
-
-    .line 234
-    invoke-static {p1, v4}, Lcom/kousei/framework/m;->q([BZ)Lcom/kousei/framework/m;
-
-    .line 237
-    move-result-object p1
-
-    .line 238
-    goto :goto_124
-
-    .line 239
-    :pswitch_ee  #0x2
-    iget-object p1, v1, Lcom/kousei/framework/w;->K:[B
-
-    .line 241
-    invoke-static {p1}, Lcom/kousei/framework/i;->q([B)Lcom/kousei/framework/i;
-
-    .line 244
-    move-result-object p1
-
-    .line 245
-    goto :goto_124
-
-    .line 246
-    :pswitch_f5  #0x1
-    iget-object p1, v1, Lcom/kousei/framework/w;->K:[B
-
-    .line 248
-    invoke-static {p1}, Lcom/kousei/framework/g;->q([B)Lcom/kousei/framework/g;
-
-    .line 251
-    move-result-object p1
-
-    .line 252
-    goto :goto_124
-
-    .line 253
-    :pswitch_fc  #0x0
-    iget-object p1, v1, Lcom/kousei/framework/w;->K:[B
-
-    .line 255
-    new-instance p2, Lcom/kousei/framework/f4;
-
-    .line 257
-    invoke-direct {p2, p1}, Lcom/kousei/framework/f4;-><init>([B)V
-
-    .line 260
-    goto/16 :goto_55
-
-    .line 262
-    :cond_105
-    iget p1, p1, Lcom/kousei/framework/k2;->O:I
-
-    .line 264
-    const/4 v0, -0x1
-
-    .line 265
-    packed-switch p1, :pswitch_data_162
-
-    .line 268
-    new-instance p1, Lcom/kousei/framework/r4;
-
-    .line 270
-    invoke-direct {p1, v1, p2}, Lcom/kousei/framework/r4;-><init>(Lcom/kousei/framework/k;I)V
-
-    .line 273
-    iput v0, p1, Lcom/kousei/framework/r4;->N:I
-
-    .line 275
-    goto :goto_120
-
-    .line 276
-    :pswitch_113  #0x1
-    new-instance p1, Lcom/kousei/framework/r4;
-
-    .line 278
-    invoke-direct {p1, v1, v4}, Lcom/kousei/framework/r4;-><init>(Lcom/kousei/framework/k;I)V
-
-    .line 281
-    iput v0, p1, Lcom/kousei/framework/r4;->N:I
-
-    .line 283
-    goto :goto_120
-
-    .line 284
-    :pswitch_11b  #0x0
-    new-instance p1, Lcom/kousei/framework/h2;
-
-    .line 286
-    invoke-direct {p1, v1}, Lcom/kousei/framework/d0;-><init>(Lcom/kousei/framework/k;)V
-
-    .line 289
-    :goto_120
-    invoke-virtual {p0, p1}, Lcom/kousei/framework/e;->c(Lcom/kousei/framework/d0;)Lcom/kousei/framework/a0;
-
-    .line 292
-    move-result-object p1
-
-    .line 293
-    :goto_124
-    invoke-virtual {p0, p1}, Lcom/kousei/framework/e;->a(Lcom/kousei/framework/a0;)V
-
-    .line 296
-    return-object p1
-
-    .line 297
-    :cond_128
-    const-string p0, "object explicit - implicit expected."
-
-    .line 299
-    goto/16 :goto_1b
-
-    .line 301
-    :pswitch_data_12c
-    .packed-switch 0x0
-        :pswitch_fc  #00000000
-        :pswitch_f5  #00000001
-        :pswitch_ee  #00000002
-        :pswitch_e7  #00000003
-        :pswitch_46  #00000004
-        :pswitch_de  #00000005
-        :pswitch_d5  #00000006
-        :pswitch_cd  #00000007
-        :pswitch_c5  #00000008
-        :pswitch_bd  #00000009
-        :pswitch_ae  #0000000a
-        :pswitch_a6  #0000000b
-        :pswitch_98  #0000000c
-        :pswitch_90  #0000000d
-        :pswitch_30  #0000000e
-        :pswitch_88  #0000000f
-        :pswitch_80  #00000010
-        :pswitch_46  #00000011
-        :pswitch_46  #00000012
-        :pswitch_78  #00000013
-        :pswitch_70  #00000014
-        :pswitch_68  #00000015
-        :pswitch_60  #00000016
-        :pswitch_58  #00000017
-        :pswitch_4e  #00000018
-    .end packed-switch
-
-    .line 355
-    :pswitch_data_162
-    .packed-switch 0x0
-        :pswitch_11b  #00000000
-        :pswitch_113  #00000001
-    .end packed-switch
+    throw v2
+    :try_end_91
+    .catchall {:try_start_7b .. :try_end_91} :catchall_79
+
+    .line 146
+    :goto_91
+    invoke-virtual {v1}, Ljava/net/HttpURLConnection;->disconnect()V
+
+    .line 149
+    throw v0
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
+.method public static synthetic b(II)V
+    .registers 4
+
+    .line 1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    .line 3
+    const-string v1, "DEF length "
+
+    .line 5
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 8
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 11
+    const-string p0, " object truncated by "
+
+    .line 13
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 16
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 19
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 22
+    move-result-object p0
+
+    .line 23
+    new-instance p1, Ljava/io/EOFException;
+
+    .line 25
+    invoke-direct {p1, p0}, Ljava/io/EOFException;-><init>(Ljava/lang/String;)V
+
+    .line 28
+    throw p1
+.end method
+
+.method public static synthetic c(ILjava/lang/String;)V
+    .registers 4
+
+    .line 1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    .line 3
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    .line 5
+    invoke-direct {v1, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 8
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 11
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 14
+    move-result-object p0
+
+    .line 15
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    .line 18
+    throw v0
+.end method
+
+.method public static synthetic d(Ljava/lang/Object;Ljava/lang/String;)V
+    .registers 3
+
+    .line 1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    .line 3
+    invoke-direct {v0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 6
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 9
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 12
+    move-result-object p0
+
+    .line 13
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    .line 15
+    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    .line 18
+    throw p1
+.end method
+
+.method public static synthetic e(Ljava/lang/String;)V
     .registers 2
 
     .line 1
-    if-ne p0, p1, :cond_4
+    new-instance v0, Ljava/lang/NullPointerException;
 
     .line 3
-    const/4 p0, 0x1
-
-    .line 4
-    return p0
-
-    .line 5
-    :cond_4
-    const/4 p0, 0x0
+    invoke-direct {v0, p0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     .line 6
-    return p0
+    throw v0
+.end method
+
+.method public static synthetic f(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Exception;)V
+    .registers 4
+
+    .line 1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    .line 3
+    invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 6
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 9
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 12
+    move-result-object p0
+
+    .line 13
+    new-instance p1, Lcom/kousei/framework/y;
+
+    .line 15
+    const/4 v0, 0x0
+
+    .line 16
+    invoke-direct {p1, p0, p2, v0}, Lcom/kousei/framework/y;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
+
+    .line 19
+    throw p1
+.end method
+
+.method public static synthetic g(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+    .registers 5
+
+    .line 1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    .line 3
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    .line 5
+    invoke-direct {v1, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 8
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 11
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 14
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 17
+    move-result-object p0
+
+    .line 18
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    .line 21
+    throw v0
+.end method
+
+.method public static synthetic h(ILjava/lang/String;)V
+    .registers 3
+
+    .line 1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    .line 3
+    invoke-direct {v0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 6
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 9
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 12
+    move-result-object p0
+
+    .line 13
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    .line 15
+    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    .line 18
+    throw p1
+.end method
+
+.method public static synthetic i(Ljava/lang/Object;Ljava/lang/String;)V
+    .registers 3
+
+    .line 1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    .line 3
+    invoke-direct {v0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 6
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 9
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 12
+    move-result-object p0
+
+    .line 13
+    new-instance p1, Lcom/kousei/framework/m;
+
+    .line 15
+    invoke-direct {p1, p0}, Lcom/kousei/framework/m;-><init>(Ljava/lang/String;)V
+
+    .line 18
+    throw p1
+.end method
+
+.method public static synthetic j(Ljava/lang/String;)V
+    .registers 2
+
+    .line 1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    .line 3
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    .line 6
+    throw v0
+.end method
+
+.method public static synthetic k(Ljava/lang/Object;Ljava/lang/String;)V
+    .registers 4
+
+    .line 1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    .line 3
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    .line 5
+    invoke-direct {v1, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 8
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 11
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 14
+    move-result-object p0
+
+    .line 15
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    .line 18
+    throw v0
+.end method
+
+.method public static synthetic l(Ljava/lang/String;)V
+    .registers 2
+
+    .line 1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    .line 3
+    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    .line 6
+    throw v0
 .end method

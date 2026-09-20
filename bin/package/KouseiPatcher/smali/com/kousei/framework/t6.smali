@@ -1,363 +1,186 @@
-.class public Lcom/kousei/framework/t6;
+.class public final Lcom/kousei/framework/t6;
 .super Ljava/lang/Object;
+.source "r8-map-id-ec70a54ac4dd249b58de3765a20c96801dd38a23bdb543e33a18faed5ec9684e"
 
 # interfaces
-.implements Lcom/kousei/framework/l6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final f:Lcom/kousei/framework/s6;
-
-.field public final g:[B
-
-.field public final h:Lcom/kousei/framework/c7;
-
-.field public final i:Ljava/math/BigInteger;
-
-.field public final j:Ljava/math/BigInteger;
+.field public final synthetic a:Lcom/kousei/framework/a7;
 
 
 # direct methods
-.method public constructor <init>(Lcom/kousei/framework/ej;)V
-    .registers 9
-
-    .line 40
-    iget-object v0, p1, Lcom/kousei/framework/ej;->L:Lcom/kousei/framework/dj;
-
-    .line 41
-    iget-object v2, v0, Lcom/kousei/framework/dj;->K:Lcom/kousei/framework/s6;
-
-    .line 42
-    iget-object v0, p1, Lcom/kousei/framework/ej;->M:Lcom/kousei/framework/gj;
-
-    invoke-virtual {v0}, Lcom/kousei/framework/gj;->h()Lcom/kousei/framework/c7;
-
-    move-result-object v3
-
-    .line 43
-    iget-object v4, p1, Lcom/kousei/framework/ej;->N:Ljava/math/BigInteger;
-
-    .line 44
-    iget-object v5, p1, Lcom/kousei/framework/ej;->O:Ljava/math/BigInteger;
-
-    .line 45
-    iget-object p1, p1, Lcom/kousei/framework/ej;->L:Lcom/kousei/framework/dj;
-
-    .line 46
-    iget-object p1, p1, Lcom/kousei/framework/dj;->L:[B
-
-    .line 47
-    invoke-static {p1}, Lcom/kousei/framework/i0;->J([B)[B
-
-    move-result-object v6
-
-    move-object v1, p0
-
-    .line 48
-    invoke-direct/range {v1 .. v6}, Lcom/kousei/framework/t6;-><init>(Lcom/kousei/framework/s6;Lcom/kousei/framework/c7;Ljava/math/BigInteger;Ljava/math/BigInteger;[B)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lcom/kousei/framework/s6;Lcom/kousei/framework/c7;Ljava/math/BigInteger;Ljava/math/BigInteger;[B)V
-    .registers 7
+.method public constructor <init>(Lcom/kousei/framework/a7;)V
+    .registers 2
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 4
-    const/4 v0, 0x0
-
-    .line 5
-    if-eqz p1, :cond_21
-
-    .line 7
-    if-eqz p3, :cond_1b
-
-    .line 9
-    iput-object p1, p0, Lcom/kousei/framework/t6;->f:Lcom/kousei/framework/s6;
-
-    .line 11
-    invoke-static {p1, p2}, Lcom/kousei/framework/t6;->a(Lcom/kousei/framework/s6;Lcom/kousei/framework/c7;)Lcom/kousei/framework/c7;
-
-    .line 14
-    move-result-object p1
-
-    .line 15
-    iput-object p1, p0, Lcom/kousei/framework/t6;->h:Lcom/kousei/framework/c7;
-
-    .line 17
-    iput-object p3, p0, Lcom/kousei/framework/t6;->i:Ljava/math/BigInteger;
-
-    .line 19
-    iput-object p4, p0, Lcom/kousei/framework/t6;->j:Ljava/math/BigInteger;
-
-    .line 21
-    invoke-static {p5}, Lcom/kousei/framework/i0;->J([B)[B
-
-    .line 24
-    move-result-object p1
-
-    .line 25
-    iput-object p1, p0, Lcom/kousei/framework/t6;->g:[B
-
-    .line 27
-    return-void
-
-    .line 28
-    :cond_1b
-    const-string p0, "n"
-
-    .line 30
-    invoke-static {p0}, Lcom/kousei/framework/f;->e(Ljava/lang/String;)V
-
-    .line 33
-    throw v0
-
-    .line 34
-    :cond_21
-    const-string p0, "curve"
-
-    .line 36
-    invoke-static {p0}, Lcom/kousei/framework/f;->e(Ljava/lang/String;)V
-
-    .line 39
-    throw v0
-.end method
-
-.method public static a(Lcom/kousei/framework/s6;Lcom/kousei/framework/c7;)Lcom/kousei/framework/c7;
-    .registers 4
-
-    .line 1
-    const/4 v0, 0x0
-
-    .line 2
-    if-eqz p1, :cond_34
-
-    .line 4
-    iget-object v1, p1, Lcom/kousei/framework/c7;->a:Lcom/kousei/framework/s6;
+    iput-object p1, p0, Lcom/kousei/framework/t6;->a:Lcom/kousei/framework/a7;
 
     .line 6
-    invoke-virtual {p0, v1}, Lcom/kousei/framework/s6;->g(Lcom/kousei/framework/s6;)Z
-
-    .line 9
-    move-result v1
-
-    .line 10
-    if-eqz v1, :cond_2e
-
-    .line 12
-    invoke-virtual {p0, p1}, Lcom/kousei/framework/s6;->k(Lcom/kousei/framework/c7;)Lcom/kousei/framework/c7;
-
-    .line 15
-    move-result-object p0
-
-    .line 16
-    invoke-virtual {p0}, Lcom/kousei/framework/c7;->l()Lcom/kousei/framework/c7;
-
-    .line 19
-    move-result-object p0
-
-    .line 20
-    invoke-virtual {p0}, Lcom/kousei/framework/c7;->i()Z
-
-    .line 23
-    move-result p1
-
-    .line 24
-    if-nez p1, :cond_28
-
-    .line 26
-    const/4 p1, 0x0
-
-    .line 27
-    const/4 v1, 0x1
-
-    .line 28
-    invoke-virtual {p0, p1, v1}, Lcom/kousei/framework/c7;->h(ZZ)Z
-
-    .line 31
-    move-result p1
-
-    .line 32
-    if-eqz p1, :cond_22
-
-    .line 34
-    return-object p0
-
-    .line 35
-    :cond_22
-    const-string p0, "Point not on curve"
-
-    .line 37
-    invoke-static {p0}, Lcom/kousei/framework/f;->k(Ljava/lang/String;)V
-
-    .line 40
-    return-object v0
-
-    .line 41
-    :cond_28
-    const-string p0, "Point at infinity"
-
-    .line 43
-    invoke-static {p0}, Lcom/kousei/framework/f;->k(Ljava/lang/String;)V
-
-    .line 46
-    return-object v0
-
-    .line 47
-    :cond_2e
-    const-string p0, "Point must be on the same curve"
-
-    .line 49
-    invoke-static {p0}, Lcom/kousei/framework/f;->k(Ljava/lang/String;)V
-
-    .line 52
-    return-object v0
-
-    .line 53
-    :cond_34
-    const-string p0, "Point cannot be null"
-
-    .line 55
-    invoke-static {p0}, Lcom/kousei/framework/f;->e(Ljava/lang/String;)V
-
-    .line 58
-    return-object v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .registers 6
+.method public final run()V
+    .registers 4
 
     .line 1
+    iget-object p0, p0, Lcom/kousei/framework/t6;->a:Lcom/kousei/framework/a7;
+
+    .line 3
     const/4 v0, 0x1
 
-    .line 2
-    if-ne p0, p1, :cond_4
-
     .line 4
-    return v0
-
-    .line 5
-    :cond_4
-    instance-of v1, p1, Lcom/kousei/framework/t6;
+    :try_start_3
+    invoke-static {}, Lcom/kousei/framework/a7;->b()Z
 
     .line 7
-    const/4 v2, 0x0
+    move-result v1
 
     .line 8
-    if-nez v1, :cond_a
+    if-nez v1, :cond_e
 
     .line 10
-    return v2
-
-    .line 11
-    :cond_a
-    check-cast p1, Lcom/kousei/framework/t6;
+    invoke-static {v0}, Lcom/kousei/framework/s6;->g(Z)Lcom/kousei/framework/r6;
+    :try_end_c
+    .catchall {:try_start_3 .. :try_end_c} :catchall_d
 
     .line 13
-    iget-object v1, p0, Lcom/kousei/framework/t6;->f:Lcom/kousei/framework/s6;
+    goto :goto_e
+
+    .line 14
+    :catchall_d
+    move v1, v0
 
     .line 15
-    iget-object v3, p1, Lcom/kousei/framework/t6;->f:Lcom/kousei/framework/s6;
+    :cond_e
+    :goto_e
+    if-eqz v1, :cond_2b
 
     .line 17
-    invoke-virtual {v1, v3}, Lcom/kousei/framework/s6;->g(Lcom/kousei/framework/s6;)Z
+    :try_start_10
+    sput-boolean v0, Lcom/kousei/framework/n0;->a:Z
+    :try_end_12
+    .catchall {:try_start_10 .. :try_end_12} :catchall_13
+
+    .line 19
+    goto :goto_2b
 
     .line 20
-    move-result v1
+    :catchall_13
+    move-exception v0
 
     .line 21
-    if-eqz v1, :cond_2b
+    iget-object v2, p0, Lcom/kousei/framework/a7;->e:Ljava/lang/Object;
 
     .line 23
-    iget-object v1, p0, Lcom/kousei/framework/t6;->h:Lcom/kousei/framework/c7;
+    monitor-enter v2
 
-    .line 25
-    iget-object v3, p1, Lcom/kousei/framework/t6;->h:Lcom/kousei/framework/c7;
+    .line 24
+    if-eqz v1, :cond_1e
 
-    .line 27
-    invoke-virtual {v1, v3}, Lcom/kousei/framework/c7;->c(Lcom/kousei/framework/c7;)Z
+    .line 26
+    :try_start_19
+    sget-object v1, Lcom/kousei/framework/z6;->d:Lcom/kousei/framework/z6;
+
+    .line 28
+    goto :goto_20
+
+    .line 29
+    :catchall_1c
+    move-exception p0
 
     .line 30
-    move-result v1
+    goto :goto_29
 
     .line 31
-    if-eqz v1, :cond_2b
+    :cond_1e
+    sget-object v1, Lcom/kousei/framework/z6;->c:Lcom/kousei/framework/z6;
 
     .line 33
-    iget-object p0, p0, Lcom/kousei/framework/t6;->i:Ljava/math/BigInteger;
+    :goto_20
+    iput-object v1, p0, Lcom/kousei/framework/a7;->g:Lcom/kousei/framework/z6;
 
     .line 35
-    iget-object p1, p1, Lcom/kousei/framework/t6;->i:Ljava/math/BigInteger;
+    iget-object p0, p0, Lcom/kousei/framework/a7;->e:Ljava/lang/Object;
 
     .line 37
-    invoke-virtual {p0, p1}, Ljava/math/BigInteger;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
     .line 40
-    move-result p0
+    monitor-exit v2
+    :try_end_28
+    .catchall {:try_start_19 .. :try_end_28} :catchall_1c
 
     .line 41
-    if-eqz p0, :cond_2b
+    throw v0
+
+    .line 42
+    :goto_29
+    :try_start_29
+    monitor-exit v2
+    :try_end_2a
+    .catchall {:try_start_29 .. :try_end_2a} :catchall_1c
 
     .line 43
-    return v0
+    throw p0
 
     .line 44
     :cond_2b
-    return v2
-.end method
+    :goto_2b
+    iget-object v0, p0, Lcom/kousei/framework/a7;->e:Ljava/lang/Object;
 
-.method public final hashCode()I
-    .registers 3
+    .line 46
+    monitor-enter v0
 
-    .line 1
-    iget-object v0, p0, Lcom/kousei/framework/t6;->f:Lcom/kousei/framework/s6;
+    .line 47
+    if-eqz v1, :cond_35
 
-    .line 3
-    invoke-virtual {v0}, Lcom/kousei/framework/s6;->hashCode()I
+    .line 49
+    :try_start_30
+    sget-object v1, Lcom/kousei/framework/z6;->d:Lcom/kousei/framework/z6;
 
-    .line 6
-    move-result v0
+    .line 51
+    goto :goto_37
 
-    .line 7
-    const/16 v1, 0x404
+    .line 52
+    :catchall_33
+    move-exception p0
 
-    .line 9
-    xor-int/2addr v0, v1
+    .line 53
+    goto :goto_40
 
-    .line 10
-    mul-int/lit16 v0, v0, 0x101
+    .line 54
+    :cond_35
+    sget-object v1, Lcom/kousei/framework/z6;->c:Lcom/kousei/framework/z6;
 
-    .line 12
-    iget-object v1, p0, Lcom/kousei/framework/t6;->h:Lcom/kousei/framework/c7;
+    .line 56
+    :goto_37
+    iput-object v1, p0, Lcom/kousei/framework/a7;->g:Lcom/kousei/framework/z6;
 
-    .line 14
-    invoke-virtual {v1}, Lcom/kousei/framework/c7;->hashCode()I
+    .line 58
+    iget-object p0, p0, Lcom/kousei/framework/a7;->e:Ljava/lang/Object;
 
-    .line 17
-    move-result v1
+    .line 60
+    invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 18
-    xor-int/2addr v0, v1
+    .line 63
+    monitor-exit v0
 
-    .line 19
-    mul-int/lit16 v0, v0, 0x101
+    .line 64
+    return-void
 
-    .line 21
-    iget-object p0, p0, Lcom/kousei/framework/t6;->i:Ljava/math/BigInteger;
+    .line 65
+    :goto_40
+    monitor-exit v0
+    :try_end_41
+    .catchall {:try_start_30 .. :try_end_41} :catchall_33
 
-    .line 23
-    invoke-virtual {p0}, Ljava/math/BigInteger;->hashCode()I
-
-    .line 26
-    move-result p0
-
-    .line 27
-    xor-int/2addr p0, v0
-
-    .line 28
-    return p0
+    .line 66
+    throw p0
 .end method

@@ -1,564 +1,954 @@
 .class public final Lcom/kousei/framework/h3;
-.super Lcom/kousei/framework/s;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public K:Lcom/kousei/framework/d0;
+# static fields
+.field public static final a:Ljava/util/HashMap;
 
-.field public L:Lcom/kousei/framework/ai;
+.field public static final b:Ljava/util/HashMap;
 
 
 # direct methods
-.method public static h(Lcom/kousei/framework/a0;)Lcom/kousei/framework/h3;
-    .registers 15
+.method static constructor <clinit>()V
+    .registers 5
 
     .line 1
-    new-instance v0, Lcom/kousei/framework/h3;
+    new-instance v0, Ljava/util/HashMap;
 
     .line 3
-    invoke-static {p0}, Lcom/kousei/framework/d0;->s(Ljava/lang/Object;)Lcom/kousei/framework/d0;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 6
-    move-result-object p0
+    sput-object v0, Lcom/kousei/framework/h3;->a:Ljava/util/HashMap;
 
-    .line 7
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    .line 8
+    new-instance v0, Ljava/util/HashMap;
 
     .line 10
-    iput-object p0, v0, Lcom/kousei/framework/h3;->K:Lcom/kousei/framework/d0;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 12
-    invoke-virtual {p0}, Lcom/kousei/framework/d0;->size()I
+    .line 13
+    sput-object v0, Lcom/kousei/framework/h3;->b:Ljava/util/HashMap;
 
     .line 15
-    move-result v1
-
-    .line 16
-    const/4 v2, 0x0
+    sget-object v1, Lcom/kousei/framework/d7;->i:Lcom/kousei/framework/u;
 
     .line 17
-    const/4 v3, 0x3
+    const-string v2, "RSASSA-PSS"
 
-    .line 18
-    if-ne v1, v3, :cond_139
+    .line 19
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
-    .line 20
-    const/4 v1, 0x0
-
-    .line 21
-    invoke-virtual {p0, v1}, Lcom/kousei/framework/d0;->t(I)Lcom/kousei/framework/k;
+    .line 22
+    sget-object v1, Lcom/kousei/framework/g4;->a:Lcom/kousei/framework/u;
 
     .line 24
-    move-result-object v4
+    const-string v2, "ED25519"
 
-    .line 25
-    instance-of v5, v4, Lcom/kousei/framework/ai;
-
-    .line 27
-    const/4 v6, 0x1
-
-    .line 28
-    const/4 v7, 0x2
+    .line 26
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
     .line 29
-    if-eqz v5, :cond_23
+    sget-object v1, Lcom/kousei/framework/g4;->b:Lcom/kousei/framework/u;
 
     .line 31
-    move-object v2, v4
+    const-string v2, "ED448"
 
-    .line 32
-    check-cast v2, Lcom/kousei/framework/ai;
-
-    .line 34
-    goto/16 :goto_128
+    .line 33
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
     .line 36
-    :cond_23
-    if-eqz v4, :cond_128
+    new-instance v1, Lcom/kousei/framework/u;
 
     .line 38
-    new-instance v5, Lcom/kousei/framework/ai;
+    const-string v2, "1.2.840.113549.1.1.5"
 
     .line 40
-    invoke-static {v4}, Lcom/kousei/framework/d0;->s(Ljava/lang/Object;)Lcom/kousei/framework/d0;
+    invoke-direct {v1, v2}, Lcom/kousei/framework/u;-><init>(Ljava/lang/String;)V
 
     .line 43
-    move-result-object v4
+    const-string v2, "SHA1WITHRSA"
 
-    .line 44
-    invoke-direct {v5}, Ljava/lang/Object;-><init>()V
+    .line 45
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
-    .line 47
-    iput-object v4, v5, Lcom/kousei/framework/ai;->K:Lcom/kousei/framework/d0;
+    .line 48
+    sget-object v1, Lcom/kousei/framework/d7;->m:Lcom/kousei/framework/u;
 
-    .line 49
-    invoke-virtual {v4, v1}, Lcom/kousei/framework/d0;->t(I)Lcom/kousei/framework/k;
+    .line 50
+    const-string v3, "SHA224WITHRSA"
 
     .line 52
-    move-result-object v8
-
-    .line 53
-    instance-of v8, v8, Lcom/kousei/framework/k2;
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
     .line 55
-    if-eqz v8, :cond_4a
+    sget-object v1, Lcom/kousei/framework/d7;->j:Lcom/kousei/framework/u;
 
     .line 57
-    invoke-virtual {v4, v1}, Lcom/kousei/framework/d0;->t(I)Lcom/kousei/framework/k;
+    const-string v3, "SHA256WITHRSA"
 
-    .line 60
-    move-result-object v8
+    .line 59
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
-    .line 61
-    check-cast v8, Lcom/kousei/framework/k2;
+    .line 62
+    sget-object v1, Lcom/kousei/framework/d7;->k:Lcom/kousei/framework/u;
 
-    .line 63
-    sget-object v9, Lcom/kousei/framework/q;->M:Lcom/kousei/framework/e;
+    .line 64
+    const-string v3, "SHA384WITHRSA"
 
-    .line 65
-    invoke-virtual {v9, v8, v6}, Lcom/kousei/framework/e;->d(Lcom/kousei/framework/k2;Z)Lcom/kousei/framework/a0;
-
-    .line 68
-    move-result-object v8
+    .line 66
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
     .line 69
-    check-cast v8, Lcom/kousei/framework/q;
+    sget-object v1, Lcom/kousei/framework/d7;->l:Lcom/kousei/framework/u;
 
     .line 71
-    iput-object v8, v5, Lcom/kousei/framework/ai;->L:Lcom/kousei/framework/q;
+    const-string v3, "SHA512WITHRSA"
 
     .line 73
-    move v8, v1
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
-    .line 74
-    goto :goto_4f
+    .line 76
+    sget-object v1, Lcom/kousei/framework/xa;->e:Lcom/kousei/framework/u;
 
-    .line 75
-    :cond_4a
-    sget-object v8, Lcom/kousei/framework/q;->O:Lcom/kousei/framework/q;
-
-    .line 77
-    iput-object v8, v5, Lcom/kousei/framework/ai;->L:Lcom/kousei/framework/q;
-
-    .line 79
-    const/4 v8, -0x1
+    .line 78
+    const-string v3, "SHAKE128WITHRSAPSS"
 
     .line 80
-    :goto_4f
-    iget-object v9, v5, Lcom/kousei/framework/ai;->L:Lcom/kousei/framework/q;
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
-    .line 82
-    invoke-virtual {v9, v1}, Lcom/kousei/framework/q;->t(I)Z
+    .line 83
+    sget-object v1, Lcom/kousei/framework/xa;->f:Lcom/kousei/framework/u;
 
     .line 85
-    move-result v9
+    const-string v3, "SHAKE256WITHRSAPSS"
 
-    .line 86
-    if-eqz v9, :cond_5a
-
-    .line 88
-    move v10, v1
-
-    .line 89
-    move v9, v6
+    .line 87
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
     .line 90
-    goto :goto_6f
+    sget-object v1, Lcom/kousei/framework/r1;->c:Lcom/kousei/framework/u;
 
-    .line 91
-    :cond_5a
-    iget-object v9, v5, Lcom/kousei/framework/ai;->L:Lcom/kousei/framework/q;
+    .line 92
+    const-string v3, "GOST3411WITHGOST3410"
 
-    .line 93
-    invoke-virtual {v9, v6}, Lcom/kousei/framework/q;->t(I)Z
-
-    .line 96
-    move-result v9
+    .line 94
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
     .line 97
-    if-eqz v9, :cond_65
+    sget-object v1, Lcom/kousei/framework/r1;->d:Lcom/kousei/framework/u;
 
     .line 99
-    move v9, v1
-
-    .line 100
-    move v10, v6
+    const-string v3, "GOST3411WITHECGOST3410"
 
     .line 101
-    goto :goto_6f
-
-    .line 102
-    :cond_65
-    iget-object v9, v5, Lcom/kousei/framework/ai;->L:Lcom/kousei/framework/q;
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
     .line 104
-    invoke-virtual {v9, v7}, Lcom/kousei/framework/q;->t(I)Z
+    sget-object v1, Lcom/kousei/framework/y7;->c:Lcom/kousei/framework/u;
 
-    .line 107
-    move-result v9
+    .line 106
+    const-string v3, "GOST3411-2012-256WITHECGOST3410-2012-256"
 
     .line 108
-    if-eqz v9, :cond_122
-
-    .line 110
-    move v9, v1
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
     .line 111
-    move v10, v9
+    sget-object v1, Lcom/kousei/framework/y7;->d:Lcom/kousei/framework/u;
 
-    .line 112
-    :goto_6f
-    add-int/lit8 v11, v8, 0x1
+    .line 113
+    const-string v3, "GOST3411-2012-512WITHECGOST3410-2012-512"
 
-    .line 114
-    invoke-virtual {v4, v11}, Lcom/kousei/framework/d0;->t(I)Lcom/kousei/framework/k;
-
-    .line 117
-    move-result-object v11
+    .line 115
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
     .line 118
-    invoke-static {v11}, Lcom/kousei/framework/q;->q(Ljava/lang/Object;)Lcom/kousei/framework/q;
+    sget-object v1, Lcom/kousei/framework/c1;->a:Lcom/kousei/framework/u;
 
-    .line 121
-    move-result-object v11
+    .line 120
+    const-string v3, "SHA1WITHPLAIN-ECDSA"
 
     .line 122
-    iput-object v11, v5, Lcom/kousei/framework/ai;->M:Lcom/kousei/framework/q;
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
-    .line 124
-    add-int/lit8 v11, v8, 0x2
+    .line 125
+    sget-object v1, Lcom/kousei/framework/c1;->b:Lcom/kousei/framework/u;
 
-    .line 126
-    invoke-virtual {v4, v11}, Lcom/kousei/framework/d0;->t(I)Lcom/kousei/framework/k;
+    .line 127
+    const-string v3, "SHA224WITHPLAIN-ECDSA"
 
     .line 129
-    move-result-object v11
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
-    .line 130
-    invoke-static {v11}, Lcom/kousei/framework/k0;->h(Ljava/lang/Object;)Lcom/kousei/framework/k0;
-
-    .line 133
-    move-result-object v11
+    .line 132
+    sget-object v1, Lcom/kousei/framework/c1;->c:Lcom/kousei/framework/u;
 
     .line 134
-    iput-object v11, v5, Lcom/kousei/framework/ai;->N:Lcom/kousei/framework/k0;
+    const-string v3, "SHA256WITHPLAIN-ECDSA"
 
     .line 136
-    add-int/lit8 v11, v8, 0x3
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
-    .line 138
-    invoke-virtual {v4, v11}, Lcom/kousei/framework/d0;->t(I)Lcom/kousei/framework/k;
+    .line 139
+    sget-object v1, Lcom/kousei/framework/c1;->d:Lcom/kousei/framework/u;
 
     .line 141
-    move-result-object v11
+    const-string v3, "SHA384WITHPLAIN-ECDSA"
 
-    .line 142
-    invoke-static {v11}, Lcom/kousei/framework/wi;->h(Ljava/lang/Object;)Lcom/kousei/framework/wi;
-
-    .line 145
-    move-result-object v11
+    .line 143
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
     .line 146
-    iput-object v11, v5, Lcom/kousei/framework/ai;->O:Lcom/kousei/framework/wi;
+    sget-object v1, Lcom/kousei/framework/c1;->e:Lcom/kousei/framework/u;
 
     .line 148
-    add-int/lit8 v11, v8, 0x4
+    const-string v3, "SHA512WITHPLAIN-ECDSA"
 
     .line 150
-    invoke-virtual {v4, v11}, Lcom/kousei/framework/d0;->t(I)Lcom/kousei/framework/k;
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
     .line 153
-    move-result-object v11
+    sget-object v1, Lcom/kousei/framework/c1;->g:Lcom/kousei/framework/u;
 
-    .line 154
-    instance-of v12, v11, Lcom/kousei/framework/ni;
+    .line 155
+    const-string v3, "SHA3-224WITHPLAIN-ECDSA"
 
-    .line 156
-    if-eqz v12, :cond_a0
-
-    .line 158
-    check-cast v11, Lcom/kousei/framework/ni;
+    .line 157
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
     .line 160
-    goto :goto_ae
+    sget-object v1, Lcom/kousei/framework/c1;->h:Lcom/kousei/framework/u;
 
-    .line 161
-    :cond_a0
-    if-eqz v11, :cond_ad
+    .line 162
+    const-string v3, "SHA3-256WITHPLAIN-ECDSA"
 
-    .line 163
-    new-instance v12, Lcom/kousei/framework/ni;
+    .line 164
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
-    .line 165
-    invoke-static {v11}, Lcom/kousei/framework/d0;->s(Ljava/lang/Object;)Lcom/kousei/framework/d0;
-
-    .line 168
-    move-result-object v11
+    .line 167
+    sget-object v1, Lcom/kousei/framework/c1;->i:Lcom/kousei/framework/u;
 
     .line 169
-    invoke-direct {v12, v11}, Lcom/kousei/framework/ni;-><init>(Lcom/kousei/framework/d0;)V
+    const-string v3, "SHA3-384WITHPLAIN-ECDSA"
 
-    .line 172
-    move-object v11, v12
-
-    .line 173
-    goto :goto_ae
+    .line 171
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
     .line 174
-    :cond_ad
-    move-object v11, v2
+    sget-object v1, Lcom/kousei/framework/c1;->j:Lcom/kousei/framework/u;
 
-    .line 175
-    :goto_ae
-    iput-object v11, v5, Lcom/kousei/framework/ai;->P:Lcom/kousei/framework/ni;
+    .line 176
+    const-string v3, "SHA3-512WITHPLAIN-ECDSA"
 
-    .line 177
-    add-int/lit8 v11, v8, 0x5
+    .line 178
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
-    .line 179
-    invoke-virtual {v4, v11}, Lcom/kousei/framework/d0;->t(I)Lcom/kousei/framework/k;
-
-    .line 182
-    move-result-object v11
+    .line 181
+    sget-object v1, Lcom/kousei/framework/c1;->f:Lcom/kousei/framework/u;
 
     .line 183
-    invoke-static {v11}, Lcom/kousei/framework/wi;->h(Ljava/lang/Object;)Lcom/kousei/framework/wi;
+    const-string v3, "RIPEMD160WITHPLAIN-ECDSA"
 
-    .line 186
-    move-result-object v11
+    .line 185
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
-    .line 187
-    iput-object v11, v5, Lcom/kousei/framework/ai;->Q:Lcom/kousei/framework/wi;
+    .line 188
+    sget-object v1, Lcom/kousei/framework/l3;->a:Lcom/kousei/framework/u;
 
-    .line 189
-    add-int/lit8 v8, v8, 0x6
+    .line 190
+    const-string v3, "SHA1WITHCVC-ECDSA"
 
-    .line 191
-    invoke-virtual {v4, v8}, Lcom/kousei/framework/d0;->t(I)Lcom/kousei/framework/k;
-
-    .line 194
-    move-result-object v11
+    .line 192
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
     .line 195
-    invoke-static {v11}, Lcom/kousei/framework/xh;->h(Ljava/lang/Object;)Lcom/kousei/framework/xh;
+    sget-object v1, Lcom/kousei/framework/l3;->b:Lcom/kousei/framework/u;
 
-    .line 198
-    move-result-object v11
+    .line 197
+    const-string v3, "SHA224WITHCVC-ECDSA"
 
     .line 199
-    iput-object v11, v5, Lcom/kousei/framework/ai;->R:Lcom/kousei/framework/xh;
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
-    .line 201
-    invoke-virtual {v4}, Lcom/kousei/framework/d0;->size()I
+    .line 202
+    sget-object v1, Lcom/kousei/framework/l3;->c:Lcom/kousei/framework/u;
 
     .line 204
-    move-result v11
-
-    .line 205
-    sub-int/2addr v11, v8
+    const-string v3, "SHA256WITHCVC-ECDSA"
 
     .line 206
-    sub-int/2addr v11, v6
-
-    .line 207
-    if-eqz v11, :cond_d9
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
     .line 209
-    if-nez v9, :cond_d3
+    sget-object v1, Lcom/kousei/framework/l3;->d:Lcom/kousei/framework/u;
 
     .line 211
-    goto :goto_d9
+    const-string v3, "SHA384WITHCVC-ECDSA"
 
-    .line 212
-    :cond_d3
-    const-string p0, "version 1 certificate contains extra data"
+    .line 213
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
-    .line 214
-    invoke-static {p0}, Lcom/kousei/framework/f;->k(Ljava/lang/String;)V
-
-    .line 217
-    return-object v2
+    .line 216
+    sget-object v1, Lcom/kousei/framework/l3;->e:Lcom/kousei/framework/u;
 
     .line 218
-    :cond_d9
-    :goto_d9
-    if-lez v11, :cond_120
+    const-string v3, "SHA512WITHCVC-ECDSA"
 
     .line 220
-    add-int v9, v8, v11
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
-    .line 222
-    invoke-virtual {v4, v9}, Lcom/kousei/framework/d0;->t(I)Lcom/kousei/framework/k;
+    .line 223
+    sget-object v1, Lcom/kousei/framework/j5;->a:Lcom/kousei/framework/u;
 
     .line 225
-    move-result-object v9
+    const-string v3, "XMSS"
 
-    .line 226
-    check-cast v9, Lcom/kousei/framework/k2;
-
-    .line 228
-    iget v12, v9, Lcom/kousei/framework/k2;->M:I
+    .line 227
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
     .line 230
-    sget-object v13, Lcom/kousei/framework/g;->L:Lcom/kousei/framework/e;
+    sget-object v1, Lcom/kousei/framework/j5;->b:Lcom/kousei/framework/u;
 
     .line 232
-    if-eq v12, v6, :cond_115
+    const-string v3, "XMSSMT"
 
     .line 234
-    if-eq v12, v7, :cond_10c
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
-    .line 236
-    if-ne v12, v3, :cond_104
+    .line 237
+    sget-object v1, Lcom/kousei/framework/na;->e:Lcom/kousei/framework/u;
 
-    .line 238
-    if-nez v10, :cond_fe
+    .line 239
+    const-string v3, "RIPEMD128WITHRSA"
 
-    .line 240
-    sget-object v12, Lcom/kousei/framework/d0;->L:Lcom/kousei/framework/e;
+    .line 241
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
-    .line 242
-    invoke-virtual {v12, v9, v6}, Lcom/kousei/framework/e;->d(Lcom/kousei/framework/k2;Z)Lcom/kousei/framework/a0;
-
-    .line 245
-    move-result-object v9
+    .line 244
+    sget-object v1, Lcom/kousei/framework/na;->d:Lcom/kousei/framework/u;
 
     .line 246
-    check-cast v9, Lcom/kousei/framework/d0;
+    const-string v3, "RIPEMD160WITHRSA"
 
     .line 248
-    invoke-static {v9}, Lcom/kousei/framework/b8;->i(Lcom/kousei/framework/d0;)Lcom/kousei/framework/b8;
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
     .line 251
-    move-result-object v9
+    sget-object v1, Lcom/kousei/framework/na;->f:Lcom/kousei/framework/u;
 
-    .line 252
-    iput-object v9, v5, Lcom/kousei/framework/ai;->U:Lcom/kousei/framework/b8;
-
-    .line 254
-    goto :goto_11d
+    .line 253
+    const-string v3, "RIPEMD256WITHRSA"
 
     .line 255
-    :cond_fe
-    const-string p0, "version 2 certificate cannot contain extensions"
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
-    .line 257
-    invoke-static {p0}, Lcom/kousei/framework/f;->k(Ljava/lang/String;)V
+    .line 258
+    new-instance v1, Lcom/kousei/framework/u;
 
     .line 260
-    return-object v2
+    const-string v3, "1.2.840.113549.1.1.4"
 
-    .line 261
-    :cond_104
-    const-string p0, "Unknown tag encountered in structure: "
-
-    .line 263
-    iget v0, v9, Lcom/kousei/framework/k2;->M:I
+    .line 262
+    invoke-direct {v1, v3}, Lcom/kousei/framework/u;-><init>(Ljava/lang/String;)V
 
     .line 265
-    invoke-static {v0, p0}, Lcom/kousei/framework/f;->i(ILjava/lang/String;)V
+    const-string v3, "MD5WITHRSA"
 
-    .line 268
-    return-object v2
+    .line 267
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
-    .line 269
-    :cond_10c
-    invoke-virtual {v13, v9, v1}, Lcom/kousei/framework/e;->d(Lcom/kousei/framework/k2;Z)Lcom/kousei/framework/a0;
+    .line 270
+    new-instance v1, Lcom/kousei/framework/u;
 
     .line 272
-    move-result-object v9
+    const-string v3, "1.2.840.113549.1.1.2"
 
-    .line 273
-    check-cast v9, Lcom/kousei/framework/g;
-
-    .line 275
-    iput-object v9, v5, Lcom/kousei/framework/ai;->T:Lcom/kousei/framework/g;
+    .line 274
+    invoke-direct {v1, v3}, Lcom/kousei/framework/u;-><init>(Ljava/lang/String;)V
 
     .line 277
-    goto :goto_11d
+    const-string v3, "MD2WITHRSA"
 
-    .line 278
-    :cond_115
-    invoke-virtual {v13, v9, v1}, Lcom/kousei/framework/e;->d(Lcom/kousei/framework/k2;Z)Lcom/kousei/framework/a0;
-
-    .line 281
-    move-result-object v9
+    .line 279
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
     .line 282
-    check-cast v9, Lcom/kousei/framework/g;
+    new-instance v1, Lcom/kousei/framework/u;
 
     .line 284
-    iput-object v9, v5, Lcom/kousei/framework/ai;->S:Lcom/kousei/framework/g;
+    const-string v3, "1.2.840.10040.4.3"
 
     .line 286
-    :goto_11d
-    add-int/lit8 v11, v11, -0x1
-
-    .line 288
-    goto :goto_d9
+    invoke-direct {v1, v3}, Lcom/kousei/framework/u;-><init>(Ljava/lang/String;)V
 
     .line 289
-    :cond_120
-    move-object v2, v5
-
-    .line 290
-    goto :goto_128
+    const-string v3, "SHA1WITHDSA"
 
     .line 291
-    :cond_122
-    const-string p0, "version number not recognised"
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
-    .line 293
-    invoke-static {p0}, Lcom/kousei/framework/f;->k(Ljava/lang/String;)V
+    .line 294
+    sget-object v1, Lcom/kousei/framework/bb;->a:Lcom/kousei/framework/u;
 
     .line 296
-    return-object v2
+    const-string v4, "SHA1WITHECDSA"
 
-    .line 297
-    :cond_128
-    :goto_128
-    iput-object v2, v0, Lcom/kousei/framework/h3;->L:Lcom/kousei/framework/ai;
+    .line 298
+    invoke-static {v1, v4}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
-    .line 299
-    invoke-virtual {p0, v6}, Lcom/kousei/framework/d0;->t(I)Lcom/kousei/framework/k;
-
-    .line 302
-    move-result-object v1
+    .line 301
+    sget-object v1, Lcom/kousei/framework/bb;->b:Lcom/kousei/framework/u;
 
     .line 303
-    invoke-static {v1}, Lcom/kousei/framework/k0;->h(Ljava/lang/Object;)Lcom/kousei/framework/k0;
+    const-string v4, "SHA224WITHECDSA"
 
-    .line 306
-    invoke-virtual {p0, v7}, Lcom/kousei/framework/d0;->t(I)Lcom/kousei/framework/k;
+    .line 305
+    invoke-static {v1, v4}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
-    .line 309
-    move-result-object p0
+    .line 308
+    sget-object v1, Lcom/kousei/framework/bb;->c:Lcom/kousei/framework/u;
 
     .line 310
-    invoke-static {p0}, Lcom/kousei/framework/g;->s(Ljava/lang/Object;)Lcom/kousei/framework/g;
+    const-string v4, "SHA256WITHECDSA"
 
-    .line 313
-    return-object v0
+    .line 312
+    invoke-static {v1, v4}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
 
-    .line 314
-    :cond_139
-    const-string p0, "sequence wrong size for a certificate"
+    .line 315
+    sget-object v1, Lcom/kousei/framework/bb;->d:Lcom/kousei/framework/u;
 
-    .line 316
-    invoke-static {p0}, Lcom/kousei/framework/f;->k(Ljava/lang/String;)V
+    .line 317
+    const-string v4, "SHA384WITHECDSA"
 
     .line 319
-    return-object v2
+    invoke-static {v1, v4}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 322
+    sget-object v1, Lcom/kousei/framework/bb;->e:Lcom/kousei/framework/u;
+
+    .line 324
+    const-string v4, "SHA512WITHECDSA"
+
+    .line 326
+    invoke-static {v1, v4}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 329
+    sget-object v1, Lcom/kousei/framework/xa;->g:Lcom/kousei/framework/u;
+
+    .line 331
+    const-string v4, "SHAKE128WITHECDSA"
+
+    .line 333
+    invoke-static {v1, v4}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 336
+    sget-object v1, Lcom/kousei/framework/xa;->h:Lcom/kousei/framework/u;
+
+    .line 338
+    const-string v4, "SHAKE256WITHECDSA"
+
+    .line 340
+    invoke-static {v1, v4}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 343
+    sget-object v1, Lcom/kousei/framework/o6;->c:Lcom/kousei/framework/u;
+
+    .line 345
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 348
+    sget-object v1, Lcom/kousei/framework/o6;->b:Lcom/kousei/framework/u;
+
+    .line 350
+    invoke-static {v1, v3}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 353
+    sget-object v1, Lcom/kousei/framework/k6;->v:Lcom/kousei/framework/u;
+
+    .line 355
+    const-string v2, "SHA224WITHDSA"
+
+    .line 357
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 360
+    sget-object v1, Lcom/kousei/framework/k6;->w:Lcom/kousei/framework/u;
+
+    .line 362
+    const-string v2, "SHA256WITHDSA"
+
+    .line 364
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 367
+    sget-object v1, Lcom/kousei/framework/d7;->z:Lcom/kousei/framework/u;
+
+    .line 369
+    const-string v2, "LMS"
+
+    .line 371
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 374
+    sget-object v1, Lcom/kousei/framework/k6;->L:Lcom/kousei/framework/u;
+
+    .line 376
+    const-string v2, "ML-DSA-44"
+
+    .line 378
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 381
+    sget-object v1, Lcom/kousei/framework/k6;->M:Lcom/kousei/framework/u;
+
+    .line 383
+    const-string v2, "ML-DSA-65"
+
+    .line 385
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 388
+    sget-object v1, Lcom/kousei/framework/k6;->N:Lcom/kousei/framework/u;
+
+    .line 390
+    const-string v2, "ML-DSA-87"
+
+    .line 392
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 395
+    sget-object v1, Lcom/kousei/framework/k6;->O:Lcom/kousei/framework/u;
+
+    .line 397
+    const-string v2, "ML-DSA-44-WITH-SHA512"
+
+    .line 399
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 402
+    sget-object v1, Lcom/kousei/framework/k6;->P:Lcom/kousei/framework/u;
+
+    .line 404
+    const-string v2, "ML-DSA-65-WITH-SHA512"
+
+    .line 406
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 409
+    sget-object v1, Lcom/kousei/framework/k6;->Q:Lcom/kousei/framework/u;
+
+    .line 411
+    const-string v2, "ML-DSA-87-WITH-SHA512"
+
+    .line 413
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 416
+    sget-object v1, Lcom/kousei/framework/k6;->R:Lcom/kousei/framework/u;
+
+    .line 418
+    const-string v2, "SLH-DSA-SHA2-128S"
+
+    .line 420
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 423
+    sget-object v1, Lcom/kousei/framework/k6;->S:Lcom/kousei/framework/u;
+
+    .line 425
+    const-string v2, "SLH-DSA-SHA2-128F"
+
+    .line 427
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 430
+    sget-object v1, Lcom/kousei/framework/k6;->T:Lcom/kousei/framework/u;
+
+    .line 432
+    const-string v2, "SLH-DSA-SHA2-192S"
+
+    .line 434
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 437
+    sget-object v1, Lcom/kousei/framework/k6;->U:Lcom/kousei/framework/u;
+
+    .line 439
+    const-string v2, "SLH-DSA-SHA2-192F"
+
+    .line 441
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 444
+    sget-object v1, Lcom/kousei/framework/k6;->V:Lcom/kousei/framework/u;
+
+    .line 446
+    const-string v2, "SLH-DSA-SHA2-256S"
+
+    .line 448
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 451
+    sget-object v1, Lcom/kousei/framework/k6;->W:Lcom/kousei/framework/u;
+
+    .line 453
+    const-string v2, "SLH-DSA-SHA2-256F"
+
+    .line 455
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 458
+    sget-object v1, Lcom/kousei/framework/k6;->X:Lcom/kousei/framework/u;
+
+    .line 460
+    const-string v2, "SLH-DSA-SHAKE-128S"
+
+    .line 462
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 465
+    sget-object v1, Lcom/kousei/framework/k6;->Y:Lcom/kousei/framework/u;
+
+    .line 467
+    const-string v2, "SLH-DSA-SHAKE-128F"
+
+    .line 469
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 472
+    sget-object v1, Lcom/kousei/framework/k6;->Z:Lcom/kousei/framework/u;
+
+    .line 474
+    const-string v2, "SLH-DSA-SHAKE-192S"
+
+    .line 476
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 479
+    sget-object v1, Lcom/kousei/framework/k6;->a0:Lcom/kousei/framework/u;
+
+    .line 481
+    const-string v2, "SLH-DSA-SHAKE-192F"
+
+    .line 483
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 486
+    sget-object v1, Lcom/kousei/framework/k6;->b0:Lcom/kousei/framework/u;
+
+    .line 488
+    const-string v2, "SLH-DSA-SHAKE-256S"
+
+    .line 490
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 493
+    sget-object v1, Lcom/kousei/framework/k6;->c0:Lcom/kousei/framework/u;
+
+    .line 495
+    const-string v2, "SLH-DSA-SHAKE-256F"
+
+    .line 497
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 500
+    sget-object v1, Lcom/kousei/framework/k6;->d0:Lcom/kousei/framework/u;
+
+    .line 502
+    const-string v2, "SLH-DSA-SHA2-128S-WITH-SHA256"
+
+    .line 504
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 507
+    sget-object v1, Lcom/kousei/framework/k6;->e0:Lcom/kousei/framework/u;
+
+    .line 509
+    const-string v2, "SLH-DSA-SHA2-128F-WITH-SHA256"
+
+    .line 511
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 514
+    sget-object v1, Lcom/kousei/framework/k6;->f0:Lcom/kousei/framework/u;
+
+    .line 516
+    const-string v2, "SLH-DSA-SHA2-192S-WITH-SHA512"
+
+    .line 518
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 521
+    sget-object v1, Lcom/kousei/framework/k6;->g0:Lcom/kousei/framework/u;
+
+    .line 523
+    const-string v2, "SLH-DSA-SHA2-192F-WITH-SHA512"
+
+    .line 525
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 528
+    sget-object v1, Lcom/kousei/framework/k6;->h0:Lcom/kousei/framework/u;
+
+    .line 530
+    const-string v2, "SLH-DSA-SHA2-256S-WITH-SHA512"
+
+    .line 532
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 535
+    sget-object v1, Lcom/kousei/framework/k6;->i0:Lcom/kousei/framework/u;
+
+    .line 537
+    const-string v2, "SLH-DSA-SHA2-256F-WITH-SHA512"
+
+    .line 539
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 542
+    sget-object v1, Lcom/kousei/framework/k6;->j0:Lcom/kousei/framework/u;
+
+    .line 544
+    const-string v2, "SLH-DSA-SHAKE-128S-WITH-SHAKE128"
+
+    .line 546
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 549
+    sget-object v1, Lcom/kousei/framework/k6;->k0:Lcom/kousei/framework/u;
+
+    .line 551
+    const-string v2, "SLH-DSA-SHAKE-128F-WITH-SHAKE128"
+
+    .line 553
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 556
+    sget-object v1, Lcom/kousei/framework/k6;->l0:Lcom/kousei/framework/u;
+
+    .line 558
+    const-string v2, "SLH-DSA-SHAKE-192S-WITH-SHAKE256"
+
+    .line 560
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 563
+    sget-object v1, Lcom/kousei/framework/k6;->m0:Lcom/kousei/framework/u;
+
+    .line 565
+    const-string v2, "SLH-DSA-SHAKE-192F-WITH-SHAKE256"
+
+    .line 567
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 570
+    sget-object v1, Lcom/kousei/framework/k6;->n0:Lcom/kousei/framework/u;
+
+    .line 572
+    const-string v2, "SLH-DSA-SHAKE-256S-WITH-SHAKE256"
+
+    .line 574
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 577
+    sget-object v1, Lcom/kousei/framework/k6;->o0:Lcom/kousei/framework/u;
+
+    .line 579
+    const-string v2, "SLH-DSA-SHAKE-256F-WITH-SHAKE256"
+
+    .line 581
+    invoke-static {v1, v2}, Lcom/kousei/framework/h3;->a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+
+    .line 584
+    sget-object v1, Lcom/kousei/framework/o6;->a:Lcom/kousei/framework/u;
+
+    .line 586
+    const-string v2, "SHA1"
+
+    .line 588
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 591
+    sget-object v1, Lcom/kousei/framework/k6;->d:Lcom/kousei/framework/u;
+
+    .line 593
+    const-string v2, "SHA224"
+
+    .line 595
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 598
+    sget-object v1, Lcom/kousei/framework/k6;->a:Lcom/kousei/framework/u;
+
+    .line 600
+    const-string v2, "SHA256"
+
+    .line 602
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 605
+    sget-object v1, Lcom/kousei/framework/k6;->b:Lcom/kousei/framework/u;
+
+    .line 607
+    const-string v2, "SHA384"
+
+    .line 609
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 612
+    sget-object v1, Lcom/kousei/framework/k6;->c:Lcom/kousei/framework/u;
+
+    .line 614
+    const-string v2, "SHA512"
+
+    .line 616
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 619
+    sget-object v1, Lcom/kousei/framework/k6;->k:Lcom/kousei/framework/u;
+
+    .line 621
+    const-string v2, "SHAKE128"
+
+    .line 623
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 626
+    sget-object v1, Lcom/kousei/framework/k6;->l:Lcom/kousei/framework/u;
+
+    .line 628
+    const-string v2, "SHAKE256"
+
+    .line 630
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 633
+    sget-object v1, Lcom/kousei/framework/k6;->g:Lcom/kousei/framework/u;
+
+    .line 635
+    const-string v2, "SHA3-224"
+
+    .line 637
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 640
+    sget-object v1, Lcom/kousei/framework/k6;->h:Lcom/kousei/framework/u;
+
+    .line 642
+    const-string v2, "SHA3-256"
+
+    .line 644
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 647
+    sget-object v1, Lcom/kousei/framework/k6;->i:Lcom/kousei/framework/u;
+
+    .line 649
+    const-string v2, "SHA3-384"
+
+    .line 651
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 654
+    sget-object v1, Lcom/kousei/framework/k6;->j:Lcom/kousei/framework/u;
+
+    .line 656
+    const-string v2, "SHA3-512"
+
+    .line 658
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 661
+    sget-object v1, Lcom/kousei/framework/na;->b:Lcom/kousei/framework/u;
+
+    .line 663
+    const-string v2, "RIPEMD128"
+
+    .line 665
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 668
+    sget-object v1, Lcom/kousei/framework/na;->a:Lcom/kousei/framework/u;
+
+    .line 670
+    const-string v2, "RIPEMD160"
+
+    .line 672
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 675
+    sget-object v1, Lcom/kousei/framework/na;->c:Lcom/kousei/framework/u;
+
+    .line 677
+    const-string v2, "RIPEMD256"
+
+    .line 679
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 682
+    return-void
 .end method
 
-
-# virtual methods
-.method public final b()Lcom/kousei/framework/a0;
-    .registers 1
+.method public static a(Lcom/kousei/framework/u;Ljava/lang/String;)V
+    .registers 4
 
     .line 1
-    iget-object p0, p0, Lcom/kousei/framework/h3;->K:Lcom/kousei/framework/d0;
+    sget-object v0, Lcom/kousei/framework/h3;->a:Ljava/util/HashMap;
 
     .line 3
+    invoke-virtual {v0, p0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    .line 6
+    move-result v1
+
+    .line 7
+    if-nez v1, :cond_c
+
+    .line 9
+    invoke-virtual {v0, p0, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 12
+    return-void
+
+    .line 13
+    :cond_c
+    const-string p0, "object identifier already present in addSignatureName"
+
+    .line 15
+    invoke-static {p0}, Lcom/kousei/framework/e;->l(Ljava/lang/String;)V
+
+    .line 18
+    return-void
+.end method
+
+.method public static b(Lcom/kousei/framework/u;)Ljava/lang/String;
+    .registers 2
+
+    .line 1
+    sget-object v0, Lcom/kousei/framework/h3;->b:Ljava/util/HashMap;
+
+    .line 3
+    invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 6
+    move-result-object v0
+
+    .line 7
+    check-cast v0, Ljava/lang/String;
+
+    .line 9
+    if-eqz v0, :cond_b
+
+    .line 11
+    return-object v0
+
+    .line 12
+    :cond_b
+    invoke-virtual {p0}, Lcom/kousei/framework/u;->u()Ljava/lang/String;
+
+    .line 15
+    move-result-object p0
+
+    .line 16
     return-object p0
 .end method

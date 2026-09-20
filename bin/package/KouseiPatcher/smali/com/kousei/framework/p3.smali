@@ -1,336 +1,387 @@
-.class public final Lcom/kousei/framework/p3;
-.super Ljava/io/InputStream;
-
-
-# instance fields
-.field public final K:Lcom/kousei/framework/f0;
-
-.field public L:Z
-
-.field public M:I
-
-.field public N:Lcom/kousei/framework/h;
-
-.field public O:Ljava/io/InputStream;
+.class public abstract Lcom/kousei/framework/p3;
+.super Lcom/kousei/framework/u3;
 
 
 # direct methods
-.method public constructor <init>(Lcom/kousei/framework/f0;)V
-    .registers 3
+.method public constructor <init>(IIII)V
+    .registers 11
 
     .line 1
-    invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
+    const-string v0, "org.bouncycastle.ec.max_f2m_field_size"
 
-    .line 4
-    const/4 v0, 0x1
+    .line 3
+    const/16 v1, 0x476
 
     .line 5
-    iput-boolean v0, p0, Lcom/kousei/framework/p3;->L:Z
-
-    .line 7
-    const/4 v0, 0x0
+    invoke-static {v1, v0}, Lcom/kousei/framework/n7;->a(ILjava/lang/String;)I
 
     .line 8
-    iput v0, p0, Lcom/kousei/framework/p3;->M:I
+    move-result v0
+
+    .line 9
+    const/4 v1, 0x0
 
     .line 10
-    iput-object p1, p0, Lcom/kousei/framework/p3;->K:Lcom/kousei/framework/f0;
+    if-gt p1, v0, :cond_7b
 
     .line 12
+    or-int v0, p3, p4
+
+    .line 14
+    const/4 v2, 0x2
+
+    .line 15
+    const/4 v3, 0x3
+
+    .line 16
+    const/4 v4, 0x1
+
+    .line 17
+    const/4 v5, 0x0
+
+    .line 18
+    if-nez v0, :cond_1c
+
+    .line 20
+    new-array p3, v3, [I
+
+    .line 22
+    aput v5, p3, v5
+
+    .line 24
+    aput p2, p3, v4
+
+    .line 26
+    aput p1, p3, v2
+
+    .line 28
+    goto :goto_2b
+
+    .line 29
+    :cond_1c
+    const/4 v0, 0x5
+
+    .line 30
+    new-array v0, v0, [I
+
+    .line 32
+    aput v5, v0, v5
+
+    .line 34
+    aput p2, v0, v4
+
+    .line 36
+    aput p3, v0, v2
+
+    .line 38
+    aput p4, v0, v3
+
+    .line 40
+    const/4 p2, 0x4
+
+    .line 41
+    aput p1, v0, p2
+
+    .line 43
+    move-object p3, v0
+
+    .line 44
+    :goto_2b
+    sget-object p1, Lcom/kousei/framework/l4;->a:Lcom/kousei/framework/i7;
+
+    .line 46
+    aget p1, p3, v5
+
+    .line 48
+    if-nez p1, :cond_75
+
+    .line 50
+    :goto_31
+    array-length p1, p3
+
+    .line 51
+    if-ge v4, p1, :cond_45
+
+    .line 53
+    aget p1, p3, v4
+
+    .line 55
+    add-int/lit8 p2, v4, -0x1
+
+    .line 57
+    aget p2, p3, p2
+
+    .line 59
+    if-le p1, p2, :cond_3f
+
+    .line 61
+    add-int/lit8 v4, v4, 0x1
+
+    .line 63
+    goto :goto_31
+
+    .line 64
+    :cond_3f
+    const-string p0, "Polynomial exponents must be monotonically increasing"
+
+    .line 66
+    invoke-static {p0}, Lcom/kousei/framework/e;->j(Ljava/lang/String;)V
+
+    .line 69
+    throw v1
+
+    .line 70
+    :cond_45
+    new-instance p1, Lcom/kousei/framework/t4;
+
+    .line 72
+    sget-object p2, Lcom/kousei/framework/l4;->a:Lcom/kousei/framework/i7;
+
+    .line 74
+    new-instance p4, Lcom/kousei/framework/o4;
+
+    .line 76
+    invoke-direct {p4, p3}, Lcom/kousei/framework/o4;-><init>([I)V
+
+    .line 79
+    invoke-direct {p1, p2, p4}, Lcom/kousei/framework/t4;-><init>(Lcom/kousei/framework/k4;Lcom/kousei/framework/o4;)V
+
+    .line 82
+    invoke-direct {p0, p1}, Lcom/kousei/framework/u3;-><init>(Lcom/kousei/framework/k4;)V
+
+    .line 85
+    const-string p0, "org.bouncycastle.ec.disable"
+
+    .line 87
+    invoke-static {p0}, Lcom/kousei/framework/n7;->c(Ljava/lang/String;)Z
+
+    .line 90
+    move-result p0
+
+    .line 91
+    if-nez p0, :cond_6d
+
+    .line 93
+    const-string p0, "org.bouncycastle.ec.disable_f2m"
+
+    .line 95
+    invoke-static {p0}, Lcom/kousei/framework/n7;->c(Ljava/lang/String;)Z
+
+    .line 98
+    move-result p0
+
+    .line 99
+    if-nez p0, :cond_65
+
+    .line 101
     return-void
+
+    .line 102
+    :cond_65
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    .line 104
+    const-string p1, "F2M disabled by \"org.bouncycastle.ec.disable_f2m\""
+
+    .line 106
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    .line 109
+    throw p0
+
+    .line 110
+    :cond_6d
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    .line 112
+    const-string p1, "F2M disabled by \"org.bouncycastle.ec.disable\""
+
+    .line 114
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    .line 117
+    throw p0
+
+    .line 118
+    :cond_75
+    const-string p0, "Irreducible polynomials in GF(2) must have constant term"
+
+    .line 120
+    invoke-static {p0}, Lcom/kousei/framework/e;->j(Ljava/lang/String;)V
+
+    .line 123
+    throw v1
+
+    .line 124
+    :cond_7b
+    const-string p0, "field size out of range: "
+
+    .line 126
+    invoke-static {p1, p0}, Lcom/kousei/framework/e;->c(ILjava/lang/String;)V
+
+    .line 129
+    throw v1
 .end method
 
 
 # virtual methods
-.method public final a()Lcom/kousei/framework/h;
-    .registers 4
+.method public final c(Ljava/math/BigInteger;Ljava/math/BigInteger;)Lcom/kousei/framework/c4;
+    .registers 5
 
     .line 1
-    iget-object v0, p0, Lcom/kousei/framework/p3;->K:Lcom/kousei/framework/f0;
-
-    .line 3
-    iget-object v1, v0, Lcom/kousei/framework/f0;->a:Lcom/kousei/framework/cb;
-
-    .line 5
-    invoke-virtual {v1}, Ljava/io/InputStream;->read()I
-
-    .line 8
-    move-result v1
-
-    .line 9
-    const/4 v2, 0x0
-
-    .line 10
-    if-gez v1, :cond_d
-
-    .line 12
-    move-object v0, v2
-
-    .line 13
-    goto :goto_11
-
-    .line 14
-    :cond_d
-    invoke-virtual {v0, v1}, Lcom/kousei/framework/f0;->a(I)Lcom/kousei/framework/k;
-
-    .line 17
-    move-result-object v0
-
-    .line 18
-    :goto_11
-    if-nez v0, :cond_14
-
-    .line 20
-    return-object v2
-
-    .line 21
-    :cond_14
-    instance-of v1, v0, Lcom/kousei/framework/h;
-
-    .line 23
-    if-eqz v1, :cond_27
-
-    .line 25
-    iget p0, p0, Lcom/kousei/framework/p3;->M:I
-
-    .line 27
-    if-nez p0, :cond_1f
-
-    .line 29
-    check-cast v0, Lcom/kousei/framework/h;
-
-    .line 31
-    return-object v0
-
-    .line 32
-    :cond_1f
-    new-instance p0, Ljava/io/IOException;
-
-    .line 34
-    const-string v0, "only the last nested bitstring can have padding"
-
-    .line 36
-    invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    .line 39
-    throw p0
-
-    .line 40
-    :cond_27
-    const-string p0, "unknown object encountered: "
-
-    .line 42
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 45
-    move-result-object v0
-
-    .line 46
-    invoke-static {v0, p0}, Lcom/kousei/framework/f;->j(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 49
-    return-object v2
-.end method
-
-.method public final read()I
-    .registers 4
-
-    .line 69
-    iget-object v0, p0, Lcom/kousei/framework/p3;->O:Ljava/io/InputStream;
-
-    const/4 v1, -0x1
-
-    if-nez v0, :cond_1c
-
-    iget-boolean v0, p0, Lcom/kousei/framework/p3;->L:Z
-
-    if-nez v0, :cond_a
-
-    goto :goto_12
-
-    :cond_a
-    invoke-virtual {p0}, Lcom/kousei/framework/p3;->a()Lcom/kousei/framework/h;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/kousei/framework/p3;->N:Lcom/kousei/framework/h;
-
-    if-nez v0, :cond_13
-
-    :goto_12
-    return v1
-
-    :cond_13
-    const/4 v2, 0x0
-
-    iput-boolean v2, p0, Lcom/kousei/framework/p3;->L:Z
-
-    :cond_16
-    invoke-interface {v0}, Lcom/kousei/framework/h;->f()Ljava/io/InputStream;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/kousei/framework/p3;->O:Ljava/io/InputStream;
-
-    :cond_1c
-    iget-object v0, p0, Lcom/kousei/framework/p3;->O:Ljava/io/InputStream;
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    move-result v0
-
-    if-ltz v0, :cond_25
-
-    return v0
-
-    :cond_25
-    iget-object v0, p0, Lcom/kousei/framework/p3;->N:Lcom/kousei/framework/h;
-
-    invoke-interface {v0}, Lcom/kousei/framework/h;->d()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/kousei/framework/p3;->M:I
-
-    invoke-virtual {p0}, Lcom/kousei/framework/p3;->a()Lcom/kousei/framework/h;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/kousei/framework/p3;->N:Lcom/kousei/framework/h;
-
-    if-nez v0, :cond_16
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/kousei/framework/p3;->O:Ljava/io/InputStream;
-
-    return v1
-.end method
-
-.method public final read([BII)I
-    .registers 8
-
-    .line 1
-    iget-object v0, p0, Lcom/kousei/framework/p3;->O:Ljava/io/InputStream;
-
-    .line 3
-    const/4 v1, 0x0
+    invoke-virtual {p0, p1}, Lcom/kousei/framework/u3;->f(Ljava/math/BigInteger;)Lcom/kousei/framework/h0;
 
     .line 4
-    if-nez v0, :cond_1b
+    move-result-object p1
 
-    .line 6
-    iget-boolean v0, p0, Lcom/kousei/framework/p3;->L:Z
+    .line 5
+    invoke-virtual {p0, p2}, Lcom/kousei/framework/u3;->f(Ljava/math/BigInteger;)Lcom/kousei/framework/h0;
 
     .line 8
-    if-nez v0, :cond_a
+    move-result-object p2
 
-    .line 10
-    goto :goto_41
+    .line 9
+    iget v0, p0, Lcom/kousei/framework/u3;->f:I
 
     .line 11
-    :cond_a
-    invoke-virtual {p0}, Lcom/kousei/framework/p3;->a()Lcom/kousei/framework/h;
+    const/4 v1, 0x5
+
+    .line 12
+    if-eq v0, v1, :cond_11
 
     .line 14
-    move-result-object v0
+    const/4 v1, 0x6
 
     .line 15
-    iput-object v0, p0, Lcom/kousei/framework/p3;->N:Lcom/kousei/framework/h;
+    if-eq v0, v1, :cond_11
 
     .line 17
-    if-nez v0, :cond_13
+    goto :goto_32
 
-    .line 19
-    goto :goto_41
+    .line 18
+    :cond_11
+    invoke-virtual {p1}, Lcom/kousei/framework/h0;->E0()Z
 
-    .line 20
-    :cond_13
-    iput-boolean v1, p0, Lcom/kousei/framework/p3;->L:Z
+    .line 21
+    move-result v0
 
     .line 22
-    :cond_15
-    invoke-interface {v0}, Lcom/kousei/framework/h;->f()Ljava/io/InputStream;
+    if-eqz v0, :cond_2a
 
-    .line 25
+    .line 24
+    invoke-virtual {p2}, Lcom/kousei/framework/h0;->X1()Lcom/kousei/framework/h0;
+
+    .line 27
     move-result-object v0
-
-    .line 26
-    iput-object v0, p0, Lcom/kousei/framework/p3;->O:Ljava/io/InputStream;
 
     .line 28
-    :cond_1b
-    iget-object v0, p0, Lcom/kousei/framework/p3;->O:Ljava/io/InputStream;
+    iget-object v1, p0, Lcom/kousei/framework/u3;->c:Lcom/kousei/framework/h0;
 
     .line 30
-    add-int v2, p2, v1
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 32
-    sub-int v3, p3, v1
+    .line 33
+    move-result v0
 
     .line 34
-    invoke-virtual {v0, p1, v2, v3}, Ljava/io/InputStream;->read([BII)I
+    if-eqz v0, :cond_24
+
+    .line 36
+    goto :goto_32
 
     .line 37
-    move-result v0
+    :cond_24
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    .line 38
-    if-ltz v0, :cond_2b
+    .line 39
+    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
-    .line 40
-    add-int/2addr v1, v0
-
-    .line 41
-    if-ne v1, p3, :cond_1b
+    .line 42
+    throw p0
 
     .line 43
-    return v1
-
-    .line 44
-    :cond_2b
-    iget-object v0, p0, Lcom/kousei/framework/p3;->N:Lcom/kousei/framework/h;
+    :cond_2a
+    invoke-virtual {p2, p1}, Lcom/kousei/framework/h0;->R(Lcom/kousei/framework/h0;)Lcom/kousei/framework/h0;
 
     .line 46
-    invoke-interface {v0}, Lcom/kousei/framework/h;->d()I
+    move-result-object p2
 
-    .line 49
-    move-result v0
+    .line 47
+    invoke-virtual {p2, p1}, Lcom/kousei/framework/h0;->b(Lcom/kousei/framework/h0;)Lcom/kousei/framework/h0;
 
     .line 50
-    iput v0, p0, Lcom/kousei/framework/p3;->M:I
+    move-result-object p2
 
-    .line 52
-    invoke-virtual {p0}, Lcom/kousei/framework/p3;->a()Lcom/kousei/framework/h;
+    .line 51
+    :goto_32
+    invoke-virtual {p0, p1, p2}, Lcom/kousei/framework/u3;->d(Lcom/kousei/framework/h0;Lcom/kousei/framework/h0;)Lcom/kousei/framework/c4;
+
+    .line 54
+    move-result-object p0
 
     .line 55
-    move-result-object v0
+    return-object p0
+.end method
 
-    .line 56
-    iput-object v0, p0, Lcom/kousei/framework/p3;->N:Lcom/kousei/framework/h;
+.method public final l(Ljava/security/SecureRandom;)Lcom/kousei/framework/h0;
+    .registers 6
 
-    .line 58
-    if-nez v0, :cond_15
+    .line 1
+    invoke-virtual {p0}, Lcom/kousei/framework/u3;->g()I
 
-    .line 60
-    const/4 p1, 0x0
+    .line 4
+    move-result v0
 
-    .line 61
-    iput-object p1, p0, Lcom/kousei/framework/p3;->O:Ljava/io/InputStream;
+    .line 5
+    :cond_4
+    invoke-static {v0, p1}, Lcom/kousei/framework/f1;->a(ILjava/security/SecureRandom;)Ljava/math/BigInteger;
 
-    .line 63
-    const/4 p0, 0x1
+    .line 8
+    move-result-object v1
 
-    .line 64
-    if-ge v1, p0, :cond_43
+    .line 9
+    invoke-virtual {v1}, Ljava/math/BigInteger;->signum()I
 
-    .line 66
-    :goto_41
-    const/4 p0, -0x1
+    .line 12
+    move-result v2
 
-    .line 67
-    return p0
+    .line 13
+    if-lez v2, :cond_4
 
-    .line 68
-    :cond_43
-    return v1
+    .line 15
+    invoke-virtual {p0, v1}, Lcom/kousei/framework/u3;->f(Ljava/math/BigInteger;)Lcom/kousei/framework/h0;
+
+    .line 18
+    move-result-object v1
+
+    .line 19
+    :cond_12
+    invoke-static {v0, p1}, Lcom/kousei/framework/f1;->a(ILjava/security/SecureRandom;)Ljava/math/BigInteger;
+
+    .line 22
+    move-result-object v2
+
+    .line 23
+    invoke-virtual {v2}, Ljava/math/BigInteger;->signum()I
+
+    .line 26
+    move-result v3
+
+    .line 27
+    if-lez v3, :cond_12
+
+    .line 29
+    invoke-virtual {p0, v2}, Lcom/kousei/framework/u3;->f(Ljava/math/BigInteger;)Lcom/kousei/framework/h0;
+
+    .line 32
+    move-result-object p0
+
+    .line 33
+    invoke-virtual {v1, p0}, Lcom/kousei/framework/h0;->Q0(Lcom/kousei/framework/h0;)Lcom/kousei/framework/h0;
+
+    .line 36
+    move-result-object p0
+
+    .line 37
+    return-object p0
 .end method

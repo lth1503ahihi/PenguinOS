@@ -1,264 +1,173 @@
 .class public final Lcom/kousei/framework/g2;
-.super Ljava/lang/Object;
+.super Lcom/kousei/framework/z;
 
 # interfaces
-.implements Lcom/kousei/framework/x;
+.implements Lcom/kousei/framework/f0;
 
 
 # instance fields
-.field public final synthetic K:I
-
-.field public L:Ljava/lang/Object;
+.field public final a:[B
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .registers 2
-
-    .line 10
-    const/4 v0, 0x1
-
-    iput v0, p0, Lcom/kousei/framework/g2;->K:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lcom/kousei/framework/f0;)V
+.method static constructor <clinit>()V
     .registers 3
 
     .line 1
-    const/4 v0, 0x0
+    new-instance v0, Lcom/kousei/framework/d;
 
-    .line 2
-    iput v0, p0, Lcom/kousei/framework/g2;->K:I
+    .line 3
+    const-class v1, Lcom/kousei/framework/g2;
 
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 5
+    const/4 v2, 0x5
 
-    .line 7
-    iput-object p1, p0, Lcom/kousei/framework/g2;->L:Ljava/lang/Object;
+    .line 6
+    invoke-direct {v0, v1, v2}, Lcom/kousei/framework/d;-><init>(Ljava/lang/Class;I)V
 
     .line 9
+    return-void
+.end method
+
+.method public constructor <init>([B)V
+    .registers 2
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    iput-object p1, p0, Lcom/kousei/framework/g2;->a:[B
+
+    .line 6
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/io/InputStream;
-    .registers 2
+.method public final c()Ljava/lang/String;
+    .registers 1
 
     .line 1
-    iget v0, p0, Lcom/kousei/framework/g2;->K:I
+    iget-object p0, p0, Lcom/kousei/framework/g2;->a:[B
 
     .line 3
-    packed-switch v0, :pswitch_data_14
+    invoke-static {p0}, Lcom/kousei/framework/ia;->a([B)Ljava/lang/String;
 
     .line 6
-    iget-object p0, p0, Lcom/kousei/framework/g2;->L:Ljava/lang/Object;
-
-    .line 8
-    check-cast p0, Lcom/kousei/framework/y5;
-
-    .line 10
-    return-object p0
-
-    .line 11
-    :pswitch_a  #0x0
-    new-instance v0, Lcom/kousei/framework/q3;
-
-    .line 13
-    iget-object p0, p0, Lcom/kousei/framework/g2;->L:Ljava/lang/Object;
-
-    .line 15
-    check-cast p0, Lcom/kousei/framework/f0;
-
-    .line 17
-    invoke-direct {v0, p0}, Lcom/kousei/framework/q3;-><init>(Lcom/kousei/framework/f0;)V
-
-    .line 20
-    return-object v0
-
-    .line 21
-    :pswitch_data_14
-    .packed-switch 0x0
-        :pswitch_a  #00000000
-    .end packed-switch
-.end method
-
-.method public final b()Lcom/kousei/framework/a0;
-    .registers 5
-
-    .line 1
-    iget v0, p0, Lcom/kousei/framework/g2;->K:I
-
-    .line 3
-    const-string v1, "IOException converting stream to byte array: "
-
-    .line 5
-    const/4 v2, 0x0
-
-    .line 6
-    packed-switch v0, :pswitch_data_34
-
-    .line 9
-    :try_start_8
-    invoke-virtual {p0}, Lcom/kousei/framework/g2;->e()Lcom/kousei/framework/a0;
-
-    .line 12
-    move-result-object v2
-    :try_end_c
-    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_c} :catch_d
-
-    .line 13
-    goto :goto_15
-
-    .line 14
-    :catch_d
-    move-exception p0
-
-    .line 15
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    .line 18
-    move-result-object v0
-
-    .line 19
-    invoke-static {v1, v0, p0}, Lcom/kousei/framework/f;->g(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Exception;)V
-
-    .line 22
-    :goto_15
-    return-object v2
-
-    .line 23
-    :pswitch_16  #0x0
-    :try_start_16
-    iget-object p0, p0, Lcom/kousei/framework/g2;->L:Ljava/lang/Object;
-
-    .line 25
-    check-cast p0, Lcom/kousei/framework/f0;
-
-    .line 27
-    new-instance v0, Lcom/kousei/framework/f2;
-
-    .line 29
-    new-instance v3, Lcom/kousei/framework/q3;
-
-    .line 31
-    invoke-direct {v3, p0}, Lcom/kousei/framework/q3;-><init>(Lcom/kousei/framework/f0;)V
-
-    .line 34
-    invoke-static {v3}, Lcom/kousei/framework/xc;->d0(Ljava/io/InputStream;)[B
-
-    .line 37
     move-result-object p0
 
-    .line 38
-    invoke-direct {v0, p0, v2}, Lcom/kousei/framework/f2;-><init>([B[Lcom/kousei/framework/w;)V
-    :try_end_28
-    .catch Ljava/io/IOException; {:try_start_16 .. :try_end_28} :catch_2a
-
-    .line 41
-    move-object v2, v0
-
-    .line 42
-    goto :goto_32
-
-    .line 43
-    :catch_2a
-    move-exception p0
-
-    .line 44
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    .line 47
-    move-result-object v0
-
-    .line 48
-    invoke-static {v1, v0, p0}, Lcom/kousei/framework/f;->g(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Exception;)V
-
-    .line 51
-    :goto_32
-    return-object v2
-
-    .line 52
-    nop
-
-    .line 53
-    :pswitch_data_34
-    .packed-switch 0x0
-        :pswitch_16  #00000000
-    .end packed-switch
+    .line 7
+    return-object p0
 .end method
 
-.method public final e()Lcom/kousei/framework/a0;
+.method public final hashCode()I
+    .registers 1
+
+    .line 1
+    iget-object p0, p0, Lcom/kousei/framework/g2;->a:[B
+
+    .line 3
+    invoke-static {p0}, Lcom/kousei/framework/h0;->i0([B)I
+
+    .line 6
+    move-result p0
+
+    .line 7
+    return p0
+.end method
+
+.method public final i(Lcom/kousei/framework/z;)Z
     .registers 3
 
     .line 1
-    iget v0, p0, Lcom/kousei/framework/g2;->K:I
+    instance-of v0, p1, Lcom/kousei/framework/g2;
 
     .line 3
-    packed-switch v0, :pswitch_data_28
+    if-nez v0, :cond_6
+
+    .line 5
+    const/4 p0, 0x0
 
     .line 6
-    new-instance v0, Lcom/kousei/framework/o4;
+    return p0
 
-    .line 8
-    iget-object p0, p0, Lcom/kousei/framework/g2;->L:Ljava/lang/Object;
+    .line 7
+    :cond_6
+    check-cast p1, Lcom/kousei/framework/g2;
 
-    .line 10
-    check-cast p0, Lcom/kousei/framework/y5;
+    .line 9
+    iget-object p0, p0, Lcom/kousei/framework/g2;->a:[B
 
-    .line 12
-    invoke-virtual {p0}, Lcom/kousei/framework/y5;->b()[B
+    .line 11
+    iget-object p1, p1, Lcom/kousei/framework/g2;->a:[B
 
-    .line 15
-    move-result-object p0
+    .line 13
+    invoke-static {p0, p1}, Ljava/util/Arrays;->equals([B[B)Z
 
     .line 16
-    invoke-direct {v0, p0}, Lcom/kousei/framework/w;-><init>([B)V
+    move-result p0
 
-    .line 19
-    return-object v0
+    .line 17
+    return p0
+.end method
 
-    .line 20
-    :pswitch_13  #0x0
-    iget-object p0, p0, Lcom/kousei/framework/g2;->L:Ljava/lang/Object;
+.method public final j(Lcom/kousei/framework/x;Z)V
+    .registers 4
 
-    .line 22
-    check-cast p0, Lcom/kousei/framework/f0;
+    .line 1
+    const/16 v0, 0x1b
 
-    .line 24
-    new-instance v0, Lcom/kousei/framework/f2;
+    .line 3
+    iget-object p0, p0, Lcom/kousei/framework/g2;->a:[B
 
-    .line 26
-    new-instance v1, Lcom/kousei/framework/q3;
+    .line 5
+    invoke-virtual {p1, p2, v0, p0}, Lcom/kousei/framework/x;->j(ZI[B)V
 
-    .line 28
-    invoke-direct {v1, p0}, Lcom/kousei/framework/q3;-><init>(Lcom/kousei/framework/f0;)V
+    .line 8
+    return-void
+.end method
 
-    .line 31
-    invoke-static {v1}, Lcom/kousei/framework/xc;->d0(Ljava/io/InputStream;)[B
+.method public final k()Z
+    .registers 1
 
-    .line 34
+    .line 1
+    const/4 p0, 0x0
+
+    .line 2
+    return p0
+.end method
+
+.method public final m(Z)I
+    .registers 2
+
+    .line 1
+    iget-object p0, p0, Lcom/kousei/framework/g2;->a:[B
+
+    .line 3
+    array-length p0, p0
+
+    .line 4
+    invoke-static {p1, p0}, Lcom/kousei/framework/x;->d(ZI)I
+
+    .line 7
+    move-result p0
+
+    .line 8
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .registers 1
+
+    .line 1
+    iget-object p0, p0, Lcom/kousei/framework/g2;->a:[B
+
+    .line 3
+    invoke-static {p0}, Lcom/kousei/framework/ia;->a([B)Ljava/lang/String;
+
+    .line 6
     move-result-object p0
 
-    .line 35
-    const/4 v1, 0x0
-
-    .line 36
-    invoke-direct {v0, p0, v1}, Lcom/kousei/framework/f2;-><init>([B[Lcom/kousei/framework/w;)V
-
-    .line 39
-    return-object v0
-
-    .line 40
-    nop
-
-    .line 41
-    :pswitch_data_28
-    .packed-switch 0x0
-        :pswitch_13  #00000000
-    .end packed-switch
+    .line 7
+    return-object p0
 .end method

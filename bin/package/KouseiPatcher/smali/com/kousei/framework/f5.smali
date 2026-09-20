@@ -1,56 +1,94 @@
-.class public final Lcom/kousei/framework/f5;
-.super Lcom/kousei/framework/g;
+.class public interface abstract Lcom/kousei/framework/f5;
+.super Ljava/lang/Object;
 
 
-# virtual methods
-.method public final i(Lcom/kousei/framework/y;Z)V
-    .registers 4
+# static fields
+.field public static final a:Lcom/kousei/framework/u;
 
-    .line 1
-    const/4 v0, 0x3
+.field public static final b:Lcom/kousei/framework/u;
 
-    .line 2
-    iget-object p0, p0, Lcom/kousei/framework/g;->K:[B
+.field public static final c:Lcom/kousei/framework/u;
 
-    .line 4
-    invoke-virtual {p1, v0, p2, p0}, Lcom/kousei/framework/y;->t(IZ[B)V
 
-    .line 7
-    return-void
-.end method
-
-.method public final j()Z
-    .registers 1
-
-    .line 1
-    const/4 p0, 0x0
-
-    .line 2
-    return p0
-.end method
-
-.method public final l(Z)I
+# direct methods
+.method static constructor <clinit>()V
     .registers 2
 
     .line 1
-    iget-object p0, p0, Lcom/kousei/framework/g;->K:[B
+    new-instance v0, Lcom/kousei/framework/u;
 
     .line 3
-    array-length p0, p0
+    const-string v1, "1.0.10118"
 
-    .line 4
-    invoke-static {p1, p0}, Lcom/kousei/framework/y;->g(ZI)I
-
-    .line 7
-    move-result p0
+    .line 5
+    invoke-direct {v0, v1}, Lcom/kousei/framework/u;-><init>(Ljava/lang/String;)V
 
     .line 8
-    return p0
-.end method
+    const-string v1, "3.0"
 
-.method public final p()Lcom/kousei/framework/a0;
-    .registers 1
+    .line 10
+    invoke-virtual {v0, v1}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
 
-    .line 1
-    return-object p0
+    .line 13
+    move-result-object v0
+
+    .line 14
+    const-string v1, "49"
+
+    .line 16
+    invoke-virtual {v0, v1}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 19
+    move-result-object v1
+
+    .line 20
+    sput-object v1, Lcom/kousei/framework/f5;->a:Lcom/kousei/framework/u;
+
+    .line 22
+    const-string v1, "50"
+
+    .line 24
+    invoke-virtual {v0, v1}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 27
+    move-result-object v1
+
+    .line 28
+    sput-object v1, Lcom/kousei/framework/f5;->b:Lcom/kousei/framework/u;
+
+    .line 30
+    const-string v1, "55"
+
+    .line 32
+    invoke-virtual {v0, v1}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 35
+    move-result-object v0
+
+    .line 36
+    sput-object v0, Lcom/kousei/framework/f5;->c:Lcom/kousei/framework/u;
+
+    .line 38
+    new-instance v0, Lcom/kousei/framework/u;
+
+    .line 40
+    const-string v1, "1.0.18033.2"
+
+    .line 42
+    invoke-direct {v0, v1}, Lcom/kousei/framework/u;-><init>(Ljava/lang/String;)V
+
+    .line 45
+    const-string v1, "1.2"
+
+    .line 47
+    invoke-virtual {v0, v1}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 50
+    const-string v1, "2.4"
+
+    .line 52
+    invoke-virtual {v0, v1}, Lcom/kousei/framework/u;->r(Ljava/lang/String;)Lcom/kousei/framework/u;
+
+    .line 55
+    return-void
 .end method

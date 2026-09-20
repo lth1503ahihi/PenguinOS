@@ -1,524 +1,377 @@
-.class public abstract Lcom/kousei/framework/r8;
-.super Ljava/lang/Object;
+.class public final Lcom/kousei/framework/r8;
+.super Lcom/kousei/framework/q3;
 
 
 # static fields
-.field public static final a:[[B
+.field public static final h:Ljava/math/BigInteger;
 
-.field public static final b:[B
+.field public static final i:[Lcom/kousei/framework/h0;
+
+
+# instance fields
+.field public final g:Lcom/kousei/framework/a2;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .registers 15
+    .registers 3
 
     .line 1
-    const/4 v0, 0x2
+    sget-object v0, Lcom/kousei/framework/s8;->T:Ljava/math/BigInteger;
 
-    .line 2
-    new-array v0, v0, [I
-
-    .line 4
-    const/4 v1, 0x1
+    .line 3
+    sput-object v0, Lcom/kousei/framework/r8;->h:Ljava/math/BigInteger;
 
     .line 5
-    const/16 v2, 0x100
+    new-instance v0, Lcom/kousei/framework/s8;
 
     .line 7
-    aput v2, v0, v1
+    sget-object v1, Lcom/kousei/framework/n3;->b:Ljava/math/BigInteger;
 
     .line 9
-    const/4 v3, 0x0
-
-    .line 10
-    aput v2, v0, v3
+    invoke-direct {v0, v1}, Lcom/kousei/framework/s8;-><init>(Ljava/math/BigInteger;)V
 
     .line 12
-    sget-object v4, Ljava/lang/Byte;->TYPE:Ljava/lang/Class;
+    const/4 v1, 0x1
 
-    .line 14
-    invoke-static {v4, v0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;[I)Ljava/lang/Object;
+    .line 13
+    new-array v1, v1, [Lcom/kousei/framework/h0;
 
-    .line 17
-    move-result-object v0
+    .line 15
+    const/4 v2, 0x0
+
+    .line 16
+    aput-object v0, v1, v2
 
     .line 18
-    check-cast v0, [[B
+    sput-object v1, Lcom/kousei/framework/r8;->i:[Lcom/kousei/framework/h0;
 
     .line 20
-    sput-object v0, Lcom/kousei/framework/r8;->a:[[B
-
-    .line 22
-    new-array v0, v2, [B
-
-    .line 24
-    sput-object v0, Lcom/kousei/framework/r8;->b:[B
-
-    .line 26
-    const-wide v4, 0x101010101010101L
-
-    .line 31
-    move-wide v6, v4
-
-    .line 32
-    :goto_1f
-    const/16 v0, 0xff
-
-    .line 34
-    const-wide v8, 0x808080808080808L
-
-    .line 39
-    const-wide v10, 0x706050403020100L
-
-    .line 44
-    if-gt v1, v0, :cond_43
-
-    .line 46
-    move v0, v3
-
-    .line 47
-    :goto_2e
-    if-ge v0, v2, :cond_3f
-
-    .line 49
-    invoke-static {v6, v7, v10, v11}, Lcom/kousei/framework/r8;->b(JJ)J
-
-    .line 52
-    move-result-wide v12
-
-    .line 53
-    sget-object v14, Lcom/kousei/framework/r8;->a:[[B
-
-    .line 55
-    aget-object v14, v14, v1
-
-    .line 57
-    invoke-static {v0, v12, v13, v14}, Lcom/kousei/framework/i0;->O1(IJ[B)V
-
-    .line 60
-    add-long/2addr v10, v8
-
-    .line 61
-    add-int/lit8 v0, v0, 0x8
-
-    .line 63
-    goto :goto_2e
-
-    .line 64
-    :cond_3f
-    add-long/2addr v6, v4
-
-    .line 65
-    add-int/lit8 v1, v1, 0x1
-
-    .line 67
-    goto :goto_1f
-
-    .line 68
-    :cond_43
-    :goto_43
-    if-ge v3, v2, :cond_7a
-
-    .line 70
-    invoke-static {v10, v11}, Lcom/kousei/framework/r8;->c(J)J
-
-    .line 73
-    move-result-wide v0
-
-    .line 74
-    invoke-static {v0, v1}, Lcom/kousei/framework/r8;->c(J)J
-
-    .line 77
-    move-result-wide v4
-
-    .line 78
-    invoke-static {v4, v5}, Lcom/kousei/framework/r8;->c(J)J
-
-    .line 81
-    move-result-wide v6
-
-    .line 82
-    invoke-static {v4, v5, v0, v1}, Lcom/kousei/framework/r8;->b(JJ)J
-
-    .line 85
-    move-result-wide v4
-
-    .line 86
-    invoke-static {v4, v5, v6, v7}, Lcom/kousei/framework/r8;->b(JJ)J
-
-    .line 89
-    move-result-wide v4
-
-    .line 90
-    invoke-static {v4, v5}, Lcom/kousei/framework/r8;->c(J)J
-
-    .line 93
-    move-result-wide v6
-
-    .line 94
-    invoke-static {v6, v7}, Lcom/kousei/framework/r8;->c(J)J
-
-    .line 97
-    move-result-wide v6
-
-    .line 98
-    invoke-static {v6, v7}, Lcom/kousei/framework/r8;->c(J)J
-
-    .line 101
-    move-result-wide v6
-
-    .line 102
-    invoke-static {v6, v7, v4, v5}, Lcom/kousei/framework/r8;->b(JJ)J
-
-    .line 105
-    move-result-wide v4
-
-    .line 106
-    invoke-static {v4, v5}, Lcom/kousei/framework/r8;->c(J)J
-
-    .line 109
-    move-result-wide v4
-
-    .line 110
-    invoke-static {v0, v1, v4, v5}, Lcom/kousei/framework/r8;->b(JJ)J
-
-    .line 113
-    move-result-wide v0
-
-    .line 114
-    sget-object v4, Lcom/kousei/framework/r8;->b:[B
-
-    .line 116
-    invoke-static {v3, v0, v1, v4}, Lcom/kousei/framework/i0;->O1(IJ[B)V
-
-    .line 119
-    add-long/2addr v10, v8
-
-    .line 120
-    add-int/lit8 v3, v3, 0x8
-
-    .line 122
-    goto :goto_43
-
-    .line 123
-    :cond_7a
     return-void
 .end method
 
-.method public static a(JJ)J
-    .registers 16
+.method public constructor <init>()V
+    .registers 4
 
     .line 1
-    const/4 v0, 0x1
+    sget-object v0, Lcom/kousei/framework/r8;->h:Ljava/math/BigInteger;
 
-    .line 2
-    shl-long v1, p0, v0
-
-    .line 4
-    and-long/2addr v1, p2
-
-    .line 5
-    shl-long v3, p2, v0
-
-    .line 7
-    and-long/2addr v3, p0
-
-    .line 8
-    xor-long/2addr v1, v3
-
-    .line 9
-    const-wide v3, -0x5555555555555556L
-
-    .line 14
-    and-long/2addr v1, v3
-
-    .line 15
-    and-long v5, p0, p2
-
-    .line 17
-    xor-long/2addr v1, v5
-
-    .line 18
-    and-long/2addr v5, v3
-
-    .line 19
-    ushr-long/2addr v5, v0
-
-    .line 20
-    xor-long/2addr v1, v5
-
-    .line 21
-    const-wide v5, 0x3333333333333333L  # 4.667261458395856E-62
-
-    .line 26
-    and-long/2addr v5, v1
-
-    .line 27
-    const-wide v7, -0x3333333333333334L  # -9.255963134931783E61
-
-    .line 32
-    and-long/2addr v1, v7
-
-    .line 33
-    const/4 v9, 0x2
-
-    .line 34
-    shl-long v10, p0, v9
-
-    .line 36
-    xor-long/2addr p0, v10
-
-    .line 37
-    and-long/2addr p0, v7
-
-    .line 38
-    ushr-long/2addr v1, v9
-
-    .line 39
-    xor-long/2addr p0, v1
-
-    .line 40
-    shl-long v1, p2, v9
-
-    .line 42
-    xor-long/2addr p2, v1
-
-    .line 43
-    and-long/2addr p2, v7
-
-    .line 44
-    const-wide v1, 0x2222222222222222L
-
-    .line 49
-    xor-long/2addr p2, v1
-
-    .line 50
-    shl-long v1, p0, v0
-
-    .line 52
-    and-long/2addr v1, p2
-
-    .line 53
-    shl-long v7, p2, v0
-
-    .line 55
-    and-long/2addr v7, p0
-
-    .line 56
-    xor-long/2addr v1, v7
-
-    .line 57
-    and-long/2addr v1, v3
-
-    .line 58
-    and-long/2addr p0, p2
-
-    .line 59
-    xor-long p2, p0, v1
-
-    .line 61
-    and-long/2addr p0, v3
-
-    .line 62
-    ushr-long/2addr p0, v0
-
-    .line 63
-    xor-long/2addr p0, p2
-
-    .line 64
-    shl-long p2, v5, v9
-
-    .line 66
-    xor-long/2addr p0, p2
-
-    .line 67
-    xor-long/2addr p0, v5
-
-    .line 68
-    return-wide p0
-.end method
-
-.method public static b(JJ)J
-    .registers 13
-
-    .line 1
-    invoke-static {p0, p1, p2, p3}, Lcom/kousei/framework/r8;->a(JJ)J
-
-    .line 4
-    move-result-wide v0
-
-    .line 5
-    const-wide v2, 0xf0f0f0f0f0f0f0fL  # 3.815736827118017E-236
-
-    .line 10
-    and-long/2addr v2, v0
-
-    .line 11
-    const-wide v4, -0xf0f0f0f0f0f0f10L  # -1.0773087426743214E236
-
-    .line 16
-    and-long/2addr v0, v4
-
-    .line 17
-    const/4 v6, 0x4
-
-    .line 18
-    shl-long v7, p0, v6
-
-    .line 20
-    xor-long/2addr p0, v7
-
-    .line 21
-    and-long/2addr p0, v4
-
-    .line 22
-    ushr-long/2addr v0, v6
-
-    .line 23
-    xor-long/2addr p0, v0
-
-    .line 24
-    shl-long v0, p2, v6
-
-    .line 26
-    xor-long/2addr p2, v0
-
-    .line 27
-    and-long/2addr p2, v4
-
-    .line 28
-    const-wide v0, 0x808080808080808L
-
-    .line 33
-    xor-long/2addr p2, v0
-
-    .line 34
-    invoke-static {p0, p1, p2, p3}, Lcom/kousei/framework/r8;->a(JJ)J
-
-    .line 37
-    move-result-wide p0
-
-    .line 38
-    shl-long p2, v2, v6
-
-    .line 40
-    xor-long/2addr p0, p2
-
-    .line 41
-    xor-long/2addr p0, v2
-
-    .line 42
-    return-wide p0
-.end method
-
-.method public static c(J)J
-    .registers 11
-
-    .line 1
-    const-wide v0, -0x5555555555555556L
+    .line 3
+    invoke-direct {p0, v0}, Lcom/kousei/framework/q3;-><init>(Ljava/math/BigInteger;)V
 
     .line 6
-    and-long v2, p0, v0
+    new-instance v0, Lcom/kousei/framework/a2;
 
     .line 8
-    const/4 v4, 0x1
+    const/4 v1, 0x0
 
     .line 9
-    ushr-long/2addr v2, v4
-
-    .line 10
-    xor-long/2addr p0, v2
+    const/16 v2, 0x9
 
     .line 11
-    const-wide v2, 0x4444444444444444L  # 7.477080264543605E20
+    invoke-direct {v0, p0, v1, v1, v2}, Lcom/kousei/framework/a2;-><init>(Lcom/kousei/framework/u3;Lcom/kousei/framework/h0;Lcom/kousei/framework/h0;I)V
+
+    .line 14
+    iput-object v0, p0, Lcom/kousei/framework/r8;->g:Lcom/kousei/framework/a2;
 
     .line 16
-    and-long/2addr v2, p0
+    sget-object v0, Lcom/kousei/framework/n3;->a:Ljava/math/BigInteger;
 
-    .line 17
-    const-wide v5, -0x7777777777777778L  # -1.48603973805866E-267
+    .line 18
+    new-instance v1, Lcom/kousei/framework/s8;
 
-    .line 22
-    and-long/2addr v5, p0
+    .line 20
+    invoke-direct {v1, v0}, Lcom/kousei/framework/s8;-><init>(Ljava/math/BigInteger;)V
 
     .line 23
-    shl-long/2addr v2, v4
-
-    .line 24
-    xor-long/2addr v2, v5
+    iput-object v1, p0, Lcom/kousei/framework/u3;->b:Lcom/kousei/framework/h0;
 
     .line 25
-    ushr-long/2addr v5, v4
-
-    .line 26
-    xor-long/2addr v2, v5
+    const-wide/16 v0, 0x5
 
     .line 27
-    const/4 v5, 0x2
-
-    .line 28
-    ushr-long/2addr v2, v5
-
-    .line 29
-    xor-long/2addr p0, v2
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     .line 30
-    const-wide v2, 0x3030303030303030L  # 1.398043286095289E-76
+    move-result-object v0
 
-    .line 35
-    and-long/2addr v2, p0
+    .line 31
+    new-instance v1, Lcom/kousei/framework/s8;
+
+    .line 33
+    invoke-direct {v1, v0}, Lcom/kousei/framework/s8;-><init>(Ljava/math/BigInteger;)V
 
     .line 36
-    const-wide v6, -0x3f3f3f3f3f3f3f40L  # -8577.50588235294
+    iput-object v1, p0, Lcom/kousei/framework/u3;->c:Lcom/kousei/framework/h0;
 
-    .line 41
-    and-long/2addr v6, p0
+    .line 38
+    new-instance v0, Ljava/math/BigInteger;
+
+    .line 40
+    const-string v1, "010000000000000000000000000001DCE8D2EC6184CAF0A971769FB1F7"
 
     .line 42
-    shl-long/2addr v2, v5
+    invoke-static {v1}, Lcom/kousei/framework/u4;->a(Ljava/lang/String;)[B
 
-    .line 43
-    xor-long/2addr v2, v6
-
-    .line 44
-    ushr-long v5, v6, v5
+    .line 45
+    move-result-object v1
 
     .line 46
-    xor-long/2addr v2, v5
+    const/4 v2, 0x1
 
     .line 47
-    const-wide v7, 0x5555555555555555L  # 1.1945305291614955E103
+    invoke-direct {v0, v2, v1}, Ljava/math/BigInteger;-><init>(I[B)V
+
+    .line 50
+    iput-object v0, p0, Lcom/kousei/framework/u3;->d:Ljava/math/BigInteger;
 
     .line 52
-    and-long/2addr v7, v2
-
-    .line 53
-    and-long/2addr v0, v2
+    const-wide/16 v0, 0x1
 
     .line 54
-    shl-long v2, v7, v4
-
-    .line 56
-    xor-long/2addr v2, v0
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     .line 57
-    ushr-long/2addr v0, v4
+    move-result-object v0
 
     .line 58
-    xor-long/2addr v0, v2
-
-    .line 59
-    xor-long/2addr v0, v5
+    iput-object v0, p0, Lcom/kousei/framework/u3;->e:Ljava/math/BigInteger;
 
     .line 60
-    const/4 v2, 0x4
+    const/4 v0, 0x2
 
     .line 61
-    ushr-long/2addr v0, v2
-
-    .line 62
-    xor-long/2addr p0, v0
+    iput v0, p0, Lcom/kousei/framework/u3;->f:I
 
     .line 63
-    return-wide p0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Lcom/kousei/framework/u3;
+    .registers 1
+
+    .line 1
+    new-instance p0, Lcom/kousei/framework/r8;
+
+    .line 3
+    invoke-direct {p0}, Lcom/kousei/framework/r8;-><init>()V
+
+    .line 6
+    return-object p0
+.end method
+
+.method public final b([Lcom/kousei/framework/c4;I)Lcom/kousei/framework/h0;
+    .registers 8
+
+    .line 1
+    mul-int/lit8 v0, p2, 0xe
+
+    .line 3
+    new-array v0, v0, [I
+
+    .line 5
+    const/4 v1, 0x0
+
+    .line 6
+    move v2, v1
+
+    .line 7
+    :goto_6
+    if-ge v1, p2, :cond_23
+
+    .line 9
+    aget-object v3, p1, v1
+
+    .line 11
+    iget-object v4, v3, Lcom/kousei/framework/c4;->b:Lcom/kousei/framework/h0;
+
+    .line 13
+    check-cast v4, Lcom/kousei/framework/s8;
+
+    .line 15
+    iget-object v4, v4, Lcom/kousei/framework/s8;->S:[I
+
+    .line 17
+    invoke-static {v2, v4, v0}, Lcom/kousei/framework/m6;->s(I[I[I)V
+
+    .line 20
+    add-int/lit8 v4, v2, 0x7
+
+    .line 22
+    iget-object v3, v3, Lcom/kousei/framework/c4;->c:Lcom/kousei/framework/h0;
+
+    .line 24
+    check-cast v3, Lcom/kousei/framework/s8;
+
+    .line 26
+    iget-object v3, v3, Lcom/kousei/framework/s8;->S:[I
+
+    .line 28
+    invoke-static {v4, v3, v0}, Lcom/kousei/framework/m6;->s(I[I[I)V
+
+    .line 31
+    add-int/lit8 v2, v2, 0xe
+
+    .line 33
+    add-int/lit8 v1, v1, 0x1
+
+    .line 35
+    goto :goto_6
+
+    .line 36
+    :cond_23
+    new-instance p1, Lcom/kousei/framework/x1;
+
+    .line 38
+    const/16 v1, 0x8
+
+    .line 40
+    invoke-direct {p1, p0, p2, v0, v1}, Lcom/kousei/framework/x1;-><init>(Lcom/kousei/framework/u3;ILjava/lang/Object;I)V
+
+    .line 43
+    return-object p1
+.end method
+
+.method public final d(Lcom/kousei/framework/h0;Lcom/kousei/framework/h0;)Lcom/kousei/framework/c4;
+    .registers 5
+
+    .line 1
+    new-instance v0, Lcom/kousei/framework/a2;
+
+    .line 3
+    const/16 v1, 0x9
+
+    .line 5
+    invoke-direct {v0, p0, p1, p2, v1}, Lcom/kousei/framework/a2;-><init>(Lcom/kousei/framework/u3;Lcom/kousei/framework/h0;Lcom/kousei/framework/h0;I)V
+
+    .line 8
+    return-object v0
+.end method
+
+.method public final f(Ljava/math/BigInteger;)Lcom/kousei/framework/h0;
+    .registers 2
+
+    .line 1
+    new-instance p0, Lcom/kousei/framework/s8;
+
+    .line 3
+    invoke-direct {p0, p1}, Lcom/kousei/framework/s8;-><init>(Ljava/math/BigInteger;)V
+
+    .line 6
+    return-object p0
+.end method
+
+.method public final g()I
+    .registers 1
+
+    .line 1
+    sget-object p0, Lcom/kousei/framework/r8;->h:Ljava/math/BigInteger;
+
+    .line 3
+    invoke-virtual {p0}, Ljava/math/BigInteger;->bitLength()I
+
+    .line 6
+    move-result p0
+
+    .line 7
+    return p0
+.end method
+
+.method public final h()Lcom/kousei/framework/c4;
+    .registers 1
+
+    .line 1
+    iget-object p0, p0, Lcom/kousei/framework/r8;->g:Lcom/kousei/framework/a2;
+
+    .line 3
+    return-object p0
+.end method
+
+.method public final l(Ljava/security/SecureRandom;)Lcom/kousei/framework/h0;
+    .registers 5
+
+    .line 1
+    const/4 p0, 0x7
+
+    .line 2
+    new-array v0, p0, [I
+
+    .line 4
+    :cond_3
+    const/16 v1, 0x1c
+
+    .line 6
+    new-array v1, v1, [B
+
+    .line 8
+    :cond_7
+    invoke-virtual {p1, v1}, Ljava/security/SecureRandom;->nextBytes([B)V
+
+    .line 11
+    invoke-static {v1, v0, p0}, Lcom/kousei/framework/m6;->u0([B[II)V
+
+    .line 14
+    sget-object v2, Lcom/kousei/framework/h0;->z:[I
+
+    .line 16
+    invoke-static {p0, v0, v2}, Lcom/kousei/framework/m6;->t0(I[I[I)I
+
+    .line 19
+    move-result v2
+
+    .line 20
+    if-eqz v2, :cond_7
+
+    .line 22
+    invoke-static {p0, v0}, Lcom/kousei/framework/m6;->G(I[I)I
+
+    .line 25
+    move-result v1
+
+    .line 26
+    if-nez v1, :cond_3
+
+    .line 28
+    new-instance p0, Lcom/kousei/framework/s8;
+
+    .line 30
+    invoke-direct {p0, v0}, Lcom/kousei/framework/s8;-><init>([I)V
+
+    .line 33
+    return-object p0
+.end method
+
+.method public final m(I)Z
+    .registers 2
+
+    .line 1
+    const/4 p0, 0x2
+
+    .line 2
+    if-eq p1, p0, :cond_5
+
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    return p0
+
+    .line 6
+    :cond_5
+    const/4 p0, 0x1
+
+    .line 7
+    return p0
+.end method
+
+.method public final n()Ljava/math/BigInteger;
+    .registers 1
+
+    .line 1
+    sget-object p0, Lcom/kousei/framework/r8;->h:Ljava/math/BigInteger;
+
+    .line 3
+    return-object p0
 .end method

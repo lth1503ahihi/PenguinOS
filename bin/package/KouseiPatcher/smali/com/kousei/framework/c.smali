@@ -1,71 +1,27 @@
-.class public abstract Lcom/kousei/framework/c;
+.class public interface abstract Lcom/kousei/framework/c;
 .super Ljava/lang/Object;
 
 
 # static fields
-.field public static final a:Ljava/util/Hashtable;
-
-.field public static final b:Ljava/util/Hashtable;
+.field public static final a:Lcom/kousei/framework/u;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .registers 7
+    .registers 2
 
     .line 1
-    new-instance v0, Lcom/kousei/framework/b;
+    new-instance v0, Lcom/kousei/framework/u;
 
     .line 3
-    const/4 v1, 0x0
+    const-string v1, "1.2.250.1.223.101.256.1"
 
-    .line 4
-    invoke-direct {v0, v1}, Lcom/kousei/framework/b;-><init>(I)V
+    .line 5
+    invoke-direct {v0, v1}, Lcom/kousei/framework/u;-><init>(Ljava/lang/String;)V
 
-    .line 7
-    new-instance v1, Ljava/util/Hashtable;
+    .line 8
+    sput-object v0, Lcom/kousei/framework/c;->a:Lcom/kousei/framework/u;
 
-    .line 9
-    invoke-direct {v1}, Ljava/util/Hashtable;-><init>()V
-
-    .line 12
-    sput-object v1, Lcom/kousei/framework/c;->a:Ljava/util/Hashtable;
-
-    .line 14
-    new-instance v2, Ljava/util/Hashtable;
-
-    .line 16
-    invoke-direct {v2}, Ljava/util/Hashtable;-><init>()V
-
-    .line 19
-    sput-object v2, Lcom/kousei/framework/c;->b:Ljava/util/Hashtable;
-
-    .line 21
-    new-instance v3, Ljava/util/Hashtable;
-
-    .line 23
-    invoke-direct {v3}, Ljava/util/Hashtable;-><init>()V
-
-    .line 26
-    sget-object v4, Lcom/kousei/framework/d;->a:Lcom/kousei/framework/v;
-
-    .line 28
-    const-string v5, "FRP256v1"
-
-    .line 30
-    invoke-static {v5}, Lcom/kousei/framework/wh;->c(Ljava/lang/String;)Ljava/lang/String;
-
-    .line 33
-    move-result-object v6
-
-    .line 34
-    invoke-virtual {v1, v6, v4}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 37
-    invoke-virtual {v3, v4, v5}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 40
-    invoke-virtual {v2, v4, v0}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 43
+    .line 10
     return-void
 .end method
