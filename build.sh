@@ -36,15 +36,12 @@ mkdir -p $work_dir/out
 python3 $work_dir/notify.py download "$repo_name" "$baserom" "$prefix_id" "$builder_name" "$builder_id"
 source "$work_dir/bin/ddevice/getROM.sh" "$baserom"
 
-# ==================== ĐOẠN FIX LỖI TÊN FILE ZIP ====================
-# Chuẩn hóa baserom: Tránh lấy nhầm URL chứa query (?viasf=1&fid=...) làm tên file giải nén
+# ==================== CHUẨN HÓA TÊN FILE ZIP ====================
 if [[ ! -f "$baserom" ]]; then
-    # Tìm file zip có dung lượng lớn nhất vừa được tải về trong thư mục làm việc
     found_zip=$(ls -S $work_dir/*.zip 2>/dev/null | head -n 1)
     if [[ -n "$found_zip" && -f "$found_zip" ]]; then
         baserom="$found_zip"
     else
-        # Lọc bỏ query param phía sau dấu ? nếu baserom truyền vào là URL
         clean_name=$(basename "${baserom%%\?*}")
         if [[ -f "$work_dir/$clean_name" ]]; then
             baserom="$work_dir/$clean_name"
@@ -53,7 +50,7 @@ if [[ ! -f "$baserom" ]]; then
         fi
     fi
 fi
-# ===================================================================
+# ================================================================
 
 python3 $work_dir/notify.py unpack "$repo_name" "$baserom" "$prefix_id" "$builder_name" "$builder_id"
 if unzip -l "${baserom}" | grep -q "payload.bin"; then
@@ -68,7 +65,7 @@ elif unzip -l "${baserom}" | grep -q "br$"; then
     super_list="system vendor product odm system_ext mi_ext"
     unpack "Found broli file"
     unpack "ROM validation passed."
-elif unzip -l "${baserom}" | grep -q "images/super.img*"; then
+elif unzip -l "${baserom}" | grep -q "super.img.*"; then
     unpack "Found super.img.* files"
     is_base_rom_eu=true
     unpack "ROM validation passed."
@@ -94,15 +91,36 @@ elif [[ ${baserom_type} == 'br' ]]; then
     unpack "File new.dat.br extracted."
 elif [[ ${is_base_rom_eu} == true ]]; then
     unpack "Extracting files from BASETROM [super.img]"
-    unzip "${baserom}" 'images/*' -d build/baserom >/dev/null 2>&1 || error "Extracting [super.img] error"
+    # Bung toàn bộ file mảnh super.img.* bất kể cấu trúc nén trong zip
+    unzip -q "${baserom}" '*super.img*' -d build/baserom/ || error "Extracting [super.img] error"
+    
+    # Tìm chính xác thư mục chứa các mảnh super.img
+    super_dir=$(dirname $(find build/baserom -name "*super.img.0*" | head -n 1))
+    if [ -z "$super_dir" ]; then
+        super_dir="build/baserom/images"
+    fi
+
     unpack "Merging super.img.* into super.img"
-    simg2img build/baserom/images/super.img.* build/baserom/images/super.img
-    rm -rf build/baserom/images/super.img.*
-    mv build/baserom/images/super.img build/baserom/super.img
+    if command -v simg2img >/dev/null 2>&1; then
+        simg2img ${super_dir}/*super.img.* build/baserom/super.img
+    else
+        ${work_dir}/bin/Linux/x86_64/simg2img ${super_dir}/*super.img.* build/baserom/super.img
+    fi
+
+    if [[ ! -s build/baserom/super.img ]]; then
+        error "Ghép super.img thất bại! File rỗng hoặc không tồn tại."
+        exit 1
+    fi
+
+    rm -rf ${super_dir}/*super.img.*
     unpack "[super.img] extracted."
-    if [[ -f build/baserom/images/cust.img.0 ]]; then
-        simg2img build/baserom/images/cust.img.* build/baserom/images/cust.img
-        rm -rf build/baserom/images/cust.img.*
+
+    # Xử lý cust.img nếu có
+    cust_file=$(find build/baserom -name "cust.img.0" | head -n 1)
+    if [[ -n "$cust_file" ]]; then
+        cust_dir=$(dirname "$cust_file")
+        simg2img ${cust_dir}/cust.img.* build/baserom/images/cust.img 2>/dev/null || true
+        rm -rf ${cust_dir}/cust.img.*
     fi
 fi
 
@@ -119,31 +137,52 @@ elif [[ ${baserom_type} == 'br' ]]; then
     done
 elif [[ ${is_base_rom_eu} == true ]]; then
     unpack "Unpacking BASEROM [super.img]"
-    super_list=$(python3 bin/lpunpack.py --info build/baserom/super.img | grep "super:" | awk '{ print $5 }')
-    for i in ${super_list}; do
-        if [[ $i == *_a ]]; then
-            i=${i%_a}
-            python3 bin/lpunpack.py -p ${i}_a build/baserom/super.img build/baserom/images >/dev/null 2>&1
-            mv build/baserom/images/${i}_a.img build/baserom/images/${i}.img 
-        else
-            python3 bin/lpunpack.py -p ${i} build/baserom/super.img build/baserom/images >/dev/null 2>&1
+    # Bung thẳng toàn bộ img từ super.img vào thư mục images/
+    python3 bin/lpunpack.py build/baserom/super.img build/baserom/images/ >/dev/null 2>&1
+    
+    # Xử lý tên phân vùng slot A/B (chuẩn hóa về .img sạch)
+    for i in build/baserom/images/*_a.img; do
+        if [ -f "$i" ]; then
+            mv "$i" "${i%_a.img}.img"
         fi
     done
-    super_list=$(echo $super_list | sed 's/_a//g')
+    
+    # Danh sách các phân vùng cần bung chi tiết
+    super_list="system system_ext product vendor odm mi_ext"
 fi
 
 for part in ${super_list}; do
-    extract_partition $work_dir/build/baserom/images/${part}.img $work_dir/build/baserom/images
-    PACK_TYPE=$(cat $work_dir/bin/ddevice/fstype.txt)
+    if [ -f "$work_dir/build/baserom/images/${part}.img" ]; then
+        extract_partition $work_dir/build/baserom/images/${part}.img $work_dir/build/baserom/images
+        PACK_TYPE=$(cat $work_dir/bin/ddevice/fstype.txt 2>/dev/null || echo "erofs")
+    fi
 done
-echo $device_f > $work_dir/bin/ddevice/device_f.txt
+
+# ==================== FIX TÊN CODENAME THIẾT BỊ ====================
+detected_codename=""
+if [ -f "$work_dir/build/baserom/images/system/system/build.prop" ]; then
+    detected_codename=$(grep -m1 "ro.product.device=" "$work_dir/build/baserom/images/system/system/build.prop" | cut -d= -f2 | tr '[:upper:]' '[:lower:]')
+elif [ -f "$work_dir/build/baserom/images/vendor/build.prop" ]; then
+    detected_codename=$(grep -m1 "ro.product.vendor.device=" "$work_dir/build/baserom/images/vendor/build.prop" | cut -d= -f2 | tr '[:upper:]' '[:lower:]')
+fi
+
+if [ -z "$detected_codename" ]; then
+    detected_codename=$(echo "$baserom" | grep -o -i -E "(peridot|onyx|garnet|corot|duchamp|manet|houji|shennong)" | head -n 1 | tr '[:upper:]' '[:lower:]')
+fi
+
+if [ -n "$detected_codename" ]; then
+    device_f="$detected_codename"
+fi
+
+echo "$device_f" > $work_dir/bin/ddevice/device_f.txt
 getvar=$(cat $work_dir/bin/ddevice/device_f.txt)
+# ===================================================================
 
 rm -rf config
 if [ -f "$baserom" ]; then rm -rf "$baserom"; fi
-rm -rf build/baserom/payload.bin build/baserom/images/super.img
+rm -rf build/baserom/payload.bin build/baserom/super.img
 
-# Kỹ thuật ép tên: Làm sạch hậu tố NT/INT và ép về tên thương hiệu riêng (ví dụ: PenguinOS)
+# Kỹ thuật ép tên: Làm sạch hậu tố NT/INT và ép về tên thương hiệu riêng
 MY_BRAND_NAME="PenguinOS"
 echo "$MY_BRAND_NAME" > $work_dir/bin/ddevice/os_type.txt
 echo "$MY_BRAND_NAME" > $work_dir/bin/ddevice/rom_os.txt
