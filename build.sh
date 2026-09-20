@@ -23,7 +23,8 @@ fi
 # Fix lỗi cấu hình gói apt/dpkg nếu có và cài đặt các phụ thuộc
 sudo dpkg --configure -a 2>/dev/null || true
 sudo apt-get update -y
-sudo apt-get install -y xmlstarlet aapt
+sudo apt-get install -y xmlstarlet aapt libc++1 libc++abi1 libsparse-tools
+sudo ln -sf /usr/lib/x86_64-linux-gnu/libc++.so.1 /usr/lib/x86_64-linux-gnu/libc++.so 2>/dev/null || true
 
 check unzip aria2c 7z zip java zipalign python3 zstd bc xmlstarlet aapt
 
