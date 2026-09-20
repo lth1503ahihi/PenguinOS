@@ -98,7 +98,6 @@ elif [[ ${is_base_rom_eu} == true ]]; then
     fi
 
     unpack "Merging super.img.* into super.img"
-    # DÙNG TRỰC TIẾP LỆNH HỆ THỐNG ĐỂ TRÁNH LỖI THƯ VIỆN LIBC++
     if [ -x "/usr/bin/simg2img" ]; then
         /usr/bin/simg2img ${super_dir}/*super.img.* build/baserom/super.img
     else
@@ -154,13 +153,16 @@ done
 
 # ==================== FIX TÊN CODENAME THIẾT BỊ ====================
 detected_codename=""
-if [ -f "$work_dir/build/baserom/images/system/system/build.prop" ]; then
-    detected_codename=$(grep -m1 "ro.product.device=" "$work_dir/build/baserom/images/system/system/build.prop" | cut -d= -f2 | tr '[:upper:]' '[:lower:]')
+
+# Ưu tiên 1: Lấy từ product/etc/build.prop hoặc vendor (chứa codename máy thật, tránh chữ missi của system)
+if [ -f "$work_dir/build/baserom/images/product/etc/build.prop" ]; then
+    detected_codename=$(grep -m1 "^ro.product.product.device=" "$work_dir/build/baserom/images/product/etc/build.prop" | cut -d= -f2 | tr '[:upper:]' '[:lower:]')
 elif [ -f "$work_dir/build/baserom/images/vendor/build.prop" ]; then
-    detected_codename=$(grep -m1 "ro.product.vendor.device=" "$work_dir/build/baserom/images/vendor/build.prop" | cut -d= -f2 | tr '[:upper:]' '[:lower:]')
+    detected_codename=$(grep -m1 "^ro.product.vendor.device=" "$work_dir/build/baserom/images/vendor/build.prop" | cut -d= -f2 | tr '[:upper:]' '[:lower:]')
 fi
 
-if [ -z "$detected_codename" ]; then
+# Ưu tiên 2: Nếu lấy ra missi hoặc rỗng thì bóc thẳng từ chuỗi baserom/tên file zip
+if [[ -z "$detected_codename" || "$detected_codename" == "missi" ]]; then
     detected_codename=$(echo "$baserom" | grep -o -i -E "(peridot|onyx|garnet|corot|duchamp|manet|houji|shennong)" | head -n 1 | tr '[:upper:]' '[:lower:]')
 fi
 
