@@ -122,7 +122,11 @@ rm -rf config
 if [ -f $work_dir/${baserom}.zip ]; then rm -rf ${baserom}.zip; fi
 rm -rf build/baserom/payload.bin build/baserom/images/super.img
 
-
+# Kỹ thuật ép tên: Làm sạch hậu tố NT/INT và ép về tên thương hiệu riêng (ví dụ: PenguinOS)
+MY_BRAND_NAME="PenguinOS"
+echo "$MY_BRAND_NAME" > $work_dir/bin/ddevice/os_type.txt
+echo "$MY_BRAND_NAME" > $work_dir/bin/ddevice/rom_os.txt
+echo "$MY_BRAND_NAME" > $work_dir/bin/ddevice/brand.txt
 
 if [ ! -s "$work_dir/bin/ddevice/device_name.txt" ]; then 
     echo "Xiaomi Device" > $work_dir/bin/ddevice/device_name.txt 
@@ -144,5 +148,23 @@ bash $work_dir/bin/modfile/Universal/insfile.sh
 bash $work_dir/bin/modfile/UpdateFile/insupdate.sh
 bash $work_dir/bin/package/patchpackage.sh
 
+# ----> ĐIỀU KIỆN ÁP DỤNG ĐỊNH DANH VÀ BẢN QUYỀN <----
+CURRENT_CODENAME="$(cat $work_dir/bin/ddevice/device_f.txt 2>/dev/null)"
+
+if [[ "$CURRENT_CODENAME" =~ (pudding|pandora|popsicle|nezha) ]]; then
+    info "Thiết bị thuộc Xiaomi 17 Series ($CURRENT_CODENAME): Giữ nguyên toàn bộ HyperOS/MIUI và version prop gốc để tránh lỗi camera."
+else
+    # ----> SÁT THỦ DIỆT MIUINT/HyperNT TỪ GỐC <----
+    info "Đang luộc chín MIUINT/HyperNT từ các file cấu hình..."
+    find "$work_dir/build/baserom/images/" -type f -name "*.prop" -exec sed -i 's/MIUINT/MIUI/g' {} +
+    find "$work_dir/build/baserom/images/" -type f -name "*.prop" -exec sed -i 's/HyperNT/HyperOS/g' {} +
+
+    # ----> ĐÓNG DẤU BẢN QUYỀN PENGUINOS <----
+    info "Đang đóng dấu bản quyền PenguinOS..."
+    find "$work_dir/build/baserom/images/" -type f -name "*.prop" -exec sed -i 's/^ro.build.display.id=.*/ro.build.display.id=PenguinOS 1.1/g' {} +
+    find "$work_dir/build/baserom/images/" -type f -name "*.prop" -exec sed -i 's/^ro.build.version.incremental=.*/ro.build.version.incremental=PenguinOS 1.1/g' {} +
+    find "$work_dir/build/baserom/images/" -type f -name "*.prop" -exec sed -i 's/^ro.mi.os.version.name=.*/ro.mi.os.version.name=PenguinOS 1.1/g' {} +
+    find "$work_dir/build/baserom/images/" -type f -name "*.prop" -exec sed -i 's/^ro.mi.os.version.incremental=.*/ro.mi.os.version.incremental=PenguinOS 1.1/g' {} +
+fi
 
 find "$work_dir/build/baserom/images/" -exec touch -t 200901010000.00 {} + 2> /dev/null || true
