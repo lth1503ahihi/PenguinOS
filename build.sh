@@ -20,7 +20,8 @@ else
 	status="Official"
 fi
 
-# ---> ĐÃ THÊM 2 DÒNG NÀY ĐỂ FIX LỖI THIẾU GÓI <---
+# Fix lỗi cấu hình gói apt/dpkg nếu có và cài đặt các phụ thuộc
+sudo dpkg --configure -a 2>/dev/null || true
 sudo apt-get update -y
 sudo apt-get install -y xmlstarlet aapt
 
@@ -34,20 +35,39 @@ mkdir -p $work_dir/out
 python3 $work_dir/notify.py download "$repo_name" "$baserom" "$prefix_id" "$builder_name" "$builder_id"
 source "$work_dir/bin/ddevice/getROM.sh" "$baserom"
 
+# ==================== ĐOẠN FIX LỖI TÊN FILE ZIP ====================
+# Chuẩn hóa baserom: Tránh lấy nhầm URL chứa query (?viasf=1&fid=...) làm tên file giải nén
+if [[ ! -f "$baserom" ]]; then
+    # Tìm file zip có dung lượng lớn nhất vừa được tải về trong thư mục làm việc
+    found_zip=$(ls -S $work_dir/*.zip 2>/dev/null | head -n 1)
+    if [[ -n "$found_zip" && -f "$found_zip" ]]; then
+        baserom="$found_zip"
+    else
+        # Lọc bỏ query param phía sau dấu ? nếu baserom truyền vào là URL
+        clean_name=$(basename "${baserom%%\?*}")
+        if [[ -f "$work_dir/$clean_name" ]]; then
+            baserom="$work_dir/$clean_name"
+        elif [[ -f "$clean_name" ]]; then
+            baserom="$clean_name"
+        fi
+    fi
+fi
+# ===================================================================
+
 python3 $work_dir/notify.py unpack "$repo_name" "$baserom" "$prefix_id" "$builder_name" "$builder_id"
-if unzip -l ${baserom} | grep -q "payload.bin"; then
+if unzip -l "${baserom}" | grep -q "payload.bin"; then
     baserom_type="payload"
     echo $baserom_type > $work_dir/bin/ddevice/romtype.txt
     unpack "Found payload.bin file"
     super_list="vendor mi_ext odm odm_dlkm system system_dlkm vendor_dlkm product product_dlkm system_ext"
     unpack "ROM validation passed."
-elif unzip -l ${baserom} | grep -q "br$";then
+elif unzip -l "${baserom}" | grep -q "br$"; then
     baserom_type="br"
     echo $baserom_type > $work_dir/bin/ddevice/romtype.txt
     super_list="system vendor product odm system_ext mi_ext"
     unpack "Found broli file"
     unpack "ROM validation passed."
-elif unzip -l ${baserom} | grep -q "images/super.img*"; then
+elif unzip -l "${baserom}" | grep -q "images/super.img*"; then
     unpack "Found super.img.* files"
     is_base_rom_eu=true
     unpack "ROM validation passed."
@@ -65,21 +85,21 @@ mkdir -p build/baserom/images/
 # Extract partitions
 if [[ ${baserom_type} == 'payload' ]]; then
     unpack "Extracting files payload.bin..."
-    unzip ${baserom} payload.bin -d build/baserom >/dev/null 2>&1 || error "Extracting payload.bin error"
+    unzip "${baserom}" payload.bin -d build/baserom >/dev/null 2>&1 || error "Extracting payload.bin error"
     unpack "File payload.bin extracted."
-elif [[ ${baserom_type} == 'br' ]];then
+elif [[ ${baserom_type} == 'br' ]]; then
     unpack "Extracting files *.new.dat.br"
-    unzip ${baserom} -d build/baserom >/dev/null 2>&1 || error "Extracting new.dat.br error"
+    unzip "${baserom}" -d build/baserom >/dev/null 2>&1 || error "Extracting new.dat.br error"
     unpack "File new.dat.br extracted."
-elif [[ ${is_base_rom_eu} == true ]];then
+elif [[ ${is_base_rom_eu} == true ]]; then
     unpack "Extracting files from BASETROM [super.img]"
-    unzip ${baserom} 'images/*' -d build/baserom >  /dev/null 2>&1 ||error "Extracting [super.img] error"
+    unzip "${baserom}" 'images/*' -d build/baserom >/dev/null 2>&1 || error "Extracting [super.img] error"
     unpack "Merging super.img.* into super.img"
     simg2img build/baserom/images/super.img.* build/baserom/images/super.img
     rm -rf build/baserom/images/super.img.*
     mv build/baserom/images/super.img build/baserom/super.img
     unpack "[super.img] extracted."
-    if [[ -f build/baserom/images/cust.img.0 ]];then
+    if [[ -f build/baserom/images/cust.img.0 ]]; then
         simg2img build/baserom/images/cust.img.* build/baserom/images/cust.img
         rm -rf build/baserom/images/cust.img.*
     fi
@@ -88,19 +108,19 @@ fi
 if [[ ${baserom_type} == 'payload' ]]; then
     unpack "Unpacking payload.bin"
     payload-extract extract -o build/baserom/images/ build/baserom/payload.bin >/dev/null 2>&1 || error "Unpacking payload.bin failed"    
-elif [[ ${baserom_type} == 'br' ]];then
+elif [[ ${baserom_type} == 'br' ]]; then
     super_list=$(cat build/baserom/dynamic_partitions_op_list | grep "add " | awk '{ print $2 }')
     unpack "Unpacking new.dat.br"
-        for brotlipart in ${super_list}; do 
-            brotli -d build/baserom/$brotlipart.new.dat.br >/dev/null 2>&1
-            python3 $work_dir/bin/Linux/x86_64/sdat2img.py build/baserom/$brotlipart.transfer.list build/baserom/$brotlipart.new.dat build/baserom/images/$brotlipart.img >/dev/null 2>&1
-            rm -rf build/baserom/$brotlipart.new.dat* build/baserom/$brotlipart.transfer.list build/baserom/$brotlipart.patch.*
-        done
-elif [[ ${is_base_rom_eu} == true ]];then
+    for brotlipart in ${super_list}; do 
+        brotli -d build/baserom/$brotlipart.new.dat.br >/dev/null 2>&1
+        python3 $work_dir/bin/Linux/x86_64/sdat2img.py build/baserom/$brotlipart.transfer.list build/baserom/$brotlipart.new.dat build/baserom/images/$brotlipart.img >/dev/null 2>&1
+        rm -rf build/baserom/$brotlipart.new.dat* build/baserom/$brotlipart.transfer.list build/baserom/$brotlipart.patch.*
+    done
+elif [[ ${is_base_rom_eu} == true ]]; then
     unpack "Unpacking BASEROM [super.img]"
     super_list=$(python3 bin/lpunpack.py --info build/baserom/super.img | grep "super:" | awk '{ print $5 }')
     for i in ${super_list}; do
-        if [[ $i == *_a ]];then
+        if [[ $i == *_a ]]; then
             i=${i%_a}
             python3 bin/lpunpack.py -p ${i}_a build/baserom/super.img build/baserom/images >/dev/null 2>&1
             mv build/baserom/images/${i}_a.img build/baserom/images/${i}.img 
@@ -119,7 +139,7 @@ echo $device_f > $work_dir/bin/ddevice/device_f.txt
 getvar=$(cat $work_dir/bin/ddevice/device_f.txt)
 
 rm -rf config
-if [ -f $work_dir/${baserom}.zip ]; then rm -rf ${baserom}.zip; fi
+if [ -f "$baserom" ]; then rm -rf "$baserom"; fi
 rm -rf build/baserom/payload.bin build/baserom/images/super.img
 
 # Kỹ thuật ép tên: Làm sạch hậu tố NT/INT và ép về tên thương hiệu riêng (ví dụ: PenguinOS)
