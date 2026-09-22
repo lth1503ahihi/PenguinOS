@@ -16,9 +16,6 @@ on:
 jobs:
   Initialize:
     runs-on: ubuntu-latest
-    env:
-      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-      TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
     steps:
       - name: Maximize build space
         uses: easimon/maximize-build-space@master
@@ -40,11 +37,6 @@ jobs:
 
       - name: Checkout repository
         uses: actions/checkout@main
-
-      - name: Start Notify
-        run: |
-          pip install requests
-          python notify.py start "${{ github.repository }}" "${{ inputs.input_url }}" "xiaomi" "${{ inputs.builder_name }}" "${{ inputs.builder_id }}"
 
       - name: Set up Time
         run: |
@@ -73,7 +65,6 @@ jobs:
 
       - name: Pack ROM...
         run: |
-          python notify.py pack "${{ github.repository }}" "${{ inputs.input_url }}" "xiaomi" "${{ inputs.builder_name }}" "${{ inputs.builder_id }}"
           sudo bash packROM.sh
 
       - name: Setup Rclone...
@@ -84,16 +75,4 @@ jobs:
           
       - name: Upload ROM...
         run: |
-          python notify.py upload "${{ github.repository }}" "${{ inputs.input_url }}" "xiaomi" "${{ inputs.builder_name }}" "${{ inputs.builder_id }}"
           sudo -E bash uploadROM.sh
-      
-      - name: Success Notification
-        if: success()
-        run: |
-          python notify.py success "${{ github.repository }}" "${{ inputs.input_url }}" "xiaomi" "${{ inputs.builder_name }}" "${{ inputs.builder_id }}"
-
-      - name: Failure Notification
-        if: failure()
-        run: |
-          python notify.py fail "${{ github.repository }}" "${{ inputs.input_url }}" "xiaomi" "${{ inputs.builder_name }}" "${{ inputs.builder_id }}"
-          
